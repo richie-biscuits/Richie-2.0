@@ -1,0 +1,35 @@
+# Richie 2.0 GitIgnore
+
+# Sensitive files
+*.key
+*.pem
+*.env
+.env*
+config.json
+openclaw.json
+
+# Token files
+tokens/
+*.token
+
+# Large media
+*.mp4
+*.mov
+*.avi
+*.mp3
+media/inbound/*.pdf
+media/inbound/*.png
+media/inbound/*.jpg
+media/inbound/*.jpeg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/
+
+# Temp files
+*.tmp
+*.temp
+*.log
