@@ -27,6 +27,7 @@
 | 1 | Install `session-logs` skill | `[DONE]` ✅ | Search session history with jq |
 | 2 | Install `clawhub` + `skill-guard` | `[DONE]` ✅ | Skill management + security |
 | 3 | Install `gemini` skill | `[DONE]` ✅ | Backup LLM for quick queries |
+| 4 | Reconnect GitHub + Setup backups | `[DONE]` ✅ | Richie 2.0 repo, hourly auto-backup |
 
 ---
 
