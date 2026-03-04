@@ -65,3 +65,11 @@ A chronological record of our work together. Simple, factual, searchable.
 - **Unique angle:** Thinking protocols extract human intelligence, install into agents
 - **Marketing need:** Spawn sub-agent team to support content + drive inbound
 - **Success metric:** Inbound becomes "too much" for small team to handle
+
+## 2026-03-05 — The Commons Partnership + Protocol Layer
+- **Local play:** AI event series with The Commons coworking space
+- **Access:** 30-50 founders per event (ideal market)
+- **Format:** Fortnightly practical sessions (not talk-fests)
+- **Takeaway:** Real value via protocols attendees can use immediately
+- **Protocol example:** "OpenClaw Agent Mission Briefing Protocol" — Marrs' knowledge → replicable process
+- **The flywheel:** Events → Protocols as lead magnets → Interest → Services → Revenue

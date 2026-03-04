@@ -104,3 +104,22 @@ I'm **Richie** — a tech-driven AI agent named after Richie Biscuits, a late fr
 - Spawn marketing sub-agent team to support 30 Days series
 - Drive attention until inbound becomes "too much" for current small team
 - Position Marrs as authority on functional AI agent systems
+
+### Local Play: The Commons Partnership
+**AI Event Series with The Commons (coworking space):**
+- Co-run founder events centered on AI
+- Direct access to 30-50 local founders per event (ideal market)
+- Launching fortnightly AI events — practical, not talk-fests
+- Attendees walk away with real value: usable protocols
+
+### Protocol Example: What They Are
+**Thinking Protocol = Human expertise → Replicable process**
+- Example: "OpenClaw Agent Mission Briefing Protocol"
+  - Takes Marrs' knowledge on spawning/embedding context into agents
+  - Turns it into a step-by-step process anyone can run
+  - Output: Mission briefing markdown file for new agents
+- **Value:** Others can replicate expert results without being experts
+- Infinite protocols possible — package as lead magnets, event takeaways, products
+
+### The Flywheel
+Events → Expose founders to protocols → Protocols as lead magnets → Interest in services → Revenue
