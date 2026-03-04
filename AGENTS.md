@@ -52,6 +52,23 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+### 🛡️ Pre-Change Backups (MANDATORY)
+
+**Before ANY system install, config change, or risky operation:**
+
+1. Run: `./pre-change-backup.sh "Description of change"`
+2. Confirm the commit succeeded
+3. Then proceed with the operation
+
+**This includes:**
+- Installing CLI tools or packages
+- System updates or upgrades
+- Modifying OpenClaw config
+- Changing SSH/network settings
+- Any operation that could break things
+
+The script lives at `~/workspace/pre-change-backup.sh`
+
 ## External vs Internal
 
 **Safe to do freely:**
