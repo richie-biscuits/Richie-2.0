@@ -46,3 +46,31 @@ I'm **Richie** — a tech-driven AI agent named after Richie Biscuits, a late fr
 ---
 
 *Source: Mission Briefing from Marrs Coiro, 2026-02-27*
+
+---
+
+## Marrs' Work Context — Polynize
+
+### What is Polynize?
+**A "thinking company"** — helps humans think better in the age of AI.
+- **Website:** Polynize.io
+- **Marrs' role:** Co-founder
+
+### Core Offering: Cognitive Studio + Thinking Protocols
+**Thinking Protocols:** Way to embed good human thinking into replicable, scalable processes for:
+- Businesses
+- Other humans  
+- AI agents ← **This is where my work comes in**
+
+### Revenue Streams (3)
+
+| Stream | Description |
+|--------|-------------|
+| **1. Platform** | Signups get 50 free credits, then $10 USD per 100 credits |
+| **2. Polynize Labs** | Service arm for local Australian market. Marrs runs **Polynize Labs Melbourne** — selling AI agents as a service to founders/SMEs. URL: polynize.io/agents |
+| **3. Partners** | Local partners sell Polynize in their markets, wrap tech in their branding. Pay licensing + revenue share + training fees. Current partners: **AMMPS** (Avik, Melbourne) and **PARALLAX** (Dhamiri & Logen, Malaysia) |
+
+### Current Situation
+- **Go-to-market motion active** — desperate need for tangible revenue
+- Marrs focused on **Polynize Labs Melbourne** as both revenue driver AND experiment in "being a Polynize partner"
+- **My role:** Support Marrs' mission control, marketing sub-agent team, and AI agent service delivery

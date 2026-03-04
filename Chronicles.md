@@ -38,4 +38,17 @@ A chronological record of our work together. Simple, factual, searchable.
 
 ---
 
+---
+
+## 2026-03-05 — Polynize Context Dump
+- Marrs shared full business context for Polynize
+- **Polynize:** Thinking company (Polynize.io) — Cognitive Studio + Thinking Protocols
+- **3 Revenue Streams:** Platform (credits), Polynize Labs (services), Partners (licensing)
+- **Marrs' Focus:** Polynize Labs Melbourne — AI agents as a service for founders/SMEs
+- **Current Partners:** AMMPS (Melbourne), PARALLAX (Malaysia)
+- **Status:** Go-to-market motion, need tangible revenue
+- **My role clarified:** Support mission control, marketing sub-agents, AI agent service delivery
+
+---
+
 *Format: Date — What we did. Keep it simple.*
