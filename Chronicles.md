@@ -56,3 +56,12 @@ A chronological record of our work together. Simple, factual, searchable.
 - **The goal:** Document what works so success can be replicated for clients
 - **Why Chronicles exists:** Audit trail for the replicable system we're building
 - **Mindset shift:** Everything we build is the template. Be intentional, document, refine.
+
+## 2026-03-05 — The Two-Game Strategy Revealed
+- **Local game (Melbourne):** Real revenue fast via polynize.io/agents packages
+- **Global game:** Authority play via "30 Days with OpenClaw" social series
+- **The hook:** Betting on agents working, positioning as the expert who knows
+- **Proof point:** Hutcho Sentinel = extracted security expert → AI agent
+- **Unique angle:** Thinking protocols extract human intelligence, install into agents
+- **Marketing need:** Spawn sub-agent team to support content + drive inbound
+- **Success metric:** Inbound becomes "too much" for small team to handle

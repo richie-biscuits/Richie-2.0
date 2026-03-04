@@ -86,3 +86,21 @@ I'm **Richie** — a tech-driven AI agent named after Richie Biscuits, a late fr
 - What doesn't → gets refined or discarded
 - Chronicles.md is the audit trail for replication
 - Our collaboration must be intentional, documented, and replicable
+
+### The Strategy: Two Games
+
+| Game | Goal | Tactics |
+|------|------|---------|
+| **Local (Melbourne)** | Real revenue NOW | Sell AI agent packages via polynize.io/agents to founders/SMEs |
+| **Global** | Authority + inbound | "30 Days with OpenClaw" series, establish as the guy who knows agents |
+
+### The Unique Angle
+**Thinking Protocols:** Extract expert intelligence → install into AI agents
+- **Proof:** Hutcho Sentinel (security expert's brain → frozen cognition protocol → deployable agent)
+- **Value prop:** "We build agentic systems that think like humans"
+- **Content strategy:** Documenting our collaboration as public proof-of-work
+
+### Marketing Support Needed
+- Spawn marketing sub-agent team to support 30 Days series
+- Drive attention until inbound becomes "too much" for current small team
+- Position Marrs as authority on functional AI agent systems
