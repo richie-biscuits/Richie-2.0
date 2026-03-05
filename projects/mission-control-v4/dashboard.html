@@ -283,8 +283,8 @@
         async function updateStats() {
             try {
                 const today = new Date().toISOString().split('T')[0];
-                const { count: taskCount } = await supabaseClient.from('agent_logs').select('*', { count: 'exact' }).gte('created_at', today);
-                const { count: todoCount } = await supabaseClient.from('todos').select('*', { count: 'exact' }).eq('status', 'todo');
+                const { count: taskCount } = await supabaseClient.from('agent_logs').select('*', { count: 'exact', head: true }).gte('created_at', today);
+                const { count: todoCount } = await supabaseClient.from('todos').select('*', { count: 'exact', head: true }).eq('status', 'todo');
                 document.getElementById('stat-tasks').textContent = taskCount || 0;
                 document.getElementById('stat-todos').textContent = todoCount || 0;
             } catch (err) { console.error('Error updating stats:', err); }
@@ -310,7 +310,12 @@
             document.getElementById(tabName).classList.remove('hidden');
             document.querySelector(`[data-tab="${tabName}"]`).classList.add('tab-active');
             document.querySelector(`[data-tab="${tabName}"]`).classList.remove('text-mc-text-secondary');
-            if (tabName === 'tasks') loadTodos();
+            if (tabName === 'tasks') {
+                loadTodos();
+            } else if (tabName === 'dashboard') {
+                loadAgentLogs();
+                updateStats();
+            }
         }
 
         // Initialize
