@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control | Richie + Marrs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mc-bg': '#0A0E1A',
+                        'mc-panel': '#111827',
+                        'mc-elevated': '#1A2235',
+                        'mc-border': '#1E2D45',
+                        'mc-mint': '#00FFB2',
+                        'mc-mint-secondary': '#00C896',
+                        'mc-text': '#E2E8F0',
+                        'mc-text-secondary': '#8A9BBF',
+                        'carol': '#A855F7',
+                        'sage': '#10B981',
+                        'dan': '#EF4444'
+                    },
+                    fontFamily: {
+                        'space': ['Space Grotesk', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0A0E1A; color: #E2E8F0; font-family: 'Space Grotesk', sans-serif; }
+        .glass-panel {
+            background: linear-gradient(180deg, #1A2235 0%, #111827 100%);
+            border: 1px solid #1E2D45;
+            border-top: 1px solid rgba(0, 255, 178, 0.3);
+        }
+        .agent-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .agent-dot.active { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: #0A0E1A; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #1E2D45; border-radius: 3px; }
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #00FFB2; }
+        .tab-active { border-bottom: 2px solid #00FFB2; color: #00FFB2; }
+        .kanban-card { transition: all 0.2s; }
+        .kanban-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 255, 178, 0.1); }
+    </style>
+</head>
+<body class="h-screen overflow-hidden">
+    <header class="glass-panel h-14 flex items-center justify-between px-6 fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="agent-dot bg-mc-mint active"></div>
+            <span class="font-bold text-lg">Mission Control</span>
+            <span class="text-xs text-mc-text-secondary bg-mc-elevated px-2 py-1 rounded">v1.0 MVP</span>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 text-sm">
+                <span class="text-mc-text-secondary">Day</span>
+                <span class="font-mono text-mc-mint font-bold">7</span>
+                <span class="text-mc-text-secondary">/ 30</span>
+            </div>
+            <div class="text-xs text-mc-text-secondary" id="connection-status">
+                <span class="agent-dot bg-yellow-500 mr-2"></span>Connecting...
+            </div>
+        </div>
+    </header>
+
+    <div class="flex h-full pt-14">
+        <aside class="w-16 glass-panel flex flex-col items-center py-4 gap-4 border-r border-mc-border">
+            <button onclick="switchTab('dashboard')" class="tab-btn tab-active p-3 rounded-lg hover:bg-mc-elevated transition" data-tab="dashboard" title="Dashboard">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                </svg>
+            </button>
+            <button onclick="switchTab('tasks')" class="tab-btn p-3 rounded-lg hover:bg-mc-elevated transition text-mc-text-secondary" data-tab="tasks" title="Tasks">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                </svg>
+            </button>
+        </aside>
+
+        <main class="flex-1 p-6 overflow-hidden">
+            <div id="dashboard" class="tab-content h-full flex flex-col gap-6">
+                <div class="glass-panel rounded-xl p-6 flex flex-col h-1/3">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-mc-mint to-mc-mint-secondary flex items-center justify-center">
+                                <span class="font-bold text-mc-bg">R</span>
+                            </div>
+                            <div>
+                                <h2 class="font-bold">Richie</h2>
+                                <p class="text-xs text-mc-text-secondary">Chief of Staff • Always Active</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono text-mc-mint">Kimi K2.5</span>
+                    </div>
+                    <div class="flex-1 bg-mc-bg rounded-lg p-4 mb-4 overflow-y-auto scrollbar-thin" id="richie-chat">
+                        <div class="mb-3">
+                            <span class="text-mc-mint font-bold text-sm">Richie:</span>
+                            <p class="text-sm mt-1">G'day Marrs! Mission Control is live. What are we tackling today?</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <input type="text" id="richie-input" placeholder="Type your command..." class="flex-1 bg-mc-bg border border-mc-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-mc-mint transition">
+                        <button onclick="sendToRichie()" class="bg-mc-mint text-mc-bg font-bold px-6 py-3 rounded-lg hover:bg-mc-mint-secondary transition">Send</button>
+                    </div>
+                </div>
+
+                <div class="flex-1 grid grid-cols-2 gap-6">
+                    <div class="glass-panel rounded-xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold flex items-center gap-2">
+                                <span class="agent-dot bg-mc-mint"></span>Recent Activity
+                            </h3>
+                            <button onclick="loadAgentLogs()" class="text-xs text-mc-text-secondary hover:text-mc-mint transition">Refresh</button>
+                        </div>
+                        <div class="overflow-y-auto scrollbar-thin h-64" id="activity-log">
+                            <div class="text-center text-mc-text-secondary py-8 text-sm">Connecting to Supabase...</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-6">
+                        <h3 class="font-bold mb-4">Today's Stats</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-mc-text-secondary">Agent Tasks</span>
+                                <span class="font-mono text-mc-mint font-bold" id="stat-tasks">0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-mc-text-secondary">Todos Pending</span>
+                                <span class="font-mono text-carol font-bold" id="stat-todos">0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-mc-text-secondary">Content in Pipeline</span>
+                                <span class="font-mono text-sage font-bold" id="stat-content">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tasks" class="tab-content hidden h-full">
+                <div class="glass-panel rounded-xl p-6 h-full flex flex-col">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-bold text-xl">Task Tracker</h2>
+                        <button onclick="addTodo()" class="bg-mc-mint text-mc-bg px-4 py-2 rounded-lg text-sm font-bold hover:bg-mc-mint-secondary transition">Add Task</button>
+                    </div>
+                    <div class="flex-1 grid grid-cols-3 gap-4 overflow-hidden">
+                        <div class="bg-mc-bg rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-bold text-sm text-mc-text-secondary">TODO</h3>
+                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-todo">0</span>
+                            </div>
+                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-todo"></div>
+                        </div>
+                        <div class="bg-mc-bg rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-bold text-sm text-mc-mint">DOING</h3>
+                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-doing">0</span>
+                            </div>
+                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-doing"></div>
+                        </div>
+                        <div class="bg-mc-bg rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-bold text-sm text-sage">DONE</h3>
+                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-done">0</span>
+                            </div>
+                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-done"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://nryqpcmnncdhkgmgbpsr.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MjUxNCwiZXhwIjoyMDg4MjQ4NTE0fQ.YjM0RlTfQ2ZjwuCFEgxKUXYtTQ2MjHr-zOoKI44qqkc';
+        let supabase;
+
+        async function initSupabase() {
+            try {
+                console.log('Initializing Supabase...');
+                console.log('URL:', SUPABASE_URL);
+                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                console.log('Client created, testing connection...');
+                const { data, error } = await supabase.from('agent_logs').select('*').limit(1);
+                console.log('Query result:', { data, error });
+                if (error) {
+                    console.error('Supabase query error:', error);
+                    throw error;
+                }
+                document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-mc-mint mr-2"></span>Connected';
+                loadAgentLogs();
+                loadTodos();
+                updateStats();
+            } catch (err) {
+                console.error('Supabase connection failed:', err);
+                document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-red-500 mr-2"></span>Failed: ' + err.message;
+                document.getElementById('activity-log').innerHTML = '<div class="text-red-400 p-4 text-sm">Error: ' + err.message + '</div>';
+            }
+        }
+
+        async function loadAgentLogs() {
+            try {
+                const { data, error } = await supabase.from('agent_logs').select('*').order('created_at', { ascending: false }).limit(20);
+                if (error) throw error;
+                const container = document.getElementById('activity-log');
+                container.innerHTML = data && data.length > 0 ? data.map(log => `
+                    <div class="kanban-card bg-mc-bg rounded-lg p-3 mb-3 border-l-2 ${log.agent_name === 'Richie' ? 'border-mc-mint' : log.agent_name === 'Carol' ? 'border-carol' : log.agent_name === 'Sage' ? 'border-sage' : 'border-dan'}">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">${log.agent_name}</span>
+                            <span class="text-xs text-mc-text-secondary">${new Date(log.created_at).toLocaleTimeString()}</span>
+                        </div>
+                        <p class="text-sm text-mc-text-secondary">${log.task_description}</p>
+                    </div>
+                `).join('') : '<div class="text-center text-mc-text-secondary py-8 text-sm">No activity yet</div>';
+            } catch (err) { console.error('Error loading logs:', err); }
+        }
+
+        async function loadTodos() {
+            try {
+                const { data, error } = await supabase.from('todos').select('*').order('created_at', { ascending: false });
+                if (error) throw error;
+                ['todo', 'doing', 'done'].forEach(status => {
+                    document.getElementById(`kanban-${status}`).innerHTML = '';
+                    document.getElementById(`count-${status}`).textContent = '0';
+                });
+                if (data) {
+                    const counts = { todo: 0, doing: 0, done: 0 };
+                    data.forEach(todo => {
+                        counts[todo.status]++;
+                        const div = document.createElement('div');
+                        div.className = 'kanban-card bg-mc-elevated rounded-lg p-3 cursor-pointer';
+                        div.innerHTML = `<h4 class="font-medium text-sm">${todo.title}</h4><span class="text-xs px-2 py-0.5 rounded ${todo.priority === 'urgent' ? 'bg-red-500/20 text-red-500' : 'bg-blue-500/20 text-blue-500'}">${todo.priority}</span>`;
+                        div.onclick = () => moveTodo(todo.id, todo.status);
+                        document.getElementById(`kanban-${todo.status}`).appendChild(div);
+                    });
+                    Object.keys(counts).forEach(status => document.getElementById(`count-${status}`).textContent = counts[status]);
+                }
+            } catch (err) { console.error('Error loading todos:', err); }
+        }
+
+        async function moveTodo(id, currentStatus) {
+            const nextStatus = { todo: 'doing', doing: 'done', done: 'todo' }[currentStatus];
+            try {
+                const updates = { status: nextStatus };
+                if (nextStatus === 'done') updates.completed_at = new Date().toISOString();
+                await supabase.from('todos').update(updates).eq('id', id);
+                loadTodos();
+            } catch (err) { console.error('Error moving todo:', err); }
+        }
+
+        async function addTodo() {
+            const title = prompt('Task title:');
+            if (!title) return;
+            const category = prompt('Category:', 'work') || 'work';
+            const priority = prompt('Priority:', 'normal') || 'normal';
+            try {
+                await supabase.from('todos').insert([{ title, category, priority, status: 'todo' }]);
+                loadTodos();
+                updateStats();
+            } catch (err) { alert('Failed to add task'); }
+        }
+
+        async function updateStats() {
+            try {
+                const today = new Date().toISOString().split('T')[0];
+                const { count: taskCount } = await supabase.from('agent_logs').select('*', { count: 'exact' }).gte('created_at', today);
+                const { count: todoCount } = await supabase.from('todos').select('*', { count: 'exact' }).eq('status', 'todo');
+                document.getElementById('stat-tasks').textContent = taskCount || 0;
+                document.getElementById('stat-todos').textContent = todoCount || 0;
+            } catch (err) { console.error('Error updating stats:', err); }
+        }
+
+        function sendToRichie() {
+            const input = document.getElementById('richie-input');
+            const chat = document.getElementById('richie-chat');
+            const message = input.value.trim();
+            if (!message) return;
+            chat.innerHTML += `<div class="mb-3 text-right"><span class="text-carol font-bold text-sm">Marrs:</span><p class="text-sm mt-1">${message}</p></div>`;
+            setTimeout(() => {
+                chat.innerHTML += `<div class="mb-3"><span class="text-mc-mint font-bold text-sm">Richie:</span><p class="text-sm mt-1">Processing: "${message}"</p></div>`;
+                chat.scrollTop = chat.scrollHeight;
+            }, 500);
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => { el.classList.remove('tab-active'); el.classList.add('text-mc-text-secondary'); });
+            document.getElementById(tabName).classList.remove('hidden');
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('tab-active');
+            document.querySelector(`[data-tab="${tabName}"]`).classList.remove('text-mc-text-secondary');
+            if (tabName === 'tasks') loadTodos();
+        }
+
+        // Initialize
+        initSupabase();
+    </script>
+</body>
+</html>
