@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission Control | Richie + Marrs</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0E1A'/%3E%3Cpath d='M14 40 L26 24 L34 34 L44 18 L50 24 L34 46 Z' fill='%2300FFB2'/%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
@@ -49,6 +50,14 @@
         .tab-active { border-bottom: 2px solid #00FFB2; color: #00FFB2; }
         .kanban-card { transition: all 0.2s; }
         .kanban-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 255, 178, 0.1); }
+        .column-drop-target { min-height: 180px; }
+        .drop-zone-active { outline: 2px dashed rgba(0, 255, 178, 0.7); outline-offset: -4px; }
+        .dragging { opacity: 0.4; }
+        .priority-dot { width: 8px; height: 8px; border-radius: 999px; display: inline-block; }
+        .priority-urgent { background: #ef4444; }
+        .priority-high { background: #f97316; }
+        .priority-normal { background: #3b82f6; }
+        .priority-low { background: #94a3b8; }
     </style>
 </head>
 <body class="h-screen overflow-hidden">
@@ -56,7 +65,7 @@
         <div class="flex items-center gap-3">
             <div class="agent-dot bg-mc-mint active"></div>
             <span class="font-bold text-lg">Mission Control</span>
-            <span class="text-xs text-mc-text-secondary bg-mc-elevated px-2 py-1 rounded">v1.0 MVP</span>
+            <span class="text-xs text-mc-text-secondary bg-mc-elevated px-2 py-1 rounded">v1.1</span>
         </div>
         <div class="flex items-center gap-6">
             <div class="flex items-center gap-2 text-sm">
@@ -146,31 +155,44 @@
 
             <div id="tasks" class="tab-content hidden h-full">
                 <div class="glass-panel rounded-xl p-6 h-full flex flex-col">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="font-bold text-xl">Task Tracker</h2>
-                        <button onclick="addTodo()" class="bg-mc-mint text-mc-bg px-4 py-2 rounded-lg text-sm font-bold hover:bg-mc-mint-secondary transition">Add Task</button>
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                        <h2 class="font-bold text-xl">Agent Task Boards</h2>
+                        <button onclick="openCreateModal()" id="add-task-btn" class="bg-mc-mint text-mc-bg px-4 py-2 rounded-lg text-sm font-bold hover:bg-mc-mint-secondary transition" disabled>Add Task</button>
                     </div>
-                    <div class="flex-1 grid grid-cols-3 gap-4 overflow-hidden">
-                        <div class="bg-mc-bg rounded-lg p-4">
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="font-bold text-sm text-mc-text-secondary">TODO</h3>
-                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-todo">0</span>
+
+                    <div id="agent-selector" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5"></div>
+
+                    <div id="board-shell" class="flex-1 hidden">
+                        <div class="text-sm text-mc-text-secondary mb-3">Showing tasks for <span id="current-agent-label" class="text-mc-mint font-bold"></span></div>
+                        <div class="h-[calc(100%-2rem)] grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden">
+                            <div class="bg-mc-bg rounded-lg p-4 flex flex-col">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-bold text-sm text-mc-text-secondary">TODO</h3>
+                                    <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-todo">0</span>
+                                </div>
+                                <div class="column-drop-target space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-todo" data-status="todo"></div>
                             </div>
-                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-todo"></div>
+                            <div class="bg-mc-bg rounded-lg p-4 flex flex-col">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-bold text-sm text-mc-mint">DOING</h3>
+                                    <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-doing">0</span>
+                                </div>
+                                <div class="column-drop-target space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-doing" data-status="doing"></div>
+                            </div>
+                            <div class="bg-mc-bg rounded-lg p-4 flex flex-col">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-bold text-sm text-sage">DONE</h3>
+                                    <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-done">0</span>
+                                </div>
+                                <div class="column-drop-target space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-done" data-status="done"></div>
+                            </div>
                         </div>
-                        <div class="bg-mc-bg rounded-lg p-4">
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="font-bold text-sm text-mc-mint">DOING</h3>
-                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-doing">0</span>
-                            </div>
-                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-doing"></div>
-                        </div>
-                        <div class="bg-mc-bg rounded-lg p-4">
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="font-bold text-sm text-sage">DONE</h3>
-                                <span class="bg-mc-elevated px-2 py-1 rounded text-xs" id="count-done">0</span>
-                            </div>
-                            <div class="space-y-3 overflow-y-auto scrollbar-thin h-full" id="kanban-done"></div>
+                    </div>
+
+                    <div id="select-agent-empty" class="flex-1 flex items-center justify-center text-center text-mc-text-secondary">
+                        <div>
+                            <div class="text-4xl mb-3">🧭</div>
+                            <p>Select an agent to view their board.</p>
                         </div>
                     </div>
                 </div>
@@ -178,130 +200,110 @@
         </main>
     </div>
 
+    <div id="task-modal" class="hidden fixed inset-0 bg-black/60 z-[100] items-center justify-center p-4">
+        <div class="glass-panel rounded-xl w-full max-w-xl p-5">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold text-lg" id="task-modal-title">Edit Task</h3>
+                <button onclick="closeTaskModal()" class="text-mc-text-secondary hover:text-mc-text">✕</button>
+            </div>
+            <form id="task-form" class="space-y-3">
+                <input type="hidden" id="task-id">
+                <div>
+                    <label class="text-xs text-mc-text-secondary">Title</label>
+                    <input id="task-title" required class="mt-1 w-full bg-mc-bg border border-mc-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-mc-mint">
+                </div>
+                <div>
+                    <label class="text-xs text-mc-text-secondary">Notes</label>
+                    <textarea id="task-notes" rows="3" class="mt-1 w-full bg-mc-bg border border-mc-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-mc-mint"></textarea>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-xs text-mc-text-secondary">Priority</label>
+                        <select id="task-priority" class="mt-1 w-full bg-mc-bg border border-mc-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-mc-mint">
+                            <option value="urgent">urgent</option>
+                            <option value="high">high</option>
+                            <option value="normal" selected>normal</option>
+                            <option value="low">low</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs text-mc-text-secondary">Status</label>
+                        <select id="task-status" class="mt-1 w-full bg-mc-bg border border-mc-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-mc-mint">
+                            <option value="todo">todo</option>
+                            <option value="doing">doing</option>
+                            <option value="done">done</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="text-xs text-mc-text-secondary">Due date</label>
+                    <input type="date" id="task-due-date" class="mt-1 w-full bg-mc-bg border border-mc-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-mc-mint">
+                </div>
+                <div class="pt-2 flex items-center justify-between">
+                    <button type="button" id="task-delete-btn" onclick="deleteTaskFromModal()" class="text-red-400 hover:text-red-300 text-sm">Delete task</button>
+                    <div class="flex gap-2">
+                        <button type="button" onclick="closeTaskModal()" class="px-3 py-2 rounded-lg border border-mc-border text-sm">Cancel</button>
+                        <button type="submit" class="bg-mc-mint text-mc-bg px-4 py-2 rounded-lg text-sm font-bold">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Must match the `ref` claim in the service_role key (cmqzawbdtnkynizughqq)
         const SUPABASE_URL = 'https://cmqzawbdtnkynizughqq.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MjUxNCwiZXhwIjoyMDg4MjQ4NTE0fQ.YjM0RlTfQ2ZjwuCFEgxKUXYtTQ2MjHr-zOoKI44qqkc';
+
+        const AGENTS = ['Marrs', 'Richie', 'Darren', 'Carol'];
+        const PRIORITY_ORDER = { urgent: 0, high: 1, normal: 2, low: 3 };
+
         let supabaseClient = null;
+        let selectedAgent = null;
+        let currentTodos = [];
+        let realtimeChannel = null;
+        let dragState = { id: null, fromStatus: null };
 
-        async function initSupabase() {
-            try {
-                console.log('Initializing Supabase...');
-                console.log('URL:', SUPABASE_URL);
-
-                if (!window.supabase || typeof window.supabase.createClient !== 'function') {
-                    throw new Error('Supabase SDK not loaded');
-                }
-
-                if (window.__MC_SUPABASE_CLIENT__) {
-                    supabaseClient = window.__MC_SUPABASE_CLIENT__;
-                } else {
-                    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-                    window.__MC_SUPABASE_CLIENT__ = supabaseClient;
-                }
-
-                console.log('Client ready, testing connection...');
-                const { data, error } = await supabaseClient.from('agent_logs').select('*').limit(1);
-                console.log('Query result:', { data, error });
-                if (error) {
-                    console.error('Supabase query error:', error);
-                    throw error;
-                }
-                document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-mc-mint mr-2"></span>Connected';
-                loadAgentLogs();
-                loadTodos();
-                updateStats();
-            } catch (err) {
-                console.error('Supabase connection failed:', err);
-                document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-red-500 mr-2"></span>Failed: ' + err.message;
-                document.getElementById('activity-log').innerHTML = '<div class="text-red-400 p-4 text-sm">Error: ' + err.message + '</div>';
-            }
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
         }
 
-        async function loadAgentLogs() {
-            try {
-                const { data, error } = await supabaseClient.from('agent_logs').select('*').order('created_at', { ascending: false }).limit(20);
-                if (error) throw error;
-                const container = document.getElementById('activity-log');
-                container.innerHTML = data && data.length > 0 ? data.map(log => `
-                    <div class="kanban-card bg-mc-bg rounded-lg p-3 mb-3 border-l-2 ${log.agent_name === 'Richie' ? 'border-mc-mint' : log.agent_name === 'Carol' ? 'border-carol' : log.agent_name === 'Sage' ? 'border-sage' : 'border-dan'}">
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="font-bold text-sm">${log.agent_name}</span>
-                            <span class="text-xs text-mc-text-secondary">${new Date(log.created_at).toLocaleTimeString()}</span>
-                        </div>
-                        <p class="text-sm text-mc-text-secondary">${log.task_description}</p>
-                    </div>
-                `).join('') : '<div class="text-center text-mc-text-secondary py-8 text-sm">No activity yet</div>';
-            } catch (err) { console.error('Error loading logs:', err); }
+        function requireClient() {
+            if (!supabaseClient) throw new Error('Supabase client not initialized');
+            return supabaseClient;
         }
 
-        async function loadTodos() {
-            try {
-                const { data, error } = await supabaseClient.from('todos').select('*').order('created_at', { ascending: false });
-                if (error) throw error;
-                ['todo', 'doing', 'done'].forEach(status => {
-                    document.getElementById(`kanban-${status}`).innerHTML = '';
-                    document.getElementById(`count-${status}`).textContent = '0';
-                });
-                if (data) {
-                    const counts = { todo: 0, doing: 0, done: 0 };
-                    data.forEach(todo => {
-                        counts[todo.status]++;
-                        const div = document.createElement('div');
-                        div.className = 'kanban-card bg-mc-elevated rounded-lg p-3 cursor-pointer';
-                        div.innerHTML = `<h4 class="font-medium text-sm">${todo.title}</h4><span class="text-xs px-2 py-0.5 rounded ${todo.priority === 'urgent' ? 'bg-red-500/20 text-red-500' : 'bg-blue-500/20 text-blue-500'}">${todo.priority}</span>`;
-                        div.onclick = () => moveTodo(todo.id, todo.status);
-                        document.getElementById(`kanban-${todo.status}`).appendChild(div);
-                    });
-                    Object.keys(counts).forEach(status => document.getElementById(`count-${status}`).textContent = counts[status]);
-                }
-            } catch (err) { console.error('Error loading todos:', err); }
+        function showStatusError(message) {
+            document.getElementById('connection-status').innerHTML = `<span class="agent-dot bg-red-500 mr-2"></span>${escapeHtml(message)}`;
         }
 
-        async function moveTodo(id, currentStatus) {
-            const nextStatus = { todo: 'doing', doing: 'done', done: 'todo' }[currentStatus];
-            try {
-                const updates = { status: nextStatus };
-                if (nextStatus === 'done') updates.completed_at = new Date().toISOString();
-                await supabaseClient.from('todos').update(updates).eq('id', id);
-                loadTodos();
-            } catch (err) { console.error('Error moving todo:', err); }
+        function priorityClass(priority) {
+            if (priority === 'urgent') return 'bg-red-500/20 text-red-300';
+            if (priority === 'high') return 'bg-orange-500/20 text-orange-300';
+            if (priority === 'low') return 'bg-slate-500/20 text-slate-300';
+            return 'bg-blue-500/20 text-blue-300';
         }
 
-        async function addTodo() {
-            const title = prompt('Task title:');
-            if (!title) return;
-            const category = prompt('Category:', 'work') || 'work';
-            const priority = prompt('Priority:', 'normal') || 'normal';
-            try {
-                await supabaseClient.from('todos').insert([{ title, category, priority, status: 'todo' }]);
-                loadTodos();
-                updateStats();
-            } catch (err) { alert('Failed to add task'); }
+        function sortTodos(items) {
+            return [...items].sort((a, b) => {
+                const pa = Number.isInteger(a.position) ? a.position : 0;
+                const pb = Number.isInteger(b.position) ? b.position : 0;
+                if (pa !== pb) return pa - pb;
+                const priA = PRIORITY_ORDER[a.priority] ?? 2;
+                const priB = PRIORITY_ORDER[b.priority] ?? 2;
+                if (priA !== priB) return priA - priB;
+                return new Date(a.created_at || 0) - new Date(b.created_at || 0);
+            });
         }
 
-        async function updateStats() {
-            try {
-                const today = new Date().toISOString().split('T')[0];
-                const { count: taskCount } = await supabaseClient.from('agent_logs').select('*', { count: 'exact', head: true }).gte('created_at', today);
-                const { count: todoCount } = await supabaseClient.from('todos').select('*', { count: 'exact', head: true }).eq('status', 'todo');
-                document.getElementById('stat-tasks').textContent = taskCount || 0;
-                document.getElementById('stat-todos').textContent = todoCount || 0;
-            } catch (err) { console.error('Error updating stats:', err); }
-        }
-
-        function sendToRichie() {
-            const input = document.getElementById('richie-input');
-            const chat = document.getElementById('richie-chat');
-            const message = input.value.trim();
-            if (!message) return;
-            chat.innerHTML += `<div class="mb-3 text-right"><span class="text-carol font-bold text-sm">Marrs:</span><p class="text-sm mt-1">${message}</p></div>`;
-            setTimeout(() => {
-                chat.innerHTML += `<div class="mb-3"><span class="text-mc-mint font-bold text-sm">Richie:</span><p class="text-sm mt-1">Processing: "${message}"</p></div>`;
-                chat.scrollTop = chat.scrollHeight;
-            }, 500);
-            input.value = '';
-            chat.scrollTop = chat.scrollHeight;
+        function renderAgentSelector() {
+            const root = document.getElementById('agent-selector');
+            root.innerHTML = AGENTS.map(agent => {
+                const active = selectedAgent === agent;
+                return `<button onclick="selectAgent('${agent}')" class="text-left rounded-lg border px-3 py-3 transition ${active ? 'border-mc-mint bg-mc-mint/10' : 'border-mc-border bg-mc-bg hover:border-mc-mint/40'}">
+                    <div class="font-semibold">${agent}</div>
+                    <div class="text-xs text-mc-text-secondary mt-1">${active ? 'Active board' : 'Open board'}</div>
+                </button>`;
+            }).join('');
         }
 
         function switchTab(tabName) {
@@ -311,6 +313,7 @@
             document.querySelector(`[data-tab="${tabName}"]`).classList.add('tab-active');
             document.querySelector(`[data-tab="${tabName}"]`).classList.remove('text-mc-text-secondary');
             if (tabName === 'tasks') {
+                renderAgentSelector();
                 loadTodos();
             } else if (tabName === 'dashboard') {
                 loadAgentLogs();
@@ -318,8 +321,349 @@
             }
         }
 
-        // Initialize
+        function selectAgent(agent) {
+            selectedAgent = agent;
+            document.getElementById('board-shell').classList.remove('hidden');
+            document.getElementById('select-agent-empty').classList.add('hidden');
+            document.getElementById('current-agent-label').textContent = agent;
+            document.getElementById('add-task-btn').disabled = false;
+            renderAgentSelector();
+            renderTodos();
+        }
+
+        async function initSupabase() {
+            try {
+                if (!window.supabase || typeof window.supabase.createClient !== 'function') throw new Error('Supabase SDK not loaded');
+                supabaseClient = window.__MC_SUPABASE_CLIENT__ || window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                window.__MC_SUPABASE_CLIENT__ = supabaseClient;
+
+                const { error } = await supabaseClient.from('agent_logs').select('*').limit(1);
+                if (error) throw error;
+
+                document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-mc-mint mr-2"></span>Connected';
+                setupRealtime();
+                loadAgentLogs();
+                loadTodos();
+                updateStats();
+            } catch (err) {
+                showStatusError('Failed: ' + err.message);
+                document.getElementById('activity-log').innerHTML = `<div class="text-red-400 p-4 text-sm">Error: ${escapeHtml(err.message)}</div>`;
+            }
+        }
+
+        function setupRealtime() {
+            if (realtimeChannel || !supabaseClient) return;
+            realtimeChannel = supabaseClient
+                .channel('todos-changes')
+                .on('postgres_changes', { event: '*', schema: 'public', table: 'todos' }, () => {
+                    loadTodos();
+                    updateStats();
+                })
+                .subscribe();
+        }
+
+        async function loadAgentLogs() {
+            const container = document.getElementById('activity-log');
+            try {
+                const client = requireClient();
+                const { data, error } = await client.from('agent_logs').select('*').order('created_at', { ascending: false }).limit(20);
+                if (error) throw error;
+                container.innerHTML = data && data.length > 0 ? data.map(log => `
+                    <div class="kanban-card bg-mc-bg rounded-lg p-3 mb-3 border-l-2 ${log.agent_name === 'Richie' ? 'border-mc-mint' : log.agent_name === 'Carol' ? 'border-carol' : log.agent_name === 'Sage' ? 'border-sage' : 'border-dan'}">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">${escapeHtml(log.agent_name || 'Unknown')}</span>
+                            <span class="text-xs text-mc-text-secondary">${log.created_at ? new Date(log.created_at).toLocaleTimeString() : 'n/a'}</span>
+                        </div>
+                        <p class="text-sm text-mc-text-secondary">${escapeHtml(log.task_description || '')}</p>
+                    </div>
+                `).join('') : '<div class="text-center text-mc-text-secondary py-8 text-sm">No activity yet</div>';
+            } catch (err) {
+                container.innerHTML = `<div class="text-red-400 p-4 text-sm">Unable to load activity: ${escapeHtml(err.message)}</div>`;
+            }
+        }
+
+        async function loadTodos() {
+            try {
+                const client = requireClient();
+                let query = client.from('todos').select('*').order('status', { ascending: true }).order('position', { ascending: true });
+                if (selectedAgent) query = query.eq('assigned_to', selectedAgent);
+                const { data, error } = await query;
+                if (error) throw error;
+                currentTodos = data || [];
+                renderTodos();
+            } catch (err) {
+                showStatusError('Todos unavailable');
+            }
+        }
+
+        function renderTodos() {
+            ['todo', 'doing', 'done'].forEach(status => {
+                document.getElementById(`kanban-${status}`).innerHTML = '';
+                document.getElementById(`count-${status}`).textContent = '0';
+            });
+
+            if (!selectedAgent) return;
+
+            const counts = { todo: 0, doing: 0, done: 0 };
+            const grouped = {
+                todo: sortTodos(currentTodos.filter(t => t.status === 'todo')),
+                doing: sortTodos(currentTodos.filter(t => t.status === 'doing')),
+                done: sortTodos(currentTodos.filter(t => t.status === 'done'))
+            };
+
+            ['todo', 'doing', 'done'].forEach(status => {
+                const container = document.getElementById(`kanban-${status}`);
+                if (grouped[status].length === 0) {
+                    container.innerHTML = `<div class="text-center text-mc-text-secondary text-sm py-8">🗂️ No tasks yet</div>`;
+                } else {
+                    grouped[status].forEach(todo => {
+                        counts[status]++;
+                        const card = document.createElement('div');
+                        card.className = 'kanban-card bg-mc-elevated rounded-lg p-3 cursor-pointer border border-transparent hover:border-mc-border';
+                        card.draggable = true;
+                        card.dataset.id = todo.id;
+                        card.dataset.status = status;
+                        card.innerHTML = `
+                            <div class="flex items-start justify-between gap-2">
+                                <h4 class="font-medium text-sm">${escapeHtml(todo.title || '(untitled)')}</h4>
+                                <span class="priority-dot priority-${escapeHtml(todo.priority || 'normal')}" title="${escapeHtml(todo.priority || 'normal')}"></span>
+                            </div>
+                            ${todo.notes ? `<p class="text-xs text-mc-text-secondary mt-2 line-clamp-2">${escapeHtml(todo.notes)}</p>` : ''}
+                            <div class="mt-3 flex items-center justify-between">
+                                <span class="text-xs px-2 py-0.5 rounded ${priorityClass(todo.priority || 'normal')}">${escapeHtml(todo.priority || 'normal')}</span>
+                                <span class="text-xs text-mc-text-secondary">${todo.due_date ? escapeHtml(todo.due_date) : ''}</span>
+                            </div>
+                        `;
+
+                        card.addEventListener('click', () => openTaskModal(todo.id));
+                        card.addEventListener('dragstart', onCardDragStart);
+                        card.addEventListener('dragend', onCardDragEnd);
+                        container.appendChild(card);
+                    });
+                }
+                document.getElementById(`count-${status}`).textContent = counts[status];
+            });
+
+            bindDropZones();
+        }
+
+        function bindDropZones() {
+            document.querySelectorAll('.column-drop-target').forEach(zone => {
+                zone.addEventListener('dragover', onColumnDragOver);
+                zone.addEventListener('drop', onColumnDrop);
+                zone.addEventListener('dragleave', () => zone.classList.remove('drop-zone-active'));
+            });
+        }
+
+        function onCardDragStart(event) {
+            const el = event.currentTarget;
+            dragState.id = Number(el.dataset.id);
+            dragState.fromStatus = el.dataset.status;
+            el.classList.add('dragging');
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.setData('text/plain', String(dragState.id));
+        }
+
+        function onCardDragEnd(event) {
+            event.currentTarget.classList.remove('dragging');
+            document.querySelectorAll('.column-drop-target').forEach(z => z.classList.remove('drop-zone-active'));
+        }
+
+        function onColumnDragOver(event) {
+            event.preventDefault();
+            event.currentTarget.classList.add('drop-zone-active');
+            const dragging = document.querySelector('.dragging');
+            if (!dragging) return;
+
+            const zone = event.currentTarget;
+            const cards = [...zone.querySelectorAll('.kanban-card:not(.dragging)')];
+            const insertBefore = cards.find(card => event.clientY < card.getBoundingClientRect().top + card.offsetHeight / 2);
+            if (insertBefore) zone.insertBefore(dragging, insertBefore);
+            else zone.appendChild(dragging);
+        }
+
+        async function onColumnDrop(event) {
+            event.preventDefault();
+            const zone = event.currentTarget;
+            zone.classList.remove('drop-zone-active');
+            if (!dragState.id) return;
+
+            const newStatus = zone.dataset.status;
+            const orderedIds = [...zone.querySelectorAll('.kanban-card')].map(el => Number(el.dataset.id));
+            const movedIndex = orderedIds.indexOf(dragState.id);
+
+            if (movedIndex === -1) {
+                await loadTodos();
+                return;
+            }
+
+            try {
+                const client = requireClient();
+                const movedUpdates = { status: newStatus, position: movedIndex, completed_at: newStatus === 'done' ? new Date().toISOString() : null };
+                const ops = [client.from('todos').update(movedUpdates).eq('id', dragState.id)];
+
+                orderedIds.forEach((id, idx) => {
+                    if (id !== dragState.id) {
+                        ops.push(client.from('todos').update({ position: idx }).eq('id', id));
+                    }
+                });
+
+                const previousColumnIds = currentTodos.filter(t => t.status === dragState.fromStatus && t.id !== dragState.id).map(t => t.id);
+                previousColumnIds.forEach((id, idx) => {
+                    ops.push(client.from('todos').update({ position: idx }).eq('id', id));
+                });
+
+                const results = await Promise.all(ops);
+                const failed = results.find(r => r.error);
+                if (failed) throw failed.error;
+                await loadTodos();
+            } catch (err) {
+                alert('Failed to reorder task: ' + err.message);
+                await loadTodos();
+            } finally {
+                dragState = { id: null, fromStatus: null };
+            }
+        }
+
+        function openCreateModal() {
+            if (!selectedAgent) return;
+            document.getElementById('task-modal-title').textContent = `New Task (${selectedAgent})`;
+            document.getElementById('task-id').value = '';
+            document.getElementById('task-title').value = '';
+            document.getElementById('task-notes').value = '';
+            document.getElementById('task-priority').value = 'normal';
+            document.getElementById('task-status').value = 'todo';
+            document.getElementById('task-due-date').value = '';
+            document.getElementById('task-delete-btn').classList.add('hidden');
+            showTaskModal();
+        }
+
+        function openTaskModal(id) {
+            const todo = currentTodos.find(t => String(t.id) === String(id));
+            if (!todo) return;
+            document.getElementById('task-modal-title').textContent = `Edit Task (${selectedAgent})`;
+            document.getElementById('task-id').value = todo.id;
+            document.getElementById('task-title').value = todo.title || '';
+            document.getElementById('task-notes').value = todo.notes || '';
+            document.getElementById('task-priority').value = todo.priority || 'normal';
+            document.getElementById('task-status').value = todo.status || 'todo';
+            document.getElementById('task-due-date').value = todo.due_date || '';
+            document.getElementById('task-delete-btn').classList.remove('hidden');
+            showTaskModal();
+        }
+
+        function showTaskModal() {
+            const modal = document.getElementById('task-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeTaskModal() {
+            const modal = document.getElementById('task-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function nextPosition(status) {
+            const items = currentTodos.filter(t => t.status === status);
+            if (items.length === 0) return 0;
+            return Math.max(...items.map(t => Number.isInteger(t.position) ? t.position : 0)) + 1;
+        }
+
+        async function deleteTaskFromModal() {
+            const id = document.getElementById('task-id').value;
+            if (!id) return;
+            if (!confirm('Delete this task?')) return;
+            try {
+                const client = requireClient();
+                const { error } = await client.from('todos').delete().eq('id', id);
+                if (error) throw error;
+                closeTaskModal();
+                await loadTodos();
+                await updateStats();
+            } catch (err) {
+                alert('Failed to delete task: ' + err.message);
+            }
+        }
+
+        document.getElementById('task-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            if (!selectedAgent) return;
+
+            const id = document.getElementById('task-id').value;
+            const payload = {
+                title: document.getElementById('task-title').value.trim(),
+                notes: document.getElementById('task-notes').value.trim(),
+                priority: document.getElementById('task-priority').value,
+                status: document.getElementById('task-status').value,
+                due_date: document.getElementById('task-due-date').value || null,
+                assigned_to: selectedAgent
+            };
+
+            if (!payload.title) {
+                alert('Title is required');
+                return;
+            }
+
+            try {
+                const client = requireClient();
+                if (id) {
+                    const existing = currentTodos.find(t => String(t.id) === String(id));
+                    if (!existing) throw new Error('Task not found');
+                    if (existing.status !== payload.status) payload.position = nextPosition(payload.status);
+                    payload.completed_at = payload.status === 'done' ? new Date().toISOString() : null;
+                    const { error } = await client.from('todos').update(payload).eq('id', id);
+                    if (error) throw error;
+                } else {
+                    payload.position = nextPosition(payload.status);
+                    payload.completed_at = payload.status === 'done' ? new Date().toISOString() : null;
+                    const { error } = await client.from('todos').insert([payload]);
+                    if (error) throw error;
+                }
+
+                closeTaskModal();
+                await loadTodos();
+                await updateStats();
+            } catch (err) {
+                alert('Failed to save task: ' + err.message);
+            }
+        });
+
+        async function updateStats() {
+            try {
+                const client = requireClient();
+                const now = new Date();
+                const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+                const { count: taskCount, error: taskError } = await client.from('agent_logs').select('*', { count: 'exact', head: true }).gte('created_at', localMidnight);
+                const { count: todoCount, error: todoError } = await client.from('todos').select('*', { count: 'exact', head: true }).eq('status', 'todo');
+                let contentCount = 0;
+                const contentRes = await client.from('content_pipeline').select('*', { count: 'exact', head: true });
+                if (!contentRes.error) contentCount = contentRes.count || 0;
+                if (taskError || todoError) throw taskError || todoError;
+                document.getElementById('stat-tasks').textContent = taskCount || 0;
+                document.getElementById('stat-todos').textContent = todoCount || 0;
+                document.getElementById('stat-content').textContent = contentCount;
+            } catch (err) {
+                console.error('Error updating stats:', err);
+            }
+        }
+
+        function sendToRichie() {
+            const input = document.getElementById('richie-input');
+            const chat = document.getElementById('richie-chat');
+            const message = input.value.trim();
+            if (!message) return;
+            chat.innerHTML += `<div class="mb-3 text-right"><span class="text-carol font-bold text-sm">Marrs:</span><p class="text-sm mt-1">${escapeHtml(message)}</p></div>`;
+            setTimeout(() => {
+                chat.innerHTML += `<div class="mb-3"><span class="text-mc-mint font-bold text-sm">Richie:</span><p class="text-sm mt-1">Processing: \"${escapeHtml(message)}\"</p></div>`;
+                chat.scrollTop = chat.scrollHeight;
+            }, 500);
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            renderAgentSelector();
             initSupabase();
         });
     </script>
