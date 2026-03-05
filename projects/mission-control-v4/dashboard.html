@@ -179,16 +179,28 @@
     </div>
 
     <script>
-        const SUPABASE_URL = 'https://nryqpcmnncdhkgmgbpsr.supabase.co';
+        // Must match the `ref` claim in the service_role key (cmqzawbdtnkynizughqq)
+        const SUPABASE_URL = 'https://cmqzawbdtnkynizughqq.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MjUxNCwiZXhwIjoyMDg4MjQ4NTE0fQ.YjM0RlTfQ2ZjwuCFEgxKUXYtTQ2MjHr-zOoKI44qqkc';
-        let supabaseClient;
+        let supabaseClient = null;
 
         async function initSupabase() {
             try {
                 console.log('Initializing Supabase...');
                 console.log('URL:', SUPABASE_URL);
-                supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-                console.log('Client created, testing connection...');
+
+                if (!window.supabase || typeof window.supabase.createClient !== 'function') {
+                    throw new Error('Supabase SDK not loaded');
+                }
+
+                if (window.__MC_SUPABASE_CLIENT__) {
+                    supabaseClient = window.__MC_SUPABASE_CLIENT__;
+                } else {
+                    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                    window.__MC_SUPABASE_CLIENT__ = supabaseClient;
+                }
+
+                console.log('Client ready, testing connection...');
                 const { data, error } = await supabaseClient.from('agent_logs').select('*').limit(1);
                 console.log('Query result:', { data, error });
                 if (error) {
@@ -302,7 +314,9 @@
         }
 
         // Initialize
-        initSupabase();
+        document.addEventListener('DOMContentLoaded', () => {
+            initSupabase();
+        });
     </script>
 </body>
 </html>
