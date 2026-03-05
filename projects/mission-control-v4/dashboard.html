@@ -68,11 +68,6 @@
             <span class="text-xs text-mc-text-secondary bg-mc-elevated px-2 py-1 rounded">v1.1</span>
         </div>
         <div class="flex items-center gap-6">
-            <div class="flex items-center gap-2 text-sm">
-                <span class="text-mc-text-secondary">Day</span>
-                <span class="font-mono text-mc-mint font-bold">7</span>
-                <span class="text-mc-text-secondary">/ 30</span>
-            </div>
             <div class="text-xs text-mc-text-secondary" id="connection-status">
                 <span class="agent-dot bg-yellow-500 mr-2"></span>Connecting...
             </div>
@@ -156,14 +151,14 @@
             <div id="tasks" class="tab-content hidden h-full">
                 <div class="glass-panel rounded-xl p-6 h-full flex flex-col">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
-                        <h2 class="font-bold text-xl">Agent Task Boards</h2>
+                        <h2 class="font-bold text-xl">Task Boards</h2>
                         <button onclick="openCreateModal()" id="add-task-btn" class="bg-mc-mint text-mc-bg px-4 py-2 rounded-lg text-sm font-bold hover:bg-mc-mint-secondary transition" disabled>Add Task</button>
                     </div>
 
-                    <div id="agent-selector" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5"></div>
+                    <div id="board-selector" class="space-y-6 mb-5"></div>
 
                     <div id="board-shell" class="flex-1 hidden">
-                        <div class="text-sm text-mc-text-secondary mb-3">Showing tasks for <span id="current-agent-label" class="text-mc-mint font-bold"></span></div>
+                        <div class="text-sm text-mc-text-secondary mb-3">Showing tasks for <span id="current-board-label" class="text-mc-mint font-bold"></span></div>
                         <div class="h-[calc(100%-2rem)] grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden">
                             <div class="bg-mc-bg rounded-lg p-4 flex flex-col">
                                 <div class="flex items-center justify-between mb-4">
@@ -192,7 +187,7 @@
                     <div id="select-agent-empty" class="flex-1 flex items-center justify-center text-center text-mc-text-secondary">
                         <div>
                             <div class="text-4xl mb-3">🧭</div>
-                            <p>Select an agent to view their board.</p>
+                            <p>Select a board to view tasks.</p>
                         </div>
                     </div>
                 </div>
@@ -255,13 +250,16 @@
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MjUxNCwiZXhwIjoyMDg4MjQ4NTE0fQ.YjM0RlTfQ2ZjwuCFEgxKUXYtTQ2MjHr-zOoKI44qqkc';
 
         const AGENTS = ['Marrs', 'Richie', 'Darren', 'Carol'];
+        const AGENT_ONLY_BOARDS = ['Richie', 'Darren', 'Carol'];
         const PRIORITY_ORDER = { urgent: 0, high: 1, normal: 2, low: 3 };
 
         let supabaseClient = null;
-        let selectedAgent = null;
+        let selectedBoard = null; // { type: 'marrs' | 'agent', agent, boardId, boardName }
+        let marrsBoards = [{ boardId: 'default', boardName: 'Default Board' }];
         let currentTodos = [];
         let realtimeChannel = null;
         let dragState = { id: null, fromStatus: null };
+        let isSavingTask = false;
 
         function escapeHtml(value) {
             return String(value ?? '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -295,15 +293,84 @@
             });
         }
 
-        function renderAgentSelector() {
-            const root = document.getElementById('agent-selector');
-            root.innerHTML = AGENTS.map(agent => {
-                const active = selectedAgent === agent;
-                return `<button onclick="selectAgent('${agent}')" class="text-left rounded-lg border px-3 py-3 transition ${active ? 'border-mc-mint bg-mc-mint/10' : 'border-mc-border bg-mc-bg hover:border-mc-mint/40'}">
-                    <div class="font-semibold">${agent}</div>
-                    <div class="text-xs text-mc-text-secondary mt-1">${active ? 'Active board' : 'Open board'}</div>
+        function boardKey(view) {
+            return `${view.type}:${view.agent}:${view.boardId || 'none'}`;
+        }
+
+        function sameBoard(a, b) {
+            if (!a || !b) return false;
+            return boardKey(a) === boardKey(b);
+        }
+
+        function renderBoardSelector() {
+            const root = document.getElementById('board-selector');
+            const marrsCards = marrsBoards.map(board => {
+                const view = { type: 'marrs', agent: 'Marrs', boardId: board.boardId, boardName: board.boardName };
+                const active = sameBoard(selectedBoard, view);
+                const count = selectedBoard?.type === 'marrs' && selectedBoard.boardId === board.boardId ? currentTodos.length : 0;
+                return `<button onclick="selectMarrsBoard('${board.boardId}')" class="text-left rounded-lg border px-3 py-3 transition ${active ? 'border-mc-mint bg-mc-mint/10' : 'border-mc-border bg-mc-bg hover:border-mc-mint/40'}">
+                    <div class="font-semibold">${escapeHtml(board.boardName)}</div>
+                    <div class="text-xs text-mc-text-secondary mt-1">${count} task${count === 1 ? '' : 's'}</div>
                 </button>`;
             }).join('');
+
+            const agentCards = AGENT_ONLY_BOARDS.map(agent => {
+                const view = { type: 'agent', agent, boardId: `agent-${agent.toLowerCase()}`, boardName: `${agent} Board` };
+                const active = sameBoard(selectedBoard, view);
+                const count = selectedBoard?.type === 'agent' && selectedBoard.agent === agent ? currentTodos.length : 0;
+                return `<button onclick="selectAgentBoard('${agent}')" class="text-left rounded-lg border px-3 py-3 transition ${active ? 'border-mc-mint bg-mc-mint/10' : 'border-mc-border bg-mc-bg hover:border-mc-mint/40'}">
+                    <div class="font-semibold">${agent}</div>
+                    <div class="text-xs text-mc-text-secondary mt-1">${count} task${count === 1 ? '' : 's'}</div>
+                </button>`;
+            }).join('');
+
+            root.innerHTML = `
+                <section>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold">My Boards (Marrs)</h3>
+                        <button onclick="createMarrsBoard()" class="text-xs px-3 py-1.5 border border-mc-border rounded-md hover:border-mc-mint/50">+ New Board</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">${marrsCards}</div>
+                </section>
+                <section>
+                    <h3 class="font-semibold mb-3">Agent Boards</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">${agentCards}</div>
+                </section>
+            `;
+        }
+
+        function selectMarrsBoard(boardId) {
+            const board = marrsBoards.find(b => b.boardId === boardId);
+            if (!board) return;
+            selectedBoard = { type: 'marrs', agent: 'Marrs', boardId: board.boardId, boardName: board.boardName };
+            openSelectedBoard();
+        }
+
+        function selectAgentBoard(agent) {
+            selectedBoard = { type: 'agent', agent, boardId: `agent-${agent.toLowerCase()}`, boardName: `${agent} Board` };
+            openSelectedBoard();
+        }
+
+        function openSelectedBoard() {
+            document.getElementById('board-shell').classList.remove('hidden');
+            document.getElementById('select-agent-empty').classList.add('hidden');
+            document.getElementById('current-board-label').textContent = selectedBoard.type === 'marrs'
+                ? `${selectedBoard.boardName} (Marrs)`
+                : selectedBoard.agent;
+            document.getElementById('add-task-btn').disabled = false;
+            renderBoardSelector();
+            loadTodos();
+        }
+
+        function createMarrsBoard() {
+            const name = prompt('Board name?');
+            if (!name) return;
+            const trimmed = name.trim();
+            if (!trimmed) return;
+            const boardId = `board-${trimmed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}-${Date.now().toString(36)}`;
+            marrsBoards.push({ boardId, boardName: trimmed });
+            selectedBoard = { type: 'marrs', agent: 'Marrs', boardId, boardName: trimmed };
+            openSelectedBoard();
         }
 
         function switchTab(tabName) {
@@ -313,22 +380,12 @@
             document.querySelector(`[data-tab="${tabName}"]`).classList.add('tab-active');
             document.querySelector(`[data-tab="${tabName}"]`).classList.remove('text-mc-text-secondary');
             if (tabName === 'tasks') {
-                renderAgentSelector();
+                renderBoardSelector();
                 loadTodos();
             } else if (tabName === 'dashboard') {
                 loadAgentLogs();
                 updateStats();
             }
-        }
-
-        function selectAgent(agent) {
-            selectedAgent = agent;
-            document.getElementById('board-shell').classList.remove('hidden');
-            document.getElementById('select-agent-empty').classList.add('hidden');
-            document.getElementById('current-agent-label').textContent = agent;
-            document.getElementById('add-task-btn').disabled = false;
-            renderAgentSelector();
-            renderTodos();
         }
 
         async function initSupabase() {
@@ -343,7 +400,8 @@
                 document.getElementById('connection-status').innerHTML = '<span class="agent-dot bg-mc-mint mr-2"></span>Connected';
                 setupRealtime();
                 loadAgentLogs();
-                loadTodos();
+                await loadBoards();
+                await loadTodos();
                 updateStats();
             } catch (err) {
                 showStatusError('Failed: ' + err.message);
@@ -356,6 +414,7 @@
             realtimeChannel = supabaseClient
                 .channel('todos-changes')
                 .on('postgres_changes', { event: '*', schema: 'public', table: 'todos' }, () => {
+                    loadBoards();
                     loadTodos();
                     updateStats();
                 })
@@ -382,11 +441,39 @@
             }
         }
 
+        async function loadBoards() {
+            try {
+                const client = requireClient();
+                const { data, error } = await client.from('todos').select('board_id, board_name').eq('assigned_to', 'Marrs');
+                if (error) throw error;
+                const map = new Map();
+                (data || []).forEach(row => {
+                    const id = row.board_id || 'default';
+                    const name = row.board_name || 'Default Board';
+                    if (!map.has(id)) map.set(id, { boardId: id, boardName: name });
+                });
+                if (!map.has('default')) map.set('default', { boardId: 'default', boardName: 'Default Board' });
+                marrsBoards = [...map.values()];
+            } catch (err) {
+                marrsBoards = [{ boardId: 'default', boardName: 'Default Board' }];
+            }
+            renderBoardSelector();
+        }
+
         async function loadTodos() {
             try {
                 const client = requireClient();
+                if (!selectedBoard) {
+                    currentTodos = [];
+                    renderTodos();
+                    return;
+                }
                 let query = client.from('todos').select('*').order('status', { ascending: true }).order('position', { ascending: true });
-                if (selectedAgent) query = query.eq('assigned_to', selectedAgent);
+                if (selectedBoard.type === 'marrs') {
+                    query = query.eq('assigned_to', 'Marrs').eq('board_id', selectedBoard.boardId);
+                } else if (selectedBoard.type === 'agent') {
+                    query = query.eq('assigned_to', selectedBoard.agent);
+                }
                 const { data, error } = await query;
                 if (error) throw error;
                 currentTodos = data || [];
@@ -402,7 +489,7 @@
                 document.getElementById(`count-${status}`).textContent = '0';
             });
 
-            if (!selectedAgent) return;
+            if (!selectedBoard) return;
 
             const counts = { todo: 0, doing: 0, done: 0 };
             const grouped = {
@@ -414,7 +501,7 @@
             ['todo', 'doing', 'done'].forEach(status => {
                 const container = document.getElementById(`kanban-${status}`);
                 if (grouped[status].length === 0) {
-                    container.innerHTML = `<div class="text-center text-mc-text-secondary text-sm py-8">🗂️ No tasks yet</div>`;
+                    container.innerHTML = `<div class="text-center text-mc-text-secondary text-sm py-8 pointer-events-none select-none">🗂️ No tasks yet</div>`;
                 } else {
                     grouped[status].forEach(todo => {
                         counts[status]++;
@@ -449,9 +536,11 @@
 
         function bindDropZones() {
             document.querySelectorAll('.column-drop-target').forEach(zone => {
+                if (zone.dataset.dropBound === '1') return;
                 zone.addEventListener('dragover', onColumnDragOver);
                 zone.addEventListener('drop', onColumnDrop);
                 zone.addEventListener('dragleave', () => zone.classList.remove('drop-zone-active'));
+                zone.dataset.dropBound = '1';
             });
         }
 
@@ -526,8 +615,8 @@
         }
 
         function openCreateModal() {
-            if (!selectedAgent) return;
-            document.getElementById('task-modal-title').textContent = `New Task (${selectedAgent})`;
+            if (!selectedBoard) return;
+            document.getElementById('task-modal-title').textContent = `New Task (${selectedBoard?.type === 'marrs' ? selectedBoard.boardName : selectedBoard?.agent || 'Board'})`;
             document.getElementById('task-id').value = '';
             document.getElementById('task-title').value = '';
             document.getElementById('task-notes').value = '';
@@ -541,7 +630,7 @@
         function openTaskModal(id) {
             const todo = currentTodos.find(t => String(t.id) === String(id));
             if (!todo) return;
-            document.getElementById('task-modal-title').textContent = `Edit Task (${selectedAgent})`;
+            document.getElementById('task-modal-title').textContent = `Edit Task (${selectedBoard?.type === 'marrs' ? selectedBoard.boardName : selectedBoard?.agent || 'Board'})`;
             document.getElementById('task-id').value = todo.id;
             document.getElementById('task-title').value = todo.title || '';
             document.getElementById('task-notes').value = todo.notes || '';
@@ -588,7 +677,7 @@
 
         document.getElementById('task-form').addEventListener('submit', async (event) => {
             event.preventDefault();
-            if (!selectedAgent) return;
+            if (!selectedBoard || isSavingTask) return;
 
             const id = document.getElementById('task-id').value;
             const payload = {
@@ -597,7 +686,9 @@
                 priority: document.getElementById('task-priority').value,
                 status: document.getElementById('task-status').value,
                 due_date: document.getElementById('task-due-date').value || null,
-                assigned_to: selectedAgent
+                assigned_to: selectedBoard.type === 'marrs' ? 'Marrs' : selectedBoard.agent,
+                board_id: selectedBoard.type === 'marrs' ? selectedBoard.boardId : `agent-${selectedBoard.agent.toLowerCase()}`,
+                board_name: selectedBoard.type === 'marrs' ? selectedBoard.boardName : `${selectedBoard.agent} Board`
             };
 
             if (!payload.title) {
@@ -605,6 +696,7 @@
                 return;
             }
 
+            isSavingTask = true;
             try {
                 const client = requireClient();
                 if (id) {
@@ -622,10 +714,13 @@
                 }
 
                 closeTaskModal();
+                await loadBoards();
                 await loadTodos();
                 await updateStats();
             } catch (err) {
                 alert('Failed to save task: ' + err.message);
+            } finally {
+                isSavingTask = false;
             }
         });
 
@@ -663,7 +758,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            renderAgentSelector();
+            bindDropZones();
+            renderBoardSelector();
             initSupabase();
         });
     </script>
