@@ -181,15 +181,15 @@
     <script>
         const SUPABASE_URL = 'https://nryqpcmnncdhkgmgbpsr.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MjY3MjUxNCwiZXhwIjoyMDg4MjQ4NTE0fQ.YjM0RlTfQ2ZjwuCFEgxKUXYtTQ2MjHr-zOoKI44qqkc';
-        let supabase;
+        let supabaseClient;
 
         async function initSupabase() {
             try {
                 console.log('Initializing Supabase...');
                 console.log('URL:', SUPABASE_URL);
-                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
                 console.log('Client created, testing connection...');
-                const { data, error } = await supabase.from('agent_logs').select('*').limit(1);
+                const { data, error } = await supabaseClient.from('agent_logs').select('*').limit(1);
                 console.log('Query result:', { data, error });
                 if (error) {
                     console.error('Supabase query error:', error);
@@ -208,7 +208,7 @@
 
         async function loadAgentLogs() {
             try {
-                const { data, error } = await supabase.from('agent_logs').select('*').order('created_at', { ascending: false }).limit(20);
+                const { data, error } = await supabaseClient.from('agent_logs').select('*').order('created_at', { ascending: false }).limit(20);
                 if (error) throw error;
                 const container = document.getElementById('activity-log');
                 container.innerHTML = data && data.length > 0 ? data.map(log => `
@@ -225,7 +225,7 @@
 
         async function loadTodos() {
             try {
-                const { data, error } = await supabase.from('todos').select('*').order('created_at', { ascending: false });
+                const { data, error } = await supabaseClient.from('todos').select('*').order('created_at', { ascending: false });
                 if (error) throw error;
                 ['todo', 'doing', 'done'].forEach(status => {
                     document.getElementById(`kanban-${status}`).innerHTML = '';
@@ -251,7 +251,7 @@
             try {
                 const updates = { status: nextStatus };
                 if (nextStatus === 'done') updates.completed_at = new Date().toISOString();
-                await supabase.from('todos').update(updates).eq('id', id);
+                await supabaseClient.from('todos').update(updates).eq('id', id);
                 loadTodos();
             } catch (err) { console.error('Error moving todo:', err); }
         }
@@ -262,7 +262,7 @@
             const category = prompt('Category:', 'work') || 'work';
             const priority = prompt('Priority:', 'normal') || 'normal';
             try {
-                await supabase.from('todos').insert([{ title, category, priority, status: 'todo' }]);
+                await supabaseClient.from('todos').insert([{ title, category, priority, status: 'todo' }]);
                 loadTodos();
                 updateStats();
             } catch (err) { alert('Failed to add task'); }
@@ -271,8 +271,8 @@
         async function updateStats() {
             try {
                 const today = new Date().toISOString().split('T')[0];
-                const { count: taskCount } = await supabase.from('agent_logs').select('*', { count: 'exact' }).gte('created_at', today);
-                const { count: todoCount } = await supabase.from('todos').select('*', { count: 'exact' }).eq('status', 'todo');
+                const { count: taskCount } = await supabaseClient.from('agent_logs').select('*', { count: 'exact' }).gte('created_at', today);
+                const { count: todoCount } = await supabaseClient.from('todos').select('*', { count: 'exact' }).eq('status', 'todo');
                 document.getElementById('stat-tasks').textContent = taskCount || 0;
                 document.getElementById('stat-todos').textContent = todoCount || 0;
             } catch (err) { console.error('Error updating stats:', err); }
