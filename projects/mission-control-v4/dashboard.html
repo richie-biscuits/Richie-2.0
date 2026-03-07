@@ -308,8 +308,13 @@
                 const view = { type: 'marrs', agent: 'Marrs', boardId: board.boardId, boardName: board.boardName };
                 const active = sameBoard(selectedBoard, view);
                 const count = selectedBoard?.type === 'marrs' && selectedBoard.boardId === board.boardId ? currentTodos.length : 0;
+                const canDelete = board.boardId !== 'default';
+                const deleteBtn = canDelete ? `<button onclick="event.stopPropagation(); deleteMarrsBoard('${board.boardId}')" class="ml-2 text-mc-text-secondary hover:text-red-400 transition" title="Delete board">✕</button>` : '';
                 return `<button onclick="selectMarrsBoard('${board.boardId}')" class="text-left rounded-lg border px-3 py-3 transition ${active ? 'border-mc-mint bg-mc-mint/10' : 'border-mc-border bg-mc-bg hover:border-mc-mint/40'}">
-                    <div class="font-semibold">${escapeHtml(board.boardName)}</div>
+                    <div class="flex items-center justify-between">
+                        <span class="font-semibold">${escapeHtml(board.boardName)}</span>
+                        ${deleteBtn}
+                    </div>
                     <div class="text-xs text-mc-text-secondary mt-1">${count} task${count === 1 ? '' : 's'}</div>
                 </button>`;
             }).join('');
@@ -371,6 +376,41 @@
             marrsBoards.push({ boardId, boardName: trimmed });
             selectedBoard = { type: 'marrs', agent: 'Marrs', boardId, boardName: trimmed };
             openSelectedBoard();
+        }
+
+        async function deleteMarrsBoard(boardId) {
+            const board = marrsBoards.find(b => b.boardId === boardId);
+            if (!board) return;
+            if (board.boardId === 'default') {
+                alert('Cannot delete the default board');
+                return;
+            }
+            if (!confirm(`Delete "${board.boardName}"? All tasks on this board will be moved to the default board.`)) {
+                return;
+            }
+
+            try {
+                const client = requireClient();
+                // Move all tasks from this board to the default board
+                const { error } = await client.from('todos')
+                    .update({ board_id: 'default', board_name: 'Default Board' })
+                    .eq('assigned_to', 'Marrs')
+                    .eq('board_id', boardId);
+                if (error) throw error;
+
+                // Remove from local state
+                marrsBoards = marrsBoards.filter(b => b.boardId !== boardId);
+
+                // If the deleted board was selected, switch to default
+                if (selectedBoard?.type === 'marrs' && selectedBoard.boardId === boardId) {
+                    selectedBoard = { type: 'marrs', agent: 'Marrs', boardId: 'default', boardName: 'Default Board' };
+                    openSelectedBoard();
+                } else {
+                    renderBoardSelector();
+                }
+            } catch (err) {
+                alert('Failed to delete board: ' + err.message);
+            }
         }
 
         function switchTab(tabName) {
@@ -501,7 +541,7 @@
             ['todo', 'doing', 'done'].forEach(status => {
                 const container = document.getElementById(`kanban-${status}`);
                 if (grouped[status].length === 0) {
-                    container.innerHTML = `<div class="text-center text-mc-text-secondary text-sm py-8 pointer-events-none select-none">🗂️ No tasks yet</div>`;
+                    container.innerHTML = '';
                 } else {
                     grouped[status].forEach(todo => {
                         counts[status]++;
