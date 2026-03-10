@@ -373,7 +373,16 @@
             const trimmed = name.trim();
             if (!trimmed) return;
             const boardId = `board-${trimmed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}-${Date.now().toString(36)}`;
-            marrsBoards.push({ boardId, boardName: trimmed });
+            const newBoard = { boardId, boardName: trimmed };
+            marrsBoards.push(newBoard);
+
+            // Persist to localStorage so boards survive page refresh
+            const stored = JSON.parse(localStorage.getItem('marrsBoards') || '[]');
+            if (!stored.find(b => b.boardId === boardId)) {
+                stored.push(newBoard);
+                localStorage.setItem('marrsBoards', JSON.stringify(stored));
+            }
+
             selectedBoard = { type: 'marrs', agent: 'Marrs', boardId, boardName: trimmed };
             openSelectedBoard();
         }
@@ -385,21 +394,30 @@
                 alert('Cannot delete the default board');
                 return;
             }
-            if (!confirm(`Delete "${board.boardName}"? All tasks on this board will be moved to the default board.`)) {
+
+            // Confirmation dialog with clear warning about cascade delete
+            const confirmMsg = `Delete board "${board.boardName}"?\n\nThis will permanently delete ALL tasks on this board.\n\nThis action cannot be undone.`;
+            if (!confirm(confirmMsg)) {
                 return;
             }
 
             try {
                 const client = requireClient();
-                // Move all tasks from this board to the default board
-                const { error } = await client.from('todos')
-                    .update({ board_id: 'default', board_name: 'Default Board' })
+
+                // CASCADE DELETE: First delete all tasks associated with this board
+                const { error: deleteError } = await client.from('todos')
+                    .delete()
                     .eq('assigned_to', 'Marrs')
                     .eq('board_id', boardId);
-                if (error) throw error;
+                if (deleteError) throw deleteError;
 
                 // Remove from local state
                 marrsBoards = marrsBoards.filter(b => b.boardId !== boardId);
+
+                // Remove from localStorage
+                const stored = JSON.parse(localStorage.getItem('marrsBoards') || '[]');
+                const updatedStored = stored.filter(b => b.boardId !== boardId);
+                localStorage.setItem('marrsBoards', JSON.stringify(updatedStored));
 
                 // If the deleted board was selected, switch to default
                 if (selectedBoard?.type === 'marrs' && selectedBoard.boardId === boardId) {
@@ -407,7 +425,16 @@
                     openSelectedBoard();
                 } else {
                     renderBoardSelector();
+                    await loadTodos();
+                    await updateStats();
                 }
+
+                // Show success feedback
+                const statusEl = document.getElementById('connection-status');
+                const originalHtml = statusEl.innerHTML;
+                statusEl.innerHTML = '<span class="agent-dot bg-mc-mint mr-2"></span>Board deleted';
+                setTimeout(() => { statusEl.innerHTML = originalHtml; }, 2000);
+
             } catch (err) {
                 alert('Failed to delete board: ' + err.message);
             }
@@ -487,15 +514,29 @@
                 const { data, error } = await client.from('todos').select('board_id, board_name').eq('assigned_to', 'Marrs');
                 if (error) throw error;
                 const map = new Map();
+
+                // First add boards from localStorage (for persistence of empty boards)
+                const stored = JSON.parse(localStorage.getItem('marrsBoards') || '[]');
+                stored.forEach(board => {
+                    if (!map.has(board.boardId)) map.set(board.boardId, board);
+                });
+
+                // Then merge with boards from Supabase (in case names were updated)
                 (data || []).forEach(row => {
                     const id = row.board_id || 'default';
                     const name = row.board_name || 'Default Board';
                     if (!map.has(id)) map.set(id, { boardId: id, boardName: name });
                 });
+
                 if (!map.has('default')) map.set('default', { boardId: 'default', boardName: 'Default Board' });
                 marrsBoards = [...map.values()];
+
+                // Update localStorage with merged boards
+                localStorage.setItem('marrsBoards', JSON.stringify(marrsBoards));
             } catch (err) {
-                marrsBoards = [{ boardId: 'default', boardName: 'Default Board' }];
+                // Fallback to localStorage only if Supabase fails
+                const stored = JSON.parse(localStorage.getItem('marrsBoards') || '[]');
+                marrsBoards = [{ boardId: 'default', boardName: 'Default Board' }, ...stored];
             }
             renderBoardSelector();
         }
