@@ -1,0 +1,408 @@
+# Second Brain Technical Brief for Mission Control Dashboard
+**Prepared for:** Opus (Development Agent)  
+**Requested by:** Marrs Coiro, Polynize Labs  
+**Date:** March 11, 2026  
+**Purpose:** Frontend architecture specification for integrating Second Brain functionality into Mission Control dashboard
+
+---
+
+## Executive Summary
+
+The Second Brain is a multi-layered knowledge and task management system that serves as the shared cognitive infrastructure between Marrs (human) and Richie (AI agent). The Mission Control dashboard must visualize, manage, and interact with this system through a unified interface.
+
+**Key Principle:** The dashboard is the **visualization layer**; the actual Second Brain consists of structured data (Supabase) + markdown files (filesystem). Richie writes to the data; the dashboard displays it and allows human interaction.
+
+---
+
+## Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    MISSION CONTROL DASHBOARD                 │
+│                      (Frontend - Your Build)                 │
+├─────────────────────────────────────────────────────────────┤
+│  Task Boards  │  Memory Search  │  Protocols  │  Reports   │
+│  (Kanban)     │  (Semantic)     │  (Viewer)   │  (Archive) │
+└───────────────┴─────────────────┴─────────────┴────────────┘
+         │                  │                  │
+         ▼                  ▼                  ▼
+┌─────────────────────────────────────────────────────────────┐
+│  SUPABASE (Structured Data)   │  FILESYSTEM (Markdown)      │
+│  - todos table                │  - MEMORY.md                │
+│  - memory_entries (future)    │  - memory/*.md              │
+│  - protocols (future)         │  - protocols/*.md           │
+│  - Real-time sync             │  - reports/*.md             │
+└─────────────────────────────────────────────────────────────┘
+         ▲                                     ▲
+         │                                     │
+    ┌────┴────┐                          ┌───┴────┐
+    │ Richie  │                          │ Richie │
+    │(Writes) │                          │(Writes)│
+    └─────────┘                          └────────┘
+```
+
+---
+
+## Layer 1: Structured Data (Supabase)
+
+### Current Schema: `todos` table
+
+```sql
+CREATE TABLE todos (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  task text NOT NULL,
+  status text DEFAULT 'todo' CHECK (status IN ('todo', 'doing', 'done')),
+  created_at timestamp DEFAULT now(),
+  assigned_to text DEFAULT 'Marrs' 
+    CHECK (assigned_to IN ('Marrs', 'Richie', 'Carol', 'Sammy', 'Darren', 'DocBot')),
+  board_id text,
+  board_name text,
+  is_default_board boolean DEFAULT false
+);
+
+-- Enable RLS
+ALTER TABLE todos ENABLE ROW LEVEL SECURITY;
+```
+
+**Connection Details:**
+- **URL:** `https://nryqpcmnncdhkgmgbpsr.supabase.co`
+- **Anon Key:** (from `~/.openclaw/openclaw.json` under `supabase.anonKey` or `supabase.serviceKey`)
+- **JavaScript Client:** `@supabase/supabase-js`
+
+**Purpose:** Task management, kanban boards, agent assignments, real-time collaboration
+
+---
+
+### Future Schema Extensions
+
+#### `memory_entries` table (for searchable knowledge)
+```sql
+CREATE TABLE memory_entries (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  type text CHECK (type IN ('decision', 'lesson', 'contact', 'idea', 'protocol')),
+  content text NOT NULL,
+  tags text[],
+  source text, -- which agent/file created this
+  created_at timestamp DEFAULT now(),
+  updated_at timestamp DEFAULT now()
+);
+```
+
+#### `protocols` table (for thinking frameworks)
+```sql
+CREATE TABLE protocols (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  name text NOT NULL,
+  content text NOT NULL, -- markdown
+  category text, -- 'agent', 'sales', 'content', 'security'
+  version text,
+  created_at timestamp DEFAULT now()
+);
+```
+
+---
+
+## Layer 2: Long-Term Memory (Markdown Files)
+
+**Location:** `/Users/openclaw_admin/.openclaw/workspace/`
+
+| File | Purpose | Content Type | Update Frequency | Who Writes |
+|------|---------|--------------|------------------|------------|
+| `MEMORY.md` | Curated long-term memory | Decisions, lessons, key insights | Weekly review | Richie |
+| `AGENTS.md` | Workspace conventions | Safety rules, tool usage | As needed | Both |
+| `SOUL.md` | Richie's identity | Voice, personality, boundaries | Rarely | Richie |
+| `USER.md` | Marrs profile | Preferences, pronouns, notes | As needed | Richie |
+| `TOOLS.md` | Model routing config | Provider settings, aliases | When models change | Richie |
+| `HEARTBEAT.md` | Periodic tasks | Checklist for cron jobs | As needed | Both |
+| `IDENTITY.md` | Richie's details | Extended identity info | Rarely | Richie |
+| `memory/YYYY-MM-DD.md` | Raw daily logs | Everything from that day | Daily | Richie |
+
+**File Naming Convention:**
+- `memory/` folder uses ISO date format: `2026-03-11.md`
+- One file per day
+- Auto-generated by Richie during daily operations
+
+---
+
+## Layer 3: Protocols & Documentation
+
+**Location:** `/Users/openclaw_admin/.openclaw/workspace/protocols/`
+
+**Current Files:**
+- `agent-spawning-protocol.md` — 6-step agent creation process
+
+**Future Files:**
+- `sales-protocols.md` — Outreach, pitch, close workflows
+- `content-protocols.md` — 30 Days series production workflow
+- `security-protocols.md` — Hutcho Sentinel procedures
+- `client-onboarding-protocol.md` — New client setup
+
+**Format:** All markdown with consistent structure (Purpose, Process, Interface, Agent, Cognition, Infrastructure)
+
+---
+
+## Layer 4: Reports & Intel
+
+**Location:** `/Users/openclaw_admin/.openclaw/workspace/reports/`
+
+**Generated By:** Automated research agents (spawned by Richie)
+
+**Current Reports:**
+- `hermes-agent-analysis-2026-03-11.md`
+- `qwen35-local-deployment-guide-2026-03-11.md`
+- `openclaw-intel-weekly-2026-03-11.md`
+
+**Naming Convention:** `{topic}-{descriptor}-{YYYY-MM-DD}.md`
+
+---
+
+## Layer 5: Skills & Tools
+
+**System Skills:** `/usr/local/lib/node_modules/openclaw/skills/`
+**Custom Skills:** `~/.openclaw/skills/`
+
+**Key Skills:**
+- `healthcheck/` — Security auditing
+- `skill-guard/` — Pre-install security scanning
+- Custom skills created for specific agent functions
+
+---
+
+## Dashboard Feature Requirements
+
+### 1. Task Boards (Kanban)
+**Data Source:** Supabase `todos` table  
+**Real-Time:** Yes (Supabase Realtime subscriptions)
+
+**Features:**
+- Drag-drop between columns (todo → doing → done)
+- Create new boards dynamically
+- Assign tasks to agents (dropdown: Marrs, Richie, Carol, Sammy, Darren, DocBot)
+- Delete boards with cascade (delete all tasks on that board)
+- Persist board order and state
+- Color-code by assigned agent
+
+**Technical:**
+- Use `@supabase/supabase-js` for real-time subscriptions
+- `supabase.from('todos').on('*', callback)` for live updates
+- Optimistic UI updates for drag-drop
+
+---
+
+### 2. Memory Search
+**Data Source:** `memory/*.md` + `MEMORY.md` (file system)  
+**Real-Time:** No (poll every 30 seconds or manual refresh)
+
+**Features:**
+- Full-text search across all markdown files
+- Filter by date range
+- Filter by type (decisions, lessons, contacts, etc.)
+- Preview snippet with highlight
+- Click to view full entry
+
+**Technical:**
+- Client-side search (fuse.js or similar)
+- Fetch files via HTTP if served, or parse if local
+- Index on load for performance
+
+---
+
+### 3. Protocol Viewer
+**Data Source:** `protocols/*.md` (file system)  
+**Real-Time:** No (static content)
+
+**Features:**
+- List all protocols with category filtering
+- Markdown rendering with syntax highlighting
+- Version tracking (if implemented)
+- Copy to clipboard
+- Print-friendly view
+
+**Technical:**
+- `marked.js` for markdown rendering
+- Static file listing (or pre-indexed)
+
+---
+
+### 4. Daily Notes Editor
+**Data Source:** `memory/YYYY-MM-DD.md` (file system)  
+**Real-Time:** No (daily refresh)
+
+**Features:**
+- Calendar view to select date
+- View any day's notes
+- Simple editing (optional — read-only is fine for MVP)
+- Markdown preview
+
+**Technical:**
+- Generate date picker
+- Fetch specific day's file
+- Render markdown
+
+---
+
+### 5. Report Archive
+**Data Source:** `reports/*.md` (file system)  
+**Real-Time:** No (static)
+
+**Features:**
+- List all reports by date
+- Filter by type (analysis, deployment, intel)
+- Search within reports
+- Download/share buttons
+
+---
+
+### 6. Agent Status Panel (Future)
+**Data Source:** OpenClaw API (when available)  
+**Real-Time:** Yes
+
+**Features:**
+- Show which agents are active
+- Recent activity log
+- Quick spawn buttons ("Spawn Carol for content")
+
+---
+
+## Technical Stack
+
+### Core Technologies
+| Component | Choice | Reason |
+|-----------|--------|--------|
+| **Framework** | Vanilla HTML/CSS/JS | No dependencies, easy to maintain, fast |
+| **Database Client** | `@supabase/supabase-js` | Real-time subscriptions, official SDK |
+| **Markdown** | `marked.js` | Industry standard, lightweight |
+| **Drag-Drop** | SortableJS OR native HTML5 | Native preferred for simplicity |
+| **Search** | Fuse.js OR lunr.js | Client-side fuzzy search |
+| **Styling** | CSS custom properties | Dark theme, easy theming |
+
+### Design System
+**Colors:**
+```css
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-card: #16161f;
+  --bg-hover: #1c1c28;
+  --text-primary: #f0f0f5;
+  --text-secondary: #a0a0b0;
+  --text-muted: #6a6a7a;
+  --accent: #69fccb;
+  --accent-dark: #4de0ad;
+  --border: #2a2a3a;
+  --border-light: #3a3a4a;
+  --radius: 16px;
+}
+```
+
+**Typography:**
+- **UI Font:** Inter (system fallback: -apple-system, BlinkMacSystemFont)
+- **Heading Font:** Space Grotesk (system fallback: sans-serif)
+- **Code Font:** SF Mono, Monaco, monospace
+
+**Layout:**
+- Responsive grid (CSS Grid for desktop, flex for mobile)
+- Mobile-first breakpoints
+- Max-width: 1400px for content
+
+---
+
+## Integration Points
+
+### How Richie Reads Data
+```javascript
+// Supabase (structured data)
+const { data: todos } = await supabase
+  .from('todos')
+  .select('*')
+  .eq('assigned_to', 'Marrs');
+
+// Markdown files (unstructured data)
+const memoryContent = await fetch('./memory/2026-03-11.md').then(r => r.text());
+```
+
+### How Richie Writes Data
+```javascript
+// Supabase
+await supabase.from('todos').insert({
+  task: 'New task',
+  status: 'todo',
+  assigned_to: 'Richie',
+  board_id: 'board-123'
+});
+
+// Markdown (via filesystem)
+// Richie uses Node.js fs module to write files
+// Dashboard reads via HTTP or file API
+```
+
+### Bidirectional Sync Strategy
+1. **Supabase:** Real-time subscriptions push updates to dashboard immediately
+2. **Markdown files:** Dashboard polls every 30 seconds OR manual refresh
+3. **Dashboard edits:** Write to Supabase/filesystem, Richie sees changes on next read
+
+---
+
+## Performance Requirements
+
+| Metric | Target | Notes |
+|--------|--------|-------|
+| Initial load | < 2 seconds | Bundle size < 500KB |
+| Task board drag | 60fps | No jank, smooth animations |
+| Search response | < 100ms | Client-side, indexed |
+| Real-time sync | < 500ms | Supabase websocket latency |
+| Mobile render | < 3 seconds | Simplified view acceptable |
+
+---
+
+## Security Model
+
+1. **Supabase:** Service role key has full access; RLS enabled but bypassed by service key
+2. **File Access:** Dashboard must be served from same domain or use appropriate CORS
+3. **Sensitive Data:** `.secrets/` folder excluded from git; dashboard should not expose this
+4. **Authentication:** Currently none (local use); future: consider basic auth or session tokens
+
+---
+
+## Deliverables
+
+**Single HTML file:** `dashboard.html` (or split if cleaner)
+**Location:** `/Users/openclaw_admin/.openclaw/workspace/projects/mission-control-v4/`
+
+**Minimum Viable Features:**
+1. ✅ Task boards with drag-drop (Supabase real-time)
+2. ✅ Create/delete boards
+3. ✅ Assign tasks to agents
+4. ✅ Memory search (basic)
+5. ✅ Protocol viewer (list + read)
+
+**Nice-to-Have:**
+- Daily notes calendar view
+- Report archive browser
+- Agent status panel
+- Knowledge graph visualization
+
+---
+
+## Questions for Clarification
+
+Before building, confirm:
+
+1. **Single file or split?** (HTML/CSS/JS combined vs separate files)
+2. **How to serve files?** (Local file://, python http.server, or built-in OpenClaw?)
+3. **Markdown file access method?** (HTTP fetch assumes server; file API requires different approach)
+4. **Authentication needed?** (Currently local-only, but consider future access)
+5. **Priority order?** (Task boards first, then memory search, etc.)
+
+---
+
+## Resources
+
+- **OpenClaw Docs:** https://docs.openclaw.ai/
+- **Supabase JS Client:** https://supabase.com/docs/reference/javascript
+- **Marked.js:** https://marked.js.org/
+- **Current Dashboard:** `/Users/openclaw_admin/.openclaw/workspace/projects/mission-control-v4/dashboard.html`
+
+---
+
+*Prepared by Richie (AI Coordinator, Polynize Labs) for Opus (Development Agent)*  
+*Questions? Forward to marrs@polynize.io or ask in Telegram*
