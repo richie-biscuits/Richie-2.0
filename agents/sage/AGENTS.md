@@ -11,7 +11,7 @@ You're Sage, and you've just been given a production content pipeline. Here's ev
 Content moves through these stages:
 
 ```
-extracted → drafted → review → approved → scheduled → sent
+extracted → drafted → review → approved → sent
 ```
 
 Marrs creates ideas → you turn them into finished content → Marrs approves → you publish.
@@ -137,7 +137,7 @@ supabase_patch('content_pieces',
 ```python
 supabase_patch('content_pieces',
     f'id=eq.{row_id}',
-    {'draft_text': 'Your caption, hook text, hashtags...', 'status': 'drafted'})
+    {'draft_text': 'Your caption, hook text, hashtags...', 'status': 'drafted', 'format': 'video', 'pillar': 'daily_openclaw'})
 ```
 
 ### Step 3 — Platform Mapping (Automatic)
@@ -286,14 +286,70 @@ def create_mc_task(title, description='', board_id='sage', assigned_to='Sage'):
 
 ---
 
+---
+
+## ⚠️ EXACT FIELD VALUES — Use These Exactly
+
+**Common mistakes that break the UI:**
+- ❌ `status='draft'` → ✅ `status='drafted'` (full word with 'ed')
+- ❌ `pillar='1'` or `'Daily OpenClaw'` → ✅ `pillar='daily_openclaw'` (kebab-case ID)
+- ❌ `format='video-script'` or `'text'` when it's actually a video → ✅ `format='video'`
+
+### Status Values (use exactly)
+| Status | When to use |
+|--------|-------------|
+| `extracted` | Marrs just created the idea |
+| `drafted` | You have written the copy (or set image_url for image posts) |
+| `review` | Marrs is reviewing / requested changes |
+| `approved` | Marrs approved AND `scheduled_at` is set |
+| `sent` | Successfully published to all platforms |
+| `dismissed` | Rejected |
+
+### Pillar Values (use exactly — IDs, not labels)
+| Pillar ID | Label | Format |
+|-----------|-------|--------|
+| `daily_openclaw` | Daily OpenClaw | video |
+
+### Format Values (use exactly)
+| Format | Meaning |
+|--------|---------|
+| `video` | Video content (Daily OpenClaw) |
+| `image` | Image + text post |
+| `text` | Text-only post (X, LinkedIn) |
+
+### Platform Auto-Mapping (don't set manually — MC does it)
+| Format | Platforms |
+|--------|-----------|
+| `video` | YouTube Shorts, Instagram, TikTok |
+| `image` | LinkedIn, Instagram, X, TikTok |
+| `text` | X, LinkedIn |
+
+### When Creating a Content Piece (supabase_post)
+Always include these fields when creating new rows:
+
+```python
+supabase_post('content_pieces', {
+    'title': 'Day 24: Your Title Here',
+    'brief': 'Direction from Marrs...',
+    'pillar': 'daily_openclaw',       # exact ID
+    'format': 'video',                # exact value
+    'status': 'drafted',              # not 'draft'
+    'created_by': 'sage',             # who created it
+    'created_at': datetime.now(datetime.UTC).isoformat()
+})
+```
+
+---
+
 ## Key Rules
 
-1. **Never publish without `scheduled_at` set by Marrs** — that's his signal he's reviewed and approved
-2. **Always respect the brief** — Marrs's notes in `brief` are direction, not suggestions
-3. **One piece at a time** — process in order (`created_at ASC`)
-4. **Fill in all required fields** — don't leave `draft_text` empty
-5. **Platform mapping is format-based** — don't override `target_platforms` manually
-6. **Track your work** — log what you draft in `memory/sage-drafts/daily-YYYY-MM-DD.md`
+1. **Use exact status strings** — `'drafted'` not `'draft'`
+2. **Use exact pillar IDs** — `'daily_openclaw'` not `'1'` or `'Daily OpenClaw'`
+3. **Use exact format values** — `'video'`, `'image'`, or `'text'` only
+4. **Never publish without `scheduled_at` set by Marrs** — that's his signal he's reviewed and approved
+5. **Always respect the brief** — Marrs's notes in `brief` are direction, not suggestions
+6. **One piece at a time** — process in order (`created_at ASC`)
+7. **Track your work** — log what you draft in `memory/sage-drafts/daily-YYYY-MM-DD.md`
 
 ---
 
