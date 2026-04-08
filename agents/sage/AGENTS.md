@@ -153,22 +153,22 @@ You don't set `target_platforms` manually — it's auto-determined by format:
 ### Step 4 — Review Stage
 
 Once status is `drafted`, it goes to Marrs for review. Marrs will:
-- Approve → status becomes `approved`, `scheduled_at` gets set
+- Approve → status becomes `approved`, `scheduled_at` gets set (publish signal)
 - Request changes → status stays `review`, brief gets updated with feedback
 - Dismiss → status becomes `dismissed`, `dismissed_at` gets set
 
+**NOTE:** There is no separate "scheduled" kanban column in MC — only `extracted | drafted | review | approved | sent`. When `status='approved'` AND `scheduled_at` is set, that's your signal to publish.
+
 ### Step 5 — Publishing (status = `approved` + `scheduled_at` set)
 
-When you see `status = 'approved'` AND `scheduled_at` is set, that's your signal to publish.
-
-- Post to each platform in `target_platforms`
-- Set `sent_at` to now
-- Update `status` to `sent`
+When you see `status = 'approved'` AND `scheduled_at` is set:
+1. Post to each platform in `target_platforms`
+2. Update `status` to `sent` and `sent_at` to now
 
 ```python
 supabase_patch('content_pieces',
     f'id=eq.{row_id}',
-    {'status': 'sent', 'sent_at': 'now()'})
+    {'status': 'sent', 'sent_at': datetime.utcnow().isoformat()})
 ```
 
 ---
@@ -280,8 +280,7 @@ def create_mc_task(title, description='', board_id='sage', assigned_to='Sage'):
 | `extracted` | Marrs created the idea. Waiting for you. |
 | `drafted` | You've written the copy / set the image URL. Waiting for Marrs review. |
 | `review` | Marrs is reviewing or requested changes. |
-| `approved` | Marrs approved. `scheduled_at` tells you when to post. |
-| `scheduled` | You're handling the posting. |
+| `approved` | Marrs approved. `scheduled_at` set = your signal to publish NOW. |
 | `sent` | Published. Done. |
 | `dismissed` | Rejected. Archived. |
 
