@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-04-10T23:08:20+11:00",
+  "generated_by": "Richie (auto-updated hourly)",
+  "reports": {
+    "latest_intel_brief": null,
+    "rosie_latest": null,
+    "sage_latest": null,
+    "scarlett_latest": null,
+    "dash_latest": null
+  },
+  "moonshot": {
+    "position": "/Users/openclaw_admin/.openclaw/workspace/moonshot/position-log.md",
+    "research_data": "/Users/openclaw_admin/.openclaw/workspace/moonshot/research/btc_correlation_dataset.csv",
+    "market_brief": "/Users/openclaw_admin/.openclaw/workspace/moonshot/training/moonshot-market-brief.md",
+    "monitor_script": "/Users/openclaw_admin/.openclaw/workspace/scripts/moonshot-aggressive-monitor.py"
+  },
+  "polynize": {
+    "lead_listener": "/Users/openclaw_admin/.openclaw/workspace/scripts/lead-realtime.js"
+  },
+  "memory": {
+    "chronicles": "/Users/openclaw_admin/.openclaw/workspace/Chronicles.md",
+    "memory": "/Users/openclaw_admin/.openclaw/workspace/MEMORY.md"
+  },
+  "system": {
+    "quick_reference": "/Users/openclaw_admin/.openclaw/workspace/mission-control-quick-reference.md",
+    "integration_report": "/Users/openclaw_admin/.openclaw/workspace/reports/workspace-file-integration-report.md"
+  }
+}
