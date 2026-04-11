@@ -3,8 +3,11 @@
 ## Project Goal
 Research leads, market trends, and competitors for AI agent services.
 
+## Research Notes — 2026-04-11
+- [Market Research]: Web search still blocked (Brave API key needed). No fresh competitor pricing or Melbourne market data obtained this cycle. Note: HN trending story today — France launching government Linux transition — could signal local govt AI adoption trends worth monitoring.
+
 ## Recent Activity
-- 2026-04-10: Rosie — Initial research cycle
+- 2026-04-11: Rosie — Cross-project research cycle
 
 ## Next Actions
 - [ ] Configure web search API for competitor pricing research

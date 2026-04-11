@@ -3,8 +3,11 @@
 ## Project Goal
 Extract and install cognition frameworks into AI agents.
 
+## Research Notes — 2026-04-11
+- [Agent Attribution]: Linux kernel now has official AI contributor guidance — uses "Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]" tags for AI contributions. First major open-source project to formalize AI agent attribution. This formalization could influence how agent cognition/framework attribution gets documented. (Source: torvalds/linux kernel docs)
+
 ## Recent Activity
-- 2026-04-10: Rosie — Initial research cycle, framework analysis
+- 2026-04-11: Rosie — Cross-project research cycle
 
 ## Next Actions
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)

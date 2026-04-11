@@ -3,8 +3,11 @@
 ## Project Goal
 Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
+## Research Notes — 2026-04-11
+- [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
+
 ## Recent Activity
-- 2026-04-10: Rosie — Initial research cycle
+- 2026-04-11: Rosie — Cross-project research cycle
 
 ## Next Actions
 - [ ] Set up web search API (Brave API key needed) to enable ongoing content trend monitoring

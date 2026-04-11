@@ -3,8 +3,11 @@
 ## Project Goal
 Research agent build patterns and tools.
 
+## Research Notes — 2026-04-11
+- [Agent Attribution]: Linux kernel now has official AI contributor guidance — uses "Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]" tags for AI contributions. This formalizes how agent contributions get documented. Relevant for PAM build patterns. (Source: torvalds/linux kernel docs)
+
 ## Recent Activity
-- 2026-04-10: Rosie — Initial research cycle, found MCP vs Skills architecture insight
+- 2026-04-11: Rosie — Cross-project research cycle, found MCP vs Skills architecture insight
 
 ## Next Actions
 - [ ] Apply "knowledge layer + connector layer" pattern to PAM tool architecture (Rosie)
