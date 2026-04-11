@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Stack Report — Polynize</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0d0d0f;
+            color: #f4f4f4;
+            line-height: 1.6;
+            padding: 0;
+        }
+        
+        .email-wrapper {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #111114;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d0f 100%);
+            padding: 40px 40px 30px;
+            border-bottom: 1px solid #222228;
+        }
+        
+        .logo {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 24px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e8e8f0;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            color: #888;
+            font-weight: 400;
+        }
+        
+        .meta-bar {
+            background: #16161a;
+            padding: 16px 40px;
+            border-bottom: 1px solid #222228;
+            display: flex;
+            gap: 32px;
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .meta-bar span { color: #555; }
+        .meta-bar strong { color: #f4f4f4; font-weight: 500; }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            font-size: 15px;
+            color: #aaa;
+            margin-bottom: 36px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #222228;
+        }
+        
+        .intro strong {
+            color: #f4f4f4;
+        }
+        
+        h2 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        
+        h2.first { margin-top: 0; }
+        
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f4f4f4;
+            margin-bottom: 16px;
+            margin-top: 28px;
+        }
+        
+        .platform-card {
+            background: #16161a;
+            border: 1px solid #222228;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .platform-card .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .platform-card h3 {
+            margin-top: 0;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        
+        .platform-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .tag-core { background: #1a3a2a; color: #4ade80; }
+        .tag-power { background: #2a1a3a; color: #a78bfa; }
+        .tag-infra { background: #1a2a3a; color: #60a5fa; }
+        .tag-orchestrate { background: #3a2a1a; color: #fb923c; }
+        
+        .platform-card .description {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+        
+        .platform-card .verdict {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .verdict-label {
+            font-weight: 600;
+            color: #888;
+            font-style: normal;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+        
+        th {
+            text-align: left;
+            padding: 10px 12px;
+            background: #1e1e24;
+            color: #888;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #2a2a32;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #1a1a1e;
+            color: #ccc;
+            vertical-align: top;
+        }
+        
+        tr:last-child td { border-bottom: none; }
+        
+        td:first-child { color: #f4f4f4; font-weight: 500; }
+        
+        .use-case-row td:first-child { color: #888; font-weight: 400; }
+        
+        .highlight { color: #4ade80; }
+        .caution { color: #fbbf24; }
+        .avoid { color: #f87171; }
+        
+        .decision-box {
+            background: linear-gradient(135deg, #1a2a1a 0%, #162016 100%);
+            border: 1px solid #2a3a2a;
+            border-radius: 10px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        
+        .decision-box h3 {
+            color: #4ade80;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .decision-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid #222;
+            font-size: 14px;
+        }
+        
+        .decision-item:last-child { border-bottom: none; }
+        
+        .decision-item .problem {
+            color: #aaa;
+            font-weight: 600;
+        }
+        
+        .decision-item .solution {
+            color: #e8e8e8;
+        }
+        
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #555;
+            margin: 32px 0 16px;
+        }
+        
+        .delta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .delta-item {
+            background: #16161a;
+            border: 1px solid #222228;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        
+        .delta-item .platform {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .delta-item .change {
+            font-size: 13px;
+            color: #f4f4f4;
+            margin-bottom: 4px;
+        }
+        
+        .delta-item .note {
+            font-size: 12px;
+            color: #555;
+        }
+        
+        .bottom-line {
+            background: #0d0d0f;
+            border-top: 1px solid #222228;
+            padding: 32px 40px;
+        }
+        
+        .bottom-line h2 {
+            margin-top: 0;
+        }
+        
+        .bottom-line p {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.7;
+        }
+        
+        .bottom-line strong { color: #f4f4f4; }
+        
+        .footer {
+            text-align: center;
+            padding: 24px 40px;
+            font-size: 12px;
+            color: #444;
+        }
+        
+        @media (max-width: 600px) {
+            .content, .meta-bar, .header, .bottom-line { padding-left: 24px; padding-right: 24px; }
+            .delta-grid { grid-template-columns: 1fr; }
+            .decision-item { grid-template-columns: 1fr; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="header">
+            <div class="logo">Polynize Agentic</div>
+            <h1>Agentic Stack Comparison</h1>
+            <div class="subtitle">Platform-agnostic infrastructure intelligence for client proposals</div>
+        </div>
+        
+        <div class="meta-bar">
+            <div><span>Week of:</span> <strong>8–14 April 2026</strong></div>
+            <div><span>Prepared by:</span> <strong>Rosie</strong></div>
+            <div><span>Version:</span> <strong>1.0</strong></div>
+        </div>
+        
+        <div class="content">
+            <p class="intro">
+                <strong>Hi, I'm <span style="color: #60a5fa; background: rgba(96, 165, 250, 0.12); padding: 2px 8px; border-radius: 4px; font-weight: 700;">Rosie</span>.</strong> I'm Polynize's Research & Intelligence Agent. Every week I pull together this report to help the team stay across the rapidly evolving agentic infrastructure landscape.
+            </p>
+            <p class="intro" style="margin-top: 16px;">
+                <strong>The problem we're solving:</strong> Marrs is seeing that <strong>OpenClaw isn't the right tool for every client problem</strong>. Different platforms have different strengths — and we need to be able to identify fast which stack is right for each new client that comes through the door. This report is our intelligence layer for that decision.
+            </p>
+            <p class="intro" style="margin-top: 16px; margin-bottom: 0; border-bottom: none;">
+                <strong>What we track:</strong> Platform capabilities, pricing shifts, new features, community sentiment, and real-world use cases. <strong>Our differentiator</strong> is the cognition layer we install on top — world-class thinking, platform-agnostic — but we need to know which platform to build on in the first place. That's what this report is for.
+            </p>
+            
+            <h2 class="first">Platform Profiles</h2>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>OpenClaw</h3>
+                        <div style="font-size: 13px; color: #888;">Our core orchestration layer</div>
+                    </div>
+                    <span class="platform-tag tag-orchestrate">Orchestration</span>
+                </div>
+                <p class="description">
+                    Multi-agent coordination platform running locally or cloud. Our primary build environment — where we install cognition, connect skills, and coordinate teams. Runs on Mac Mini, cloud VM, or dedicated hardware.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>Self-hosted (free). Cloud hosting from ~<strong style="color:#f4f4f4;">$17/mo</strong> on AWS Lightsail (basic VM). No per-seat or per-agent licensing.</td></tr>
+                    <tr><td>Key strength</td><td>Full control, multi-agent teams, skill ecosystem, local execution</td></tr>
+                    <tr><td>Key limitation</td><td>Requires setup; not a managed SaaS</td></tr>
+                    <tr><td>Best for</td><td>Complex multi-agent workflows, privacy-sensitive work, custom builds</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> Our primary build environment. Where we install the cognition layer and coordinate agent teams.</p>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>Perplexity Computer</h3>
+                        <div style="font-size: 13px; color: #888;">Autonomous web research agent</div>
+                    </div>
+                    <span class="platform-tag tag-power">Research / Reasoning</span>
+                </div>
+                <p class="description">
+                    Perplexity's autonomous agent that can browse the web, interact with applications, and execute complex research tasks end-to-end. Their API also exposes agent endpoints supporting multiple frontier models (including OpenAI models). Category-defining for research — it's to web intelligence what a senior analyst is to due diligence.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>API: usage-based per token. Pro subscription (~$20/mo) for Consumer access. Enterprise pricing TBC.</td></tr>
+                    <tr><td>Key strength</td><td>Best-in-class web research, autonomous browsing, real-time information synthesis, source filtering, multi-model support via API</td></tr>
+                    <tr><td>Key limitation</td><td>Closed platform; limited customization beyond API; focus on research only</td></tr>
+                    <tr><td>Best for</td><td>Deep market research, competitor analysis, investment due diligence, real-time data gathering</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> Plug into OpenClaw as the research module for any client project. We install cognition on top so it knows <em>how</em> to research like an expert in that domain.</p>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>Claude Managed Agents</h3>
+                        <div style="font-size: 13px; color: #888;">Anthropic's autonomous agent feature — we monitor closely</div>
+                    </div>
+                    <span class="platform-tag tag-power">Autonomous Agents</span>
+                </div>
+                <p class="description">
+                    Claude Managed Agents is Anthropic's alpha feature that lets Claude run autonomously with tool use — browsing, coding, file operations, and multi-step task completion without human intervention at each step. Sonnet 4 remains the workhorse model. Opus 4 for deep reasoning. This is the feature we track as it develops — it could shift the competitive landscape significantly.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>Claude 3.5 Sonnet: ~$3/input + ~$15/output million tokens. Opus 4: ~$15/$75. Managed Agents: usage-based (alpha — pricing TBC when GA).</td></tr>
+                    <tr><td>Key strength</td><td>Best-in-class reasoning + autonomous execution. Long context (200K). Safety alignment built in. Sonnet is exceptional value for most tasks.</td></tr>
+                    <tr><td>Key limitation</td><td>Managed Agents still alpha; closed model; walled gardens emerging (Anthropic has cut off OpenClaw connectors); expensive at scale for Opus</td></tr>
+                    <tr><td>Best for</td><td>Complex reasoning, document analysis, autonomous task execution, coding, strategic thinking, content creation</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> Primary intelligence model for most builds. Our cognition layer tells Claude <em>how to think</em> about the specific domain — not just what to do. As Managed Agents matures, this becomes an increasingly powerful build target.</p>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>n8n</h3>
+                        <div style="font-size: 13px; color: #888;">Workflow automation backbone</div>
+                    </div>
+                    <span class="platform-tag tag-infra">Automation</span>
+                </div>
+                <p class="description">
+                    Open-source workflow automation. Connects APIs, databases, and AI services into triggered pipelines. Self-hosted or cloud. Strong community. Good for repetitive operational tasks that need to fire reliably on schedule.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>Free self-hosted. Cloud: from ~€20/mo. Enterprise: custom pricing.</td></tr>
+                    <tr><td>Key strength</td><td>Massive integration library (300+ apps), workflow triggers, reliability</td></tr>
+                    <tr><td>Key limitation</td><td>Not a thinking agent — follows fixed pipelines; needs OpenClaw or similar for complex decisions</td></tr>
+                    <tr><td>Best for</td><td>CRM syncs, notification pipelines, data transformation, scheduled report generation</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> The automation backbone under OpenClaw agents. Agents make decisions, n8n executes the fixed workflows those decisions trigger.</p>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>Nemoclaw</h3>
+                        <div style="font-size: 13px; color: #888;">NVIDIA's secure OpenClaw variant</div>
+                    </div>
+                    <span class="platform-tag tag-orchestrate">Orchestration</span>
+                </div>
+                <p class="description">
+                    NVIDIA Nemoclaw is an open-source stack that adds <strong style="color:#f4f4f4;">privacy and security controls to OpenClaw</strong>. Uses NVIDIA OpenShell to enforce policy-based guardrails on agent behaviour and data handling. Runs high-performance open models like NVIDIA Nemotron locally for enhanced privacy and cost efficiency. One-command install. Early preview.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>Open-source, free to install. Local inference uses your own hardware. Cloud model routing available via privacy router.</td></tr>
+                    <tr><td>Key strength</td><td>Security/privacy guardrails on OpenClaw; local model inference option; NVIDIA ecosystem integration; single-command deploy</td></tr>
+                    <tr><td>Key limitation</td><td>Early preview stage; requires NVIDIA hardware/software stack; less community momentum than vanilla OpenClaw</td></tr>
+                    <tr><td>Best for</td><td>Enterprise clients requiring strict data privacy; regulated industries; clients who want OpenClaw but with security guarantees</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> Relevant for enterprise deals where privacy and data governance are hard requirements. Builds on OpenClaw — we can deploy Nemoclaw stacks with our cognition layer on top.</p>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div>
+                        <h3>Base44 Superagents</h3>
+                        <div style="font-size: 13px; color: #888;">No-code agent builder — consumer/SMB focus</div>
+                    </div>
+                    <span class="platform-tag tag-power">No-Code Agents</span>
+                </div>
+                <p class="description">
+                    Base44 Superagents are no-code personal AI agents that live in WhatsApp, Telegram, Slack, or browser. No Docker, servers, SSH, or config files required. They take real actions — sending messages, following up with leads, pulling reports, reacting to events — and remember context across sessions. Connects to Google Calendar, Gmail, Drive, Discord, Slack, socials, CRMs, and more via built-in connectors.
+                </p>
+                <table>
+                    <tr><td style="width: 110px;">Pricing</td><td>Free tier available. Pro plans from ~$30/mo. Enterprise plans available.</td></tr>
+                    <tr><td>Key strength</td><td>Zero setup friction; works where clients already work (WhatsApp, Slack); proactive automation; built-in connectors; evolves and remembers</td></tr>
+                    <tr><td>Key limitation</td><td>No local execution; walled garden; limited customisation beyond connectors; not designed for complex multi-agent orchestration</td></tr>
+                    <tr><td>Best for</td><td>Quick personal productivity agents; SMB automation; clients who want agents without technical setup</td></tr>
+                </table>
+                <p class="verdict"><span class="verdict-label">Polynize role:</span> Good for entry-level client demos and simple personal automation use cases. For anything requiring deep customisation, complex workflows, or enterprise scale — we migrate to OpenClaw + our cognition layer.</p>
+            </div>
+            
+            <h2>Decision Matrix — Which Stack for Which Problem</h2>
+            
+            <div class="decision-box">
+                <h3>Quick Decision Guide</h3>
+                
+                <div class="decision-item">
+                    <div class="problem">Due diligence on an investment</div>
+                    <div class="solution">Claude (intelligence) + Perplexity Computer (research) + OpenClaw (coordination) + our cognition layer</div>
+                </div>
+                <div class="decision-item">
+                    <div class="problem">Social media management & posting</div>
+                    <div class="solution">OpenClaw (orchestration) + n8n (scheduling/publishing) + Claude (copy) + our content cognition</div>
+                </div>
+                <div class="decision-item">
+                    <div class="problem">CRM pipeline management & lead follow-up</div>
+                    <div class="solution">OpenClaw + n8n (CRM triggers) + Claude (reasoning) + our sales cognition</div>
+                </div>
+                <div class="decision-item">
+                    <div class="problem">Real-time market intelligence</div>
+                    <div class="solution">Perplexity Computer (web research) + Claude (analysis) + our market cognition</div>
+                </div>
+                <div class="decision-item">
+                    <div class="problem">Internal operations automation</div>
+                    <div class="solution">OpenClaw + n8n (workflows) + our ops cognition</div>
+                </div>
+                <div class="decision-item">
+                    <div class="problem">Complex multi-agent research project</div>
+                    <div class="solution">OpenClaw (team coordination) + Claude + Perplexity + our research cognition framework</div>
+                </div>
+            </div>
+            
+            <h2>This Week's Delta</h2>
+            
+            <div class="delta-grid">
+                <div class="delta-item">
+                    <div class="platform">OpenClaw</div>
+                    <div class="change">No major release notes this week</div>
+                    <div class="note">Focus: agent stability and Multi-Agency protocol updates in alpha</div>
+                </div>
+                <div class="delta-item">
+                    <div class="platform">Perplexity</div>
+                    <div class="change">Computer agent capability expanding</div>
+                    <div class="note">Now handling multi-step research tasks with fewer steps required</div>
+                </div>
+                <div class="delta-item">
+                    <div class="platform">Claude</div>
+                    <div class="change">Managed Agents in alpha</div>
+                    <div class="note">Anthropic continuing to build out autonomous agent capabilities. Pricing TBC.</div>
+                </div>
+                <div class="delta-item">
+                    <div class="platform">n8n</div>
+                    <div class="change">Workflow improvements</div>
+                    <div class="note">AI Nodes being expanded; better Claude integration in beta</div>
+                </div>
+            </div>
+            
+            <h2>Community Sentiment This Week</h2>
+            
+            <table>
+                <tr><th>Platform</th><th>What We're Hearing</th><th>Signal</th></tr>
+                <tr>
+                    <td>OpenClaw</td>
+                    <td>Strong in local/enterprise communities. ClawHub growing as skill marketplace. Some frustration with cloud deployment UX.</td>
+                    <td><span class="highlight">Positive</span></td>
+                </tr>
+                <tr>
+                    <td>Perplexity Computer</td>
+                    <td>Getting attention as category-defining research agent. Developers exploring as an API layer. Limited customization is the main complaint.</td>
+                    <td><span class="highlight">Very positive</span></td>
+                </tr>
+                <tr>
+                    <td>Claude</td>
+                    <td>Growing managed agents buzz. Sonnet 4 widely adopted. Opus 4 for premium tasks. Concerns about walled garden becoming more real.</td>
+                    <td><span class="highlight">Positive</span></td>
+                </tr>
+                <tr>
+                    <td>n8n</td>
+                    <td>Strong adoption in SMB/indie space. Enterprise interest growing. Community active and responsive.</td>
+                    <td><span class="highlight">Positive</span></td>
+                </tr>
+                <tr>
+                    <td>Base44</td>
+                    <td>Good for simple use cases, but users hitting walls and looking for more. Many searching for "Base44 alternative."</td>
+                    <td><span class="caution">Mixed</span></td>
+                </tr>
+            </table>
+            
+            <h2>Best Use Cases by Platform</h2>
+            
+            <div class="section-label">OpenClaw — Best For</div>
+            <table>
+                <tr><td>Multi-agent team coordination (lead + specialist agents)</td></tr>
+                <tr><td>Local/private execution (no data leaves the machine)</td></tr>
+                <tr><td>Custom cognition installation per client</td></tr>
+                <tr><td>Complex workflows requiring judgment calls</td></tr>
+                <tr><td>Long-running research and analysis projects</td></tr>
+            </table>
+            
+            <div class="section-label">Perplexity Computer — Best For</div>
+            <table>
+                <tr><td>Real-time competitive research</td></tr>
+                <tr><td>Investment due diligence (web-scraping public data)</td></tr>
+                <tr><td>Market mapping and landscape analysis</td></tr>
+                <tr><td>Trend identification across public sources</td></tr>
+            </table>
+            
+            <div class="section-label">Claude — Best For</div>
+            <table>
+                <tr><td>Complex reasoning and strategic analysis</td></tr>
+                <tr><td>Document synthesis (PDFs, decks, contracts)</td></tr>
+                <tr><td>Writing and content creation with nuance</td></tr>
+                <tr><td>Coding and technical builds</td></tr>
+            </table>
+            
+            <div class="section-label">n8n — Best For</div>
+            <table>
+                <tr><td>Scheduled report generation and distribution</td></tr>
+                <tr><td>CRM/database sync pipelines</td></tr>
+                <tr><td>Cross-app data transformation</td></tr>
+                <tr><td>Trigger-based automation (form submitted → action fired)</td></tr>
+            </table>
+            
+            <h2>What's Missing / Needs Research</h2>
+            
+            <table>
+                <tr><td style="color: #888;">Nemoclaw details</td><td>Need exact stack capabilities, pricing, and use cases. Marrs to provide details.</td></tr>
+                <tr><td style="color: #888;">AutoGen / Microsoft ecosystem</td><td>Enterprise-grade multi-agent framework. Growing in enterprise. Needs monitoring.</td></tr>
+                <tr><td style="color: #888;">CrewAI</td><td>Popular in developer community. Good for research agents. Worth tracking.</td></tr>
+                <tr><td style="color: #888;">Live pricing checks</td><td>This report uses known pricing. Automated version will pull live via Tavily search.</td></tr>
+            </table>
+        </div>
+        
+        <div class="bottom-line">
+            <h2>The Bottom Line</h2>
+            <p>
+                <strong>The architecture that wins:</strong> For any complex client problem, the answer usually involves <strong>OpenClaw as the orchestration layer</strong>, <strong>Claude as the intelligence</strong>, and our <strong>cognition layer installed on top</strong> — telling the whole system how to think like an expert in that client's domain.
+            </p>
+            <p style="margin-top: 16px;">
+                <strong>When to go deeper:</strong> Add Perplexity Computer for research-heavy problems. Add n8n for operational automation that doesn't need judgment. The stack is modular — we pick what fits.
+            </p>
+            <p style="margin-top: 16px;">
+                <strong>Our differentiator:</strong> Anyone can spin up a Claude agent. <em>We install the cognition layer that makes it think like a domain expert.</em> That's the Polynize difference — and it's platform-agnostic.
+            </p>
+        </div>
+        
+        <div class="footer">
+            Agentic Stack Comparison Report — Rosie (Polynize Research Agent) · Weekly
+        </div>
+    </div>
+</body>
+</html>
