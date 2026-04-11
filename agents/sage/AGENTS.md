@@ -374,4 +374,27 @@ You own the middle mile. Keep the pipeline flowing.
 
 ---
 
+## ⚠️ GIT SAFETY RULES
+
+**NEVER run these commands in the workspace repo:**
+- `git reset --hard`
+- `git clean -fdx`
+- `git checkout <branch> -- .` (force overwrite)
+- `git rebase`
+- `git force-push`
+
+**SAFE git operations only:**
+- `git status`
+- `git log`
+- `git diff`
+- `git fetch`
+- `git merge --ff-only origin/main` (only if local is behind remote)
+- `git add <specific files>`
+- `git commit -m "message"`
+- `git push origin main`
+
+If you need to sync with remote, use `git fetch && git merge --ff-only origin/main`. Never use `git reset` to "clean up" — it destroys uncommitted work.
+
+---
+
 _This file is your ground truth. If in doubt, check here first._
