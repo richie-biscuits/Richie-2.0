@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polynize Content Marketing Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a0f;
+      --bg-card: #16161f;
+      --text-primary: #f0f0f5;
+      --text-secondary: #a0a0b0;
+      --text-muted: #6a6a7a;
+      --mint: #69fccb;
+      --blue: #a5c1ec;
+      --gold: #f0e1b6;
+      --border: #2a2a3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 48px 0 24px;
+      color: var(--text-primary);
+    }
+
+    h3 {
+      font-size: 22px;
+      margin: 32px 0 16px;
+      color: var(--mint);
+    }
+
+    h4 {
+      font-size: 17px;
+      margin: 24px 0 12px;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    .header span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--mint);
+      text-transform: uppercase;
+    }
+
+    .header h1 {
+      margin-top: 12px;
+    }
+
+    .header .subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .metric {
+      display: inline-block;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 32px;
+      margin: 8px;
+      text-align: center;
+    }
+
+    .metric .number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .metric .label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .pillar {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .pillar h4 {
+      color: var(--mint);
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+
+    .pillar p {
+      font-size: 14px;
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .platform {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .platform h4 {
+      color: var(--mint);
+      margin: 0 0 8px;
+    }
+
+    .platform .handle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .platform ul {
+      list-style: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .platform li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .platform li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      background: var(--mint);
+      border-radius: 50%;
+    }
+
+    .workflow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .workflow-step {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .workflow-step .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--mint);
+      margin-bottom: 4px;
+    }
+
+    .workflow-step .step-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .workflow-step .step-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .arrow {
+      color: var(--mint);
+      font-size: 24px;
+    }
+
+    .hook-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .hook {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .voice-col h4 {
+      color: var(--mint);
+      margin-top: 0;
+    }
+
+    .voice-col ul {
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .voice-col li {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .voice-col .use li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mint);
+    }
+
+    .voice-col .dont li::before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: #ff6b6b;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .highlight {
+      color: var(--mint);
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    code {
+      background: var(--bg-dark);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--mint);
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .schedule-table th {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .schedule-table td {
+      color: var(--text-secondary);
+    }
+
+    .schedule-table .day {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+      
+      .pillars,
+      .platforms,
+      .hook-list,
+      .voice-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <span>Polynize Agentic</span>
+    <h1>Content Marketing Plan</h1>
+    <p class="subtitle">Living document for the Polynize 30 Days series and ongoing social content strategy</p>
+  </div>
+
+  <div class="card">
+    <h3>Series Overview</h3>
+    <p><strong>30 Days with OpenCore</strong> — Marrs documents the journey of building with OpenClaw, sharing real insights, real builds, and real results. Each video showcases one specific thing built and one key insight.</p>
+    
+    <h4>Content Pillars</h4>
+    <div class="pillars">
+      <div class="pillar">
+        <h4>01 — The Hidden Cost of Drowning</h4>
+        <p>Named, specific pain points SME founders live through. Drowning in ops work. Missing opportunities. Losing to bigger competitors.</p>
+      </div>
+      <div class="pillar">
+        <h4>02 — Named Agents, Named Jobs</h4>
+        <p>"Meet Tabatha, the deal flow agent we built for X." First-person agent introductions with personalities and specific capabilities.</p>
+      </div>
+      <div class="pillar">
+        <h4>03 — The Hiring Maths</h4>
+        <p>Cost comparisons that reframe capacity. "The sales rep you were going to hire for $90K... vs. the agent team that costs $2,500."</p>
+      </div>
+      <div class="pillar">
+        <h4>04 — Humans, Elevated</h4>
+        <p>Stories where the human is the hero. A founder reclaiming their week. A department lead who stopped being the bottleneck.</p>
+      </div>
+      <div class="pillar">
+        <h4>05 — Behind the Build</h4>
+        <p>How we think. The concept of drift. Why configuration beats tooling. Short explainer content that positions us as builders with a point of view.</p>
+      </div>
+      <div class="pillar">
+        <h4>06 — The Polynize Perspective</h4>
+        <p>Our angle on the wider AI-and-work conversation. The cognitive unit. The real bottleneck. Thought leadership without the thought-leader voice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Goals 2026</h3>
+    <div style="margin-top: 16px;">
+      <div class="metric">
+        <div class="number">10K</div>
+        <div class="label">LinkedIn (Marrs personal)</div>
+      </div>
+      <div class="metric">
+        <div class="number">25K</div>
+        <div class="label">YouTube (Polynize Labs)</div>
+      </div>
+      <div class="metric">
+        <div class="number">25K</div>
+        <div class="label">TikTok (Polynize Labs)</div>
+      </div>
+      <div class="metric">
+        <div class="number">25K</div>
+        <div class="label">Instagram (Polynize Labs)</div>
+      </div>
+      <div class="metric">
+        <div class="number">10K</div>
+        <div class="label">X/Twitter (Marrs)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Platform Strategy</h3>
+    <div class="platforms">
+      <div class="platform">
+        <h4>YouTube Shorts</h4>
+        <div class="handle">@polynize-labs</div>
+        <ul>
+          <li>Best day: Sunday 8-10 AM AEST</li>
+          <li>Same vertical format as TikTok/Reels</li>
+          <li>Cross-post from TikTok when aligned</li>
+          <li>YouTube-native captions</li>
+          <li>Dark thumbnails with mint/gold accent</li>
+        </ul>
+      </div>
+      <div class="platform">
+        <h4>TikTok</h4>
+        <div class="handle">@polynize.labs</div>
+        <ul>
+          <li>Best days: Sat, Sun, Mon 4-7 PM AEST</li>
+          <li>Vertical 9:16, captions always on</li>
+          <li>First 2 seconds must stop scroll</li>
+          <li>Keep under 45 seconds</li>
+          <li>Low-key electronic or lo-fi music</li>
+        </ul>
+      </div>
+      <div class="platform">
+        <h4>Instagram Reels</h4>
+        <div class="handle">@polynize.labs</div>
+        <ul>
+          <li>Best time: 4-6 PM AEST</li>
+          <li>Same vertical format as TikTok</li>
+          <li>Cross-post same content as TikTok</li>
+          <li>Carousels work for cost comparisons</li>
+          <li>Grid: dark backgrounds, mint accents</li>
+        </ul>
+      </div>
+      <div class="platform">
+        <h4>LinkedIn</h4>
+        <div class="handle">linkedin.com/in/marrscoiro</div>
+        <ul>
+          <li>Best day: Thursday 9 AM AEST</li>
+          <li>Marrs personal profile (not company)</li>
+          <li>Longer form is fine</li>
+          <li>Real founder voice, real client stories</li>
+          <li>No abstract thought-leader energy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Content Workflow</h3>
+    <p>Every piece of content follows this pipeline, tracked in Mission Control:</p>
+    
+    <div class="workflow">
+      <div class="workflow-step">
+        <div class="step-num">STEP 1</div>
+        <div class="step-title">Brief</div>
+        <div class="step-desc">Marrs creates brief</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 2</div>
+        <div class="step-title">Script</div>
+        <div class="step-desc">Sage writes draft script</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 3</div>
+        <div class="step-title">Record</div>
+        <div class="step-desc">Marrs records video</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 4</div>
+        <div class="step-title">Transcript</div>
+        <div class="step-desc">Upload to Mission Control</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 5</div>
+        <div class="step-title">Post Text</div>
+        <div class="step-desc">Sage writes copy</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 6</div>
+        <div class="step-title">Approve</div>
+        <div class="step-desc">Marrs reviews & approves</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 7</div>
+        <div class="step-title">Schedule</div>
+        <div class="step-desc">Sage posts via BloTato</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="workflow-step">
+        <div class="step-num">STEP 8</div>
+        <div class="step-title">Calendar</div>
+        <div class="step-desc">Add to Content Schedule</div>
+      </div>
+    </div>
+    
+    <h4>Post Structure (Video)</h4>
+    <p>Hook mirrors video hook. Structure mirrors video sections. Use section headers with colons.</p>
+    <pre style="background: var(--bg-dark); padding: 16px; border-radius: 10px; font-size: 13px; color: var(--text-secondary); overflow-x: auto;">
+🦞 Day 25 of 30 working with OpenClaw: One thing I actually built and major insight...
+
+What I built:
+[Section content]
+
+Here's the insight:
+[Section content]
+
+Head to polynize.ai/agents to [specific action].
+
+This is my Day 25. Follow along for the ride.
+
+#AI #OpenClaw #agenticai #agent #agentic</pre>
+  </div>
+
+  <div class="card">
+    <h3>Approved Hooks</h3>
+    <p>Use these, adapt them, or write new ones in the same spirit. All reinforce "human-led agent team" positioning.</p>
+    
+    <h4>Cost-Reframe Hooks</h4>
+    <div class="hook-list">
+      <div class="hook">The role you couldn't afford to hire, we just built it for $2,500.</div>
+      <div class="hook">Your next hire doesn't need a salary.</div>
+      <div class="hook">Built in a week. Works 24/7. Never asks for a raise.</div>
+      <div class="hook">The $85K salary you were going to pay, reallocated, honestly.</div>
+    </div>
+
+    <h4>Agentic Team Hooks</h4>
+    <div class="hook-list">
+      <div class="hook">You don't need a bigger team. You need a team that works while you think.</div>
+      <div class="hook">One founder. Four agents. One business that finally scales.</div>
+      <div class="hook">Stop wearing five hats. Deploy five agents and wear the one that matters.</div>
+      <div class="hook">Your agent team, ready to work, in the same tools you already live in.</div>
+    </div>
+
+    <h4>Drift & Configuration Hooks</h4>
+    <div class="hook-list">
+      <div class="hook">Most AI looks impressive and quietly misses. That's called drift.</div>
+      <div class="hook">The problem isn't that AI is bad. The problem is that nobody installed a way of thinking into it.</div>
+      <div class="hook">Cheap AI is easy. Configured AI is the unfair advantage.</div>
+      <div class="hook">Every AI tool looks the same. Ours comes with an expert installed.</div>
+    </div>
+
+    <h4>Identity & Reframe Hooks</h4>
+    <div class="hook-list">
+      <div class="hook">You're not buying AI. You're buying an expert's way of thinking, installed.</div>
+      <div class="hook">We don't build chatbots. We build cognitive teams.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Voice & Language</h3>
+    <div class="voice-grid">
+      <div class="voice-col use">
+        <h4>Always Use</h4>
+        <ul>
+          <li>Agent (not bot, not assistant)</li>
+          <li>Agentic Team</li>
+          <li>Install (not configure, program)</li>
+          <li>Deploy (not launch, release)</li>
+          <li>Service fee (not subscription)</li>
+          <li>Expert thinking</li>
+          <li>Trained on your business</li>
+          <li>Blueprint</li>
+          <li>Human lead</li>
+          <li>Drift</li>
+          <li>Specific numbers, named tools</li>
+          <li>Named agents with personalities</li>
+        </ul>
+      </div>
+      <div class="voice-col dont">
+        <h4>Never Use</h4>
+        <ul>
+          <li>Unlock, leverage, empower, game-changer</li>
+          <li>Delve, cutting-edge, robust, seamless</li>
+          <li>Chatbot, AI assistant (generic)</li>
+          <li>Replace, fire, eliminate headcount</li>
+          <li>Hosting, maintenance, subscription</li>
+          <li>Solution, platform, ecosystem, synergy</li>
+          <li>Powered by AI, AI-driven</li>
+          <li>"Imagine if..." / "What if..."</li>
+          <li>Em dashes (use commas or colons)</li>
+          <li>Vague claims without numbers</li>
+          <li>Anything implying humans replaced</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Visual Identity</h3>
+    <h4>Colour Palette</h4>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: #0a0a0f; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px;"></div>
+        <code>#0a0a0f</code>
+        <div style="font-size: 12px; color: var(--text-muted);">Background</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: #69fccb; border-radius: 8px; margin-bottom: 8px;"></div>
+        <code>#69fccb</code>
+        <div style="font-size: 12px; color: var(--text-muted);">Mint (primary)</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: #a5c1ec; border-radius: 8px; margin-bottom: 8px;"></div>
+        <code>#a5c1ec</code>
+        <div style="font-size: 12px; color: var(--text-muted);">Electric Blue</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: #f0e1b6; border-radius: 8px; margin-bottom: 8px;"></div>
+        <code>#f0e1b6</code>
+        <div style="font-size: 12px; color: var(--text-muted);">Cream/Gold (numbers)</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: #f0f0f5; border-radius: 8px; margin-bottom: 8px;"></div>
+        <code>#f0f0f5</code>
+        <div style="font-size: 12px; color: var(--text-muted);">Text Primary</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 24px;">Visual Rules</h4>
+    <ul style="list-style: none; columns: 2; gap: 16px;">
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✓ Dark backgrounds always</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✓ Mint used sparingly for emphasis</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✓ Low-poly geometric faces</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✓ Abstract thinking patterns</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✗ No robot hands or glowing brains</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✗ No stock photos of office smiles</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✗ No rainbow gradients</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);">✗ No circuit-board backgrounds</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Claims & Compliance</h3>
+    <h4>We Can Make</h4>
+    <ul style="list-style: none; columns: 2; gap: 12px;">
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span class="highlight">✓</span> "Up to 25× cheaper than hiring"</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span class="highlight">✓</span> "2–5× throughput"</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span class="highlight">✓</span> "Live in a week" (single agent)</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span class="highlight">✓</span> "Trained on your business"</li>
+    </ul>
+
+    <h4>We Cannot Make (Yet)</h4>
+    <ul style="list-style: none; columns: 2; gap: 12px;">
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span style="color: #ff6b6b;">✗</span> "Thousands trust us"</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span style="color: #ff6b6b;">✗</span> "Guaranteed ROI in 30 days"</li>
+      <li style="margin-bottom: 8px; color: var(--text-secondary);"><span style="color: #ff6b6b;">✗</span> "Replaces an entire department"</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Posting Schedule</h3>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Platform</th>
+          <th>Time (AEST)</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="day">Monday</td>
+          <td>TikTok, Instagram</td>
+          <td>4-7 PM</td>
+          <td>30 Days series</td>
+        </tr>
+        <tr>
+          <td class="day">Tuesday</td>
+          <td>—</td>
+          <td>—</td>
+          <td>Filming day</td>
+        </tr>
+        <tr>
+          <td class="day">Wednesday</td>
+          <td>LinkedIn</td>
+          <td>9 AM</td>
+          <td>Long-form founder voice</td>
+        </tr>
+        <tr>
+          <td class="day">Thursday</td>
+          <td>TikTok, Instagram</td>
+          <td>4-7 PM</td>
+          <td>30 Days series</td>
+        </tr>
+        <tr>
+          <td class="day">Friday</td>
+          <td>—</td>
+          <td>—</td>
+          <td>Planning/buffer</td>
+        </tr>
+        <tr>
+          <td class="day">Saturday</td>
+          <td>TikTok, Instagram</td>
+          <td>4-7 PM</td>
+          <td>30 Days series</td>
+        </tr>
+        <tr>
+          <td class="day">Sunday</td>
+          <td>YouTube Shorts</td>
+          <td>8-10 AM</td>
+          <td>30 Days series</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">Note: X/Twitter thread strategy TBD. Current approach posts text-only content manually.</p>
+  </div>
+
+  <div class="card">
+    <h3>CTAs & Links</h3>
+    <p>Always include relevant CTAs in posts:</p>
+    <ul style="list-style: none; columns: 2; gap: 12px; margin-top: 16px;">
+      <li style="margin-bottom: 8px;"><code>polynize.ai/agents</code> — Agent Builder (primary CTA)</li>
+      <li style="margin-bottom: 8px;"><code>polynize.ai/links</code> — Link in bio hub</li>
+      <li style="margin-bottom: 8px;"><code>polynize.ai/pricing</code> — Current pricing</li>
+      <li style="margin-bottom: 8px;"><code>polynize.io/misc/tos.pdf</code> — Terms of Service</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>Polynize Agentic Content Marketing Plan — Living Document</p>
+    <p>Last updated: <span class="highlight">April 2026</span> · Version 1.0</p>
+  </div>
+
+</body>
+</html>
