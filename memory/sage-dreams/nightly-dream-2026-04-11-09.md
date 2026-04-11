@@ -13,21 +13,21 @@
 - **Notable pattern:** Posts that ask a question or frame a "mistake most people make" consistently outperform generic advice threads.
 - **Hashtag trends:** #Leadership #Entrepreneurship #CareerAdvice #BuildInPublic
 
-### YouTube (Polynize Labs — Goal: 25K)
+### YouTube (Polynize.ai — Goal: 25K)
 - **Algorithm:** Watch time and audience retention remain king. Shorts are now competing directly with long-form for shelf space. YouTube is heavily favoring channels that post consistently (3x/week minimum to maintain momentum).
 - **What works:** Tutorial-format long videos with timestamps, "day in the life" vlogs, Shorts that link to long-form. Reaction content continues to perform.
 - **Optimal schedule:** Fri–Sun for long-form (most views), Shorts daily for algorithmic lift.
 - **Notable pattern:** Shorts that end with a hook for part 2 drive massive subscriptions. "Why I quit X" and "I spent 24 hours doing Y" formats evergreen.
 - **Engagement benchmark:** Top 3% of channels have 8–12% CTR on thumbnails.
 
-### TikTok (Polynize Labs — Goal: 25K)
+### TikTok (Polynize.ai — Goal: 25K)
 - **Algorithm:** For You page driven by completion rate + watch time + shares. Algorithm now heavily weights Saves > Shares > Comments > Likes (in that priority order).
 - **What works (from TikTok Next 2026 Trend Report):** Authenticity-first content, "cozy" aesthetic, "lo-fi life" niches, practical how-to with warm tone. Brands that humanize perform better than polished corporate content.
 - **Posting schedule:** Posting between 7–9 PM local is strongest for discovery; lunch posts (11 AM–1 PM) work for news/topic-based content.
 - **Notable pattern:** Series-based content dramatically outperforms one-offs. Creating recurring series drives follow rates and FYP eligibility.
 - **Hashtag trends:** #DayInMyLife #GetReadyWithMe #Lo-fiLife #WhatIEat #StudyTok
 
-### Instagram (Polynize Labs — Goal: 25K)
+### Instagram (Polynize.ai — Goal: 25K)
 - **Algorithm:** Recommendation-first platform now. Interest graph > social graph. For Reels: DM shares are the #1 weighted signal for distribution. Saves and watch time are top engagement signals.
 - **What works:** Original audio Reels with trending sounds, carousels with practical tips, "GRWM" (Get Ready With Me) format, "POV" storytelling. Re-sharing other content performs poorly.
 - **Key shift (2026):** SEO over hashtags — keywords in captions and profile now more important than hashtag strategy.
@@ -51,7 +51,7 @@
 ## Phase 3: Deep Dive
 **Most actionable finding: TikTok's Save-first algorithm.**
 
-TikTok's 2026 shift to weighting Saves over Likes changes the content creation playbook entirely. Saves indicate high-value, keep-it-for-later content — users are literally bookmarking to revisit. For Polynize Labs (which is likely in the creator education / tools / productivity or lifestyle niche based on the brand name and the Content Pipeline project), the implication is clear: Polynize should restructure TikTok content to deliver high-density, reference-quality clips — practical how-tos, tool breakdowns, step-by-step frameworks — formatted as standalone, reusable content rather than purely entertainment. This directly increases Saves, which compounds into FYP reach, which is the fastest path to the 25K follower goal on TikTok.
+TikTok's 2026 shift to weighting Saves over Likes changes the content creation playbook entirely. Saves indicate high-value, keep-it-for-later content — users are literally bookmarking to revisit. For Polynize.ai (which is likely in the creator education / tools / productivity or lifestyle niche based on the brand name and the Content Pipeline project), the implication is clear: Polynize should restructure TikTok content to deliver high-density, reference-quality clips — practical how-tos, tool breakdowns, step-by-step frameworks — formatted as standalone, reusable content rather than purely entertainment. This directly increases Saves, which compounds into FYP reach, which is the fastest path to the 25K follower goal on TikTok.
 
 ---
 
