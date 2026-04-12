@@ -3,11 +3,15 @@
 ## Project Goal
 Extract and install cognition frameworks into AI agents.
 
+## Research Notes — 2026-04-13
+- [Memory Architecture]: Mem0 v1.0.0 just released — hybrid vector+graph+KV architecture, +26% accuracy vs OpenAI Memory on LOCOMO benchmark, 91% faster, 90% fewer tokens. Graph memory on Pro tier ($249/mo). Key insight: no temporal fact modeling — memories timestamped at creation but no validity windows. (Source: mem0ai/mem0 GitHub, Atlan comparison)
+- [Temporal Memory]: Zep/Graphiti leads on temporal knowledge graph — stores facts with validity windows ("Kendra loves Adidas (as of March 2026)"). Scores 63.8% on LongMemEval vs Mem0's 49.0%. This temporal modeling gap is architecturally significant for cognition frameworks. (Source: Atlan.com benchmark comparison)
+
 ## Research Notes — 2026-04-11
 - [Agent Attribution]: Linux kernel now has official AI contributor guidance — uses "Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]" tags for AI contributions. First major open-source project to formalize AI agent attribution. This formalization could influence how agent cognition/framework attribution gets documented. (Source: torvalds/linux kernel docs)
 
 ## Recent Activity
-- 2026-04-11: Rosie — Cross-project research cycle
+- 2026-04-13: Rosie — Cross-project research cycle
 
 ## Next Actions
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)
