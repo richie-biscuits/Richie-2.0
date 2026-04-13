@@ -29,11 +29,11 @@ TELEGRAM_CHAT_ID = ""  # Add your chat ID
 
 # Trading parameters
 RSI_PERIOD = 14
-RSI_OVERSOLD = 35       # Buy signal threshold (aggressive)
-RSI_OVERBOUGHT = 70     # Sell signal threshold
-RSI_STRONG_SELL = 25     # Strong sell - exit immediately
+RSI_OVERSOLD = 35        # BUY signal threshold (RSI below this = oversold = accumulation opportunity)
+RSI_OVERBOUGHT = 70      # SELL signal threshold (RSI above this = overbought = distribution)
+RSI_STRONG = 25          # Strong signal threshold - extreme oversold (BUY) or overbought (SELL)
 TRADE_AMOUNT_USD = 100   # Default trade size in USD
-MAX_POSITION_SIZE = 500 # Maximum position in USD
+MAX_POSITION_SIZE = 500  # Maximum position in USD
 
 # Supabase (for logging)
 SUPABASE_URL = "https://cmqzawbdtnkynizughqq.supabase.co"
@@ -276,7 +276,14 @@ def get_market_summary():
     }
 
 def determine_signal(market_data):
-    """Determine trading signal based on RSI and momentum."""
+    """Determine trading signal based on RSI and momentum.
+    
+    RSI interpretation (inverted from traditional for this strategy):
+    - LOW RSI (< 35) = Oversold = BUY opportunity (this is an aggressive accumulator)
+    - HIGH RSI (> 70) = Overbought = SELL opportunity
+    
+    The strategy is: buy when others are fearful (low RSI), sell when greedy (high RSI).
+    """
     if not market_data or not market_data.get('price'):
         return SignalUrgency.NONE, None
     
@@ -291,15 +298,17 @@ def determine_signal(market_data):
         'action': 'HOLD'
     }
     
-    # Strong sell - RSI below 25, exit immediately
-    if rsi < RSI_STRONG_SELL:
-        signal_details['action'] = 'STRONG_SELL'
-        signal_details['reason'] = f'RSI {rsi} below strong sell threshold {RSI_STRONG_SELL}'
+    # BUY SIGNALS (RSI low = oversold = accumulation opportunity)
+    
+    # Strong buy - RSI below 25, deeply oversold - accumulate aggressively
+    if rsi < RSI_STRONG:
+        signal_details['action'] = 'STRONG_BUY'
+        signal_details['reason'] = f'RSI {rsi} deeply oversold - accumulate'
         return SignalUrgency.HIGH, signal_details
     
-    # Oversold - RSI below 35, potential buy
+    # Oversold - RSI below 35, potential buy opportunity
     if rsi < RSI_OVERSOLD:
-        if momentum > 0.5:  # Also showing positive momentum
+        if momentum > 0.5:  # Also showing positive momentum = confirmation
             signal_details['action'] = 'BUY'
             signal_details['reason'] = f'RSI {rsi} oversold with +momentum {momentum}%'
             return SignalUrgency.HIGH, signal_details
@@ -312,38 +321,61 @@ def determine_signal(market_data):
             signal_details['reason'] = f'RSI {rsi} oversold, waiting confirmation'
             return SignalUrgency.MEDIUM, signal_details
     
+    # SELL SIGNALS (RSI high = overbought = distribution opportunity)
+    
+    # Strong sell - RSI above 75, extremely overbought - take profit
+    if rsi > 75:
+        signal_details['action'] = 'STRONG_SELL'
+        signal_details['reason'] = f'RSI {rsi} extremely overbought - take profit'
+        return SignalUrgency.HIGH, signal_details
+    
     # Overbought - RSI above 70, potential sell
     if rsi > RSI_OVERBOUGHT:
         signal_details['action'] = 'SELL'
         signal_details['reason'] = f'RSI {rsi} overbought'
-        return SignalUrgency.HIGH, signal_details
+        return SignalUrgency.MEDIUM, signal_details  # MEDIUM for regular overbought
     
-    # Medium signal - RSI approaching extremes
-    if rsi < 40 or rsi > 65:
-        signal_details['action'] = 'WATCH'
-        signal_details['reason'] = f'RSI {rsi} neutral but elevated'
-        return SignalUrgency.MEDIUM, signal_details
+    # WATCH signals - RSI approaching extremes but not there yet
+    if rsi < 40:
+        signal_details['action'] = 'BUY_WATCH'
+        signal_details['reason'] = f'RSI {rsi} neutral-low, watching for entry'
+        return SignalUrgency.LOW, signal_details
+    
+    if rsi > 65:
+        signal_details['action'] = 'SELL_WATCH'
+        signal_details['reason'] = f'RSI {rsi} neutral-high, watching for exit'
+        return SignalUrgency.LOW, signal_details
     
     # No signal
     return SignalUrgency.NONE, signal_details
 
 def execute_trade(action, market_data, dry_run=True):
-    """Execute trade on Kraken (or dry run)."""
+    """Execute trade on Kraken (or dry run).
+    
+    Actions:
+    - BUY / STRONG_BUY: Market buy BTC
+    - SELL / STRONG_SELL: Market sell BTC
+    - BUY_WATCH / SELL_WATCH: No trade, just watch
+    """
+    # No trade for watch actions
+    if 'WATCH' in action or action == 'HOLD':
+        return {'dry_run': True, 'action': action, 'price': market_data['price'], 'skipped': True}
+    
     if not KRAKEN_API_KEY or dry_run:
         print(f"[DRY RUN] Would execute: {action} at ${market_data['price']}")
         return {'dry_run': True, 'action': action, 'price': market_data['price']}
     
     pair = "XXBTZUSD"  # Kraken BTC/USD
+    volume_btc = str(TRADE_AMOUNT_USD / market_data['price'])
     
-    if action == 'BUY':
-        # Place market buy order
+    if 'BUY' in action:  # BUY or STRONG_BUY
         result = kraken_request(
             "/0/private/AddOrder",
             {
                 'pair': pair,
                 'type': 'buy',
                 'ordertype': 'market',
-                'volume': str(TRADE_AMOUNT_USD / market_data['price']),
+                'volume': volume_btc,
                 'validate': 'false'
             },
             KRAKEN_API_KEY,
@@ -351,15 +383,14 @@ def execute_trade(action, market_data, dry_run=True):
         )
         return result
     
-    elif action == 'SELL' or action == 'STRONG_SELL':
-        # Place market sell order
+    elif 'SELL' in action:  # SELL or STRONG_SELL
         result = kraken_request(
             "/0/private/AddOrder",
             {
                 'pair': pair,
                 'type': 'sell',
                 'ordertype': 'market',
-                'volume': '0.001',  # Small amount for testing
+                'volume': volume_btc,
                 'validate': 'false'
             },
             KRAKEN_API_KEY,
@@ -380,8 +411,11 @@ def format_report(market_data, signal, urgency, timestamp):
     
     action_emoji = {
         'BUY': '🟢',
+        'STRONG_BUY': '🟢🟢',
         'SELL': '🔴',
         'STRONG_SELL': '🔴🔴',
+        'BUY_WATCH': '👀🟢',
+        'SELL_WATCH': '👀🔴',
         'WATCH': '👀',
         'HOLD': '⏸️'
     }.get(signal.get('action', 'HOLD'), '❓')
