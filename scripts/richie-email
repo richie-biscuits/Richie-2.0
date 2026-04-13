@@ -1,0 +1,8 @@
+#!/bin/bash
+# Thin wrapper — delegates to credentials stored OUTSIDE workspace
+# Credentials: ~/.config/richie-google/
+
+VENV_BIN="$HOME/.config/richie-google/venv/bin/python3"
+EMAIL_SCRIPT="$HOME/.config/richie-google/gmail_cli.py"
+
+exec "$VENV_BIN" "$EMAIL_SCRIPT" "$@"
