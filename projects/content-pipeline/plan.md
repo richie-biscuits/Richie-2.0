@@ -7,7 +7,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
 
 ## Recent Activity
-- 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA)
+- 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA — DuckDuckGo blocking all queries)
+- 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by bot detection (DuckDuckGo CAPTCHA)
 
 ## Next Actions
 - [ ] Set up web search API (Brave API key needed) to enable ongoing content trend monitoring

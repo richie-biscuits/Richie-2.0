@@ -7,7 +7,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Market Research]: Web search still blocked (Brave API key needed). No fresh competitor pricing or Melbourne market data obtained this cycle. Note: HN trending story today — France launching government Linux transition — could signal local govt AI adoption trends worth monitoring.
 
 ## Recent Activity
-- 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA)
+- 2026-04-13: Rosie — Cross-project research cycle (web search completely blocked — DuckDuckGo CAPTCHA now blocking ALL queries, not just LinkedIn/market topics)
 
 ## Next Actions
 - [ ] Configure web search API for competitor pricing research
