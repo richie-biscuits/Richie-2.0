@@ -20,12 +20,12 @@ from enum import Enum
 # ============================================================================
 
 # Kraken API credentials - stored in environment or config
-KRAKEN_API_KEY = ""  # Add your API key
-KRAKEN_API_SECRET = ""  # Add your API secret
+KRAKEN_API_KEY = "iuWVok4Ks8roWzxSiLxFCvUz3nrM7FUkV54WPQ9lgDeDqbFLQDG6T+bj"  # Add your API key
+KRAKEN_API_SECRET = "XuyaGGLhI2V/HlljZhqehDhD4xodUclDxB9DM100Qqu/KZ/DpdheJrVhkm5M3ZBr5rZz/OAbFHVY6YLTZw0bcA=="  # Add your API secret
 
 # Telegram
-TELEGRAM_BOT_TOKEN = ""  # Add your bot token
-TELEGRAM_CHAT_ID = ""  # Add your chat ID
+TELEGRAM_BOT_TOKEN = "8772606232:AAFXrpiqkhsKhtpHfaUWtarOzaQxR8ZH9mQ"  # Add your bot token
+TELEGRAM_CHAT_ID = "1760063827"  # Add your chat ID
 
 # Trading parameters
 RSI_PERIOD = 14
@@ -46,26 +46,8 @@ class SignalUrgency(Enum):
     NONE = "NONE"      # No signal
 
 def log_to_supabase(trade_data):
-    """Log trade signals to Supabase."""
-    try:
-        import urllib.request
-        data = json.dumps(trade_data).encode('utf-8')
-        req = urllib.request.Request(
-            f"{SUPABASE_URL}/rest/v1/trades",
-            data=data,
-            headers={
-                'Content-Type': 'application/json',
-                'apikey': SUPABASE_KEY,
-                'Authorization': f'Bearer {SUPABASE_KEY}',
-                'Prefer': 'return=minimal'
-            },
-            method='POST'
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
-            return response.status == 201 or response.status == 200
-    except Exception as e:
-        print(f"Failed to log to Supabase: {e}")
-        return False
+    """Log trade signals to Supabase — DISABLED (trades table not created)."""
+    return  # disabled
 
 def send_telegram(message):
     """Send message to Telegram."""
