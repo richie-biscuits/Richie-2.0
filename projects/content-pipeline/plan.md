@@ -3,6 +3,9 @@
 ## Project Goal
 Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
+## Research Notes — 2026-04-14
+- [Content Research]: Web search still blocked — DuckDuckGo returning CAPTCHA on all queries via web_fetch. No fresh LinkedIn/TikTok/YouTube trend data obtained. Brave API key remains the actual solution for automated research. (Source: attempted web fetch)
+
 ## Research Notes — 2026-04-11
 - [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
 
