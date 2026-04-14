@@ -110,6 +110,51 @@ There are **four litter boxes** located at:
 
 Each litter box has its own **scoop and roll of green litter bags**. It's clumping litter — scoop into the bag, tie a semi-knot, and leave it next to the litter box. When the bag is full or at the next opportunity, put it in the bin.
 
+### Upstairs Bathroom Litter Box
+
+The upstairs bathroom has a litter box area with:
+- Litter scoop and green bags kept near the litter boxes
+- Dustpan and brush for cleaning up any accidents
+- Spare litter bags, spare bin bags, disinfectant wipes, and paper towels in the **third drawer**
+- Spare pee pads in the **bottom drawer**
+- A vacuum is available downstairs in the cupboard if needed
+
+**Important:** Don't flush paper towels down the toilet — only toilet paper. Put paper towels in the bin.
+
+---
+
+## Viva's Bedtime Routine
+
+Viva sleeps in the **upstairs bathroom** at night — this is her routine now because she can sometimes pee and poo everywhere when roaming at night.
+
+### Setting Up at Night
+1. Place Viva in the upstairs bathroom before you go to bed (usually around 7–8pm, or whenever you head to bed yourself — she'll settle on her own if she's not already with someone)
+2. Make sure the bathroom door **clicks shut** when you close it — this is important!
+3. She sleeps on one of the small beds, which sits on top of the warming mat
+4. The warming mat is covered with a pad (protects the mat in case she pees or poos)
+
+### Warming Mat Settings
+There's a small square gauge with three lines:
+- **Line 1:** Set to **medium**
+- **Line 2:** Set to **manual**
+- **Line 3:** Set to **9 to 12 hours** (just make sure it's on)
+
+She sometimes likes to stay on the warming mat during the day too, so keep it on near the litter boxes.
+
+### Fresh Water
+Give Viva fresh water before she goes to bed.
+
+### Morning Check
+When you wake up (around 6:30–7am), let her out. She'll let you know!
+
+**Check the bathroom thoroughly when you let her out:**
+- Around the toilet — she sometimes poos there
+- Under her bed — she sometimes lifts the bed away and pees or poos underneath
+
+---
+
+## What to Watch For
+
 ---
 
 ## What to Watch For
@@ -202,6 +247,10 @@ Most lights are controlled by **Hey Google** or **Hey Siri**.
 - **Main kitchen lights:** physical switch just behind the fridge. Top switch = flood lights. Bottom switch = kitchen light above the sink.
 - The kitchen light is also Google/Siri controlled: "Hey Google, turn off kitchen light"
 
+### Additional Manual Lights
+- **Upstairs flood lights (kitchen area):** not on Google — use the light switch behind the fridge (top switch)
+- **Studio bright light:** on the studio side of the house, there's a **cable hanging from the roof** — pull it to turn on the bright light on that side
+
 ### Downstairs / Entry
 | Command | Action |
 |---|---|
@@ -285,6 +334,12 @@ For washing bedding or blankets:
 - Cold wash
 - Detergent in sections 1 and 2
 
+### Drying
+There are **no outdoor clotheslines**:
+- **Smalls:** use the clips above the washing machine
+- **Garments:** hang off the shower rail, or next to the desk upstairs on the south side of the building (near the stairwell)
+- **Clothes racks:** stacked in the corner — use these to dry clothes anywhere in the house
+
 ### Vacuum
 - **Dyson (main):** stored in the closet at the end of the hallway downstairs (sensor light, wait 2 seconds)
 - **Roborock (upstairs):** "Hey Google, start the vacuum" or "Hey Google, vacuum the [room]"
@@ -292,6 +347,37 @@ For washing bedding or blankets:
 ### Freezer / Ice
 - The freezer door has an ice dispenser — press the middle button to scroll: big ice / crushed ice / water
 - Freezer is kept at around 20–21 degrees
+
+### Coffee Machine (Gajah Classic Pro)
+
+**Grinding:**
+1. Hit the left button on the machine (front, left of three) to turn it on
+2. Let it warm up for about 10 minutes
+3. Grab the **portafilter** (the thing the coffee goes into) — there's a **ring** that fits on top to stop grounds spilling
+4. Go to the **grinder machine** (to the right of the coffee machine) — called a *Special Miller Grinder*
+5. Turn the grinder on, put the portafilter head on the two prongs, and push forward — coffee will start coming out
+6. Let the whole amount come out
+7. Turn the grinder off, tap the portafilter on the bench so granules compact
+8. Take the ring off
+9. Take the **black circular tamper** (on top of the machine), place it on top, press down and twist a few times
+10. Remove the tamper — the portafilter is now ready
+
+**Pulling the shot:**
+11. Put the portafilter into the machine
+12. (Optional nerdy step) Put a red coffee cup on the scale, place scale under the black drip tray to weigh your shot
+13. You want about **20g of coffee** coming out — hit the **middle button** to start
+14. Wait for ~20g in the cup, then press stop
+15. Remove the scale and portafilter, knock it clean, then rinse under the tap — or use the middle button to run hot water through the portafilter into the drip tray
+16. Leave the portafilter in the sink to dry
+
+**Steaming milk:**
+17. The milk is in the front of the fridge
+18. Hit the **right button** (steam button), wait for the light to come on
+19. There's a little black cup that sits under the steaming wand — open the **black valve** above the wand for 2–3 seconds to let excess water flow out
+20. Move the cup aside, put milk into a stainless steel container, and steam until hot to the touch
+21. Turn off, clean the wand with the sponge
+22. Leave the wand open a little bit to let excess steam out — this releases pressure from the system
+23. Pour the milk into your coffee — enjoy!
 
 ---
 
@@ -311,6 +397,7 @@ For washing bedding or blankets:
 - **Bin day is Monday night** — you don't need to do anything about this during a 5-day stay
 - **Mail:** nothing expected, just leave it
 - **Parking:** street parking
+- **Spare toilet paper and towels:** on the middle shelf in the corridor downstairs
 
 ---
 
