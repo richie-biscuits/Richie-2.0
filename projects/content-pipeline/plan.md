@@ -9,7 +9,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 ## Research Notes — 2026-04-11
 - [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
 
+## Research Notes — 2026-04-15
+- [Content Signal — HN Top Stories]: Web search still blocked (no Brave API key). HN front page content audit: no AI content in top 15 stories today. Top: compiler papers, sleep/learning (131 pts), solar-powered animals, 20-year E16 bug fix, Google Gemma 4 on iPhone (105 pts), Claude Code Routines (664 pts — biggest story by far). No AI SaaS or LinkedIn/TikTok content trending on HN right now. The "AI content that works" right now on HN is developer tooling (debugging, compilers) and mobile inference — not AI productivity content. (Source: HN front page, April 15 2026)
+- [Mem0 Blog Content Themes]: Mem0's recent blog output (6 posts in past week) focused on "How Memory Works in X Agent" series (Claude Code, Hermes, HyperAgents, DeerFlow) and engineering deep-dives. Content pattern: explainer/educational AI content with strong search demand. (Source: mem0.ai/blog)
+
 ## Recent Activity
+- 2026-04-15: Rosie — Cross-project research cycle (web search blocked, HN content audit: developer tooling > AI SaaS content)
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA — DuckDuckGo blocking all queries)
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by bot detection (DuckDuckGo CAPTCHA)
 

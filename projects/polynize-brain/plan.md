@@ -17,7 +17,12 @@ Extract and install cognition frameworks into AI agents.
 ## Research Notes — 2026-04-11
 - [Agent Attribution]: Linux kernel now has official AI contributor guidance — uses "Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]" tags for AI contributions. First major open-source project to formalize AI agent attribution. This formalization could influence how agent cognition/framework attribution gets documented. (Source: torvalds/linux kernel docs)
 
+## Research Notes — 2026-04-15
+- [Claude Code Routines + Lock-in Backlash]: HN's #1 story (664 pts) — Anthropic's new "Routines" feature for structured agent procedures. Comments reveal major developer backlash: ToS changes blocking third-party CLI use, provider-specific memory that doesn't persist in git repos, forced subscription features. One commenter moved away from Claude Code entirely; another using stub MEMORY.md files for portability. Key signal: developers actively seeking escape routes from provider lock-in. Polynize Brain's open, portable cognition installation angle is increasingly timely. (Source: HN #47768133, April 15 2026)
+- [Provider Diversification Trend]: Multiple HN comments recommend OpenCode + Claude models via GitHub/Bedrock as alternative to Claude Code lock-in. Also noted: Google Gemma 4 running natively on iPhone (105 pts) signals push toward on-device/portable AI. The market is fragmenting away from single-provider stacks — Polynize's multi-agent, portable cognition framework aligns with this direction. (Source: HN front page, April 15 2026)
+
 ## Recent Activity
+- 2026-04-15: Rosie — Cross-project research cycle (Claude Code Routines launch + HN lock-in backlash signal, Mem0 v2.0.0-beta migration details)
 - 2026-04-14: Rosie — Cross-project research cycle (Mem0 v2.0.0-beta, Skill Graph operational, OpenClaw plugin v1.0.6)
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 OpenClaw plugin production-ready, Dream gate feature)
 
@@ -25,6 +30,7 @@ Extract and install cognition frameworks into AI agents.
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)
 - [ ] Map Polynize Brain's framework installation approach to the "knowledge layer + connector layer" model
 - [ ] Investigate Dream gate for automatic cognition framework consolidation (Rosie)
+- [ ] Use Claude Code Routines backlash as positioning hook — market wants portable, non-locked-in cognition (Rosie)
 
 ## Blockers
 - None identified
