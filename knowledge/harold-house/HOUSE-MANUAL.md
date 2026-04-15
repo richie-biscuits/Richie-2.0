@@ -26,7 +26,8 @@ Harold is warm, calm, practical, and reassuring. He speaks clearly and doesn't o
 |---|---|
 | Marrs | 0425 837 955 |
 | Neda | 0412 494 747 |
-| Michele (Neda's mum, nearby in Northcote) | 0431 101 956 |
+| Michele (Neda's mum, nearby) | 0431 101 956 |
+| Ash (neighbour) | 0417 935 329 |
 | Abby the Vet | 0401 682 015 |
 | Vet Assistant | 0416 905 810 |
 
@@ -38,8 +39,14 @@ Harold is warm, calm, practical, and reassuring. He speaks clearly and doesn't o
 
 There are **three cats**: Viva, Massa, and Merlin.
 
-- **Viva** and **Massa** are both over 18 years old — elderly and precious.
-- **Merlin** is approximately 16–17 months old — young, playful, and energetic.
+- **Viva** — brindle light tabby, elderly (18+ years), precious
+- **Massa** — dark charcoal, elderly (18+ years), precious
+- **Merlin** — grey Maine Coon, approximately 16–17 months old, young and chaotic
+
+### Merlin's Sinus Issues
+Merlin has had some sinus issues — if he sneezes green snoty sneezes:
+1. Just wipe up the snot with a paper towel
+2. If it happens often and he looks distressed, call Marrs or Neda and they'll let you know how to give him nasal anti-inflammatory drops
 
 ---
 
@@ -97,6 +104,14 @@ The feeders are **chip-activated** — the cats open them automatically with the
 - **Can toppers:** there's an orange topper that fits Merlin's cans perfectly — use that. Massa and Viva's food doesn't need a topper.
 - **Recycling:** rinse cans before putting in the left side of the bin. Paper packaging goes in the same left recycling side.
 - **Churu treats:** for special occasions or if you really need to get them to eat
+
+### Kitchen Storage
+- **Plastic containers:** big drawer underneath the island (bottom of island)
+- **Cutlery:** top drawer of the island
+- **Glad wrap and aluminium foil:** bottom drawer of the island
+- **Tea and tea cups:** big top drawer next to the stove
+- **Plates:** middle drawer of the island
+- **Honey, Vegemite, and spices:** middle cupboard under the coffee machine
 
 ---
 
@@ -174,6 +189,17 @@ When you wake up (around 6:30–7am), let her out. She'll let you know!
 3. Spare sheets and blankets are in the **last door of the cupboards in the bedroom**
 4. Cleaning kit is in the hallway — it'll be left somewhere visible
 
+**If a cat pees on something other than the bed:**
+1. Dry it out with paper towel as much as possible — paper towel is in the bottom drawer of the bathroom and some more in the kitchen
+2. Once as dry as possible, use a **bin bag** to dispose of the paper towel (bin bags for upstairs bathroom are in the **third drawer**)
+3. Spray with **Nature's Miracle Advanced Stain and Odor Eliminator** (red bottle, on top of the drawers in the upstairs bathroom)
+4. Let it soak for 10–15 minutes, then damp it dry
+
+**Bin bag locations:**
+- Kitchen bin: on the trolley next to the fridge
+- Upstairs bathroom: in the third drawer
+- Downstairs bins: in the vicinity of the bin itself
+
 **If a cat seems unwell** — call Abby the Vet (0401 682 015) or the vet assistant (0416 905 810) straight away.
 
 ---
@@ -192,6 +218,12 @@ When you wake up (around 6:30–7am), let her out. She'll let you know!
 ## Water
 
 The **tap on the back left of the sink** is filtered water. Use this for all cat water and all human drinking water.
+
+### Water Bowls
+- **Fountain** (on the tiles next to the wood fire heater): change every 2 days — unplug the USB cable, take to the kitchen, rinse and refill
+- **White wheelie round table** at the top of the stairs: check and change regularly
+- **Bedroom:** check and change regularly
+- **Upstairs bathroom** next to Viva's bowl: check and change regularly
 
 ---
 
@@ -289,9 +321,9 @@ Note: The office workstation has the Genelec speakers, monitors, and UAD all on 
 
 ## Aircon / Heating
 
-- **"Hey Google, turn on the aircon"** — turns on the heater/aircon
+- **"Hey Google, turn on the aircon"** — turns on the heater/aircon (this is how you heat up the house!)
 - **"Hey Google, what is the aircon set to?"** — check current temperature
-- **"Hey Google, set the aircon to [temperature]"** — adjust
+- **"Hey Google, set aircon temperature to 24"** — adjust the warmth (try around 22–24°C for warmth)
 - **"Hey Google, turn off the aircon"** — turns it off
 - The Canara wood fire heater is on the south wall under the hanging lamps (for use if Marrs/Neda have shown you how)
 
