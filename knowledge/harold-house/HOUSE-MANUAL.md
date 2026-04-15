@@ -67,6 +67,9 @@ Cats are fed **twice a day**: morning around 7:00am and evening around 5:00pm. B
 - If he's not eating his wet food, he's probably just slobbered on it too much — toss it and give fresh biscuits instead
 - Merlin gets wet food + biscuits in the morning, and biscuits topped up throughout the day as needed
 
+### Dry Food (all cats)
+No specific amounts — just **top up if low**. Check the bowls and top up as needed.
+
 ### Feeding Locations
 | Cat | Location |
 |---|---|
@@ -150,11 +153,28 @@ Viva sleeps in the **upstairs bathroom** at night — this is her routine now be
 
 ### Warming Mat Settings
 There's a small square gauge with three lines:
-- **Line 1:** Set to **medium**
-- **Line 2:** Set to **manual**
-- **Line 3:** Set to **9 to 12 hours** (just make sure it's on)
+- **Left column:** Set to **medium** (2 bars) — this is the heat setting
+- **Middle column:** Set to **manual**
+- **Right column:** Set to **9 to 12 hours** (just make sure it's on)
 
 She sometimes likes to stay on the warming mat during the day too, so keep it on near the litter boxes.
+
+---
+
+## Massa's Bedtime Routine
+
+Massa sleeps in the **main bedroom** at night, in the **igloo cat bed** on the electric blanket side of the bed.
+
+To make him extra comfortable:
+1. Turn on **one of the electric blankets** in the main bedroom
+2. Open the **top drawer in the closet in the bedroom** — there are some of Marrs' tshirts in there
+3. Line the igloo cat bed with **one or two of Marrs' tshirts** for extra comfort
+
+### If Massa Gets Disoriented
+Massa sometimes gets a bit lost and confused at night. If you hear him **meowing downstairs in the entry way**, he needs some guidance:
+- He can get disoriented and might **bite if he's confused** — be careful!
+- **Pick him up gently** and move him back to the main bedroom/bed
+- He'll settle eventually once he's back in the right spot
 
 ### Fresh Water
 Give Viva fresh water before she goes to bed.
