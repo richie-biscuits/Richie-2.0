@@ -21,7 +21,12 @@ Research agent build patterns and tools.
 - [Mem0 v2.0.0-beta.1 Full Changelog]: Node SDK v3.0.0-beta.1 + Python SDK v2.0.0b1 both shipped April 14. Key: DeepSeek LLM provider added to Node SDK, Azure OpenAI structured output support added (Python), LLM-hallucinated ID crashes fixed (issue #3931), telemetry sampling at 10% for hot-path events. enable_graph removed across all APIs — any PAM integration against Mem0 OSS will need migration from v1.x patterns. (Source: mem0ai/mem0 GitHub releases, April 14 2026)
 - [Claude Code Routines — HN #1 Story]: 664 points, 375 comments. Routines feature allows structured agent procedures/policies. Key PAM insight: comments reveal strong preference for portable, non-provider-locked patterns. "I want a commodity, not a platform" sums up developer sentiment. PAM design should avoid Anthropic-specific patterns. (Source: HN #47768133)
 
+## Research Notes — 2026-04-16
+- [Agent Framework Comparison — 8 SDKs]: Deep comparison article covers Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI, Smolagents, Pydantic AI, AutoGen. Key insight: MCP/A2A protocols covered as connector layer, Skills as knowledge/context layer. The article reinforces the "MCP for connections, Skills for patterns" architecture — validates this as the right pattern for PAM. (Source: morphllm.com/ai/agent-framework)
+- [Morph Tools for Coding Agents]: New tool category emerging — Morph SDK with subagents: Fast Apply (AI code merge), WarpGrep (sub-6s AI search), Compact (context compaction for long agents), Glance (auto-test PRs with video). All via OpenAI-compatible API + Anthropic/Vercel AI SDK support. Notable: MCP connectivity to Claude/Cursor/VS Code. (Source: morphllm.com)
+
 ## Recent Activity
+- 2026-04-16: Rosie — Cross-project research cycle (8-framework comparison validates PAM architecture, Morph subagent tools)
 - 2026-04-15: Rosie — Cross-project research cycle (Mem0 v2.0.0-beta.1 full changelog, Claude Code Routines HN analysis)
 - 2026-04-14: Rosie — Cross-project research cycle (Mem0 v2.0.0-beta breaks enable_graph, LOCOMO benchmark latency targets, 13-framework integration landscape)
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
