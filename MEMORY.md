@@ -29,19 +29,17 @@
 - Will own: lead collection, email nurture, CRM management, proposal workflow
 - Marrs building this in Claude
 
-## Proposals — Active
-- **Lorenzo/Supanova** — $80k, waiting on his update email
-- **Social Studio (Jess)** — $2.5k, proposal ready to send
-- **Scott Waterman/Roxbury** — $10k, quote being prepared, 10-20 agents scope
-- **Naomi Ferstera** — considering saying no; Facebook group agent too risky
+## Active Proposals — Hot Pipeline (Apr 17)
+- **Social Studio (Jess)** — $30k, quoting, proposal Monday
+- **Scott Waterman (Roxbury)** — ~$10k first build, potentially much more, quoting
+- **Lorenzo/Supanova** — $30k-$80k, quoting, emailed update Apr 14
+- **AJ + Michael Cotton (Everstock)** — ~$30k, quoting, survival supplies business
 
 ## Technical State
-- Mission Control: serving from `mission-control-v4/` on port 3000
-- Launchd plist: `io.polynize.mission-control-serve.plist`
-- Supabase: `cmqzawbdtnkynizughqq.supabase.co` (ynizugqq, not ynkypizughpq)
-- Google email: `richie@polynize.io` — OAuth2 tokens at `~/.config/richie-google/`
-- Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a`
-- Orthogonal API key: `orth_live_qCjOXLCtlw9R7tKt2IodgjDk1QLG2DZz`
+- Kraken API keys: transferred to Dash (moonshot project now managed by Dash)
+- Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a` (working, refreshed)
+- Google OAuth: rotated — ignore any previous credential references
+- Moonshot Supabase 404: resolved by Dash managing the project
 
 ## Active Cron Jobs (key ones)
 - Moonshot monitor: 9am daily (reduced from every 5 min)
