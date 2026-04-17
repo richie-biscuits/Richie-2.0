@@ -9,6 +9,10 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 ## Research Notes — 2026-04-11
 - [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
 
+## Research Notes — 2026-04-17
+- [Content Angle — Android CLI + Agent Tools]: Google dropped Android CLI for agents (April 17) — "3x faster app building with any agent." This is a NEW topic that's trending on HN right now. Content angle: "how to use AI agents to build Android apps" — Google itself is creating demand for this content. Also Codex launched major update with background computer use, in-app browser, image generation. Both are fresh, newsworthy, timely topics for content.
+- [HN Content Audit — What AI Content is Trending]: HN front page shows AI content that resonates: Codex launches (921 pts, #6), Claude Opus 4.7 launch (1826 pts, #3), Android CLI for agents (263 pts, #13). Pattern: developer-facing content about tools, not "AI productivity tips for SMEs." Content pipeline should lean into tool comparisons, how-to guides, and platform comparisons rather than generic AI content.
+
 ## Research Notes — 2026-04-16
 - [Australian AI Pricing Benchmarks]: Fresh pricing data for Australian market (March 2026): Custom agents $5K-$50K+, AI receptionists $300-$1K/mo, AI employees $297/mo (Industrial AI), off-the-shelf tools $50-$500/mo, consulting $150-$400/hr. Most SMEs see ROI in 3-6 months. Custom agent price drivers: workflow complexity, integration count ($1K-$3K/integration), compliance needs, autonomy level. (Source: flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026, industrialai.au)
 - [Content Research Still Blocked]: LinkedIn/TikTok/YouTube research still blocked by DuckDuckGo CAPTCHA. Fresh content trend research remains limited to HN front page monitoring. Brave API key still needed. (Source: attempted web fetch)
@@ -18,6 +22,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Mem0 Blog Content Themes]: Mem0's recent blog output (6 posts in past week) focused on "How Memory Works in X Agent" series (Claude Code, Hermes, HyperAgents, DeerFlow) and engineering deep-dives. Content pattern: explainer/educational AI content with strong search demand. (Source: mem0.ai/blog)
 
 ## Recent Activity
+- 2026-04-17: Rosie — Cross-project research cycle (HN AI content audit: coding/agent tools dominate, Android CLI + Codex launches = fresh content angles)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, content research still blocked)
 - 2026-04-15: Rosie — Cross-project research cycle (web search blocked, HN content audit: developer tooling > AI SaaS content)
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA — DuckDuckGo blocking all queries)

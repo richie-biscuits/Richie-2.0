@@ -10,6 +10,10 @@ Research leads, market trends, and competitors for AI agent services.
 ## Research Notes — 2026-04-11
 - [Market Research]: Web search still blocked (Brave API key needed). No fresh competitor pricing or Melbourne market data obtained this cycle. Note: HN trending story today — France launching government Linux transition — could signal local govt AI adoption trends worth monitoring.
 
+## Research Notes — 2026-04-17
+- [Market Validation — AI Memory is Now Table Stakes]: OpenAI Codex now has memory (3M+ users), Google has Android Skills. AI agents with persistent memory/cognition is no longer novel — it's expected. Polynize needs to sell "portable, open" memory as the differentiator NOW while competitors are locking users into platform-specific memory. The window for "memory as differentiator" is closing.
+- [Competitor — Codex CLI]: OpenAI's Codex at 3M+ users is a massive competitor for "AI agents for developers." Sales conversations with developer leads should address Codex directly — "we're not competing with Codex, we're building the cognition layer that makes it portable."
+
 ## Research Notes — 2026-04-16
 - [Australian AI Pricing Benchmarks — SME Segment]: Fresh market data (March 2026): Custom AI agents $5K-$50K+ (AUD), AI receptionists $300-$1K/mo, AI employees $297/mo (Industrial AI — direct competitor), off-the-shelf tools $50-$500/mo, consulting $150-$400/hr. ROI typically 3-6 months. Key pricing drivers: workflow complexity, integration count ($1K-$3K each), compliance requirements, autonomy level. (Source: flowtivity.ai, industrialai.au)
 - [Competitor — Industrial AI]: Melbourne-based competitor offering "AI employee" at $297/mo. Services: email, calendar, admin, persistent memory, voice notes, document ingestion. No per-message fees. Positions as "10 hours of VA for the price of one." SME-focused. This is Polynize's closest competitor in the Melbourne market. (Source: industrialai.au)
@@ -21,6 +25,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA + no Brave API key = no automated competitor pricing research. This blocker has persisted for 5 days. Needs escalation. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-17: Rosie — Cross-project research cycle (Codex memory launch validates market demand, Android CLI = new content angle for lead gen)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, Melbourne competitor Industrial AI identified at $297/mo)
 - 2026-04-15: Rosie — Cross-project research cycle (Claude Code lock-in backlash = positioning opportunity, mobile AI inference trend)
 - 2026-04-14: Rosie — Cross-project research cycle (web search still blocked, pricing anchor from Mem0 Pro $249/mo)
