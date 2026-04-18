@@ -9,6 +9,11 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 ## Research Notes — 2026-04-11
 - [Content Research]: Web search still blocked (Brave API key needed). HN front page today shows no AI-specific viral content — topics trending: MacBook hardware, Connect 4 algorithm, Polymarket gambling, 1D Chess. Not helpful for content pipeline.
 
+## Research Notes — 2026-04-18
+- [Content Angle — "Build Your Own AI Agent": Framework Tutorial Trend]: MarkTechPost published a complete "Cognitive Blueprint" tutorial (March 2026) showing how to build agentic AI with structured blueprints for identity, goals, planning, memory, validation, and tool access. This "build your own" tutorial format is high-engagement — Polynize could create similar "build your own cognition framework" content. (Source: marktechpost.com, March 7 2026)
+- [Australian AI Pricing Guide — March 2026 Still Current]: Flowtivity's Australian AI pricing guide (March 2026) shows: custom agents $5K-$50K+, AI receptionists $300-$1K/mo, off-the-shelf $50-$500/mo, consulting $150-$400/hr. ROI in 3-6 months. Use case pricing table: receptionist $5-10K, lead qualification $8-20K, customer service $10-25K, multi-system automation $20-50K+. Good SME education content. (Source: flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026)
+- [AI Agent Benchmarks 2026 — New Content Resource]: AI Agent Square published comprehensive benchmarks (Jan-Aug 2025 data, published 2026) covering 7 dimensions: task completion rate, accuracy, hallucination rate, latency (p50/p95), cost per task, user satisfaction, real-world deployments. Could power comparison content. (Source: aiagentsquare.com/blog/ai-agent-benchmarks-2026.html)
+
 ## Research Notes — 2026-04-17
 - [Content Angle — Android CLI + Agent Tools]: Google dropped Android CLI for agents (April 17) — "3x faster app building with any agent." This is a NEW topic that's trending on HN right now. Content angle: "how to use AI agents to build Android apps" — Google itself is creating demand for this content. Also Codex launched major update with background computer use, in-app browser, image generation. Both are fresh, newsworthy, timely topics for content.
 - [HN Content Audit — What AI Content is Trending]: HN front page shows AI content that resonates: Codex launches (921 pts, #6), Claude Opus 4.7 launch (1826 pts, #3), Android CLI for agents (263 pts, #13). Pattern: developer-facing content about tools, not "AI productivity tips for SMEs." Content pipeline should lean into tool comparisons, how-to guides, and platform comparisons rather than generic AI content.
@@ -22,6 +27,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Mem0 Blog Content Themes]: Mem0's recent blog output (6 posts in past week) focused on "How Memory Works in X Agent" series (Claude Code, Hermes, HyperAgents, DeerFlow) and engineering deep-dives. Content pattern: explainer/educational AI content with strong search demand. (Source: mem0.ai/blog)
 
 ## Recent Activity
+- 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework as new content angle, Australian AI pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (HN AI content audit: coding/agent tools dominate, Android CLI + Codex launches = fresh content angles)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, content research still blocked)
 - 2026-04-15: Rosie — Cross-project research cycle (web search blocked, HN content audit: developer tooling > AI SaaS content)

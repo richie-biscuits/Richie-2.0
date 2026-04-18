@@ -10,6 +10,11 @@ Research leads, market trends, and competitors for AI agent services.
 ## Research Notes — 2026-04-11
 - [Market Research]: Web search still blocked (Brave API key needed). No fresh competitor pricing or Melbourne market data obtained this cycle. Note: HN trending story today — France launching government Linux transition — could signal local govt AI adoption trends worth monitoring.
 
+## Research Notes — 2026-04-18
+- [Sales Hook — "Cognitive Blueprint" Framework Validates Polynize Brain]: External framework (marktechpost.com, March 2026) independently arrived at the same architecture as Polynize Brain: structured blueprints with identity, goals, memory, planning, validation components that load at runtime. This validates the concept is becoming mainstream — Polynize should position as "the installable version of what everyone's trying to build." (Source: marktechpost.com, March 7 2026)
+- [Australian AI Pricing Benchmarks — Still Current March 2026]: Custom AI agents $5K-$50K+, AI receptionists $300-$1K/mo, off-the-shelf $50-$500/mo, consulting $150-$400/hr. ROI 3-6 months. Integration cost $1K-$3K each. Compliance agents $25-50K+. Use these as reference points in SME sales conversations. (Source: flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026)
+- [AI Agent Benchmarks 7 Dimensions]: Independent benchmarks (AI Agent Square) now measure: task completion rate, accuracy, hallucination rate, latency (p50/p95), cost/task, user satisfaction, real-world deployments. These 7 dimensions are what enterprise buyers will ask about — ensure Polynize positioning addresses all 7. (Source: aiagentsquare.com)
+
 ## Research Notes — 2026-04-17
 - [Market Validation — AI Memory is Now Table Stakes]: OpenAI Codex now has memory (3M+ users), Google has Android Skills. AI agents with persistent memory/cognition is no longer novel — it's expected. Polynize needs to sell "portable, open" memory as the differentiator NOW while competitors are locking users into platform-specific memory. The window for "memory as differentiator" is closing.
 - [Competitor — Codex CLI]: OpenAI's Codex at 3M+ users is a massive competitor for "AI agents for developers." Sales conversations with developer leads should address Codex directly — "we're not competing with Codex, we're building the cognition layer that makes it portable."
@@ -25,6 +30,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA + no Brave API key = no automated competitor pricing research. This blocker has persisted for 5 days. Needs escalation. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint validates Polynize Brain architecture — use as sales hook for "installable cognition," Australian pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (Codex memory launch validates market demand, Android CLI = new content angle for lead gen)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, Melbourne competitor Industrial AI identified at $297/mo)
 - 2026-04-15: Rosie — Cross-project research cycle (Claude Code lock-in backlash = positioning opportunity, mobile AI inference trend)

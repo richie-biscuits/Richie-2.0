@@ -21,6 +21,10 @@ Extract and install cognition frameworks into AI agents.
 - [Claude Code Routines + Lock-in Backlash]: HN's #1 story (664 pts) — Anthropic's new "Routines" feature for structured agent procedures. Comments reveal major developer backlash: ToS changes blocking third-party CLI use, provider-specific memory that doesn't persist in git repos, forced subscription features. One commenter moved away from Claude Code entirely; another using stub MEMORY.md files for portability. Key signal: developers actively seeking escape routes from provider lock-in. Polynize Brain's open, portable cognition installation angle is increasingly timely. (Source: HN #47768133, April 15 2026)
 - [Provider Diversification Trend]: Multiple HN comments recommend OpenCode + Claude models via GitHub/Bedrock as alternative to Claude Code lock-in. Also noted: Google Gemma 4 running natively on iPhone (105 pts) signals push toward on-device/portable AI. The market is fragmenting away from single-provider stacks — Polynize's multi-agent, portable cognition framework aligns with this direction. (Source: HN front page, April 15 2026)
 
+## Research Notes — 2026-04-18
+- [Cognitive Blueprint Pattern Validates Polynize Brain Architecture]: A March 2026 tutorial describes "CognitiveBlueprint" framework with identity, goals, constraints, tools, memory, planning, and validation components — all defined in YAML and loaded at runtime. Key insight: the blueprint IS the cognition installation artifact. This is exactly what Polynize Brain aims to do: define cognition frameworks as portable, installable artifacts. Blueprint portability is emerging as the core concept. (Source: marktechpost.com, March 7 2026)
+- [Cognitive Blueprint — Architecture Components]: BlueprintMemory (type, window_size, summarize_after), BlueprintPlanning (strategy: sequential/hierarchical/reactive, max_steps, max_retries), BlueprintValidation (require_reasoning, min_response_length, forbidden_phrases). This component model maps directly to what Polynize Brain's framework extraction should produce. (Source: marktechpost.com, March 7 2026)
+
 ## Research Notes — 2026-04-17
 - [Cognition Installation — Android Skills Validates SKILL.md Pattern]: Google just released official Android Skills for AI agents (github.com/google/android-studio-skills) — modular markdown (SKILL.md) instruction sets that trigger automatically when prompt matches skill metadata. This is direct validation of Polynize Brain's SKILL.md-based cognition framework installation concept from the largest tech company in the world. Skills are now being adopted by Google, Mem0, and the broader agent ecosystem. (Source: android-developers.googleblog.com, April 17 2026)
 - [Codex Memory = Direct Competitor]: OpenAI's Codex now has memory that "allows re-using existing conversation threads, preserving context previously built up" and can "remember useful context from previous experience, including personal preferences, corrections and information that took time to gather." This is the same value proposition as Polynize Brain. Codex memory is now live for 3M+ users. Urgency for Polynize Brain to differentiate (portable, open, non-platform-locked) just increased. (Source: openai.com/codex, April 17 2026)
@@ -30,6 +34,7 @@ Extract and install cognition frameworks into AI agents.
 - [Provider Lock-in Momentum]: Developer backlash to Claude Code Routines (HN #47768133, 664 pts) continues to build. "I want a commodity, not a platform" sentiment strengthens Polynize Brain's portable cognition installation positioning. The market is actively seeking escape routes from provider lock-in. (Source: HN, April 15-16 2026)
 
 ## Recent Activity
+- 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint pattern validates Polynize Brain architecture — blueprint portability is emerging as key concept)
 - 2026-04-17: Rosie — Cross-project research cycle (Google Android skills validates SKILL.md cognition installation pattern, Codex memory = direct competitor to Polynize Brain concept)
 - 2026-04-16: Rosie — Cross-project research cycle (8-framework comparison validates Skills>MCP for cognition installation, lock-in backlash continues building)
 - 2026-04-15: Rosie — Cross-project research cycle (Claude Code Routines launch + HN lock-in backlash signal, Mem0 v2.0.0-beta migration details)
@@ -43,6 +48,7 @@ Extract and install cognition frameworks into AI agents.
 - [ ] Investigate Dream gate for automatic cognition framework consolidation (Rosie)
 - [ ] Use Claude Code Routines backlash as positioning hook — market wants portable, non-locked-in cognition (Rosie)
 - [ ] Analyze Codex memory (3M+ users) as direct competitor — Polynize Brain differentiation angle must sharpen NOW (Rosie)
+- [ ] Align Polynize Brain output format with CognitiveBlueprint pattern — identity/goals/memory/planning/validation components (Rosie)
 
 ## Blockers
 - None identified
