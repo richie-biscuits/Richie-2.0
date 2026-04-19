@@ -3,6 +3,10 @@
 ## Project Goal
 Research agent build patterns and tools.
 
+## Research Notes — 2026-04-19
+- [Agent Framework Landscape — 2026 State of Play]: awesome-ai-agents-2026 lists 20+ agent frameworks, 10+ agent memory solutions, 10+ agent protocols. LangChain (90k+ stars) dominates ecosystem, CrewAI (20k+ stars) leads multi-agent. Notable new entrant: Devstral 2 (Mistral's open-source coding agent). Key insight: frameworks are fragmenting, memory is consolidating as its own category — PAM should build to this landscape. (Source: github.com/Zijian-Ni/awesome-ai-agents-2026)
+- [Model Context Reaching 1M Tokens]: GPT-5.4 (March 2026) and Claude Opus 4.6 (Feb 2026) both support 1M token context windows. This changes the latency/cost calculus for memory architecture — full context is now viable for some use cases. PAM should benchmark against this new baseline: is selective memory still worth the engineering complexity when full context is cheap? (Source: awesome-ai-agents-2026)
+
 ## Research Notes — 2026-04-14
 - [Mem0 v2.0.0-beta]: Python SDK v2.0.0b0 (April 13) + v2.0.0b1 (April 14) — major breaking changes: removed enable_graph parameter, deprecated params stripped across LLMs/embeddings/vector stores/graphs. LLM-hallucinated ID crashes fixed (was issue #3931). Azure OpenAI structured output support added. DeepSeek LLM provider added to Node SDK. If building PAM against Mem0, expect migration work. (Source: mem0ai/mem0 GitHub releases)
 - [LOCOMO Full Data]: Full-context: 72.9% accuracy but 9.87s median latency, ~26k tokens/conv. Mem0g: 68.4% at 1.09s. Mem0: 66.9% at 0.71s. P95 latency: Mem0g 1.44s vs full-context 17.12s. Key lesson: accuracy ceiling comes with categorical latency cost. PAM memory architecture should target ~1s median, <2s p95 as production baseline. (Source: mem0.ai/blog/state-of-ai-agent-memory-2026)
@@ -34,6 +38,7 @@ Research agent build patterns and tools.
 - [Morph Tools for Coding Agents]: New tool category emerging — Morph SDK with subagents: Fast Apply (AI code merge), WarpGrep (sub-6s AI search), Compact (context compaction for long agents), Glance (auto-test PRs with video). All via OpenAI-compatible API + Anthropic/Vercel AI SDK support. Notable: MCP connectivity to Claude/Cursor/VS Code. (Source: morphllm.com)
 
 ## Recent Activity
+- 2026-04-19: Rosie — Cross-project research cycle (20+ framework landscape map from awesome-ai-agents-2026, 1M token context baseline shifts memory architecture calculus)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework = reference architecture for PAM cognition, AI Agent Benchmarks 2026 published)
 - 2026-04-17: Rosie — Cross-project research cycle (Android CLI validates agent-first SDK pattern, Codex = production reference for memory + background execution)
 - 2026-04-16: Rosie — Cross-project research cycle (8-framework comparison validates PAM architecture, Morph subagent tools)
@@ -42,6 +47,7 @@ Research agent build patterns and tools.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
 
 ## Next Actions
+- [ ] Reassess PAM memory architecture against 1M-token context baseline — is selective memory still worth the complexity when full context is viable? (Rosie)
 - [ ] Evaluate Zep vs Mem0 for PAM memory architecture — Zep's temporal knowledge graph may be better suited for agent cognition that needs fact validity tracking (Rosie)
 - [ ] Apply "knowledge layer + connector layer" pattern to PAM tool architecture (Rosie)
 - [ ] Use LOCOMO benchmark latency data to set PAM memory performance targets (Rosie)

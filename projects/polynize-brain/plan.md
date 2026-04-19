@@ -3,6 +3,11 @@
 ## Project Goal
 Extract and install cognition frameworks into AI agents.
 
+## Research Notes — 2026-04-19
+- [Agent Memory Landscape — awesome-ai-agents-2026]: New comprehensive curated list covers 10+ agent memory solutions, 20+ agent frameworks, 10+ protocols (MCP/A2A). Key finding: memory category is now distinct from frameworks — Mem0, Zep, Graphiti all listed separately. Polynize Brain's "framework installation" positioning fits between memory (layer) and frameworks (tools). (Source: github.com/Zijian-Ni/awesome-ai-agents-2026)
+- [Agent Frameworks — LangChain Dominates, CrewAI Leads Multi-Agent]: LangChain leads ecosystem (90k+ GitHub stars), CrewAI leads multi-agent collaboration (20k+ stars). Both have mature memory systems. New entrant: Devstral 2 (Mistral, best open-source coding agent). Framework landscape confirms: no single winner, integration breadth matters. (Source: alphamatch.ai "Top 7 Agentic AI Frameworks 2026")
+- [Model Context Windows Hit 1M Tokens]: GPT-5.4 (March 2026) and Claude Opus 4.6 (Feb 2026) both offer 1M token context. This raises the bar for what "memory" means — agents with 1M token windows don't need the same memory architecture as 128K-context models. Polynize Brain should consider: are we building for models that forget, or models that remember everything? (Source: awesome-ai-agents-2026)
+
 ## Research Notes — 2026-04-14
 - [Memory Architecture]: Mem0 v2.0.0-beta.0/1 released (April 13-14) — major breaking changes: removed enable_graph/enableGraph deprecated params across all APIs. Python SDK v2.0.0b1 and Node SDK v3.0.0-beta.1 both pushed. Telemetry improvements across all tools. Graph memory remains on Pro tier ($249/mo). (Source: mem0ai/mem0 GitHub releases)
 - [Skill Graph]: Mem0 Skill Graph now fully operational — Claude Code, Cursor, and Codex all have in-context mem0 knowledge via dedicated skills. Three skills: mem0 Core Skill (SDK reference), mem0-cli Skill (terminal reference), mem0-vercel-ai-sdk Skill (Vercel provider). This is the mechanism Polynize Brain should use for framework installation — install as a Skill, not MCP. (Source: docs.mem0.ai/changelog/highlights)
@@ -34,6 +39,7 @@ Extract and install cognition frameworks into AI agents.
 - [Provider Lock-in Momentum]: Developer backlash to Claude Code Routines (HN #47768133, 664 pts) continues to build. "I want a commodity, not a platform" sentiment strengthens Polynize Brain's portable cognition installation positioning. The market is actively seeking escape routes from provider lock-in. (Source: HN, April 15-16 2026)
 
 ## Recent Activity
+- 2026-04-19: Rosie — Cross-project research cycle (awesome-ai-agents-2026 landscape map, model context hitting 1M tokens — memory architecture implications for Polynize Brain)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint pattern validates Polynize Brain architecture — blueprint portability is emerging as key concept)
 - 2026-04-17: Rosie — Cross-project research cycle (Google Android skills validates SKILL.md cognition installation pattern, Codex memory = direct competitor to Polynize Brain concept)
 - 2026-04-16: Rosie — Cross-project research cycle (8-framework comparison validates Skills>MCP for cognition installation, lock-in backlash continues building)
@@ -48,6 +54,8 @@ Extract and install cognition frameworks into AI agents.
 - [ ] Investigate Dream gate for automatic cognition framework consolidation (Rosie)
 - [ ] Use Claude Code Routines backlash as positioning hook — market wants portable, non-locked-in cognition (Rosie)
 - [ ] Analyze Codex memory (3M+ users) as direct competitor — Polynize Brain differentiation angle must sharpen NOW (Rosie)
+- [ ] Evaluate Polynize Brain positioning against 1M-token context models — does "cognition framework" still matter when models have perfect recall? (Rosie)
+- [ ] Evaluate Polynize Brain positioning against 1M-token context models — does "cognition framework" still matter when models have perfect recall? (Rosie)
 - [ ] Align Polynize Brain output format with CognitiveBlueprint pattern — identity/goals/memory/planning/validation components (Rosie)
 
 ## Blockers

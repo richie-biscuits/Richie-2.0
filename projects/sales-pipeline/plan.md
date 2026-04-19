@@ -3,6 +3,10 @@
 ## Project Goal
 Research leads, market trends, and competitors for AI agent services.
 
+## Research Notes — 2026-04-19
+- [Market Signal — Model Context Windows Hit 1M Tokens]: GPT-5.4 (March 2026) and Claude Opus 4.6 (Feb 2026) both have 1M-token context. This is a sales conversation shifter — prospects who were told "AI forgets" now face models that remember everything. Polynize positioning should address this: even with perfect recall, cognition frameworks (persona, goals, validation) add structure that context alone doesn't. (Source: awesome-ai-agents-2026)
+- [Sales Positioning — Framework Fragmentation Creates Opportunity]: 20+ agent frameworks now in market (LangChain, CrewAI, AutoGPT, AutoGen, etc.), no single winner. This fragmentation means enterprises are paying for integration work repeatedly. Polynize Brain as "portable cognition that survives framework churn" is increasingly relevant — sell to teams who have rebuilt their agent setup twice already. (Source: alphamatch.ai "Top 7 Agentic AI Frameworks 2026")
+
 ## Research Notes — 2026-04-14
 - [Pricing Benchmark]: Mem0 Pro tier at $249/mo — useful anchor for AI service pricing. For context: full-context memory (72.9% accuracy) costs ~14x more in tokens than selective memory approaches. SME clients likely to be sensitive to per-query costs — position Polynize as efficient/optimized vs naive full-context approaches. (Source: mem0.ai pricing + LOCOMO benchmark data)
 - [Market Research]: Web search still blocked — DuckDuckGo returning CAPTCHA on all queries. No fresh Melbourne/SME competitor pricing obtained this cycle. Brave API key still needed for automated research. (Source: attempted web fetch)
@@ -30,6 +34,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA + no Brave API key = no automated competitor pricing research. This blocker has persisted for 5 days. Needs escalation. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-19: Rosie — Cross-project research cycle (1M token context changes sales conversation, framework fragmentation creates Polynize positioning opportunity)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint validates Polynize Brain architecture — use as sales hook for "installable cognition," Australian pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (Codex memory launch validates market demand, Android CLI = new content angle for lead gen)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, Melbourne competitor Industrial AI identified at $297/mo)

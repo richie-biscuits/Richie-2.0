@@ -27,6 +27,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Mem0 Blog Content Themes]: Mem0's recent blog output (6 posts in past week) focused on "How Memory Works in X Agent" series (Claude Code, Hermes, HyperAgents, DeerFlow) and engineering deep-dives. Content pattern: explainer/educational AI content with strong search demand. (Source: mem0.ai/blog)
 
 ## Recent Activity
+- 2026-04-19: Rosie — Cross-project research cycle (framework landscape overview — LangChain/CrewAI dominance, 1M token context shifts content angle, HN Sunday not AI-heavy)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework as new content angle, Australian AI pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (HN AI content audit: coding/agent tools dominate, Android CLI + Codex launches = fresh content angles)
 - 2026-04-16: Rosie — Cross-project research cycle (Australian AI pricing benchmarks obtained, content research still blocked)
