@@ -26,7 +26,13 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Signal — HN Top Stories]: Web search still blocked (no Brave API key). HN front page content audit: no AI content in top 15 stories today. Top: compiler papers, sleep/learning (131 pts), solar-powered animals, 20-year E16 bug fix, Google Gemma 4 on iPhone (105 pts), Claude Code Routines (664 pts — biggest story by far). No AI SaaS or LinkedIn/TikTok content trending on HN right now. The "AI content that works" right now on HN is developer tooling (debugging, compilers) and mobile inference — not AI productivity content. (Source: HN front page, April 15 2026)
 - [Mem0 Blog Content Themes]: Mem0's recent blog output (6 posts in past week) focused on "How Memory Works in X Agent" series (Claude Code, Hermes, HyperAgents, DeerFlow) and engineering deep-dives. Content pattern: explainer/educational AI content with strong search demand. (Source: mem0.ai/blog)
 
+## Research Notes — 2026-04-20
+- [Content Angle — "Build Your Own AI Agent Memory"]: OMEGA scores 95.4% on LongMemEval (highest published), local-first with zero dependencies. Tutorial potential: "how to add OMEGA memory to your AI agent in 20 lines of code." Zero-dependency hook removes cloud/Data privacy objections — perfect for SME-focused content. (Source: omegamax.co, April 2026)
+- [Content Angle — MemoryLake "Memory Passport" Demo]: MemoryLake positions as platform-neutral cross-agent memory. Could do side-by-side demo: "MemoryLake stores what happened, Polynize installs how to think." Good differentiation content that also educates market on the distinction. (Source: powerdrill.ai, April 8 2026)
+- [Memory Framework Content Map]: OMEGA 95.4% (local-first) | Zep 63.8% (temporal reasoning) | Mem0 49.0% (personalization, largest community). Three architectures = three content pieces. Could build "which memory system should your AI agent use in 2026" as a comparison series. (Source: Atlan, Vectorize, OMEGA comparisons)
+
 ## Recent Activity
+- 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, content angles: local-first demo, MemoryLake comparison, framework comparison series)
 - 2026-04-19: Rosie — Cross-project research cycle (framework landscape overview — LangChain/CrewAI dominance, 1M token context shifts content angle, HN Sunday not AI-heavy)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework as new content angle, Australian AI pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (HN AI content audit: coding/agent tools dominate, Android CLI + Codex launches = fresh content angles)
@@ -36,7 +42,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by bot detection (DuckDuckGo CAPTCHA)
 
 ## Next Actions
-- [ ] Set up web search API (Brave API key needed) to enable ongoing content trend monitoring
+- [ ] Create "how to add OMEGA memory to your AI agent" tutorial — zero-deps hook for SME audience (Rosie)
+- [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0 three-way content (Rosie)
 - [ ] Research LinkedIn AI content patterns this week
 - [ ] Create content hook from "AI employees at $297/mo vs hiring" angle — resonates with SME audience (Rosie)
 

@@ -37,7 +37,13 @@ Research agent build patterns and tools.
 - [Agent Framework Comparison — 8 SDKs]: Deep comparison article covers Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI, Smolagents, Pydantic AI, AutoGen. Key insight: MCP/A2A protocols covered as connector layer, Skills as knowledge/context layer. The article reinforces the "MCP for connections, Skills for patterns" architecture — validates this as the right pattern for PAM. (Source: morphllm.com/ai/agent-framework)
 - [Morph Tools for Coding Agents]: New tool category emerging — Morph SDK with subagents: Fast Apply (AI code merge), WarpGrep (sub-6s AI search), Compact (context compaction for long agents), Glance (auto-test PRs with video). All via OpenAI-compatible API + Anthropic/Vercel AI SDK support. Notable: MCP connectivity to Claude/Cursor/VS Code. (Source: morphllm.com)
 
+## Research Notes — 2026-04-20
+- [OMEGA — 95.4% LongMemEval, Zero Dependencies]: New top performer on independent benchmarks. SQLite + ONNX embeddings, AES-256 encryption, 25 MCP tools, "intelligent forgetting." Local-first with no external infrastructure. For PAM, OMEGA could replace Mem0 cloud-dependency — same memory problem, zero-deps solution. (Source: omegamax.co, April 2026)
+- [MemoryLake — Cross-Agent Memory Infrastructure Reference]: Platform-neutral "memory passport for agents." Cross-session + cross-agent portable memory, multimodal (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion). PAM could use MemoryLake architecture as reference for how to build portable cross-agent memory, not just per-agent memory. (Source: powerdrill.ai, April 8 2026)
+- [Memory Benchmark Summary for PAM]: OMEGA 95.4% (zero deps) | Zep 63.8-71.2% (temporal reasoning, needs Neo4j) | Mem0 49.0% (cloud-first, graph behind $249/mo paywall). PAM memory architecture decision: local-first (OMEGA) vs cloud-managed (Mem0) vs temporal-graph (Zep). OMEGA's zero-deps最适合 self-hosted PAM deployments. (Source: Atlan, Vectorize, OMEGA comparisons)
+
 ## Recent Activity
+- 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, zero-deps architecture ideal for PAM, MemoryLake cross-agent reference)
 - 2026-04-19: Rosie — Cross-project research cycle (20+ framework landscape map from awesome-ai-agents-2026, 1M token context baseline shifts memory architecture calculus)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework = reference architecture for PAM cognition, AI Agent Benchmarks 2026 published)
 - 2026-04-17: Rosie — Cross-project research cycle (Android CLI validates agent-first SDK pattern, Codex = production reference for memory + background execution)
@@ -47,10 +53,9 @@ Research agent build patterns and tools.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
 
 ## Next Actions
-- [ ] Reassess PAM memory architecture against 1M-token context baseline — is selective memory still worth the complexity when full context is viable? (Rosie)
-- [ ] Evaluate Zep vs Mem0 for PAM memory architecture — Zep's temporal knowledge graph may be better suited for agent cognition that needs fact validity tracking (Rosie)
+- [ ] Evaluate OMEGA (95.4% LME, zero-deps, local-first) vs Mem0 for PAM memory architecture — OMEGA's self-hosted story may fit PAM better (Rosie)
+- [ ] Use MemoryLake "memory passport" architecture as reference for PAM's portable cross-agent memory design (Rosie)
 - [ ] Apply "knowledge layer + connector layer" pattern to PAM tool architecture (Rosie)
-- [ ] Use LOCOMO benchmark latency data to set PAM memory performance targets (Rosie)
 
 ## Blockers
 - Web search blocked

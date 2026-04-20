@@ -38,7 +38,13 @@ Extract and install cognition frameworks into AI agents.
 - [Cognition Installation — Skills > MCP for Knowledge]: Deep comparison of 8 AI agent frameworks (Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI, Smolagents, Pydantic AI, AutoGen) confirms the MCP+Skills pattern — MCP for connectors, Skills for knowledge/context. The article specifically recommends Skills for teaching agents "gotchas and patterns discovered during sessions" — directly aligns with Polynize Brain's cognition framework installation concept. (Source: morphllm.com/ai/agent-framework)
 - [Provider Lock-in Momentum]: Developer backlash to Claude Code Routines (HN #47768133, 664 pts) continues to build. "I want a commodity, not a platform" sentiment strengthens Polynize Brain's portable cognition installation positioning. The market is actively seeking escape routes from provider lock-in. (Source: HN, April 15-16 2026)
 
+## Research Notes — 2026-04-20
+- [OMEGA Memory — New Top Performer on LongMemEval]: OMEGA scores 95.4% on LongMemEval (highest published), with 25 MCP tools, zero external dependencies, SQLite + ONNX embeddings, AES-256 encryption, and "intelligent forgetting." This is a new entrant that Polynize Brain should evaluate — zero-dependency architecture is the opposite of Mem0's cloud-first approach. Local-first positioning aligns with "portable cognition." (Source: omegamax.co, April 2026)
+- [MemoryLake — "Memory Passport for Agents"]: Emerging cross-agent memory infrastructure positions itself as platform-neutral, detaching agent memory from LLM providers/orchestration frameworks. Multimodal support (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion controls). Directly competitive with Polynize Brain's portable cognition concept. (Source: powerdrill.ai, April 8 2026)
+- [Memory Framework Benchmark Summary]: OMEGA 95.4% | Zep 63.8-71.2% | Mem0 49.0%. Mem0's self-editing model resolves conflicts on write without duplicates. Zep leads on temporal reasoning with validity windows. Both Mem0 Pro ($249/mo) and Zep Enterprise gate graph features. Self-hosting: Mem0 fully self-hostable (Apache 2.0); Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
+
 ## Recent Activity
+- 2026-04-20: Rosie — Cross-project research cycle (OMEGA memory scores 95.4% LongMemEval — new top performer, MemoryLake emerges as cross-agent competitor)
 - 2026-04-19: Rosie — Cross-project research cycle (awesome-ai-agents-2026 landscape map, model context hitting 1M tokens — memory architecture implications for Polynize Brain)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint pattern validates Polynize Brain architecture — blueprint portability is emerging as key concept)
 - 2026-04-17: Rosie — Cross-project research cycle (Google Android skills validates SKILL.md cognition installation pattern, Codex memory = direct competitor to Polynize Brain concept)
@@ -48,6 +54,8 @@ Extract and install cognition frameworks into AI agents.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 OpenClaw plugin production-ready, Dream gate feature)
 
 ## Next Actions
+- [ ] Evaluate OMEGA (95.4% LME, zero deps, local-first) as Polynize Brain memory layer — vs Mem0 cloud-first (Rosie)
+- [ ] Compare MemoryLake "memory passport" vs Polynize Brain portable cognition — differentiation story (Rosie)
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)
 - [ ] Draft positioning statement leveraging "commodity not platform" developer sentiment (Rosie)
 - [ ] Map Polynize Brain's framework installation approach to the "knowledge layer + connector layer" model

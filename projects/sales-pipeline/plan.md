@@ -33,7 +33,13 @@ Research leads, market trends, and competitors for AI agent services.
 - [Market Trend — Mobile AI Inference]: Google Gemma 4 running on iPhone (105 pts, trending on HN) signals growing demand for on-device/portable AI. Melbourne/SME clients who resist cloud AI for data sovereignty reasons may respond to "runs anywhere" positioning. (Source: HN front page, April 15 2026)
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA + no Brave API key = no automated competitor pricing research. This blocker has persisted for 5 days. Needs escalation. (Source: research cycle)
 
+## Research Notes — 2026-04-20
+- [OMEGA Memory — 95.4% LongMemEval, Zero Dependencies]: New memory framework scoring highest on independent benchmarks. Local-first, AES-256 encryption, 25 MCP tools, SQLite + ONNX. Self-hostable with no external infrastructure. Key sales angle: for SMEs concerned about data sovereignty, OMEGA's local-first architecture removes the "your data is in the cloud" objection entirely. (Source: omegamax.co, April 2026)
+- [MemoryLake — Cross-Agent Memory Competitor]: Platform-neutral "memory passport for agents" emerges as direct competitor to Polynize Brain concept. Cross-session, cross-agent portability with multimodal support. Enterprise governance (provenance, traceability, deletion) strongest in class. Polynize needs differentiation story against MemoryLake's "memory infrastructure" positioning. (Source: powerdrill.ai, April 8 2026)
+- [Memory Benchmark Summary]: OMEGA 95.4% | Zep 63.8-71.2% | Mem0 49.0% on LongMemEval. Zep leads temporal reasoning with validity windows. Mem0 self-edits to avoid duplicates. Both gate graph features behind paywalls ($249/mo Pro). Mem0 fully self-hostable Apache 2.0; Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
+
 ## Recent Activity
+- 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME score — new top memory performer, MemoryLake emerges as competitor, benchmark comparison updated)
 - 2026-04-19: Rosie — Cross-project research cycle (1M token context changes sales conversation, framework fragmentation creates Polynize positioning opportunity)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint validates Polynize Brain architecture — use as sales hook for "installable cognition," Australian pricing guide still current)
 - 2026-04-17: Rosie — Cross-project research cycle (Codex memory launch validates market demand, Android CLI = new content angle for lead gen)
@@ -43,8 +49,8 @@ Research leads, market trends, and competitors for AI agent services.
 - 2026-04-13: Rosie — Cross-project research cycle (web search completely blocked — DuckDuckGo CAPTCHA now blocking ALL queries)
 
 ## Next Actions
-- [ ] Configure web search API for competitor pricing research
-- [ ] Research Melbourne/SME AI adoption rates
+- [ ] Position Polynize Brain against OMEGA — "OMEGA stores memory, Polynize installs cognition frameworks" is the differentiation angle (Rosie)
+- [ ] Create MemoryLake comparison — Polynize installs cognition, MemoryLake stores memory — different problems (Rosie)
 - [ ] Incorporate "portable, not locked-in" positioning into sales messaging — resonates with Claude Code backlash sentiment (Rosie)
 - [ ] Price Polynize against Industrial AI ($297/mo AI employee) — need differentiation story (Rosie)
 
