@@ -475,7 +475,7 @@ def main():
     # Handle based on urgency
     if urgency == SignalUrgency.HIGH:
         print("\n⚡ HIGH URGENCY - Executing trade...")
-        result = execute_trade(signal.get('action', 'BUY'), market_data, dry_run=True)
+        result = execute_trade(signal.get('action', 'BUY'), market_data, dry_run=False)
         
         if result.get('dry_run'):
             print(f"   [DRY RUN] Trade simulation complete")
