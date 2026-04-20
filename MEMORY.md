@@ -7,16 +7,18 @@
 
 ## Marrs Coiro — Key Context
 - Founder, Polynize.ai — sells AI agent teams to founders/SMEs
-- Based: Melbourne, The Commons (Mon/Wed/Fri), Queensland (currently traveling Apr 15-20)
-- Works with: Shourov (co-founder), Julian (tech), Julia (content)
+- Based: Melbourne, The Commons (Mon/Wed/Fri)
+- Works with: Shourov (co-founder), Julian (tech — NOT Julia), Julia (content)
 - Communication: plain, direct. No corporate speak. Marrs is results-focused.
+- Back from Queensland April 19/20
 
-## Current Trip — Queensland (Apr 15-20)
-- Marrs is traveling, need to keep him on track
-- Priorities: Proposals out (Felix/Simon), PAM design
-- Lorenzo emailed about Supanova proposal update — check today
-- Naomi considering saying NO to Facebook group agent (risky, no clear solution)
-- Scott Waterman (Roxbury) — $10k, potentially 10-20 agents
+## This Week (Apr 20-24)
+- Naomi pitch — tonight — new pricing structure
+- Everstock proposal — tomorrow
+- Scott Waterman — tomorrow, book meeting today
+- Jess proposal — tomorrow
+- Felix — wrap up (Orthogonal + training) → invoice
+- Simon (Aquallis) — blocked waiting on his account details
 
 ## Polynize — Business
 - Revenue target: tangible revenue NOW
@@ -29,11 +31,14 @@
 - Will own: lead collection, email nurture, CRM management, proposal workflow
 - Marrs building this in Claude
 
-## Active Proposals — Hot Pipeline (Apr 17)
-- **Social Studio (Jess)** — $30k, quoting, proposal Monday
-- **Scott Waterman (Roxbury)** — ~$10k first build, potentially much more, quoting
-- **Lorenzo/Supanova** — $30k-$80k, quoting, emailed update Apr 14
-- **AJ + Michael Cotton (Everstock)** — ~$30k, quoting, survival supplies business
+## Active Proposals — Hot Pipeline (Apr 20)
+- **Naomi** — pitch tonight, new pricing structure
+- **Everstock (AJ/Michael Cotton)** — $30k, proposal tomorrow
+- **Scott Waterman (Roxbury)** — ~$10k first build, potentially 10-20 agents, meeting to book today, proposal tomorrow
+- **Jess (Social Studio)** — $30k, proposal tomorrow
+- **Felix (Cat Empire)** — 90% done, needs Orthogonal Google integration + training → ready to invoice
+- **Simon (Aquallis)** — blocked waiting on his account details
+- **Lorenzo/Supanova** — $30k-$80k, quoting
 
 ## Technical State
 - Kraken API keys: transferred to Dash (moonshot project now managed by Dash)
@@ -48,6 +53,12 @@
 - Rosie research: 11:15pm
 - Scarlett sales review: 8am weekdays
 - Dash morning check-in: 8am
+
+## Integrations Needed
+- **Xero** — Polynize Xero account needs integrating so Richie can create and send invoices
+- **Google Calendar** — Richie needs read access to Marrs' calendar
+- **Email** — Richie needs to be able to read emails
+- **Orthogonal** — Need to integrate Felix's Google account with Orthogonal
 
 ## Critical Rules
 - Email signature: Best, Richie AI Co-Ordinator / Polynize.ai
