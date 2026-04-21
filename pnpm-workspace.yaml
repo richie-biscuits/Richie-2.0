@@ -1,0 +1,5 @@
+allowBuilds:
+  koffi: true
+  openclaw: true
+  protobufjs: true
+  sharp: true
