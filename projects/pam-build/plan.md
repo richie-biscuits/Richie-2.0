@@ -42,7 +42,14 @@ Research agent build patterns and tools.
 - [MemoryLake — Cross-Agent Memory Infrastructure Reference]: Platform-neutral "memory passport for agents." Cross-session + cross-agent portable memory, multimodal (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion). PAM could use MemoryLake architecture as reference for how to build portable cross-agent memory, not just per-agent memory. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary for PAM]: OMEGA 95.4% (zero deps) | Zep 63.8-71.2% (temporal reasoning, needs Neo4j) | Mem0 49.0% (cloud-first, graph behind $249/mo paywall). PAM memory architecture decision: local-first (OMEGA) vs cloud-managed (Mem0) vs temporal-graph (Zep). OMEGA's zero-deps最适合 self-hosted PAM deployments. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-21
+- [OMEGA 95.4% LME — Build Decision Point]: Full comparison confirms OMEGA vs Mem0 tradeoffs: OMEGA (95.4% LME, 25 MCP tools, zero deps, AES-256, SQLite+ONNX) vs Mem0 (47.3K stars, 4-9 MCP tools, cloud-first, $249/mo Pro). For PAM: OMEGA's self-hosted story is the strongest fit — zero infrastructure overhead, highest benchmark score. Mem0 v2.0.0-beta migration complexity (enable_graph removed) is an additional argument for evaluating OMEGA as the PAM memory layer. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026, April 2026)
+- [Memory Architecture Tier Guide — Three Build Paths]: ShareUHack guide (April 19) confirms practical build paths: solo (Hmem/Engram, SQLite MCP, no Docker), startup (Mem0 hybrid, SQLite+vector DB), enterprise (scope-chain, on-prem). Key build insight: SQLite+FTS5 handles <100K memories at sub-ms speed — most PAM deployments don't need a vector database. PAM's memory architecture should default to SQLite-first, with vector DB as an upgrade path. (Source: shareuhack.com AI agent memory architecture guide)
+- [Four Memory Types Taxonomy — Build Reference]: Complete memory taxonomy from LangChain/LangMem: Working (LLM native), Episodic (conversation history, SQLite/checkpointer), Semantic (facts/concepts, vector/FTS5), Procedural (SOPs, markdown/SKILL.md). For PAM: procedural memory IS the cognition framework — SKILL.md files are procedural memory. This confirms the Polynize Brain extraction approach maps directly to the "procedural memory" layer. (Source: shareuhack.com, LangChain documentation)
+- [Web Search Still Blocked for Framework Research]: DuckDuckGo blocking AI agent framework release queries. Brave API key still needed. (Source: research cycle)
+
 ## Recent Activity
+- 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison for PAM memory decision, SQLite-first architecture confirmed practical, four memory types taxonomy maps SKILL.md to procedural memory)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, zero-deps architecture ideal for PAM, MemoryLake cross-agent reference)
 - 2026-04-19: Rosie — Cross-project research cycle (20+ framework landscape map from awesome-ai-agents-2026, 1M token context baseline shifts memory architecture calculus)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework = reference architecture for PAM cognition, AI Agent Benchmarks 2026 published)
@@ -53,9 +60,9 @@ Research agent build patterns and tools.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
 
 ## Next Actions
-- [ ] Evaluate OMEGA (95.4% LME, zero-deps, local-first) vs Mem0 for PAM memory architecture — OMEGA's self-hosted story may fit PAM better (Rosie)
-- [ ] Use MemoryLake "memory passport" architecture as reference for PAM's portable cross-agent memory design (Rosie)
-- [ ] Apply "knowledge layer + connector layer" pattern to PAM tool architecture (Rosie)
+- [ ] Evaluate OMEGA vs Mem0 for PAM memory layer — OMEGA's zero-deps + 95.4% LME is strongest fit for self-hosted PAM (Rosie)
+- [ ] Default PAM memory architecture to SQLite+FTS5 first — vector DB is upgrade path only (Rosie)
+- [ ] Map SKILL.md procedural memory extraction to the "procedural memory" layer in the four memory types taxonomy (Rosie)
 
 ## Blockers
 - Web search blocked

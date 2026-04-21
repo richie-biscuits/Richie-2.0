@@ -38,7 +38,13 @@ Research leads, market trends, and competitors for AI agent services.
 - [MemoryLake — Cross-Agent Memory Competitor]: Platform-neutral "memory passport for agents" emerges as direct competitor to Polynize Brain concept. Cross-session, cross-agent portability with multimodal support. Enterprise governance (provenance, traceability, deletion) strongest in class. Polynize needs differentiation story against MemoryLake's "memory infrastructure" positioning. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary]: OMEGA 95.4% | Zep 63.8-71.2% | Mem0 49.0% on LongMemEval. Zep leads temporal reasoning with validity windows. Mem0 self-edits to avoid duplicates. Both gate graph features behind paywalls ($249/mo Pro). Mem0 fully self-hostable Apache 2.0; Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-21
+- [OMEGA vs Mem0 — Pricing Positioning Signal]: OMEGA (zero-deps, local-first, AES-256 encryption) positions against Mem0 ($249/mo Pro tier, cloud-first). For sales: OMEGA removes the "$249/mo" price anchor that Mem0 set for memory infrastructure. SMEs who balked at Mem0 pricing now have a free alternative. Polynize Brain should position ABOVE OMEGA — "OMEGA stores what happened, Polynize installs how to think." (Source: omegamax.co, April 2026)
+- [Memory Tier Pricing — Solo $0 to Enterprise "not primary concern"]: ShareUHack guide confirms three pricing tiers: solo $0 (Hmem/Engram/SQLite), startup $50-500/mo (Mem0 hybrid), enterprise no budget concern (agent-recall). Key sales insight: Polynize Brain's target market (startups to mid-market) sits in the $50-500/mo consideration range. Position Polynize as "the missing cognition layer" for teams who already have (or rejected) Mem0. (Source: shareuhack.com, April 19 2026)
+- [Web Search Still Blocked for Pricing]: DuckDuckGo blocking most pricing/competitor queries. Flowtivity Australian pricing guide still accessible (flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/) — no new competitor pricing data this cycle. (Source: research cycle)
+
 ## Recent Activity
+- 2026-04-21: Rosie — Cross-project research cycle (OMEGA removes $249/mo price anchor, memory tier pricing guide confirms $50-500/mo startup segment, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME score — new top memory performer, MemoryLake emerges as competitor, benchmark comparison updated)
 - 2026-04-19: Rosie — Cross-project research cycle (1M token context changes sales conversation, framework fragmentation creates Polynize positioning opportunity)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint validates Polynize Brain architecture — use as sales hook for "installable cognition," Australian pricing guide still current)
@@ -49,10 +55,9 @@ Research leads, market trends, and competitors for AI agent services.
 - 2026-04-13: Rosie — Cross-project research cycle (web search completely blocked — DuckDuckGo CAPTCHA now blocking ALL queries)
 
 ## Next Actions
-- [ ] Position Polynize Brain against OMEGA — "OMEGA stores memory, Polynize installs cognition frameworks" is the differentiation angle (Rosie)
-- [ ] Create MemoryLake comparison — Polynize installs cognition, MemoryLake stores memory — different problems (Rosie)
-- [ ] Incorporate "portable, not locked-in" positioning into sales messaging — resonates with Claude Code backlash sentiment (Rosie)
-- [ ] Price Polynize against Industrial AI ($297/mo AI employee) — need differentiation story (Rosie)
+- [ ] Position Polynize above OMEGA — "OMEGA stores what happened, Polynize installs how to think" (Rosie)
+- [ ] Target $50-500/mo startup segment with "missing cognition layer" sales message (Rosie)
+- [ ] Price Polynize against Industrial AI ($297/mo AI employee) and Mem0 ($249/mo) — need clear differentiation (Rosie)
 
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries

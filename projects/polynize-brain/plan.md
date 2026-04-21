@@ -43,7 +43,13 @@ Extract and install cognition frameworks into AI agents.
 - [MemoryLake — "Memory Passport for Agents"]: Emerging cross-agent memory infrastructure positions itself as platform-neutral, detaching agent memory from LLM providers/orchestration frameworks. Multimodal support (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion controls). Directly competitive with Polynize Brain's portable cognition concept. (Source: powerdrill.ai, April 8 2026)
 - [Memory Framework Benchmark Summary]: OMEGA 95.4% | Zep 63.8-71.2% | Mem0 49.0%. Mem0's self-editing model resolves conflicts on write without duplicates. Zep leads on temporal reasoning with validity windows. Both Mem0 Pro ($249/mo) and Zep Enterprise gate graph features. Self-hosting: Mem0 fully self-hostable (Apache 2.0); Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-21
+- [OMEGA vs Mem0 Full Comparison — April 2026]: OMEGA leads on benchmarks (95.4% LME, 25 MCP tools, zero deps) vs Mem0 (47.3K stars, no published LME score, cloud-first, $249/mo Pro). Key insight for Polynize Brain: OMEGA and Mem0 are solving the same problem (memory) with opposite architectures — local-first vs cloud-first. Polynize Brain's "cognition installation" is a different layer entirely. The memory wars are real, but Polynize is playing above them. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026, April 2026)
+- [Memory Architecture Tier Guide — Solo/Startup/Enterprise]: Practical guide confirms three-tier architecture pattern: solo (Hmem/Engram, SQLite, $0), startup (Mem0 hybrid, SQLite+vector DB, $50-500/mo), enterprise (scope-chain, on-prem). Key insight: most indie projects don't need a vector database — SQLite+FTS5 handles <100K memories at sub-ms query speed. Polynize Brain framework extraction should target the solo→startup transition. (Source: shareuhack.com AI agent memory architecture guide, April 19 2026)
+- [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking most queries (content, framework searches). Memory queries worked. Brave API key still needed. (Source: research cycle)
+
 ## Recent Activity
+- 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison, memory architecture tier guide confirms SQLite-first for indie, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA memory scores 95.4% LongMemEval — new top performer, MemoryLake emerges as cross-agent competitor)
 - 2026-04-19: Rosie — Cross-project research cycle (awesome-ai-agents-2026 landscape map, model context hitting 1M tokens — memory architecture implications for Polynize Brain)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint pattern validates Polynize Brain architecture — blueprint portability is emerging as key concept)
@@ -54,8 +60,9 @@ Extract and install cognition frameworks into AI agents.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 OpenClaw plugin production-ready, Dream gate feature)
 
 ## Next Actions
-- [ ] Evaluate OMEGA (95.4% LME, zero deps, local-first) as Polynize Brain memory layer — vs Mem0 cloud-first (Rosie)
-- [ ] Compare MemoryLake "memory passport" vs Polynize Brain portable cognition — differentiation story (Rosie)
+- [ ] Evaluate OMEGA vs Mem0 — "OMEGA stores memory, Polynize installs cognition" is the differentiation angle (Rosie)
+- [ ] Document the "memory vs cognition" positioning: OMEGA/Mem0/Zep store what happened, Polynize installs how to think (Rosie)
+- [ ] Target the startup segment ($50-500/mo budget) with "missing cognition layer" positioning (Rosie)
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)
 - [ ] Draft positioning statement leveraging "commodity not platform" developer sentiment (Rosie)
 - [ ] Map Polynize Brain's framework installation approach to the "knowledge layer + connector layer" model

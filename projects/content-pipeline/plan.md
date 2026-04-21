@@ -31,7 +31,13 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — MemoryLake "Memory Passport" Demo]: MemoryLake positions as platform-neutral cross-agent memory. Could do side-by-side demo: "MemoryLake stores what happened, Polynize installs how to think." Good differentiation content that also educates market on the distinction. (Source: powerdrill.ai, April 8 2026)
 - [Memory Framework Content Map]: OMEGA 95.4% (local-first) | Zep 63.8% (temporal reasoning) | Mem0 49.0% (personalization, largest community). Three architectures = three content pieces. Could build "which memory system should your AI agent use in 2026" as a comparison series. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-21
+- [Content Angle — "SQLite vs Vector DB for AI Memory" — High Tutorial Potential]: ShareUHack published practical guide (April 19) on memory architecture tiers: solo dev ($0, SQLite), startup ($50-500/mo, SQLite+vector DB), enterprise (on-prem scope-chain). Key content insight: "You don't need a vector database" is a contrarian, high-engagement angle that challenges conventional wisdom. Tutorial potential: "Why your AI agent doesn't need a vector database" — perfect for the maker/SME audience Polynize targets. (Source: shareuhack.com, April 19 2026)
+- [Content Angle — Memory Framework Comparison as Series]: OMEGA vs Mem0 comparison page (April 2026) formats memory frameworks as a structured comparison (benchmark, MCP tools, dependencies, local-first, encryption, stars). This comparison-table-as-content format is highly shareable. Could adapt to "which AI agent memory system should you use in 2026" — OMEGA/Zep/Mem0/Letta/Cognee five-way comparison. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026)
+- [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking LinkedIn/TikTok content queries. Brave API key still needed for automated social content research. Memory-focused queries worked. (Source: research cycle)
+
 ## Recent Activity
+- 2026-04-21: Rosie — Cross-project research cycle (SQLite vs Vector DB tutorial angle, memory comparison table format, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, content angles: local-first demo, MemoryLake comparison, framework comparison series)
 - 2026-04-19: Rosie — Cross-project research cycle (framework landscape overview — LangChain/CrewAI dominance, 1M token context shifts content angle, HN Sunday not AI-heavy)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint framework as new content angle, Australian AI pricing guide still current)
@@ -42,9 +48,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by bot detection (DuckDuckGo CAPTCHA)
 
 ## Next Actions
-- [ ] Create "how to add OMEGA memory to your AI agent" tutorial — zero-deps hook for SME audience (Rosie)
-- [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0 three-way content (Rosie)
-- [ ] Research LinkedIn AI content patterns this week
+- [ ] Create "Why your AI agent doesn't need a vector database" tutorial — contrarian SQLite-first angle (Rosie)
+- [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0/Letta/Cognee five-way (Rosie)
 - [ ] Create content hook from "AI employees at $297/mo vs hiring" angle — resonates with SME audience (Rosie)
 
 ## Blockers
