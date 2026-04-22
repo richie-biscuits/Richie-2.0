@@ -10,58 +10,47 @@
 - Based: Melbourne, The Commons (Mon/Wed/Fri)
 - Works with: Shourov (co-founder), Julian (tech — NOT Julia), Julia (content)
 - Communication: plain, direct. No corporate speak. Marrs is results-focused.
-- Back from Queensland April 19/20
-
-## This Week (Apr 20-24)
-- Naomi pitch — tonight — new pricing structure
-- Everstock proposal — tomorrow
-- Scott Waterman — tomorrow, book meeting today
-- Jess proposal — tomorrow
-- Felix — wrap up (Orthogonal + training) → invoice
-- Simon (Aquallis) — blocked waiting on his account details
 
 ## Polynize — Business
 - Revenue target: tangible revenue NOW
 - Strategy: Local sales (The Commons) + global authority (30 Days series)
-- Pipeline value: ~$131k across 17 CRM contacts
+- Team: Shourov, Julian, Julia, plus Simon (enterprise sales), Daniel (BD)
+- Malaysia pipeline: 50+ targets, $500M each, pitch May 5
+- Pricing: transformation-based (show ROI, not deliverables)
+- Tiered: Essential → Advanced → Custom Expert; min $999 base + $1,500-$2k/mo managed ops
 
-## PAM (Polynize Agent Management) — Priority Project
-- Separate Polynize team workflow from Marrs' personal workflow
-- Team needs CRM visibility (currently zero)
-- Will own: lead collection, email nurture, CRM management, proposal workflow
-- Marrs building this in Claude
+## Active Deals — Updated Apr 22
+- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Decision today.
+- **Naomi Ferstera** — $5k + $299/mo. Proposal sent, waiting on response.
+- **Jess/Social Studio** — $15k total ($5k+$10k) + $1k/mo. Went well.
+- **Scott Waterman (Roxbury)** — ~$10k first build, 10-20 agents. Meeting TODAY. Post-auction comms AI.
+- **Felix (Cat Empire)** — Built. Training session needed this week → then invoice.
+- **Simon (Aquallis)** — Blocked waiting on account details.
+- **Lorenzo/Supanova** — $30k-$80k. quoting.
 
-## Active Proposals — Hot Pipeline (Apr 20)
-- **Naomi** — pitch tonight, new pricing structure
-- **Everstock (AJ/Michael Cotton)** — $30k, proposal tomorrow
-- **Scott Waterman (Roxbury)** — ~$10k first build, potentially 10-20 agents, meeting to book today, proposal tomorrow
-- **Jess (Social Studio)** — $30k, proposal tomorrow
-- **Felix (Cat Empire)** — 90% done, needs Orthogonal Google integration + training → ready to invoice
-- **Simon (Aquallis)** — blocked waiting on his account details
-- **Lorenzo/Supanova** — $30k-$80k, quoting
+## Integrations Needed
+- **Xero** — Need Polynize Xero account integrated for invoices
+- **Google Calendar** — Richie needs read access
+- **Email** — gmail_cli.py exists at ~/.config/richie-google/ but not fully integrated
+- **Orthogonal** — Felix Google account integration still pending
 
-## Technical State
-- Kraken API keys: transferred to Dash (moonshot project now managed by Dash)
-- Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a` (working, refreshed)
-- Google OAuth: rotated — ignore any previous credential references
-- Moonshot Supabase 404: resolved by Dash managing the project
-
-## Active Cron Jobs (key ones)
-- Moonshot monitor: 9am daily (reduced from every 5 min)
-- Workspace backup: every 6 hours
-- Daily Northstar: 9:30am
+## Active Cron Jobs
+- Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
 - Rosie research: 11:15pm
 - Scarlett sales review: 8am weekdays
 - Dash morning check-in: 8am
+- Daily Northstar: 9:30am
+- Moonshot monitor: 9am daily
+- Workspace backup: every 6hrs
+- Google Calendar token refresh: every 55m
+- Weekly Skills audit: Mondays 9am (error — needs fix)
 
-## Integrations Needed
-- **Xero** — Polynize Xero account needs integrating so Richie can create and send invoices
-- **Google Calendar** — Richie needs read access to Marrs' calendar
-- **Email** — Richie needs to be able to read emails
-- **Orthogonal** — Need to integrate Felix's Google account with Orthogonal
+## Technical State
+- Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a` (working)
+- Google OAuth: fresh credentials at ~/.config/richie-google/
+- OpenClaw: upgraded to 2026.4.20 (Apr 22)
 
 ## Critical Rules
 - Email signature: Best, Richie AI Co-Ordinator / Polynize.ai
-- MC deploy path: `~/.openclaw/workspace/projects/mission-control-v4/index.html`
 - Never commit secrets to git
-- `reports/` never tracked in git — restore from git commit `9151bd8` if needed
+- `reports/` never tracked — restore from git commit `9151bd8` if needed
