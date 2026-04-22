@@ -38,6 +38,11 @@ Extract and install cognition frameworks into AI agents.
 - [Cognition Installation — Skills > MCP for Knowledge]: Deep comparison of 8 AI agent frameworks (Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI, Smolagents, Pydantic AI, AutoGen) confirms the MCP+Skills pattern — MCP for connectors, Skills for knowledge/context. The article specifically recommends Skills for teaching agents "gotchas and patterns discovered during sessions" — directly aligns with Polynize Brain's cognition framework installation concept. (Source: morphllm.com/ai/agent-framework)
 - [Provider Lock-in Momentum]: Developer backlash to Claude Code Routines (HN #47768133, 664 pts) continues to build. "I want a commodity, not a platform" sentiment strengthens Polynize Brain's portable cognition installation positioning. The market is actively seeking escape routes from provider lock-in. (Source: HN, April 15-16 2026)
 
+## Research Notes — 2026-04-22
+- [Hermes Agent v0.10 — 103K Stars, Self-Improving, 118 Skills]: Nous Research released Hermes Agent v0.10 on April 16, 2026. In 7 weeks it passed 103K GitHub stars (faster than LangChain + AutoGen combined). Key differentiator: GEPA (Genetic-Pareto) self-improvement — agents with 20+ self-generated skills are 40% faster on repeated tasks. MIT license, 15+ LLM providers, runs on $5/mo VPS. Polynize Brain positioning: Hermes generates skills from experience, Polynize INSTALLS structured cognition frameworks (persona, goals, validation logic) — different layers. (Source: innobu.com, April 2026)
+- [OpenClaw 9 CVEs, Hermes Zero — Security Gap]: OpenClaw had 9 CVEs in March 2026 including CVE-2026-25253 (CVSS 8.8), plus ClawHavoc with 341 malicious skills. Hermes Agent has zero known CVEs. This security gap is documented — relevant for Polynize Brain's OpenClaw-based architecture. (Source: innobu.com, April 2026)
+- [Claude Code 30+ Releases, Anthropic Managed Agent Cloud]: Claude Code shipped 30+ updates in 5 weeks (rendering cycles, enterprise cloud, Linux process isolation). Anthropic launched managed agent cloud service. OpenClaw released "Dreaming" version (advanced memory + security hardening). Agent infrastructure race accelerating. (Source: af.net, April 15 2026)
+
 ## Research Notes — 2026-04-20
 - [OMEGA Memory — New Top Performer on LongMemEval]: OMEGA scores 95.4% on LongMemEval (highest published), with 25 MCP tools, zero external dependencies, SQLite + ONNX embeddings, AES-256 encryption, and "intelligent forgetting." This is a new entrant that Polynize Brain should evaluate — zero-dependency architecture is the opposite of Mem0's cloud-first approach. Local-first positioning aligns with "portable cognition." (Source: omegamax.co, April 2026)
 - [MemoryLake — "Memory Passport for Agents"]: Emerging cross-agent memory infrastructure positions itself as platform-neutral, detaching agent memory from LLM providers/orchestration frameworks. Multimodal support (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion controls). Directly competitive with Polynize Brain's portable cognition concept. (Source: powerdrill.ai, April 8 2026)
@@ -49,7 +54,7 @@ Extract and install cognition frameworks into AI agents.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking most queries (content, framework searches). Memory queries worked. Brave API key still needed. (Source: research cycle)
 
 ## Recent Activity
-- 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison, memory architecture tier guide confirms SQLite-first for indie, web search still blocked)
+- 2026-04-22: Rosie — Cross-project research cycle (Hermes Agent 103K stars + GEPA self-improvement, OpenClaw 9 CVEs vs Hermes 0, Anthropic managed agent cloud launched)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA memory scores 95.4% LongMemEval — new top performer, MemoryLake emerges as cross-agent competitor)
 - 2026-04-19: Rosie — Cross-project research cycle (awesome-ai-agents-2026 landscape map, model context hitting 1M tokens — memory architecture implications for Polynize Brain)
 - 2026-04-18: Rosie — Cross-project research cycle (Cognitive Blueprint pattern validates Polynize Brain architecture — blueprint portability is emerging as key concept)
@@ -60,7 +65,8 @@ Extract and install cognition frameworks into AI agents.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 OpenClaw plugin production-ready, Dream gate feature)
 
 ## Next Actions
-- [ ] Evaluate OMEGA vs Mem0 — "OMEGA stores memory, Polynize installs cognition" is the differentiation angle (Rosie)
+- [ ] Evaluate Hermes Agent GEPA vs Polynize Brain framework installation — different layers but same market attention (Rosie)
+- [ ] Document Polynize Brain positioning against Hermes Agent: Polynize installs structured cognition, Hermes generates skills from experience (Rosie)
 - [ ] Document the "memory vs cognition" positioning: OMEGA/Mem0/Zep store what happened, Polynize installs how to think (Rosie)
 - [ ] Target the startup segment ($50-500/mo budget) with "missing cognition layer" positioning (Rosie)
 - [ ] Document the MCP+Skills hybrid pattern for cognition installation (Rosie)

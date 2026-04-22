@@ -31,12 +31,19 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — MemoryLake "Memory Passport" Demo]: MemoryLake positions as platform-neutral cross-agent memory. Could do side-by-side demo: "MemoryLake stores what happened, Polynize installs how to think." Good differentiation content that also educates market on the distinction. (Source: powerdrill.ai, April 8 2026)
 - [Memory Framework Content Map]: OMEGA 95.4% (local-first) | Zep 63.8% (temporal reasoning) | Mem0 49.0% (personalization, largest community). Three architectures = three content pieces. Could build "which memory system should your AI agent use in 2026" as a comparison series. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-22
+- [LinkedIn Organic Reach Dropped 50% YoY — April 2026]: Ozigi blog (April 20) reports LinkedIn organic reach dropped 50% year-over-year. What works now: authentic voice, video content, creator-focused posts. What's dying: generic AI-generated content, corporate-speak. Content pipeline must prioritize authentic voice + visual formats. (Source: blog.ozigi.app, April 20 2026)
+- [AI LinkedIn Agents Trending — 9 Tools Listed April 2026]: Magicpost.in article (April 17) covers 9 best AI agents for LinkedIn (Multi-Thread Agent, Ads Manager, Warm Connector). Market actively searching for LinkedIn automation tools — Polynize AI agent content has real search demand. (Source: magicpost.in, April 17 2026)
+- [Google Cloud AI Agent Trends 2026 Report Published]: Google published comprehensive AI agent trends report. Authoritative source for 30 Days content series — reference/link for credibility. (Source: services.google.com/fh/files/misc/google_cloud_ai_agent_trends_2026_report.pdf)
+- [Web Search Recovered]: DuckDuckGo CAPTCHA no longer blocking all queries — past-week filter (&tbs=qdr:w) works. Automated research restored for first time since April 13. (Source: research cycle)
+
 ## Research Notes — 2026-04-21
 - [Content Angle — "SQLite vs Vector DB for AI Memory" — High Tutorial Potential]: ShareUHack published practical guide (April 19) on memory architecture tiers: solo dev ($0, SQLite), startup ($50-500/mo, SQLite+vector DB), enterprise (on-prem scope-chain). Key content insight: "You don't need a vector database" is a contrarian, high-engagement angle that challenges conventional wisdom. Tutorial potential: "Why your AI agent doesn't need a vector database" — perfect for the maker/SME audience Polynize targets. (Source: shareuhack.com, April 19 2026)
 - [Content Angle — Memory Framework Comparison as Series]: OMEGA vs Mem0 comparison page (April 2026) formats memory frameworks as a structured comparison (benchmark, MCP tools, dependencies, local-first, encryption, stars). This comparison-table-as-content format is highly shareable. Could adapt to "which AI agent memory system should you use in 2026" — OMEGA/Zep/Mem0/Letta/Cognee five-way comparison. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026)
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking LinkedIn/TikTok content queries. Brave API key still needed for automated social content research. Memory-focused queries worked. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-22: Rosie — Cross-project research cycle (LinkedIn organic reach -50% YoY, AI LinkedIn agents trending, web search recovered)
 - 2026-04-21: Rosie — Cross-project research cycle (SQLite vs Vector DB tutorial angle, memory comparison table format, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, content angles: local-first demo, MemoryLake comparison, framework comparison series)
 - 2026-04-19: Rosie — Cross-project research cycle (framework landscape overview — LangChain/CrewAI dominance, 1M token context shifts content angle, HN Sunday not AI-heavy)

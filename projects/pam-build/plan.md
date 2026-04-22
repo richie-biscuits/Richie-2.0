@@ -42,6 +42,12 @@ Research agent build patterns and tools.
 - [MemoryLake — Cross-Agent Memory Infrastructure Reference]: Platform-neutral "memory passport for agents." Cross-session + cross-agent portable memory, multimodal (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion). PAM could use MemoryLake architecture as reference for how to build portable cross-agent memory, not just per-agent memory. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary for PAM]: OMEGA 95.4% (zero deps) | Zep 63.8-71.2% (temporal reasoning, needs Neo4j) | Mem0 49.0% (cloud-first, graph behind $249/mo paywall). PAM memory architecture decision: local-first (OMEGA) vs cloud-managed (Mem0) vs temporal-graph (Zep). OMEGA's zero-deps最适合 self-hosted PAM deployments. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-22
+- [Hermes Agent v0.10 — Build Reference for Self-Improving Agents]: Nous Research's Hermes Agent v0.10 (April 16) is the first production-ready self-improving open-source agent. GEPA mechanism (ICLR 2026 Oral) makes agents with 20+ self-generated skills 40% faster on repeated tasks. Three-layer memory (short-term, long-term FTS5, procedural skills). 118 skills bundled. For PAM: this is the reference implementation for self-improving agents — study GEPA architecture. (Source: innobu.com, April 2026)
+- [Hermes Agent — Zero CVEs vs OpenClaw 9]: Hermes has zero known CVEs; OpenClaw had 9 in March 2026 (CVE-2026-25253 CVSS 8.8) plus ClawHavoc supply chain attack (341 malicious skills). For PAM build: security architecture lesson — smaller footprint + strict vetting > broad ecosystem with security gaps. (Source: innobu.com, April 2026)
+- [OpenAI Agents SDK — Indie Maker Guide April 2026]: ShareUHack published practical guide to OpenAI Agents SDK (April 19). Key content: harness/compute separation, sandbox vendors (E2B vs Modal vs Daytona), cost modeling, Manifest anti-lock-in strategies. $20-50/month budget target. For PAM: this is the indie dev segment we're building for — understand their stack. (Source: shareuhack.com, April 19 2026)
+- [Claude Code 30+ Releases, Anthropic Managed Agent Cloud]: Claude Code shipped 30+ updates in 5 weeks. Anthropic launched managed agent cloud service. OpenClaw "Dreaming" release. The agent infrastructure race is accelerating — PAM must keep pace with framework evolution. (Source: af.net, April 15 2026)
+
 ## Research Notes — 2026-04-21
 - [OMEGA 95.4% LME — Build Decision Point]: Full comparison confirms OMEGA vs Mem0 tradeoffs: OMEGA (95.4% LME, 25 MCP tools, zero deps, AES-256, SQLite+ONNX) vs Mem0 (47.3K stars, 4-9 MCP tools, cloud-first, $249/mo Pro). For PAM: OMEGA's self-hosted story is the strongest fit — zero infrastructure overhead, highest benchmark score. Mem0 v2.0.0-beta migration complexity (enable_graph removed) is an additional argument for evaluating OMEGA as the PAM memory layer. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026, April 2026)
 - [Memory Architecture Tier Guide — Three Build Paths]: ShareUHack guide (April 19) confirms practical build paths: solo (Hmem/Engram, SQLite MCP, no Docker), startup (Mem0 hybrid, SQLite+vector DB), enterprise (scope-chain, on-prem). Key build insight: SQLite+FTS5 handles <100K memories at sub-ms speed — most PAM deployments don't need a vector database. PAM's memory architecture should default to SQLite-first, with vector DB as an upgrade path. (Source: shareuhack.com AI agent memory architecture guide)
@@ -49,6 +55,7 @@ Research agent build patterns and tools.
 - [Web Search Still Blocked for Framework Research]: DuckDuckGo blocking AI agent framework release queries. Brave API key still needed. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-22: Rosie — Cross-project research cycle (Hermes Agent GEPA self-improvement architecture, OpenClaw security gap vs Hermes zero CVEs, OpenAI Agents SDK indie guide, Anthropic managed cloud launched)
 - 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison for PAM memory decision, SQLite-first architecture confirmed practical, four memory types taxonomy maps SKILL.md to procedural memory)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, zero-deps architecture ideal for PAM, MemoryLake cross-agent reference)
 - 2026-04-19: Rosie — Cross-project research cycle (20+ framework landscape map from awesome-ai-agents-2026, 1M token context baseline shifts memory architecture calculus)
@@ -60,6 +67,7 @@ Research agent build patterns and tools.
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
 
 ## Next Actions
+- [ ] Evaluate Hermes Agent GEPA as reference architecture for self-improving PAM — study three-layer memory + skill generation loop (Rosie)
 - [ ] Evaluate OMEGA vs Mem0 for PAM memory layer — OMEGA's zero-deps + 95.4% LME is strongest fit for self-hosted PAM (Rosie)
 - [ ] Default PAM memory architecture to SQLite+FTS5 first — vector DB is upgrade path only (Rosie)
 - [ ] Map SKILL.md procedural memory extraction to the "procedural memory" layer in the four memory types taxonomy (Rosie)
