@@ -22,6 +22,7 @@
 ## Active Deals — Updated Apr 23
 - **Scott Waterman (Roxbury's Auction House)** — ✅ DEAL CLOSED $9,900. Build starts Fri Apr 24. Meeting confirmed 10am.
 - **AJ/Everstock (Michael Cotton)** — ✅ DEAL CLOSED $28k setup + <$2k/mo. Survival supplies.
+- **Jess (different person — potential lead, old contact of Marrs)** — Meeting tomorrow Thu Apr 24, 1pm. Not Social Studio.
 - **Jess/Social Studio** — $15k total ($5k+$10k) + $1k/mo. Still warm, Marrs re-engaged her Apr 23.
 - **Naomi Ferstera** — $5k + $299/mo. Proposal sent, waiting. Marrs will nudge tomorrow (Apr 24).
 - **Felix (Cat Empire)** — Built. Training session needed this week. Marrs to book weekend.
