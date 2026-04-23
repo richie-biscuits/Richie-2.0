@@ -19,20 +19,29 @@
 - Pricing: transformation-based (show ROI, not deliverables)
 - Tiered: Essential → Advanced → Custom Expert; min $999 base + $1,500-$2k/mo managed ops
 
-## Active Deals — Updated Apr 22
-- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Decision today.
-- **Naomi Ferstera** — $5k + $299/mo. Proposal sent, waiting on response.
-- **Jess/Social Studio** — $15k total ($5k+$10k) + $1k/mo. Went well.
-- **Scott Waterman (Roxbury)** — ~$10k first build, 10-20 agents. Meeting TODAY. Post-auction comms AI.
-- **Felix (Cat Empire)** — Built. Training session needed this week → then invoice.
-- **Simon (Aquallis)** — Blocked waiting on account details.
-- **Lorenzo/Supanova** — $30k-$80k. quoting.
+## Active Deals — Updated Apr 23
+- **Scott Waterman (Roxbury's Auction House)** — ✅ DEAL CLOSED $9,900. Build starts Fri Apr 24. Meeting confirmed 10am.
+- **AJ/Everstock (Michael Cotton)** — ✅ DEAL CLOSED $28k setup + <$2k/mo. Survival supplies.
+- **Jess/Social Studio** — $15k total ($5k+$10k) + $1k/mo. Still warm, Marrs re-engaged her Apr 23.
+- **Naomi Ferstera** — $5k + $299/mo. Proposal sent, waiting. Marrs will nudge tomorrow (Apr 24).
+- **Felix (Cat Empire)** — Built. Training session needed this week. Marrs to book weekend.
+- **Simon (Aquallis)** — Meeting booked early next week (calendar shows no specific time yet).
+- **Lorenzo/Supanova** — $30k-$80k. Gone quiet, will resurface when ready.
+- **AJay Nevastok (Ajay from Everstock)** — Booked in Mon afternoon (see calendar).
 
-## Integrations Needed
-- **Xero** — Need Polynize Xero account integrated for invoices
-- **Google Calendar** — Richie needs read access
-- **Email** — gmail_cli.py exists at ~/.config/richie-google/ but not fully integrated
-- **Orthogonal** — Felix Google account integration still pending
+## Integrations — Working
+- **Xero** — ✅ Integrated via client credentials OAuth. Can create/authorise/send invoices. Token auto-refreshes.
+- **Google Calendar** — ✅ Read access to marrs@polynize.io (read-only, can't write events to this calendar).
+- **Email** — ✅ Gmail CLI at ~/.config/richie-google/gmail_cli.py. Token auto-refreshes.
+- **Orthogonal** — Felix Google account integration still pending.
+
+## Calendar (marrs@polynize.io)
+- Roxbury build session: Fri Apr 24, 10am
+- Jess meeting: Fri Apr 24, 1pm
+- AJay Nevastok meeting: Mon Apr 27, 4pm
+- Simon (Aquallis): early next week (time TBD)
+- UQ iLab presentation: Tue Apr 28, 10:30am
+- Queensland Uni presentation prep: Tue Apr 28 (Presentation Prep slot)
 
 ## Active Cron Jobs
 - Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
@@ -47,10 +56,17 @@
 
 ## Technical State
 - Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a` (working)
-- Google OAuth: fresh credentials at ~/.config/richie-google/
+- Google OAuth: credentials at ~/.config/richie-google/ (working, read+write for richie calendar, read for marrs calendar)
 - OpenClaw: upgraded to 2026.4.20 (Apr 22)
+- Xero: client credentials OAuth working (token refreshes every ~25min)
 
 ## Critical Rules
 - Email signature: Best, Richie AI Co-Ordinator / Polynize.ai
 - Never commit secrets to git
 - `reports/` never tracked — restore from git commit `9151bd8` if needed
+
+## Reminders
+- UQ iLab presentation: Tue Apr 28 morning — prep needed
+- Naomi nudge: tomorrow Fri Apr 24
+- Felix training session: book on weekend
+- Agent team console (client-facing Mission Control): in progress — part of website infrastructure build
