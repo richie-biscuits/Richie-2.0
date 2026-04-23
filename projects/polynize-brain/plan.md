@@ -38,6 +38,12 @@ Extract and install cognition frameworks into AI agents.
 - [Cognition Installation — Skills > MCP for Knowledge]: Deep comparison of 8 AI agent frameworks (Claude Agent SDK, OpenAI Agents SDK, Google ADK, LangGraph, CrewAI, Smolagents, Pydantic AI, AutoGen) confirms the MCP+Skills pattern — MCP for connectors, Skills for knowledge/context. The article specifically recommends Skills for teaching agents "gotchas and patterns discovered during sessions" — directly aligns with Polynize Brain's cognition framework installation concept. (Source: morphllm.com/ai/agent-framework)
 - [Provider Lock-in Momentum]: Developer backlash to Claude Code Routines (HN #47768133, 664 pts) continues to build. "I want a commodity, not a platform" sentiment strengthens Polynize Brain's portable cognition installation positioning. The market is actively seeking escape routes from provider lock-in. (Source: HN, April 15-16 2026)
 
+## Research Notes — 2026-04-23
+- [Persona Protocol — 7-Layer Cognitive Identity Architecture]: New framework (personaprotocol.ai) defines PAC² — Personalized Augmented Collaborators with Context. Seven distinct cognitive identity layers define how AI characters think, change, and maintain continuity. Directly competitive with Polynize Brain's cognition installation concept — same problem space, different terminology. Key signal: the identity/persona layer is becoming its own architectural category. (Source: personaprotocol.ai)
+- [Nuwa Skill — AI Persona Distillation Framework]: PyShine published Zhang Xuefeng Skill (April 20) using Nuwa framework to distill public figures into installable AI personas with mental models, decision heuristics, and expression DNA — turning thinking into a runnable cognitive operating system. This is EXACTLY the Polynize Brain concept in market right now. Nuwa's "cognitive operating system" phrasing is a strong positioning match. (Source: pyshine.com/blog/2026/04/20/Zhang-Xuefeng-Skill-AI-Persona-Distillation/)
+- [RASA — Persona-Driven YAML Agent Framework]: New open-source Python framework (github.com/vedanta/rasa) for persona-driven, memory-aware AI agents with declarative YAML configuration. Define personality, multi-layered memory, domain-specific reasoning. Accessible via API, CLI, or Python. This is the same "cognition as YAML artifact" concept Polynize Brain is building — independent validation of the architecture. (Source: github.com/vedanta/rasa)
+- [Persona Cognitive Architecture — Three Memory Types + Cognitive Cycle]: DeepWiki article on persona cognitive architecture (crcresearch/agentic_collab) describes three memory types + four-stage cognitive cycle. Each persona operates autonomously on this architecture. Could serve as reference architecture for Polynize Brain's framework extraction output format. (Source: deepwiki.com/crcresearch/agentic_collab/2.2-persona-cognitive-architecture)
+
 ## Research Notes — 2026-04-22
 - [Hermes Agent v0.10 — 103K Stars, Self-Improving, 118 Skills]: Nous Research released Hermes Agent v0.10 on April 16, 2026. In 7 weeks it passed 103K GitHub stars (faster than LangChain + AutoGen combined). Key differentiator: GEPA (Genetic-Pareto) self-improvement — agents with 20+ self-generated skills are 40% faster on repeated tasks. MIT license, 15+ LLM providers, runs on $5/mo VPS. Polynize Brain positioning: Hermes generates skills from experience, Polynize INSTALLS structured cognition frameworks (persona, goals, validation logic) — different layers. (Source: innobu.com, April 2026)
 - [OpenClaw 9 CVEs, Hermes Zero — Security Gap]: OpenClaw had 9 CVEs in March 2026 including CVE-2026-25253 (CVSS 8.8), plus ClawHavoc with 341 malicious skills. Hermes Agent has zero known CVEs. This security gap is documented — relevant for Polynize Brain's OpenClaw-based architecture. (Source: innobu.com, April 2026)
@@ -54,6 +60,7 @@ Extract and install cognition frameworks into AI agents.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking most queries (content, framework searches). Memory queries worked. Brave API key still needed. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-23: Rosie — Cross-project research cycle (Nuwa Skill persona distillation validates Polynize Brain concept, Persona Protocol 7-layer architecture, RASA YAML agent framework, Microsoft Agent Governance Toolkit released)
 - 2026-04-22: Rosie — Cross-project research cycle (Hermes Agent 103K stars + GEPA self-improvement, OpenClaw 9 CVEs vs Hermes 0, Anthropic managed agent cloud launched)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA memory scores 95.4% LongMemEval — new top performer, MemoryLake emerges as cross-agent competitor)
 - 2026-04-19: Rosie — Cross-project research cycle (awesome-ai-agents-2026 landscape map, model context hitting 1M tokens — memory architecture implications for Polynize Brain)
@@ -66,6 +73,9 @@ Extract and install cognition frameworks into AI agents.
 
 ## Next Actions
 - [ ] Evaluate Hermes Agent GEPA vs Polynize Brain framework installation — different layers but same market attention (Rosie)
+- [ ] Document Polynize Brain positioning against Nuwa Skill persona distillation — same concept, different market phrasing ("cognitive operating system") (Rosie)
+- [ ] Align Polynize Brain output format with Nuwa/RASA "installable persona artifact" pattern — YAML-based cognition artifacts (Rosie)
+- [ ] Evaluate Persona Protocol 7-layer architecture as reference for framework extraction components (Rosie)
 - [ ] Document Polynize Brain positioning against Hermes Agent: Polynize installs structured cognition, Hermes generates skills from experience (Rosie)
 - [ ] Document the "memory vs cognition" positioning: OMEGA/Mem0/Zep store what happened, Polynize installs how to think (Rosie)
 - [ ] Target the startup segment ($50-500/mo budget) with "missing cognition layer" positioning (Rosie)

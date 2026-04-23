@@ -31,6 +31,10 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — MemoryLake "Memory Passport" Demo]: MemoryLake positions as platform-neutral cross-agent memory. Could do side-by-side demo: "MemoryLake stores what happened, Polynize installs how to think." Good differentiation content that also educates market on the distinction. (Source: powerdrill.ai, April 8 2026)
 - [Memory Framework Content Map]: OMEGA 95.4% (local-first) | Zep 63.8% (temporal reasoning) | Mem0 49.0% (personalization, largest community). Three architectures = three content pieces. Could build "which memory system should your AI agent use in 2026" as a comparison series. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-23
+- [Social Media April 2026 — Platform Update Playbook Available]: SocialCoach published April 2026 playbook covering LinkedIn, Instagram, TikTok, YouTube updates + 4 trending video formats. Fresh resource for content calendar planning. Key focus: platform-specific content strategy vs generic AI content. (Source: socialcoach.io/blog/april-2026-social-media-strategy-playbook)
+- [Digital Marketing News April 1-10 Roundup]: ALM Corp published April digital marketing roundup covering Google, Meta, TikTok, LinkedIn, SEO, paid media, AI search. Full month update for content reference. (Source: almcorp.com/blog/digital-marketing-news-april-2026/)
+
 ## Research Notes — 2026-04-22
 - [LinkedIn Organic Reach Dropped 50% YoY — April 2026]: Ozigi blog (April 20) reports LinkedIn organic reach dropped 50% year-over-year. What works now: authentic voice, video content, creator-focused posts. What's dying: generic AI-generated content, corporate-speak. Content pipeline must prioritize authentic voice + visual formats. (Source: blog.ozigi.app, April 20 2026)
 - [AI LinkedIn Agents Trending — 9 Tools Listed April 2026]: Magicpost.in article (April 17) covers 9 best AI agents for LinkedIn (Multi-Thread Agent, Ads Manager, Warm Connector). Market actively searching for LinkedIn automation tools — Polynize AI agent content has real search demand. (Source: magicpost.in, April 17 2026)
@@ -43,6 +47,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking LinkedIn/TikTok content queries. Brave API key still needed for automated social content research. Memory-focused queries worked. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-23: Rosie — Cross-project research cycle (April social media playbook available, digital marketing April roundup)
 - 2026-04-22: Rosie — Cross-project research cycle (LinkedIn organic reach -50% YoY, AI LinkedIn agents trending, web search recovered)
 - 2026-04-21: Rosie — Cross-project research cycle (SQLite vs Vector DB tutorial angle, memory comparison table format, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, content angles: local-first demo, MemoryLake comparison, framework comparison series)

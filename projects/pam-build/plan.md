@@ -42,6 +42,10 @@ Research agent build patterns and tools.
 - [MemoryLake — Cross-Agent Memory Infrastructure Reference]: Platform-neutral "memory passport for agents." Cross-session + cross-agent portable memory, multimodal (docs, images, audio). Strong enterprise governance (provenance, traceability, deletion). PAM could use MemoryLake architecture as reference for how to build portable cross-agent memory, not just per-agent memory. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary for PAM]: OMEGA 95.4% (zero deps) | Zep 63.8-71.2% (temporal reasoning, needs Neo4j) | Mem0 49.0% (cloud-first, graph behind $249/mo paywall). PAM memory architecture decision: local-first (OMEGA) vs cloud-managed (Mem0) vs temporal-graph (Zep). OMEGA's zero-deps最适合 self-hosted PAM deployments. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-23
+- [Microsoft Agent Governance Toolkit — OWASP Top 10 Coverage, Sub-Millisecond]: Microsoft released Agent Governance Toolkit (April 2) under MIT license — first open-source toolkit addressing all 10 OWASP agentic AI risks. Seven packages: agent-os (stateless policy engine <0.1ms p99), agent-mesh (DID identity + behavioral trust scoring), agent-sre (circuit breakers + SLO enforcement), CMVK (cross-model verification with majority voting). Works with LangChain, CrewAI, Google ADK, OpenAI Agents SDK, Haystack, PydanticAI. Python/TypeScript/Rust/Go/.NET. Key for PAM: security is now a first-class build concern, not an afterthought. (Source: opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit)
+- [New Framework — Claw Code Hit 72K Stars in First Days]: Claw Code launched April 2026 as open-source AI coding agent framework with 72,000 GitHub stars in first days. Emerged since last cycle — competitive with Claude Code. PAM should monitor Claw Code's trajectory. (Source: financialcontent.com, April 2026)
+
 ## Research Notes — 2026-04-22
 - [Hermes Agent v0.10 — Build Reference for Self-Improving Agents]: Nous Research's Hermes Agent v0.10 (April 16) is the first production-ready self-improving open-source agent. GEPA mechanism (ICLR 2026 Oral) makes agents with 20+ self-generated skills 40% faster on repeated tasks. Three-layer memory (short-term, long-term FTS5, procedural skills). 118 skills bundled. For PAM: this is the reference implementation for self-improving agents — study GEPA architecture. (Source: innobu.com, April 2026)
 - [Hermes Agent — Zero CVEs vs OpenClaw 9]: Hermes has zero known CVEs; OpenClaw had 9 in March 2026 (CVE-2026-25253 CVSS 8.8) plus ClawHavoc supply chain attack (341 malicious skills). For PAM build: security architecture lesson — smaller footprint + strict vetting > broad ecosystem with security gaps. (Source: innobu.com, April 2026)
@@ -55,6 +59,7 @@ Research agent build patterns and tools.
 - [Web Search Still Blocked for Framework Research]: DuckDuckGo blocking AI agent framework release queries. Brave API key still needed. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-23: Rosie — Cross-project research cycle (Microsoft Agent Governance Toolkit addresses all 10 OWASP agentic AI risks, Claw Code hits 72K stars in first days)
 - 2026-04-22: Rosie — Cross-project research cycle (Hermes Agent GEPA self-improvement architecture, OpenClaw security gap vs Hermes zero CVEs, OpenAI Agents SDK indie guide, Anthropic managed cloud launched)
 - 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison for PAM memory decision, SQLite-first architecture confirmed practical, four memory types taxonomy maps SKILL.md to procedural memory)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME = new top memory performer, zero-deps architecture ideal for PAM, MemoryLake cross-agent reference)
@@ -71,6 +76,8 @@ Research agent build patterns and tools.
 - [ ] Evaluate OMEGA vs Mem0 for PAM memory layer — OMEGA's zero-deps + 95.4% LME is strongest fit for self-hosted PAM (Rosie)
 - [ ] Default PAM memory architecture to SQLite+FTS5 first — vector DB is upgrade path only (Rosie)
 - [ ] Map SKILL.md procedural memory extraction to the "procedural memory" layer in the four memory types taxonomy (Rosie)
+- [ ] Evaluate Microsoft Agent Governance Toolkit for PAM security architecture — OWASP Top 10 coverage is now baseline for production agents (Rosie)
+- [ ] Monitor Claw Code trajectory — new framework hitting 72K stars in first days (competitive with Claude Code) (Rosie)
 
 ## Blockers
 - Web search blocked

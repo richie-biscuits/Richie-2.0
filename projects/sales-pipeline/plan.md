@@ -38,6 +38,11 @@ Research leads, market trends, and competitors for AI agent services.
 - [MemoryLake — Cross-Agent Memory Competitor]: Platform-neutral "memory passport for agents" emerges as direct competitor to Polynize Brain concept. Cross-session, cross-agent portability with multimodal support. Enterprise governance (provenance, traceability, deletion) strongest in class. Polynize needs differentiation story against MemoryLake's "memory infrastructure" positioning. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary]: OMEGA 95.4% | Zep 63.8-71.2% | Mem0 49.0% on LongMemEval. Zep leads temporal reasoning with validity windows. Mem0 self-edits to avoid duplicates. Both gate graph features behind paywalls ($249/mo Pro). Mem0 fully self-hostable Apache 2.0; Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-04-23
+- [Melbourne AI Agency Pricing — Three-Tier Market Fully Mapped]: Jahanzaib.ai published detailed Melbourne AI agency pricing (April 18): off-the-shelf tools AUD $25-250/mo, configured automation AUD $2,500-20,000 upfront, custom AI systems AUD $35,000-350,000+. "Most SMBs should start in AUD $8,000-15,000 range" — confirms the $5K-50K+ pricing tier Polynize operates in. Only 5% of Australian SMBs "fully AI-enabled" — 111% profitability uplift for the fully-enabled. (Source: jahanzaib.ai/blog/ai-agency-melbourne)
+- [Melbourne Market — 64-84% SMBs Using AI, Only 5% Fully Integrated]: AI Lab Australia 2026 report shows market is still early. The gap between basic ChatGPT use and full integration = Polynize's opportunity. 111% profitability uplift for fully-enabled businesses is a strong sales hook. Melbourne professional services ahead of national average — Polynize should target legal, accounting, financial planning first. (Source: jahanzaib.ai citing AI Lab Australia 2026 State of AI Adoption report)
+- [Industrial AI Competitor — Still Active at $297/mo]: Industrial AI remains Polynize's closest Melbourne competitor. Confirmed pricing at AUD $297/mo for AI employee. Key differentiation needed: Polynize vs Industrial AI messaging. (Source: industrialai.au)
+
 ## Research Notes — 2026-04-22
 - [Industrial AI — Australian AI Pricing Breakdown April 2026]: Industrial AI blog (April 3) publishes honest pricing breakdown for Australian AI agents. Key finding: Custom AI agents $5K-$50K+, AI receptionists $300-$1K/mo, off-the-shelf $50-$500/mo, consulting $150-$400/hr. Integration complexity drives cost ($1K-$3K per integration). This confirms the pricing landscape Polynize operates in. (Source: industrialai.au/blog/ai-for-business-costs-platforms-australia-2026)
 - [Melbourne AI Agency Landscape — 2026 Active]: Multiple guides list top Melbourne AI agencies: Team400 (#1), Futuro Network, Enterprise Monkey, Abbacus Technologies. Melbourne AI consulting landscape "exploded in 2026" — now diverse ecosystem of specialists, boutique agencies, engineering-led firms. Polynize is competing in a busy market. (Source: team400.ai, enterprisemonkey.com.au, abbacustechnologies.com)
@@ -50,6 +55,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Web Search Still Blocked for Pricing]: DuckDuckGo blocking most pricing/competitor queries. Flowtivity Australian pricing guide still accessible (flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/) — no new competitor pricing data this cycle. (Source: research cycle)
 
 ## Recent Activity
+- 2026-04-23: Rosie — Cross-project research cycle (Melbourne AI agency pricing fully mapped: AUD $8K-15K starting range for SMBs, only 5% SMBs fully AI-enabled = Polynize opportunity)
 - 2026-04-22: Rosie — Cross-project research cycle (Industrial AI pricing breakdown, Melbourne AI agency landscape mapped, Google AI agent trends report for sales use)
 - 2026-04-21: Rosie — Cross-project research cycle (OMEGA removes $249/mo price anchor, memory tier pricing guide confirms $50-500/mo startup segment, web search still blocked)
 - 2026-04-20: Rosie — Cross-project research cycle (OMEGA 95.4% LME score — new top memory performer, MemoryLake emerges as competitor, benchmark comparison updated)
@@ -65,6 +71,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [ ] Position Polynize above OMEGA — "OMEGA stores what happened, Polynize installs how to think" (Rosie)
 - [ ] Target $50-500/mo startup segment with "missing cognition layer" sales message (Rosie)
 - [ ] Price Polynize against Industrial AI ($297/mo AI employee) and Mem0 ($249/mo) — need clear differentiation (Rosie)
+- [ ] Use "111% profitability uplift for fully AI-enabled SMBs" from AI Lab Australia report as sales hook (Rosie)
 
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries
