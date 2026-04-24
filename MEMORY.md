@@ -27,8 +27,7 @@
 - **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies.
 
 ### 🟡 Pipeline (Working)
-- **Jess Kenos** (new Jess, different from Social Studio) — Meeting TODAY Fri Apr 24, 1pm. Potential lead, old contact.
-- **Jess/Social Studio** — $15k total ($5k+$10k) + $1k/mo. Warm, re-engaged by Marrs.
+- **Jessica Cameron (Jess/Social Studio)** — Meeting TODAY Fri Apr 24, 1pm. $15k total ($5k+$10k) + $1k/mo. Warm, re-engaged by Marrs. Also known as Jess Kenos in some contexts.
 - **Naomi Ferstera** — $5k + $299/mo. Proposal sent. Nudge today (Apr 24).
 - **Simon (Aquallis)** — Early next week meeting (time TBC). Account details resolved.
 - **Felix (Cat Empire)** — Built, waiting on training session. Email sent re: weekend. $99 trial first month.
