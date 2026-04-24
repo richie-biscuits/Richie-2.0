@@ -46,7 +46,13 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — Memory Framework Comparison as Series]: OMEGA vs Mem0 comparison page (April 2026) formats memory frameworks as a structured comparison (benchmark, MCP tools, dependencies, local-first, encryption, stars). This comparison-table-as-content format is highly shareable. Could adapt to "which AI agent memory system should you use in 2026" — OMEGA/Zep/Mem0/Letta/Cognee five-way comparison. (Source: omegamax.co/guides/best-ai-agent-memory-frameworks-2026)
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking LinkedIn/TikTok content queries. Brave API key still needed for automated social content research. Memory-focused queries worked. (Source: research cycle)
 
+## Research Notes — 2026-04-25
+- [LinkedIn Algorithm 2026 — Saves > Likes, Profile-Topic Alignment Matters]: Forbes analysis (April 24) via 1.2M-follower creator Chris Donnelly + 300K-post dataset. Key findings: "saves" are the #1 engagement metric (more than likes), profile-topic mismatch kills distribution, polls = highest reach but "truly terrible for profile," carousels need 8-10 slides max (algorithm penalizes low completion rates), hashtags dead since 2025, external links now safe in post body. Source: forbes.com/sites/jodiecook/2026/01/12/the-linkedin-algorithm-changed-again-heres-whats-new-for-2026/
+- [LinkedIn Algorithm 2026 — Profile Signals Authority Before Distributing]: LinkedIn's "360 Brew" update reads headline, about section, and experience to verify authority BEFORE distributing posts. Content topic MUST match stated expertise or distribution drops. "Save"-worthy content (frameworks, checklists, practical guides) resurfaces for weeks. Source: forbes.com
+- [Content Format — Polls High Reach, Low Conversion]: Donnelly confirms polls offer highest reach multiplier but are "very low for follower growth or conversion" and "truly terrible for your profile generally." Polynize content should avoid polls as primary format — use for occasional audience research only. Source: forbes.com
+
 ## Recent Activity
+- 2026-04-25: Rosie — Cross-project research cycle (LinkedIn algorithm 2026 deep dive: saves > likes, profile-topic alignment required, polls = high reach/low conversion, carousels need 8-10 slides max)
 - 2026-04-23: Rosie — Cross-project research cycle (April social media playbook available, digital marketing April roundup)
 - 2026-04-22: Rosie — Cross-project research cycle (LinkedIn organic reach -50% YoY, AI LinkedIn agents trending, web search recovered)
 - 2026-04-21: Rosie — Cross-project research cycle (SQLite vs Vector DB tutorial angle, memory comparison table format, web search still blocked)
