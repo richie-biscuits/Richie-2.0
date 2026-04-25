@@ -1,3 +1,4 @@
 [2026-04-22 16:48 UTC] Token refresh failed: scripts directory not found at /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts
 [2026-04-25 15:28:38 AEST] Token refresh failed: no such directory /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts
 [2026-04-25 15:29:52 AEST] Token refresh failed: deleted_client (OAuth client was deleted)
+[2026-04-26 03:34] CRON: Token refresh failed - OAuth client was deleted (deleted_client). Refresh token:  (first 20 chars). Cannot refresh without re-creating the Google Cloud OAuth client.
