@@ -47,12 +47,17 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Web Search Still Blocked]: DuckDuckGo CAPTCHA blocking LinkedIn/TikTok content queries. Brave API key still needed for automated social content research. Memory-focused queries worked. (Source: research cycle)
 
 ## Research Notes — 2026-04-25
+- [Content Hook — DeepSeek V4 Launch = Massive AI Story]: DeepSeek V4 Preview released April 24. Scored 1,973 points on HN (biggest story of the day by 3x), with 1,509 comments. Content angles: "DeepSeek V4 vs Claude/GPT — the open-source AI agent just leapfrogged everyone," "1M context is now standard — what it means for your business," "DeepSeek V4 integrated with Claude Code and OpenClaw — the agent ecosystem is converging." This is the biggest AI launch since... well, maybe DeepSeek V3. Must create content around this. (Source: news.ycombinator.com, api-docs.deepseek.com)
+- [Content Hook — 'I Cancelled Claude' Post = 898 Points, 531 Comments]: User backlash post on HN (April 24) complaining about token issues, declining quality, poor support from Anthropic. This is a strong signal: model dissatisfaction creates content opportunity for "why you need a multi-provider AI strategy" positioning. Content angle: "Claude quality declining? Here's how to build AI that doesn't depend on one provider." (Source: news.ycombinator.com)
+- [Content Hook — Google Invests Up to $40B in Anthropic]: 656 points, 658 comments. This validates the AI investment thesis for SME buyers. Content angle: "If Google is betting $40B on AI agents, shouldn't your business be figuring this out now?" Creates urgency narrative. (Source: bloomberg.com via HN)
+- [Mem0 New Token-Efficient Algorithm — Content Material]: Mem0 published detailed blog (April 16) explaining new algorithm achieving 93.4 LongMemEval with under 7K tokens/query. Engineering depth content viable. Key interesting hook: ADD-only extraction means no more overwriting memories — perfect for "the evolution of AI memory" narrative. (Source: mem0.ai/blog/mem0-the-token-efficient-memory-algorithm)
 - [LinkedIn Algorithm 2026 — Saves > Likes, Profile-Topic Alignment Matters]: Forbes analysis (April 24) via 1.2M-follower creator Chris Donnelly + 300K-post dataset. Key findings: "saves" are the #1 engagement metric (more than likes), profile-topic mismatch kills distribution, polls = highest reach but "truly terrible for profile," carousels need 8-10 slides max (algorithm penalizes low completion rates), hashtags dead since 2025, external links now safe in post body. Source: forbes.com/sites/jodiecook/2026/01/12/the-linkedin-algorithm-changed-again-heres-whats-new-for-2026/
 - [LinkedIn Algorithm 2026 — Profile Signals Authority Before Distributing]: LinkedIn's "360 Brew" update reads headline, about section, and experience to verify authority BEFORE distributing posts. Content topic MUST match stated expertise or distribution drops. "Save"-worthy content (frameworks, checklists, practical guides) resurfaces for weeks. Source: forbes.com
 - [Content Format — Polls High Reach, Low Conversion]: Donnelly confirms polls offer highest reach multiplier but are "very low for follower growth or conversion" and "truly terrible for your profile generally." Polynize content should avoid polls as primary format — use for occasional audience research only. Source: forbes.com
 
 ## Recent Activity
-- 2026-04-25: Rosie — Cross-project research cycle (LinkedIn algorithm 2026 deep dive: saves > likes, profile-topic alignment required, polls = high reach/low conversion, carousels need 8-10 slides max)
+- 2026-04-25: Rosie — Cross-project research cycle (DeepSeek V4 launch = biggest AI content story, 'I Cancelled Claude' backlash = multi-provider content hook, Google $40B in Anthropic = urgency narrative, LinkedIn algorithm deep dive)
+- 2026-04-25 (earlier): Rosie — Cross-project research cycle (LinkedIn algorithm 2026 deep dive: saves > likes, profile-topic alignment required, polls = high reach/low conversion, carousels need 8-10 slides max)
 - 2026-04-23: Rosie — Cross-project research cycle (April social media playbook available, digital marketing April roundup)
 - 2026-04-22: Rosie — Cross-project research cycle (LinkedIn organic reach -50% YoY, AI LinkedIn agents trending, web search recovered)
 - 2026-04-21: Rosie — Cross-project research cycle (SQLite vs Vector DB tutorial angle, memory comparison table format, web search still blocked)
@@ -69,6 +74,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] Create "Why your AI agent doesn't need a vector database" tutorial — contrarian SQLite-first angle (Rosie)
 - [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0/Letta/Cognee five-way (Rosie)
 - [ ] Create content hook from "AI employees at $297/mo vs hiring" angle — resonates with SME audience (Rosie)
+- [ ] Create "DeepSeek V4 vs Claude vs GPT" comparison content — biggest AI launch of the month, strong search demand (Rosie)
+- [ ] Create "I cancelled Claude" backlash content — multi-provider strategy content hook, capitalises on HN 898-pt story (Rosie)
 
 ## Blockers
 - Web search blocked by bot detection (DuckDuckGo CAPTCHA) — Brave API key needed for automated research

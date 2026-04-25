@@ -59,13 +59,18 @@ Research agent build patterns and tools.
 - [Web Search Still Blocked for Framework Research]: DuckDuckGo blocking AI agent framework release queries. Brave API key still needed. (Source: research cycle)
 
 ## Research Notes — 2026-04-25
+- [Build Reference — Mem0 New Token-Efficient Algorithm Sets New Memory Baseline]: Mem0's April 16 release achieves 91.6 LoCoMo (+28% from old 71.4), 93.4 LongMemEval, 64.1 BEAM (1M), 48.6 BEAM (10M), all at under 7K tokens/query. Architectural changes: single-pass ADD-only extraction (eliminates costly reconciliation step, preserves full state history), entity linking (proper nouns/quoted text/compound noun phrases), multi-signal retrieval (semantic + keyword + entity parallel scoring, fused via rank). For PAM: this is the production memory baseline PAM should target — sub-7K tokens, ADD-only extraction, multi-signal retrieval. The old Mem0 benchmark data in PAM plan (49.0% LME) is now obsolete — Mem0's new algorithm at 93.4% is competitive with OMEGA's 95.4%, and Mem0 has no published BEAM score. (Source: mem0.ai/blog/mem0-the-token-efficient-memory-algorithm)
+- [Build Reference — DeepSeek V4 Agent-Aware Architecture]: DeepSeek V4 Preview (April 24) integrated with Claude Code, OpenClaw, OpenCode. Dedicated optimizations for agentic coding — novel attention with token-wise compression + DSA (DeepSeek Sparse Attention). For PAM: the model layer is now explicitly agent-optimized. PAM architecture should assume agent-aware models are the baseline, not the exception. (Source: api-docs.deepseek.com)
+- [Google $40B Anthropic Investment — AI Infrastructure Investment Validates Market]: While not directly a build reference, $40B investment signals that AI agent infrastructure is a $ multi-billion market. For PAM: the build investment is justified — this is not a niche. (Source: bloomberg.com)
+- [Mem0 Kimi K2.6 Memory Analysis — Multi-Agent Memory Architecture Reference]: Mem0 published "Reading the Traces: What Two Charts Tell Us About Kimi K2.6's Memory" (April 23). Technical deep dive into how a leading multi-agent system manages memory. PAM should study this as reference architecture for multi-agent memory orchestration. (Source: mem0.ai/blog)
 - [Microsoft Agent Framework 1.0 GA — April 3, 2026 — Build Reference]: GA'd April 3, 2026. Unifies Semantic Kernel + AutoGen (75K+ combined stars) into single .NET + Python SDK. Five-layer architecture: Connectors (6 providers) → Kernel (DI) → Agents (first-class) → Orchestration (multi-agent patterns) → Interop (MCP + A2A). Multi-agent patterns: round-robin, supervisor, hierarchical, dynamic hand-off. DevUI local debugger included. OpenTelemetry native. MIT license. For PAM: this is the new enterprise baseline — PAM should integrate with Agent Framework 1.0 via A2A. Source: digitalapplied.com, April 18, 2026
 - [Agent Framework 1.0 — A2A Enables Cross-Framework Coordination]: A2A 1.0 protocol lets Agent Framework agents coordinate with agents in other frameworks (Hermes Agent, LangChain, custom). This makes cross-framework agent communication a reality — PAM's portable cognition layer fits into this ecosystem. Source: digitalapplied.com
 - [MemNexus Validates Cross-Framework Memory Gap for PAM Architecture]: MemNexus article (April 7) confirms: LangChain memory stays in LangGraph, CrewAI memory stays in CrewAI, AutoGen has no built-in memory. "The frameworks treat memory as a feature of the framework; the actual problem is memory as infrastructure that works across all of them." This is the exact problem PAM should solve. Source: memnexus.ai/blog/2026-04-07-agentic-framework-memory-comparison
 - [Web Search Recovered — Framework Research Restored]: DuckDuckGo no longer blocking queries. Web search functional for first time since April 13. Previous blocker resolved. Source: research cycle
 
 ## Recent Activity
-- 2026-04-25: Rosie — Cross-project research cycle (Microsoft Agent Framework 1.0 GA = new enterprise build baseline with A2A, MemNexus validates cross-framework memory gap for PAM architecture, web search restored)
+- 2026-04-25: Rosie — Cross-project research cycle (Mem0 new algorithm 93.4 LME under 7K tokens = new PAM memory baseline, ADD-only extraction architecture, DeepSeek V4 agent-aware model, Google $40B Anthropic validates market)
+- 2026-04-25 (earlier): Rosie — Cross-project research cycle (Microsoft Agent Framework 1.0 GA = new enterprise build baseline with A2A, MemNexus validates cross-framework memory gap for PAM architecture, web search restored)
 - 2026-04-23: Rosie — Cross-project research cycle (Microsoft Agent Governance Toolkit addresses all 10 OWASP agentic AI risks, Claw Code hits 72K stars in first days)
 - 2026-04-22: Rosie — Cross-project research cycle (Hermes Agent GEPA self-improvement architecture, OpenClaw security gap vs Hermes zero CVEs, OpenAI Agents SDK indie guide, Anthropic managed cloud launched)
 - 2026-04-21: Rosie — Cross-project research cycle (OMEGA vs Mem0 full comparison for PAM memory decision, SQLite-first architecture confirmed practical, four memory types taxonomy maps SKILL.md to procedural memory)
@@ -80,11 +85,13 @@ Research agent build patterns and tools.
 
 ## Next Actions
 - [ ] Evaluate Hermes Agent GEPA as reference architecture for self-improving PAM — study three-layer memory + skill generation loop (Rosie)
-- [ ] Evaluate OMEGA vs Mem0 for PAM memory layer — OMEGA's zero-deps + 95.4% LME is strongest fit for self-hosted PAM (Rosie)
+- [ ] RE-EVALUATE OMEGA vs Mem0 for PAM memory layer — Mem0 new algorithm at 93.4% LME closes the gap with OMEGA's 95.4%, and Mem0 has BEAM scores OMEGA lacks (Rosie)
 - [ ] Default PAM memory architecture to SQLite+FTS5 first — vector DB is upgrade path only (Rosie)
 - [ ] Map SKILL.md procedural memory extraction to the "procedural memory" layer in the four memory types taxonomy (Rosie)
 - [ ] Evaluate Microsoft Agent Governance Toolkit for PAM security architecture — OWASP Top 10 coverage is now baseline for production agents (Rosie)
 - [ ] Monitor Claw Code trajectory — new framework hitting 72K stars in first days (competitive with Claude Code) (Rosie)
+- [ ] Study Mem0 new algorithm architecture (ADD-only extraction, multi-signal retrieval) as PAM memory reference implementation (Rosie)
+- [ ] Evaluate DeepSeek V4 agent-aware architecture — assumes agent-optimized models are the baseline (Rosie)
 
 ## Blockers
 - Web search blocked

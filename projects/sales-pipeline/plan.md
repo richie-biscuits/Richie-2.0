@@ -55,12 +55,17 @@ Research leads, market trends, and competitors for AI agent services.
 - [Web Search Still Blocked for Pricing]: DuckDuckGo blocking most pricing/competitor queries. Flowtivity Australian pricing guide still accessible (flowtivity.ai/blog/ai-agent-cost-pricing-guide-australia-2026/) — no new competitor pricing data this cycle. (Source: research cycle)
 
 ## Research Notes — 2026-04-25
+- [Sales Hook — Google $40B in Anthropic Validates Market Thesis]: Google plans to invest up to $40B in Anthropic (Bloomberg, April 24). 656 HN points, 658 comments. For SME sales conversations: "The world's biggest companies are betting $40B+ on AI agents. You don't need to spend $40B — but ignoring this market shift is the real risk." Strong social proof anchor for Polynize pricing conversations. (Source: bloomberg.com)
+- [Sales Hook — 'I Cancelled Claude' = Market Dissatisfaction Signal]: HN front page #3 (898 pts, 531 comments) — user complaining about Anthropic token issues, declining quality, poor support. This creates Polynize positioning opportunity: "Your AI provider is locking you in while quality declines. Polynize builds portable agents that don't depend on one model." Directly aligns with established "commodity not platform" positioning. (Source: news.ycombinator.com)
+- [Competitive Landscape — DeepSeek V4 Changes the Pricing Game]: DeepSeek V4 Preview (1.6T MoE, 1M context, open-source SOTA agentic coding) is open-source with API pricing undercutting GPT-5.4 and Claude Opus 4.7. For sales: cost of AI agent inference is dropping fast. Polynize should position on VALUE DELIVERED, not model cost — the model is a commodity, the cognition framework is the differentiator. (Source: api-docs.deepseek.com)
+- [Mem0 Token-Efficient Algorithm — Proven Cost Optimization]: Mem0's new algorithm achieves 93.4 LongMemEval with under 7K tokens/query — 3-4x token savings vs full-context approaches. For SME sales: "Memory infrastructure that costs 25K+ tokens per query is burning your budget. We use 7K tokens at similar accuracy." Cost-conscious positioning resonates with SME buyers. (Source: mem0.ai/blog)
 - [MemNexus — Cross-Framework Memory Gap = Polynize Sales Hook]: MemNexus article (April 7) documents the exact problem Polynize solves: "A developer using Claude Code in the morning and Cursor in the afternoon carries zero memory between them. A LangGraph agent cannot access CrewAI memories." Sales conversation opener: "Your agents only remember within their own framework. We make cognition portable across all of them." Source: memnexus.ai/blog/2026-04-07-agentic-framework-memory-comparison
 - [Microsoft Agent Framework 1.0 GA — April 3, 2026 — New Competitive Entry]: GA'd April 3, 2026. Unifies Semantic Kernel + AutoGen (75K+ combined stars). Languages: .NET 9+ (C# 13) + Python 3.10+. Native MCP + A2A. Provider matrix: Azure OpenAI, OpenAI, Anthropic Claude, Bedrock, Gemini, Ollama. Enterprise-grade with OpenTelemetry. Multi-agent orchestration patterns (round-robin, supervisor, hierarchical, dynamic hand-off). DevUI local debugger included. MIT license. Source: digitalapplied.com, April 18, 2026
 - [Agent Framework 1.0 — A2A Protocol Enables Cross-Framework Agent Coordination]: A2A 1.0 lets Agent Framework agents coordinate with agents in other frameworks (Hermes Agent, LangChain, custom). This is infrastructure Polynize should be part of — if A2A enables cross-framework communication, Polynize Brain's portable cognition fits into the cross-framework ecosystem. Source: digitalapplied.com
 
 ## Recent Activity
-- 2026-04-25: Rosie — Cross-project research cycle (MemNexus validates cross-framework memory gap as sales hook, Microsoft Agent Framework 1.0 GA = new competitive entry with A2A cross-framework coordination)
+- 2026-04-25: Rosie — Cross-project research cycle (Google $40B in Anthropic = market validation, 'I Cancelled Claude' = positioning opportunity, DeepSeek V4 reshapes pricing landscape, Mem0 cost optimization data)
+- 2026-04-25 (earlier): Rosie — Cross-project research cycle (MemNexus validates cross-framework memory gap as sales hook, Microsoft Agent Framework 1.0 GA = new competitive entry with A2A cross-framework coordination)
 - 2026-04-23: Rosie — Cross-project research cycle (Melbourne AI agency pricing fully mapped: AUD $8K-15K starting range for SMBs, only 5% SMBs fully AI-enabled = Polynize opportunity)
 - 2026-04-22: Rosie — Cross-project research cycle (Industrial AI pricing breakdown, Melbourne AI agency landscape mapped, Google AI agent trends report for sales use)
 - 2026-04-21: Rosie — Cross-project research cycle (OMEGA removes $249/mo price anchor, memory tier pricing guide confirms $50-500/mo startup segment, web search still blocked)
@@ -78,6 +83,8 @@ Research leads, market trends, and competitors for AI agent services.
 - [ ] Target $50-500/mo startup segment with "missing cognition layer" sales message (Rosie)
 - [ ] Price Polynize against Industrial AI ($297/mo AI employee) and Mem0 ($249/mo) — need clear differentiation (Rosie)
 - [ ] Use "111% profitability uplift for fully AI-enabled SMBs" from AI Lab Australia report as sales hook (Rosie)
+- [ ] Use Google $40B Anthropic investment as social proof in SME sales conversations — "the market is betting big on AI agents" (Rosie)
+- [ ] Use DeepSeek V4 pricing pressure in sales narrative — "AI models are commoditizing, but cognition frameworks are the real differentiator" (Rosie)
 
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries
