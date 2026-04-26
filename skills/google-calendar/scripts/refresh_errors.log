@@ -1,0 +1,3 @@
+[2026-04-26 10:54:00] Token refresh failed: HTTP Error 401: Unauthorized
+- Refresh token present in secrets.env but returned 401 (revoked/expired)
+- Google Calendar skill needs re-authorization (run auth flow again)
