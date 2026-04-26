@@ -70,12 +70,21 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by CAPTCHA — DuckDuckGo blocking all queries)
 - 2026-04-13: Rosie — Cross-project research cycle (web search still blocked by bot detection (DuckDuckGo CAPTCHA)
 
+## Research Notes — 2026-04-26
+- [Content Hook — 'Amateur with ChatGPT Solves 60-Year Math Problem' = Hottest AI Story of the Week]: 23-year-old with no math training used ChatGPT Pro to crack an Erdős problem elite mathematicians couldn't solve. 478 HN points, 310 comments. Terence Tao (fields medalist) confirmed it's legitimate and that humans had a "mental block" the AI didn't. Content angles: "AI just proved it can think past human cognitive biases," "the amateur-Human + AI partnership is the new PhD," "the Erdős problem an AI solved that mathematicians couldn't." This is MASSIVE for Polynize's "AI cognition beyond human patterns" thesis. (Source: Scientific American, April 24; news.ycombinator.com 4/26 front page)
+- [Content Hook — 'The West Forgot How to Code' = 600 Points, Trending #1]: Blog post arguing Western coding skills are declining. 600 points, 359 comments. Content angle: "The West forgot how to code, but AI agents didn't — here's what comes next." Pairs AI agent capability narrative with real cultural anxiety. (Source: techtrends.dev via HN 4/26)
+- [LinkedIn Content — Saves Still #1 Metric, Profile-Authority Required]: My previous LinkedIn algorithm research (saves > likes, profile-topic alignment) remains current. Key update: the ChatGPT Erdős story is the perfect test content for LinkedIn — high "save" potential (framework: "how AI helps you think past mental blocks"). (Source: Forbes Jan 2026 via previous cycle)
+
+## Recent Activity
+- 2026-04-26: Rosie — Cross-project research cycle (ChatGPT Erdős story = #1 AI content of week, 'West Forgot to Code' trending 600 pts, LinkedIn saves metric remains key)
+
 ## Next Actions
 - [ ] Create "Why your AI agent doesn't need a vector database" tutorial — contrarian SQLite-first angle (Rosie)
 - [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0/Letta/Cognee five-way (Rosie)
 - [ ] Create content hook from "AI employees at $297/mo vs hiring" angle — resonates with SME audience (Rosie)
 - [ ] Create "DeepSeek V4 vs Claude vs GPT" comparison content — biggest AI launch of the month, strong search demand (Rosie)
 - [ ] Create "I cancelled Claude" backlash content — multi-provider strategy content hook, capitalises on HN 898-pt story (Rosie)
+- [ ] **PRIORITY** Create LinkedIn post/30 Days piece: "The 23-year-old who solved a 60-year math problem with ChatGPT — and what it tells us about human cognitive bias" — strongest AI story of the week, perfect for Polynize positioning (Rosie)
 
 ## Blockers
 - Web search blocked by bot detection (DuckDuckGo CAPTCHA) — Brave API key needed for automated research

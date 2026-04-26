@@ -83,6 +83,14 @@ Research agent build patterns and tools.
 - 2026-04-14: Rosie — Cross-project research cycle (Mem0 v2.0.0-beta breaks enable_graph, LOCOMO benchmark latency targets, 13-framework integration landscape)
 - 2026-04-13: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 report, LOCOMO benchmark data)
 
+## Research Notes — 2026-04-26
+- [Build Reference — Mem0 'Context Window vs Persistent Memory' — BEAM Benchmark Details]: Mem0's definitive blog post (April 8) on why 1M context isn't enough cites BEAM benchmark data showing quality correlation plummets from ~0.8 (2K context) to ~0.3 (128K) to near zero at 1M tokens. Key insight: as context grows, relevant information gets buried in noise — retrieval-augmented memory architectures are NOT optional even at 1M context. Full-context costs ~26K tokens/conv vs Mem0's ~1,800 — 14x cost difference. For PAM: this is the production architecture validation — PAM must use retrieval-based memory, not naive context stuffing. (Source: mem0.ai/blog/context-window-vs-persistent-memory-why-1m-tokens-isn-t-enough)
+- [Build Reference — ChatGPT Solves Erdős Problem = Validation of AI Cognition Beyond Human Patterns]: The AI found a proof method "no human had thought of." For PAM: this validates the value of building agents with structured cognition frameworks that can explore solution spaces humans don't. PAM should incorporate "cognitive exploration" as a design pattern — agents that search solution spaces differently than humans would. (Source: Scientific American, April 24)
+- [Build Reference — OpenAI Privacy Filter = New Data Privacy Architecture Pattern]: OpenAI's Privacy Filter (April 26) gives users control over data sent to AI. For PAM: privacy-aware agent architecture is becoming table stakes. PAM should include privacy filter capabilities from day one — not as an afterthought. (Source: openai.com)
+
+## Recent Activity
+- 2026-04-26: Rosie — Cross-project research cycle (Mem0 BEAM benchmark proves retrieval memory mandatory even at 1M context, ChatGPT Erdős validates cognitive exploration as PAM pattern, OpenAI Privacy Filter makes privacy-aware agents table stakes)
+
 ## Next Actions
 - [ ] Evaluate Hermes Agent GEPA as reference architecture for self-improving PAM — study three-layer memory + skill generation loop (Rosie)
 - [ ] RE-EVALUATE OMEGA vs Mem0 for PAM memory layer — Mem0 new algorithm at 93.4% LME closes the gap with OMEGA's 95.4%, and Mem0 has BEAM scores OMEGA lacks (Rosie)
@@ -92,6 +100,7 @@ Research agent build patterns and tools.
 - [ ] Monitor Claw Code trajectory — new framework hitting 72K stars in first days (competitive with Claude Code) (Rosie)
 - [ ] Study Mem0 new algorithm architecture (ADD-only extraction, multi-signal retrieval) as PAM memory reference implementation (Rosie)
 - [ ] Evaluate DeepSeek V4 agent-aware architecture — assumes agent-optimized models are the baseline (Rosie)
+- [ ] Add "cognitive exploration" as PAM design pattern — agents that search solution spaces differently than humans (Rosie)
 
 ## Blockers
 - Web search blocked

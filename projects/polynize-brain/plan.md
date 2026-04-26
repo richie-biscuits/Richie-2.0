@@ -101,8 +101,13 @@ Extract and install cognition frameworks into AI agents.
 - [ ] Align Polynize Brain output format with CognitiveBlueprint pattern — identity/goals/memory/planning/validation components (Rosie)
 - [ ] Update Polynize Brain memory benchmark references — old Mem0 49.0% LME data is now obsolete (new algorithm hits 93.4%). All comparison notes April 13-20 need revision (Rosie)
 
-## Blockers
-- None identified
+## Research Notes — 2026-04-26
+- [Cognition Transfer — ChatGPT Solves Erdős Problem = Human Cognition Gap Proof]: 23-year-old amateur with zero math training used ChatGPT Pro (GPT-5.4) to solve a 60-year-old Erdős problem that elite mathematicians couldn't crack. Terence Tao: "humans just collectively made a slight wrong turn at move one — there was some kind of mental block." This is the strongest empirical validation yet of the "cognition gap" thesis: AI can think past human cognitive biases. For Polynize Brain: this proves cognition frameworks derived from AI can be BETTER than human-derived ones. The AI found a method "no human had thought of." (Source: Scientific American, April 24 2026; news.ycombinator.com #47903126, 478 points)
+- [Context Window vs Persistent Memory — Mem0 Published Definitive Case]: Mem0 blog (April 8 2026) makes the strongest case yet: 1M context STILL isn't enough — context resets every session, cost scales quadratically, BEAM benchmark proves dramatic quality decay after 1M tokens, latency becomes prohibitive. Key data point: full-context approach consumes ~26K tokens/conv vs Mem0's ~1,800 tokens — 90% reduction. For Polynize Brain: this is the sales-ready argument for why cognition frameworks matter regardless of context window size. (Source: mem0.ai/blog/context-window-vs-persistent-memory-why-1m-tokens-isn-t-enough)
+- [OpenAI Privacy Filter — April 26 2026 — Potential Polynize Brain Integration Point]: OpenAI launched Privacy Filter (235 HN points) — allows users to control what information is sent to OpenAI during AI interactions. Privacy-tagged data could feed into Polynize Brain's cognition extraction pipeline as a trusted data source. (Source: openai.com/index/introducing-openai-privacy-filter)
+
+## Recent Activity
+- 2026-04-26: Rosie — Cross-project research cycle (ChatGPT solves Erdős problem = human cognition gap proof, Mem0 definitive case for context window vs memory, OpenAI Privacy Filter launch)
 
 ## Research Notes — 2026-04-10
 - [Cognition Transfer]: MCP preferred over Skills for service integration. Skills work for knowledge/context. Best approach: "knowledge layer on top of connector layer" — use MCP for actual service connections, Skills to teach gotchas and patterns discovered during sessions. (Source: david.coffee "I Still Prefer MCP Over Skills")

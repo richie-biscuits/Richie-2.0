@@ -78,6 +78,14 @@ Research leads, market trends, and competitors for AI agent services.
 - 2026-04-14: Rosie — Cross-project research cycle (web search still blocked, pricing anchor from Mem0 Pro $249/mo)
 - 2026-04-13: Rosie — Cross-project research cycle (web search completely blocked — DuckDuckGo CAPTCHA now blocking ALL queries)
 
+## Research Notes — 2026-04-26
+- [Sales Hook — ChatGPT Solved Erdős Problem = Proof That AI Thinks Differently]: This week's biggest AI story: an amateur solved a 60-year math problem using ChatGPT, using a method "no human had thought of." For Polynize sales: "AI doesn't just replicate human thinking — it finds solutions humans miss. That's the value of installing structured cognition frameworks in your AI agents." This is a concrete, non-technical example any SME prospect can understand. (Source: Scientific American, April 24 2026)
+- [Sales Hook — 'The West Forgot How to Code' = Cultural Anxiety Polynize Can Address]: 600-point HN story about declining coding skills. Sales angle: "If your development team is struggling with complex builds, AI agents with proper cognition frameworks don't have that gap. You don't need to hire more developers — you need AI that completes your team." (Source: techtrends.dev via HN 4/26)
+- [Competitive Landscape — OpenAI Privacy Filter Could Increase Enterprise Trust in AI Agents]: OpenAI's Privacy Filter gives users granular control over data sharing. This may lower enterprise objections to AI agent adoption — "even OpenAI is making privacy a first-class feature." Could be used in sales conversations about data security concerns. (Source: openai.com, April 26 2026)
+
+## Recent Activity
+- 2026-04-26: Rosie — Cross-project research cycle (ChatGPT Erdős proof = powerful non-technical sales hook, 'West forgot to code' narrative, OpenAI Privacy Filter lowers enterprise objections)
+
 ## Next Actions
 - [ ] Position Polynize above OMEGA — "OMEGA stores what happened, Polynize installs how to think" (Rosie)
 - [ ] Target $50-500/mo startup segment with "missing cognition layer" sales message (Rosie)
@@ -85,6 +93,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [ ] Use "111% profitability uplift for fully AI-enabled SMBs" from AI Lab Australia report as sales hook (Rosie)
 - [ ] Use Google $40B Anthropic investment as social proof in SME sales conversations — "the market is betting big on AI agents" (Rosie)
 - [ ] Use DeepSeek V4 pricing pressure in sales narrative — "AI models are commoditizing, but cognition frameworks are the real differentiator" (Rosie)
+- [ ] **PRIORITY** Add ChatGPT Erdős story to sales deck — concrete example of AI cognition > human cognition for non-technical buyers (Rosie)
 
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries
