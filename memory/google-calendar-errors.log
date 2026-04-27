@@ -1,3 +1,4 @@
 [2026-04-19 12:40:00] Token refresh failed: directory not found /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts
 [2026-04-26 04:29:56] ERROR: google-calendar skill not installed (missing scripts/refresh_token.py). Cron will keep failing until the skill is installed and configured.
 2026-04-26 04:29: token refresh failed - skill/scripts missing
+[2026-04-27 18:59:28] Google Calendar token refresh FAILED: HTTP 401 Unauthorized — refresh token may be expired or revoked. Manual re-authorization needed.
