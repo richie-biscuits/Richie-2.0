@@ -1,1 +1,2 @@
 [2026-04-12 18:25:06] ERROR: refresh_token.py not found at /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts
+[2026-04-28 01:24:38] Google Calendar token refresh FAILED: HTTP 401 Unauthorized — refresh token expired/revoked. Manual re-authentication needed.

@@ -6,3 +6,4 @@
 - Refresh token still revoked. New auth flow required.
 - Try: cd /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts && python3 refresh_token.py --auth
   (or run the init auth flow manually)
+[2026-04-28T03:14] Token refresh failed: 401 Unauthorized - refresh token may be expired/revoked. User needs to re-authenticate.
