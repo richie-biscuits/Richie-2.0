@@ -1,3 +1,8 @@
 [2026-04-26 10:54:00] Token refresh failed: HTTP Error 401: Unauthorized
 - Refresh token present in secrets.env but returned 401 (revoked/expired)
 - Google Calendar skill needs re-authorization (run auth flow again)
+
+[2026-04-27 06:09:00] Token refresh failed again: HTTP Error 401: Unauthorized
+- Refresh token still revoked. New auth flow required.
+- Try: cd /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts && python3 refresh_token.py --auth
+  (or run the init auth flow manually)

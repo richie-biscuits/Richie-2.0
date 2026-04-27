@@ -1,1 +1,8 @@
 [2026-04-26 14:34:24] ⚠️ Google Calendar token refresh FAILED: HTTP 401 Unauthorized — refresh token may be expired/revoked. Manual re-auth needed.
+[2026-04-27 11:39] ❌ Token refresh FAILED: 401 Unauthorized. Refresh token revoked. Full re-auth required.
+
+[2026-04-27 11:39] 🔑 TO FIX:
+1. Go to https://console.cloud.google.com/apis/credentials (project: "polynize" / the one used here)
+2. Generate a new refresh token via OAuth consent
+3. Update ~/.config/google-calendar/secrets.env
+4. Or delete GOOGLE_REFRESH_TOKEN from env and trigger new Google Calendar API auth flow

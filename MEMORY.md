@@ -20,25 +20,31 @@
 - Tiered: Essential → Advanced → Custom Expert; min $999 base + $1,500-$2k/mo managed ops
 - Core narrative shift: cognitive work unit AI agents (NOT single agents)
 
-## Active Deals — Updated Apr 24
+## Active Deals — Updated Apr 27
 
 ### 🟢 Active Clients (Delivery)
-- **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session TODAY Fri Apr 24, 10am.
-- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies.
+- **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session underway (Apr 24). Fireflies debrief captured: focus on cognitive load mapping, Zendesk/Slack/Airtable agent access, role-driven agent team design. Next: create data/access doc for Jaden, session for data export coordination.
+- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Meeting Mon Apr 27, 4pm confirmed.
 
 ### 🟡 Pipeline (Working)
-- **Jessica Cameron (Jess/Social Studio)** — Meeting TODAY Fri Apr 24, 1pm. $15k total ($5k+$10k) + $1k/mo. Warm, re-engaged by Marrs. Also known as Jess Kenos in some contexts.
-- **Naomi Ferstera** — $5k + $299/mo. Proposal sent. Nudge today (Apr 24).
-- **Simon (Aquallis)** — Early next week meeting (time TBC). Account details resolved.
-- **Felix (Cat Empire)** — Built, waiting on training session. Email sent re: weekend. $99 trial first month.
+- **Jessica Cameron (Jess/Social Studio)** — $15k total ($5k+$10k) + $1k/mo. Warm. Follow-up pending.
+- **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — next step: Marrs presenting to her class Tue Apr 28.
+- **Simon (Aquallis)** — Meeting Mon Apr 27, 1:30pm ✅ Confirmed on calendar.
+- **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month.
+- **Monica Bratuti** — Follow-up meeting next Friday. AI agent concept + cloud DB solution + visa process work. Warm lead.
 
 ### 🔵 Early Stage
 - **Lorenzo/Supanova** — $30k-$80k. Gone quiet, will reconnect when ready.
-- **AJay Nevastok** — Mon Apr 27, 4pm meeting confirmed.
+- **Parallax <> Polynize** — Catchup today 1pm.
 
 ### ❌ Removed from Pipeline
 - Dr G (x2), Dave Garcia, Yaz Krishna, Mitch — dead, focusing on cognitive work unit narrative
 - Logen P — operational, lost setup
+
+## Recent Fireflies Activity
+- **Polynize Weekly Wrap-Up** (Apr 24) — Pipeline prioritization, PwC demo prep, capability matrix, platform sprint to operational readiness. Action: share checklist with Dhamiri Petra.
+- **Monica & Marrs** (Apr 24) — Visa process, AI agents, trade logistics, career strategy. Next meeting this week.
+- **Roxbury Debrief** (Apr 24) — Cognitive load mapping, Zendesk/Slack/Airtable agent setup, role-reframing for agent teams. Next: data export session with Jaden.
 
 ## Integrations — Working
 - **Xero** — ✅ Integrated via client credentials OAuth. Can create/authorise/send invoices.
