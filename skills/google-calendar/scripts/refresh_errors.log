@@ -7,3 +7,8 @@
 - Try: cd /Users/openclaw_admin/.openclaw/workspace/skills/google-calendar/scripts && python3 refresh_token.py --auth
   (or run the init auth flow manually)
 [2026-04-28T03:14] Token refresh failed: 401 Unauthorized - refresh token may be expired/revoked. User needs to re-authenticate.
+
+[2026-04-28 18:49] Token refresh failed: 401 Unauthorized (still revoked since April 26)
+- GOOGLE_REFRESH_TOKEN in secrets.env is no longer valid.
+- Need to re-run OAuth authorization flow: python3 refresh_token.py --auth
+- Or manually regenerate via Google Cloud Console.
