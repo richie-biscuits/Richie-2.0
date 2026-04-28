@@ -1,0 +1,49 @@
+📋 **Pipeline Review — Tue Apr 28**
+
+**Today (Tue Apr 28)**
+  • 10:00 — Presentation Prep
+  • 10:30 — UQ iLab - Marrs
+  • 17:00 — Marrs x Mikey
+  • 16:00 — AJ and Marrs Coiro
+  • 16:30 — [15-minute buffer after Meeting with Marrs at Polynize.ai event]
+  • 13:00 — Marrs Busy
+  • 14:00 — Marrs x Monica x Agents
+  • 15:00 — Polynize Weekly Wrap-Up
+  • 12:00 — Weekly Alignment
+  • 10:00 — Founder Connect + weekly metrics review
+  • 13:00 — Parallax <> Polynize catchup
+  • 12:00 — AJ <> Marrs Lunch (location TBC)
+  • 10:00 — Marrs x Shourov Weekly Lab Recording 
+  • 10:45 — Lab Edit and Post
+  • 15:00 — Polynize Weekly Wrap-Up
+  • 12:00 — Weekly Alignment
+  • 10:00 — Founder Connect + weekly metrics review
+  • 13:00 — Parallax <> Polynize catchup
+  • 14:00 — (PLACEHOLDER) GRID Series Discussion group
+  • 10:00 — Marrs x Shourov Weekly Lab Recording 
+
+**This Week**
+  • 04-28 10:30 — UQ iLab - Marrs
+  • 04-28 17:00 — Marrs x Mikey
+  • 04-29 16:00 — AJ and Marrs Coiro
+  • 04-29 16:30 — [15-minute buffer after Meeting with Marrs at Polynize.ai event]
+  • 04-30 13:00 — Marrs Busy
+  • 05-01 14:00 — Marrs x Monica x Agents
+  • 05-01 15:00 — Polynize Weekly Wrap-Up
+
+**Pipeline**
+### 🟢 Active Clients (Delivery)
+- **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session underway (Apr 24). Fireflies debrief captured: focus on cognitive load mapping, Zendesk/Slack/Airtable agent access, role-driven agent team design. Next: create data/access doc for Jaden, session for data export coordination.
+- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Meeting Mon Apr 27, 4pm confirmed.
+### 🟡 Pipeline (Working)
+- **Jessica Cameron (Jess/Social Studio)** — $15k total ($5k+$10k) + $1k/mo. Warm. Follow-up pending.
+- **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — next step: Marrs presenting to her class Tue Apr 28.
+- **Simon (Aquallis)** — Meeting Mon Apr 27, 1:30pm ✅ Confirmed on calendar.
+- **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month.
+- **Monica Bratuti** — Follow-up meeting next Friday. AI agent concept + cloud DB solution + visa process work. Warm lead.
+### 🔵 Early Stage
+- **Lorenzo/Supanova** — $30k-$80k. Gone quiet, will reconnect when ready.
+- **Parallax <> Polynize** — Catchup today 1pm.
+### ❌ Removed from Pipeline
+- Dr G (x2), Dave Garcia, Yaz Krishna, Mitch — dead, focusing on cognitive work unit narrative
+- Logen P — operational, lost setup
