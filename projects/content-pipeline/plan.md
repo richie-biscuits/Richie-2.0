@@ -95,8 +95,19 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 ## Blockers
 - Web search blocked by bot detection (DuckDuckGo CAPTCHA) — Brave API key needed for automated research
 
-## Research Notes — 2026-04-10
-- [Content Research]: Web search limited by bot detection. Manual content monitoring required until search API is configured. Hacker News shows strong interest in AI agent infrastructure topics (MCP, agents, coding tools).
+## Research Notes — 2026-04-29
+- [Content Hook — 'Claude for Creative Work' = Fresh AI Product Launch Content]: Anthropic launched creative work features for Claude (HN #7, 130 pts, April 29). Content angles: "Anthropic just made Claude a creative partner — what it means for creators," "Claude vs ChatGPT for creative work in 2026." But more importantly for Polynize: this validates the "AI as creative collaborator" framing that's been building for months. The market is moving beyond "AI replaces workers" to "AI enables creativity." Polynize content should lean into this reframe. (Source: anthropic.com/news/claude-for-creative-work)
+- [Content Hook — 'AI Asked to Count Carbs 27,000 Times, Couldn't Give Same Answer Twice' = Anti-Pattern Content]: HN #23 (91 pts, 98 comments) — article about carb counting inconsistency shows the market is getting skeptical of AI as a standalone solution. Content angle: "Why AI agents need structure, not just prompts — the carb-counting lesson." This is perfect content for Polynize: it shows WHY raw AI fails at consistent tasks and rationalizes the need for structured cognition frameworks. (Source: diabettech.com, HN April 29)
+- [Content Hook — 'How ChatGPT Serves Ads' = Polarizing Content with High Engagement]: HN #2 (395 pts, 267 comments) — deep dive on ChatGPT's ad delivery mechanism. Content angle: "The ad-based AI model is here — what it means for your business." For Polynize SME audience: this is a trust/reliability concern that rationalizes moving to structured AI agents over chat-based AI. (Source: buchodi.com, HN April 29)
+- [Content Hook — Mendral 'Triager Pattern' = Agent Architecture Content]: Mendral published how they saved LLM costs with a Haiku-then-Opus triager pattern (HN #10, 96 pts). Key insight: "4 out of 5 failures never reach Opus. A triager match costs around 25x less than a full investigation." Content angle: "The triager pattern — how to build cost-effective AI agents that don't burn through your budget." This is practical, SME-friendly, and positions Polynize as knowing the production patterns. (Source: mendral.com, HN April 29)
+- [Content Trend — HN April 29: AI is 3 of Top 10 Stories but None Are AI Boosterism]: Stories are: ChatGPT ads (#2, skeptical), Claude Code regression bug (#3, critical), Claude for Creative Work (#7, neutral). Pattern: the HN audience is engaging with AI stories that are corrective/skeptical/analytical, not promotional. Polynize content should match this tone — analytical, pattern-oriented, not boosterish. (Source: news.ycombinator.com April 29)
+
+## Recent Activity
+- 2026-04-29: Rosie — Cross-project research cycle (Claude for Creative Work = new launch content, carb-counting failure = anti-pattern content for cognition frameworks, ChatGPT ads = polarizing AI monetization hook, Mendral triager pattern = agent architecture case study, HN tone is corrective/skeptical not promotional)
+
+## Next Actions
+- [ ] Create content: "Why ChatGPT can't count carbs twice — and what it means for your business AI" — uses viral anti-pattern story to rationalize Polynize's structured cognition approach (Rosie)
+- [ ] Create content: "The triager pattern — how to avoid paying for expensive AI when a cheap one will do" — case study format, SME-friendly (Rosie)
 
 ## Notes
 - Priority: Configure Brave API key for automated research

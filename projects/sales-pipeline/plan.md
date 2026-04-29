@@ -110,9 +110,18 @@ Research leads, market trends, and competitors for AI agent services.
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries
 
-## Research Notes — 2026-04-10
-- [Market Research]: Web search blocked. Could not gather competitor pricing or Melbourne market data this cycle. Need Brave API key to enable automated research.
+## Research Notes — 2026-04-29
+- [Sales Hook — Claude Code Regression Bug (HN #3, 234 pts) = 'You're Paying for Their Bugs' Sales Angle]: A single GitHub issue (#49363) showing "malware reminder on every read still causes subagent refusals" hit HN front page with 234 points and 126 comments. HN commenters explicitly articulate the conflict of interest: Anthropic sells both the agent harness AND the tokens — they're incentivized to burn tokens. A commenter reports switching to Codex: "I get way more out of the Codex $100 plan than I was getting out of the Anthropic $200. Like, probably 2x at least." For Polynize sales conversations: "Your AI provider profits from token consumption — we don't. We're paid for agents that work, not agents that burn credits." This is a tangible, relatable objection that any SME using Claude Code or similar tools will understand instantly. (Source: github.com/anthropics/claude-code/issues/49363, HN April 29)
+- [Market Signal — Model Quality Convergence = 'Your Model Choice Matters Less' Argument]: HN comments from experienced users report: "when using strict guardrails, TDD, reviews etc. I cannot notice any quality difference between Opus and Codex or even between GPT 5.3, 5.4, and 5.5." For SME sales: this removes the "we need the best model" objection. If models are converging in production quality, Polynize's value is in the frameworks/workflows around the model, not which model you use. This simplifies the sales conversation — customers don't need to worry about model choice, they need to worry about agent architecture. (Source: HN #47942492)
+- [Market Signal — OpenAI Adding Ads to ChatGPT = Monetization Pressure]: HN #2 (395 pts, 267 comments) — "How ChatGPT serves ads" exposes OpenAI's ad delivery. The thread dissects Sam Altman's earlier statement about ads being "a last resort." For Polynize: this builds the case that AI platform companies are financially incentivized to extract more value from users. Polynize's fixed-fee agent model becomes more attractive as platform-based models pile on ads and token overconsumption. (Source: buchodi.com, HN April 29)
+- [Sales Positioning — 'He asked AI to count carbs 27,000 times' = Perfect SME Proxy for 'Why You Need Structure']: HN #23 (91 pts, 98 comments) — the carb-counting story shows raw AI's fundamental unreliability for consistent tasks. For Polynize SME sales: this is a non-technical, relatable story that explains why agents need structured cognition frameworks instead of raw prompts. Sales conversation opener: "If an AI can't count carbs the same way twice, can you trust it to handle your customer service, lead qualification, or inventory management without structure?" (Source: diabettech.com, HN April 29)
+
+## Recent Activity
+- 2026-04-29: Rosie — Cross-project research cycle (Claude Code regression bug = 'you pay for their bugs' sales hook, model convergence = 'model choice matters less' argument, OpenAI ads = platform monetization concern, carb-counting failure = 'why you need structured agents' SME story)
+
+## Next Actions
+- [ ] Add Claude Code #49363 to sales deck — concrete proof of platform-incentive conflict that any Claude Code user understands (Rosie)
+- [ ] Create carb-counting story as SME-friendly "why you need structured AI agents" sales opener (Rosie)
 
 ## Notes
 - Priority: Get Brave API key configured
-- Melbourne market: France launching government Linux transition (from HN) — potential signal for local govt AI adoption trends
