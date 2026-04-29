@@ -24,18 +24,18 @@
 
 ### 🟢 Active Clients (Delivery)
 - **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session underway (Apr 24). Fireflies debrief captured: focus on cognitive load mapping, Zendesk/Slack/Airtable agent access, role-driven agent team design. Next: create data/access doc for Jaden, session for data export coordination.
-- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Meeting Mon Apr 27, 4pm confirmed.
+- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Meeting **today Wed Apr 29, 4pm** (moved from Monday). Full scope not yet accepted — still deciding what to build.
 
 ### 🟡 Pipeline (Working)
 - **Jessica Cameron (Jess/Social Studio)** — $15k total ($5k+$10k) + $1k/mo. Warm. Follow-up pending.
-- **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — next step: Marrs presenting to her class Tue Apr 28.
-- **Simon (Aquallis)** — Meeting Mon Apr 27, 1:30pm ✅ Confirmed on calendar.
-- **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month.
-- **Monica Bratuti** — Follow-up meeting next Friday. AI agent concept + cloud DB solution + visa process work. Warm lead.
+- **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — she's now booked time to continue the conversation.
+- **Simon (Aquallis)** — Meeting went well (Apr 27). Going to build him a team, using it as training ground for Julian and Will. Marrs will know by end of this week.
+- **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month. Still waiting on reply from Felix.
+- **Monica Bratuti** — Follow-up meeting end of this week. AI agent concept + cloud DB solution + visa process work. Warm lead.
 
 ### 🔵 Early Stage
 - **Lorenzo/Supanova** — $30k-$80k. Gone quiet, will reconnect when ready.
-- **Parallax <> Polynize** — Catchup today 1pm.
+- **Parallax <> Polynize** — Catchup done Mon Apr 27.
 
 ### ❌ Removed from Pipeline
 - Dr G (x2), Dave Garcia, Yaz Krishna, Mitch — dead, focusing on cognitive work unit narrative
@@ -65,6 +65,8 @@
 
 ## Active Cron Jobs
 - Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
+- Morning Intel & Briefing Prep: 7:45am weekdays (main session) — checks calendar + Fireflies + email, updates MEMORY.md, writes briefing
+- Daily Northstar & Priorities: 9:30am (to be fixed — needs calendar/Fireflies/email access)
 - Rosie research: 11:15pm nightly (ERROR last run — needs fix)
 - Dash morning check-in: 8am weekdays
 - Daily Northstar: 9:30am weekdays
@@ -89,7 +91,10 @@
 - `reports/` never tracked — restore from git commit `9151bd8` if needed
 
 ## Reminders
-- Naomi nudge: TODAY (Apr 24)
-- Felix training session: weekend, email sent
-- UQ iLab / Queensland Uni presentation: Tue Apr 28
+- Everstock meeting moved: Wed Apr 29, 4pm
+- Naomi: booked time to continue conversation (replied to Marrs)
+- Felix: still waiting on reply
+- Simon: meeting went well, building him a team (training ground for Julian & Will)
+- Monica: another meeting end of this week
+- UQ iLab presentation: yesterday (went great, blew minds)
 - Agent team console (client-facing Mission Control): in progress (Polynize website build)
