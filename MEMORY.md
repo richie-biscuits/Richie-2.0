@@ -24,14 +24,14 @@
 
 ### 🟢 Active Clients (Delivery)
 - **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session underway (Apr 24). Fireflies debrief captured: focus on cognitive load mapping, Zendesk/Slack/Airtable agent access, role-driven agent team design. Next: create data/access doc for Jaden, session for data export coordination.
-- **AJ/Everstock (Michael Cotton)** — $28k setup + <$2k/mo. Survival supplies. Meeting **today Wed Apr 29, 4pm** (moved from Monday). Full scope not yet accepted — still deciding what to build.
+- **AJ/Everstock (Michael Cotton)** — Seed investors (via Optio Capital), special deal — we help them, they help us. They went for option 3 (revenue upfront for build + profit share). Survival supplies.
 
 ### 🟡 Pipeline (Working)
 - **Jessica Cameron (Jess/Social Studio)** — $15k total ($5k+$10k) + $1k/mo. Warm. Follow-up pending.
 - **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — she's now booked time to continue the conversation.
-- **Simon (Aquallis)** — Meeting went well (Apr 27). Going to build him a team, using it as training ground for Julian and Will. Marrs will know by end of this week.
+- **Simon (Aquallis)** — Meeting went well (Apr 27). Going to build him a team, using it as training ground for Julian. Marrs will know by end of this week.
 - **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month. Still waiting on reply from Felix.
-- **Monica Bratuti** — Follow-up meeting end of this week. AI agent concept + cloud DB solution + visa process work. Warm lead.
+- **Monica Bratuti** — Follow-up meeting end of this week. Scoping out potential way forward depending on career direction decision. Warm lead.
 
 ### 🔵 Early Stage
 - **Lorenzo/Supanova** — $30k-$80k. Gone quiet, will reconnect when ready.
@@ -43,7 +43,7 @@
 
 ## Recent Fireflies Activity
 - **Polynize Weekly Wrap-Up** (Apr 24) — Pipeline prioritization, PwC demo prep, capability matrix, platform sprint to operational readiness. Action: share checklist with Dhamiri Petra.
-- **Monica & Marrs** (Apr 24) — Visa process, AI agents, trade logistics, career strategy. Next meeting this week.
+- **Monica & Marrs** (Apr 24) — AI agents, trade logistics, career strategy. Next meeting this week.
 - **Roxbury Debrief** (Apr 24) — Cognitive load mapping, Zendesk/Slack/Airtable agent setup, role-reframing for agent teams. Next: data export session with Jaden.
 
 ## Integrations — Working
@@ -54,14 +54,17 @@
 - **Orthogonal** — Felix Google account integration still pending.
 
 ## Calendar (marrs@polynize.io)
-- Fri Apr 24, 10am — Roxbury Build Session
-- Fri Apr 24, 1pm — Jess Kenos (potential lead)
-- Fri Apr 24, 2pm — Marrs x Monica (AI Agents)
-- Fri Apr 24, 3pm — Polynize Weekly Wrap-Up
-- Fri Apr 24, 4pm — Polynize Tech Demo
-- Mon Apr 27, 4pm — AJay Nevastok
-- Tue Apr 28, 10am — Presentation Prep
-- Tue Apr 28, 10:30am — UQ iLab - Marrs (Queensland Uni opportunity via MC/Optio Capital)
+- Thu Apr 30, 1pm-4pm — Marrs Busy (blocked)
+- Fri May 1, 2pm — Marrs x Monica x Agents
+- Fri May 1, 3pm — Polynize Weekly Wrap-Up
+- Sun May 3, 12pm — Weekly Alignment
+- Mon May 4, 10am — Founder Connect + weekly metrics review
+- Mon May 4, 1pm — Parallax <> Polynize catchup
+- Tue May 5, 12pm — AJ <> Marrs Lunch (location TBC)
+- Wed May 6, 11am — Roxbury — Jayden Young (data export session)
+- Fri May 8, 10am — Marrs x Shourov Weekly Lab Recording
+- Fri May 8, 10:45am — Lab Edit and Post
+- Fri May 8, 3pm — Polynize Weekly Wrap-Up
 
 ## Active Cron Jobs
 - Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
@@ -90,11 +93,12 @@
 - Never commit secrets to git
 - `reports/` never tracked — restore from git commit `9151bd8` if needed
 
-## Reminders
-- Everstock meeting moved: Wed Apr 29, 4pm
-- Naomi: booked time to continue conversation (replied to Marrs)
-- Felix: still waiting on reply
-- Simon: meeting went well, building him a team (training ground for Julian & Will)
-- Monica: another meeting end of this week
-- UQ iLab presentation: yesterday (went great, blew minds)
-- Agent team console (client-facing Mission Control): in progress (Polynize website build)
+## Reminders (Apr 30)
+- Everstock (AJ/MC) — Meeting happened Apr 29. Shared profit model discussed. 12-month experiment before defining exact splits. $10/person digital survival plan. 4-week build timeline.
+- Naomi: continuing conversation (still warm)
+- Felix: email to felix@catempire.com bounced (Apr 22). Need to find another way to reach him.
+- Simon (Aquallis): decision due by end of this week (today/tomorrow)
+- Monica: meeting tomorrow (Fri May 1, 2pm — on calendar)
+- Jayden Young (Roxbury): Wed May 6, 11am — data export session
+- UQ iLab presentation: went great
+- Agent team console (client-facing Mission Control): in progress
