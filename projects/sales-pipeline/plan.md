@@ -99,6 +99,7 @@ Research leads, market trends, and competitors for AI agent services.
 - 2026-04-28: Rosie — Cross-project research cycle (Mem0 State of AI Agent Memory 2026 = authoritative cost/performance benchmark for sales, 'decouple memory from reasoning' architecture differentiator, full-context not viable confirmed, AgentSwift fragmentation trend)
 
 ## Next Actions
+- [ ] Add OpenAI goblins post to sales deck — best non-technical entry point for explaining 'structured cognition frameworks' to SME buyers (Rosie)
 - [ ] Position Polynize above OMEGA — "OMEGA stores what happened, Polynize installs how to think" (Rosie)
 - [ ] Target $50-500/mo startup segment with "missing cognition layer" sales message (Rosie)
 - [ ] Price Polynize against Industrial AI ($297/mo AI employee) and Mem0 ($249/mo) — need clear differentiation (Rosie)
@@ -109,6 +110,11 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Blockers
 - Web search partially recovered via direct URL fetch — DuckDuckGo CAPTCHA still blocking some queries
+
+## Research Notes — 2026-04-30
+- [Sales Hook — OpenAI 'Goblins' Post = Perfect SME-Friendly Proof-of-Concept Story]: OpenAI's goblin post is the best non-technical entry point for explaining the Polynize value proposition. "OpenAI spent months trying to make ChatGPT more 'nerdy' and accidentally taught it to love goblins so much that even non-nerdy users got goblins. The RL reward signal was too strong, and the behavior spread. Now imagine installing a deliberate business cognition framework instead of accidental goblins." This is a funny, memorable story any SME prospect can understand that leads directly to "structured cognition frameworks > random RL outcomes." (Source: openai.com, April 30)
+- [Sales Hook — Zig AI Ban + Bun Fork = 'Your AI Development Has a Portability Problem']: Bun can't upstream its 4x performance improvements because Zig bans AI-assisted contributions. Sales angle: "The open-source project that bans AI means AI-augmented work gets stuck in forks. We solve this by making cognition portable across environments and policies." Relevant for prospects concerned about IP/reproducibility of AI work. (Source: simonwillison.net, April 30)
+- [Market Signal — IBM Granite 4.1 8B Beats 32B = Model Costs Collapsing Further]: IBM's 8B dense model matching its 32B MoE on most benchmarks means enterprise model costs are dropping. For sales conversations: "The underlying model size doesn't matter for outcomes anymore. An 8B model beats 32B with better training. Your cognition framework matters more than your model choice." Reinforces the 'model commoditization' narrative. (Source: firethering.com, April 30)
 
 ## Research Notes — 2026-04-29
 - [Sales Hook — Claude Code Regression Bug (HN #3, 234 pts) = 'You're Paying for Their Bugs' Sales Angle]: A single GitHub issue (#49363) showing "malware reminder on every read still causes subagent refusals" hit HN front page with 234 points and 126 comments. HN commenters explicitly articulate the conflict of interest: Anthropic sells both the agent harness AND the tokens — they're incentivized to burn tokens. A commenter reports switching to Codex: "I get way more out of the Codex $100 plan than I was getting out of the Anthropic $200. Like, probably 2x at least." For Polynize sales conversations: "Your AI provider profits from token consumption — we don't. We're paid for agents that work, not agents that burn credits." This is a tangible, relatable objection that any SME using Claude Code or similar tools will understand instantly. (Source: github.com/anthropics/claude-code/issues/49363, HN April 29)

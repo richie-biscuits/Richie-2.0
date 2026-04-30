@@ -85,6 +85,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - 2026-04-28: Rosie — Cross-project research cycle (Talkie vintage LM = weird/surprising AI content hook, Mem0 State of AI Agent Memory report = canonical reference stats, HN quiet on AI = lean into surprising data not promotion, decouple architecture article)
 
 ## Next Actions
+- [ ] **PRIORITY** Create content: "OpenAI accidentally installed a goblin personality in ChatGPT — what if you could install business cognition on purpose?" — hottest AI story today, perfect bridge to Polynize value prop (Rosie)
 - [ ] Create "Why your AI agent doesn't need a vector database" tutorial — contrarian SQLite-first angle (Rosie)
 - [ ] Build "which AI agent memory system in 2026" comparison series — OMEGA/Zep/Mem0/Letta/Cognee five-way (Rosie)
 - [ ] Create content hook from "AI employees at $297/mo vs hiring" angle — resonates with SME audience (Rosie)
@@ -94,6 +95,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Blockers
 - Web search blocked by bot detection (DuckDuckGo CAPTCHA) — Brave API key needed for automated research
+
+## Research Notes — 2026-04-30
+- [Content Hook — OpenAI 'Goblins' Post = Hottest AI Story of the Day, 788 Points, 467 Comments]: OpenAI published a delightful postmortem about GPT-5.x's accidental goblin obsession. This is PERFECT Polynize content: a technical story about how RL training for personality (Nerdy mode) accidentally installed a cognitive pattern across the entire model. Content angle: "The story of how ChatGPT became obsessed with goblins — and what it tells us about AI personality design." Or more directly for Polynize: "OpenAI accidentally installed a goblin personality in ChatGPT — what if you could install business cognition on purpose?" This is shareable, funny, and leads directly to the Polynize thesis. 467 comments on HN means high engagement potential. (Source: openai.com/index/where-the-goblins-came-from)
+- [Content Hook — IBM Granite 4.1: 'An 8B Model That Beats 32B MoE' = Strong Technical Story]: IBM released Granite 4.1 (April 29) with a dense 8B model that matches their previous 32B MoE flagship. Content angles: "This 8B model outperforms models 4x its size — what it means for AI pricing" or "IBM just proved smaller AI models are better — how to build enterprise AI that doesn't need giant infrastructure." Fits Polynize 'efficient AI' positioning perfectly. (Source: firethering.com, aimadetools.com April 30)
+- [Content Hook — Zig Anti-AI Policy + Bun Fork = 'When Open Source Can't Use AI' = Strong Anti-Pattern Content]: Zig's anti-AI policy (401 pts) and Bun's inability to upstream 4x perf improvements because of it. Content angle: "When AI assistance is banned, performance gains stay locked in forks — the case for portable cognition." Nuanced, interesting, high-engagement topic. (Source: simonwillison.net, HN April 30)
+- [Content Trend — HN April 30: OpenAI Goblins #1 (788 pts), Zig Anti-AI #5 (401 pts), Alignment Whack-a-Mole #20 (164 pts) = AI Content Heavy]: Three AI stories in top 20. Pattern: the most engaging AI content is analytical/interesting/weird (goblins), not promotional. Polynize content should match this tone. (Source: news.ycombinator.com April 30)
 
 ## Research Notes — 2026-04-29
 - [Content Hook — 'Claude for Creative Work' = Fresh AI Product Launch Content]: Anthropic launched creative work features for Claude (HN #7, 130 pts, April 29). Content angles: "Anthropic just made Claude a creative partner — what it means for creators," "Claude vs ChatGPT for creative work in 2026." But more importantly for Polynize: this validates the "AI as creative collaborator" framing that's been building for months. The market is moving beyond "AI replaces workers" to "AI enables creativity." Polynize content should lean into this reframe. (Source: anthropic.com/news/claude-for-creative-work)
