@@ -1,5 +1,21 @@
 # MEMORY.md — Richie Long-Term Memory
 
+## 🚀 Project Mars — Marrs' North Star (May 1)
+Marrs is developing his big life's goal. Three pillars:
+1. **Build Polynize into the biggest tech company in the world**
+2. **Build a totally self-sustainable off-the-grid city block compound oasis with nuclear bunker** (aligned with Everstock)
+3. **Make one million people millionaires** (still loose)
+
+Across all: content and public figure development.
+
+Everstock now has direct strategic alignment with Goal #2. Marrs is going all in — wants to go deeper with the Everstock team in the next meeting. This is not just a sale anymore, it's a Project Mars partnership play.
+
+## 🎯 Current Priorities (May 1)
+- Redesign Mission Control from the ground up — not fit for purpose
+- Rosie: monitor OAuth access to Codex GPT-5.5 and flag when available
+- Everstock: go deeper, align with Project Mars Goal #2
+- MCP servers for companies — Marrs researching in ~30 min
+
 ## Who I Am
 - Name: Richie — AI Co-Ordinator at Polynize
 - Vibe: direct, no fluff, gets things done
@@ -55,16 +71,19 @@
 - **Orthogonal** — Felix Google account integration still pending.
 
 ## Calendar (marrs@polynize.io)
-- Thu Apr 30, 1pm-4pm — Marrs Busy (blocked)
+- ✓ Thu Apr 30, 1pm-4pm — Marrs Busy (blocked)
+- Fri May 1, 11:30am — Everstock System Map
+- Fri May 1, 1pm — Naomi Ferstera call
 - Fri May 1, 2pm — Marrs x Monica x Agents
 - Fri May 1, 3pm — Polynize Weekly Wrap-Up
+- Fri May 1, 3:45pm — Polynize Tech Demo 2/2
 - Sun May 3, 12pm — Weekly Alignment
 - Mon May 4, 10am — Founder Connect + weekly metrics review
 - Mon May 4, 1pm — Parallax <> Polynize catchup
+- Mon May 4, 1pm-5pm — Agent Build Pipeline Mapping Session
 - Tue May 5, 12pm — AJ <> Marrs Lunch (location TBC)
 - Wed May 6, 11am — Roxbury — Jayden Young (data export session)
 - Fri May 8, 10am — Marrs x Shourov Weekly Lab Recording
-- Fri May 8, 10:45am — Lab Edit and Post
 - Fri May 8, 3pm — Polynize Weekly Wrap-Up
 
 ## Active Cron Jobs
@@ -185,5 +204,8 @@
 - **Shourov:** Prototype interactive capability map UI in Claude
 - **Shourov:** Work on enterprise pricing model, show to Marrs + Dhamiri
 - **Felix:** Email to felix@catempire.com bounced. Need alternate contact.
-- **Naomi:** Meeting booked to talk about niche coaching agent concept
-- **Monica:** Meeting tomorrow (Fri May 1, 2pm)
+- **Naomi:** Meeting TODAY (Fri May 1, 1pm) — niche coaching agent concept
+- **Monica:** Meeting TODAY (Fri May 1, 2pm) — career direction / AI agents
+- **Everstock:** System map session TODAY (Fri May 1, 11:30am)
+- **Simon:** Decision due end of this week (now — Fri May 1)
+- **Felix:** Still no reply. Previous email to felix@catempire.com bounced.
