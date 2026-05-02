@@ -122,10 +122,16 @@ Research leads, market trends, and competitors for AI agent services.
 - [Market Signal — OpenAI Adding Ads to ChatGPT = Monetization Pressure]: HN #2 (395 pts, 267 comments) — "How ChatGPT serves ads" exposes OpenAI's ad delivery. The thread dissects Sam Altman's earlier statement about ads being "a last resort." For Polynize: this builds the case that AI platform companies are financially incentivized to extract more value from users. Polynize's fixed-fee agent model becomes more attractive as platform-based models pile on ads and token overconsumption. (Source: buchodi.com, HN April 29)
 - [Sales Positioning — 'He asked AI to count carbs 27,000 times' = Perfect SME Proxy for 'Why You Need Structure']: HN #23 (91 pts, 98 comments) — the carb-counting story shows raw AI's fundamental unreliability for consistent tasks. For Polynize SME sales: this is a non-technical, relatable story that explains why agents need structured cognition frameworks instead of raw prompts. Sales conversation opener: "If an AI can't count carbs the same way twice, can you trust it to handle your customer service, lead qualification, or inventory management without structure?" (Source: diabettech.com, HN April 29)
 
+## Research Notes — 2026-05-02
+- [Australia SME Adoption Gap — Implementation Is the Bottleneck]: Credare’s 2026 Australian SME research reports only 34% of SMEs actively using AI tools and only 5% beyond pilot-stage automation, while global enterprise adoption is 78-88%. Their synthesis also cites 56% of AI projects failing to move from pilot to production and identifies implementation complexity (67%) as the top blocker. Sales implication: Polynize should sell "pilot-to-production execution" as the core value, not model novelty. (Source: https://credare.ai/research/)
+
+
 ## Recent Activity
+- 2026-05-02: Rosie — Cross-project research cycle (Credare AU SME report: 34% active AI use, 5% beyond pilot, 67% cite implementation complexity as top blocker)
 - 2026-04-29: Rosie — Cross-project research cycle (Claude Code regression bug = 'you pay for their bugs' sales hook, model convergence = 'model choice matters less' argument, OpenAI ads = platform monetization concern, carb-counting failure = 'why you need structured agents' SME story)
 
 ## Next Actions
+- [ ] Add a new sales narrative block: "From AI Pilot to Production in 90 Days" with proof points around implementation bottlenecks and execution support (Rosie)
 - [ ] Add Claude Code #49363 to sales deck — concrete proof of platform-incentive conflict that any Claude Code user understands (Rosie)
 - [ ] Create carb-counting story as SME-friendly "why you need structured AI agents" sales opener (Rosie)
 

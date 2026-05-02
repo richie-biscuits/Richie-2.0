@@ -109,10 +109,16 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Hook — Mendral 'Triager Pattern' = Agent Architecture Content]: Mendral published how they saved LLM costs with a Haiku-then-Opus triager pattern (HN #10, 96 pts). Key insight: "4 out of 5 failures never reach Opus. A triager match costs around 25x less than a full investigation." Content angle: "The triager pattern — how to build cost-effective AI agents that don't burn through your budget." This is practical, SME-friendly, and positions Polynize as knowing the production patterns. (Source: mendral.com, HN April 29)
 - [Content Trend — HN April 29: AI is 3 of Top 10 Stories but None Are AI Boosterism]: Stories are: ChatGPT ads (#2, skeptical), Claude Code regression bug (#3, critical), Claude for Creative Work (#7, neutral). Pattern: the HN audience is engaging with AI stories that are corrective/skeptical/analytical, not promotional. Polynize content should match this tone — analytical, pattern-oriented, not boosterish. (Source: news.ycombinator.com April 29)
 
+## Research Notes — 2026-05-02
+- [LinkedIn Feed Ranking Changed — LLM Retrieval + Sequence Ranking]: LinkedIn rolled out an LLM-powered retrieval + transformer ranking stack that maps semantic topic relationships, updates embeddings within minutes, and ranks using behavior sequences (likes/comments/dwell patterns). Platform is simultaneously downranking engagement bait and automation pods. Content implication: topic authority + save-worthy depth beats generic engagement hacks even harder now. (Source: https://searchengineland.com/linkedin-updates-feed-algorithm-llm-ranking-retrieval-471708)
+
+
 ## Recent Activity
+- 2026-05-02: Rosie — Cross-project research cycle (LinkedIn now uses LLM retrieval + transformer sequence ranking; engagement bait and automation pods being downranked)
 - 2026-04-29: Rosie — Cross-project research cycle (Claude for Creative Work = new launch content, carb-counting failure = anti-pattern content for cognition frameworks, ChatGPT ads = polarizing AI monetization hook, Mendral triager pattern = agent architecture case study, HN tone is corrective/skeptical not promotional)
 
 ## Next Actions
+- [ ] Create 3 LinkedIn posts optimized for new ranking logic: one deep framework post, one operator checklist post, one contrarian POV post — all tightly aligned to Marrs/Polynize profile authority (Rosie)
 - [ ] Create content: "Why ChatGPT can't count carbs twice — and what it means for your business AI" — uses viral anti-pattern story to rationalize Polynize's structured cognition approach (Rosie)
 - [ ] Create content: "The triager pattern — how to avoid paying for expensive AI when a cheap one will do" — case study format, SME-friendly (Rosie)
 

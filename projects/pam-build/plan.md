@@ -127,10 +127,16 @@ Research agent build patterns and tools.
 - [Build Reference — Mem0 'State of AI Agent Memory 2026' Report Published TODAY]: Mem0's definitive report went live April 29 (same day as this research cycle). Key benchmark data: Full-context 72.9% accuracy but 9.87s median / 17.12s p95 latency ("categorically unusable in production"), Mem0 66.9% at 0.71s (6-pt accuracy drop for 91% less latency, 90% fewer tokens), OpenAI Memory 52.9%. For PAM: this is the production benchmark baseline — PAM memory architecture should target <1s median, <2s p95 latency with accuracy in the 66-69% range for practical deployments. (Source: mem0.ai/blog/state-of-ai-agent-memory-2026)
 - [Build Reference — Mem0 Report Confirms 21 Integrations Across Fragmented Framework Landscape]: Mem0 now documents 21 integrations across Python and TypeScript: LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen, Agno, CAMEL AI, Dify, Flowise, Google ADK, OpenAI Agents SDK, Mastra. "No single framework has won. Developers are building across all of them." For PAM: this validates the cross-framework approach. PAM should NOT build for a single framework — it should integrate THROUGH the memory layer (Mem0, etc.) to be framework-agnostic. (Source: mem0.ai/blog/state-of-ai-agent-memory-2026)
 
+## Research Notes — 2026-05-02
+- [Cloudflare Agents Week Stack — Stateful Agent Runtime Is Standardizing]: Cloudflare’s official Agents Week releases and docs show a converged build pattern: durable stateful agent instances (Durable Objects + SQL), built-in scheduling, human-in-the-loop tools, MCP exposure, and provider-agnostic model routing via AI Gateway. This validates PAM’s direction toward stateful, multi-provider, tool-orchestrated agents as the default architecture baseline. (Sources: https://blog.cloudflare.com/tag/agents-week/ ; https://developers.cloudflare.com/agents/)
+
+
 ## Recent Activity
+- 2026-05-02: Rosie — Cross-project research cycle (Cloudflare Agents Week + Agents SDK docs validate stateful durable-object agent runtime with built-in scheduling, HITL, MCP, and multi-provider routing)
 - 2026-04-29: Rosie — Cross-project research cycle (Claude for Creative Work = persona switching reference, Claude Code #49363 = provider lock-in cost proof, Mendral triager = multi-model architecture reference, Dirac's no-MCP pattern, Mem0 State of AI Agent Memory 2026 published TODAY)
 
 ## Next Actions
+- [ ] Add a PAM reference architecture doc mapping current PAM components to Cloudflare’s stateful agent primitives (state store, scheduler, HITL, MCP, model routing) and identify gaps (Rosie)
 - [ ] Study Claude for Creative Work persona switching implementation (feature flag, system prompt swap, or model variant?) — this is the production reference for PAM's multi-persona architecture (Rosie)
 - [ ] Design PAM token tracking architecture — Claude Code #49363 proves opaque token consumption is a UX risk; PAM must report token usage transparently (Rosie)
 - [ ] Evaluate the Mendral triager pattern as PAM's default multi-model routing architecture (Rosie)
