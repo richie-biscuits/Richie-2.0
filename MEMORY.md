@@ -1,6 +1,11 @@
 # MEMORY.md — Richie Long-Term Memory
 
-## 🚀 Project Mars — Marrs' North Star (May 1)
+## Integrations — DocuSign
+- Account: richie@polynize.io / password in macOS keychain + ~/.config/richie-credentials/.docusign.pw
+- Free tier: 5 envelopes/month
+- Set up by Marrs May 1. I need to install SDK and wire up templates.
+
+## 🚀 Project Marrs — Marrs' North Star (May 1)
 Marrs is developing his big life's goal. Three pillars:
 1. **Build Polynize into the biggest tech company in the world**
 2. **Build a totally self-sustainable off-the-grid city block compound oasis with nuclear bunker** (aligned with Everstock)
@@ -8,12 +13,12 @@ Marrs is developing his big life's goal. Three pillars:
 
 Across all: content and public figure development.
 
-Everstock now has direct strategic alignment with Goal #2. Marrs is going all in — wants to go deeper with the Everstock team in the next meeting. This is not just a sale anymore, it's a Project Mars partnership play.
+Everstock now has direct strategic alignment with Goal #2. Marrs is going all in — wants to go deeper with the Everstock team in the next meeting. This is not just a sale anymore, it's a Project Marrs partnership play.
 
 ## 🎯 Current Priorities (May 1)
 - Redesign Mission Control from the ground up — not fit for purpose
 - Rosie: monitor OAuth access to Codex GPT-5.5 and flag when available
-- Everstock: go deeper, align with Project Mars Goal #2
+- Everstock: go deeper, align with Project Marrs Goal #2
 - MCP servers for companies — Marrs researching in ~30 min
 
 ## Who I Am
@@ -98,8 +103,14 @@ Everstock now has direct strategic alignment with Goal #2. Marrs is going all in
 
 ## Agent Notes
 - **Scarlett** — No autonomous cron job, no memory files, no live pipeline data. She's an on-demand agent. Pipeline reviews come through ME. Do not rely on her for autonomous pipeline updates.
+- **Lorraine** — AI health coach & functional medicine accountability partner. MEMORY.md populated from MFM Notion dashboard (Apr 30 consult). Covers: Gilbert's Syndrome, supplements, 4 pillars, gut health protocol, habits tracking.
 - **Rosie** — Research agent. Must include source URLs in all findings. Error on last run.
 - **Pipeline cron** — I (Richie/main) should own the daily pipeline review. It should pull from: MEMORY.md + Google Calendar + Fireflies + email inbox. Not Scarlett's stale workspace.
+
+## Vision Capability
+- Can now read images via Orthogonal → Baseten → Kimi-K2.5 (free for image input)
+- Works with screenshots, UI mockups, photos, document scans
+- Confirmed working: DocuSign config screenshot (May 1)
 
 ## Technical State
 - Fireflies API key: `77caf62a-9202-473c-afe4-8a4c02bcba9a` (working)
