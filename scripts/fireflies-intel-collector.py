@@ -3,7 +3,7 @@
 Fireflies Intel Collector
 Fetches recent meetings from Fireflies, extracts key intel, updates Richie's memory.
 """
-import subprocess, json, os
+import subprocess, json, os, sys
 from datetime import datetime, timezone
 
 FIREFLIES_API_KEY = "77caf62a-9202-473c-afe4-8a4c02bcba9a"
@@ -14,12 +14,21 @@ PREV_TRANSCRIPT_FILE = os.path.join(MEMORY_DIR, ".last_transcripts.json")
 def gql_query(query):
     payload = {"query": query}
     r = subprocess.run([
-        "curl", "-s", "-X", "POST", FIREFLIES_ENDPOINT,
+        "curl", "-s", "-w", "\n%{http_code}", "-X", "POST", FIREFLIES_ENDPOINT,
         "-H", f"Authorization: Bearer {FIREFLIES_API_KEY}",
         "-H", "Content-Type: application/json",
         "-d", json.dumps(payload)
     ], capture_output=True, text=True, timeout=30)
-    return json.loads(r.stdout)
+    stdout = r.stdout.strip()
+    # Extract HTTP code from last line
+    lines = stdout.rsplit("\n", 1)
+    body = lines[0] if len(lines) > 1 else ""
+    http_code = lines[-1] if len(lines) > 1 else "000"
+    if http_code not in ("200", "201"):
+        raise Exception(f"Fireflies API returned HTTP {http_code}: {body[:200]}")
+    if not body.strip():
+        raise Exception("Fireflies API returned empty response")
+    return json.loads(body)
 
 def get_recent_transcripts(limit=20):
     q = ("{ transcripts(limit: %d) { "
@@ -73,7 +82,13 @@ def write_intel(meetings):
     print("Wrote intel for %d new meetings." % len(meetings))
 
 if __name__ == "__main__":
-    transcripts = get_recent_transcripts(20)
+    try:
+        transcripts = get_recent_transcripts(20)
+    except Exception as e:
+        print("[Fireflies Intel Collector] ERROR: %s" % e, file=sys.stderr)
+        print("Fireflies API unavailable (may be a transient outage). Skipping this run.")
+        sys.exit(1)
+
     new_meetings = [t for t in transcripts if t["id"] not in load_last_seen()]
     all_ids = [t["id"] for t in transcripts]
     save_last_seen(all_ids)
