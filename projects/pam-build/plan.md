@@ -132,6 +132,7 @@ Research agent build patterns and tools.
 
 
 ## Recent Activity
+- 2026-05-03: Rosie — Cross-project research cycle (Cloudflare Agents Week launch = production reference architecture, Mendral harness-outside-sandbox pattern, Specsmaxxing YAML validation)
 - 2026-05-02: Rosie — Cross-project research cycle (Cloudflare Agents Week + Agents SDK docs validate stateful durable-object agent runtime with built-in scheduling, HITL, MCP, and multi-provider routing)
 - 2026-04-29: Rosie — Cross-project research cycle (Claude for Creative Work = persona switching reference, Claude Code #49363 = provider lock-in cost proof, Mendral triager = multi-model architecture reference, Dirac's no-MCP pattern, Mem0 State of AI Agent Memory 2026 published TODAY)
 
@@ -142,6 +143,13 @@ Research agent build patterns and tools.
 - [ ] Evaluate the Mendral triager pattern as PAM's default multi-model routing architecture (Rosie)
 - [ ] Update PAM memory benchmarks to reference Mem0's 2026 State of AI Agent Memory report as the canonical production baseline (Rosie)
 
+## Research Notes — 2026-05-03
+- [Cloudflare Agents Week — Major Platform Launch Validates Stateful Agent Architecture]: Cloudflare launched Agents Week (April 20) with their Agents SDK — stateful AI agents on Durable Objects with SQLite, WebSockets, scheduling, and MCP. Key primitives: AIChatAgent class, SQL state store, cron scheduling, human-in-the-loop, sub-agents, browser tools, voice agents. This is a converged stack that validates PAM's direction. PAM should align with Cloudflare's architecture: stateful durable objects + multi-provider routing + built-in scheduling. (Source: blog.cloudflare.com/agents-week-in-review, developers.cloudflare.com/agents/)
+- [Agent Harness Architecture — Mendral 'Outside Sandbox' Pattern]: Mendral's HN-front-page post (119 pts) documents why the agent harness should run OUTSIDE the sandbox — credentials stay out of the sandbox, suspendable when idle, cattle-not-pets sandboxes. Uses Inngest for durable execution and Blaxel for 25ms sandbox resume. For PAM: this is the production reference for multi-user agent architecture. (Source: mendral.com/blog/agent-harness-belongs-outside-sandbox)
+- [Spec-Driven Development — 'Specsmaxxing' Trending on HN]: acai.sh's "Specsmaxxing" post (161 pts, 178 comments) on overcoming AI psychosis with YAML specs validates structured cognition approach. Key insight: "the context window is the limit" — when context fills, requirements get lost. Structured specs (YAML) are the mitigation. This validates Polynize Brain's framework extraction concept — specs as portable cognition. (Source: acai.sh/blog/specsmaxxing)
+- [Cloudflare Agents SDK — Reference Architecture]: The Agents SDK provides the complete reference: npx create-cloudflare@latest --template cloudflare/agents-starter. Features include streaming AI chat, server-side and client-side tools, human-in-the-loop approval, task scheduling. PAM should evaluate Cloudflare as a deployment target — it's a full agent platform. (Source: developers.cloudflare.com/agents/)
+
 ## Notes
 - Key insight: MCP = tool connection, Skills = tool documentation/context
 - PAM tools should expose MCP interfaces, with Skills that capture discovered patterns
+- Cloudflare Agents SDK is now the production reference for stateful agent architecture
