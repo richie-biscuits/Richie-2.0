@@ -120,12 +120,19 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 
 ## Recent Activity
+- 2026-05-04: Rosie — Cross-project research cycle (DeepClaude 17x cost reduction = trending content hook, OpenAI o1 ER diagnosis = mainstream AI story, Text-to-CAD = manufacturing AI angle)
 - 2026-05-03: Rosie — Cross-project research cycle (Cloudflare Agents Week = biggest infrastructure story, Specsmaxxing trending on HN, Agent Harness architecture deep-dive material)
 - 2026-05-02: Rosie — Cross-project research cycle (LinkedIn now uses LLM retrieval + transformer sequence ranking; engagement bait and automation pods being downranked)
 - 2026-04-29: Rosie — Cross-project research cycle (Claude for Creative Work = new launch content, carb-counting failure = anti-pattern content for cognition frameworks, ChatGPT ads = polarizing AI monetization hook, Mendral triager pattern = agent architecture case study, HN tone is corrective/skeptical not promotional)
 
+## Research Notes — 2026-05-04
+- [Content Hook — DeepClaude 17x Cost Reduction = 'Same UX, 17x Cheaper' Narrative]: DeepClaude trending on HN (#11, 533 pts) — Claude Code UX with DeepSeek V4 Pro backend at $0.87/M vs $15/M. Content angles: "How to cut your AI coding costs by 17x without changing your workflow," "The Claude Code killer isn't a new UI — it's a cheaper brain." This validates the "commodity not platform" narrative with hard numbers. (Source: github.com/aattaran/DeepClaude, HN May 4 2026)
+- [Content Hook — OpenAI o1 ER Diagnosis = 'AI Beats Doctors' Headline]: o1 diagnosed 67% of ER cases correctly vs 50-55% for triage doctors (HN #21, 427 pts). Massive mainstream appeal — medical AI outperforming humans. Content angles: "OpenAI's model is now better than ER doctors at diagnosis — what comes next?" (Source: theguardian.com via HN, May 3 2026)
+- [Content Hook — Text-to-CAD = AI-Generated Manufacturing Content]: Open-source harness for generating CAD models with agents (HN #29, 132 pts). Shows agents moving into physical manufacturing, not just software. Content angle: "AI agents are now designing physical parts — from code to CAD." (Source: github.com/earthtojake/text-to-cad)
+
 ## Next Actions
-- [ ] **PRIORITY** Create content on Cloudflare Agents Week — "The infrastructure just arrived: why 2026 is the year of the agent" — authoritative platform launch validates the market (Rosie)
+- [ ] **PRIORITY** Create LinkedIn post: "DeepClaude proves you don't need to pay $200/mo for Claude Code — here's the 17x cheaper alternative" — ride the HN trend (Rosie)
+- [ ] Create content on Cloudflare Agents Week — "The infrastructure just arrived: why 2026 is the year of the agent" — authoritative platform launch validates the market (Rosie)
 - [ ] Create content on Specsmaxxing — "Why your AI agents need specs (not just prompts)" — trending HN story, validates Polynize thesis (Rosie)
 - [ ] Create content on Agent Harness architecture — "Where your agent's brain should actually live" — Mendral's outside-sandbox pattern (Rosie)
 - [ ] Create 3 LinkedIn posts optimized for new ranking logic: one deep framework post, one operator checklist post, one contrarian POV post — all tightly aligned to Marrs/Polynize profile authority (Rosie)

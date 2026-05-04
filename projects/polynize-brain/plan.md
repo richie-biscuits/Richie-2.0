@@ -82,8 +82,14 @@ Extract and install cognition frameworks into AI agents.
 - 2026-04-14: Rosie - Cross-project research cycle (Mem0 v2.0.0-beta, Skill Graph operational, OpenClaw plugin v1.0.6)
 - 2026-04-13: Rosie - Cross-project research cycle (Mem0 OpenClaw plugin production-ready, Dream gate feature)
 
+## Research Notes — 2026-05-04
+- [Cognition Transfer — DeepClaude: 17x Cost Reduction Validates Model Swapping Architecture]: DeepClaude (HN #11, 533 pts) swaps Claude Code's brain to DeepSeek V4 Pro while keeping the same UX — $0.87/M tokens vs $15/M (17x cheaper). Key insight for Polynize Brain: the cognition layer (Claude Code's tool loop, file editing, bash, git, subagent spawning) is SEPARATE from the model layer. This validates Polynize's architecture — cognition frameworks can be installed on ANY capable model, not locked to one provider. Multi-backend support (DeepSeek, OpenRouter, Fireworks, Anthropic) with mid-session switching proves portable cognition is technically viable NOW. (Source: github.com/aattaran/DeepClaude, HN May 4 2026)
+- [Cognition Architecture — OpenAI o1 ER Diagnosis 67% vs Doctors 50-55% = AI Cognition Superiority Proof]: OpenAI's o1 model correctly diagnosed 67% of ER patients vs 50-55% by triage doctors (HN #21, 427 pts, 377 comments). This is massive empirical validation that AI cognition can outperform human cognition in high-stakes domains. For Polynize Brain: this proves structured AI cognition isn't just convenient — it can be BETTER than human expertise. The sales narrative shifts from "AI helps you" to "AI thinks differently than humans, and sometimes that's an advantage." (Source: theguardian.com via HN, May 3 2026)
+
 ## Next Actions
-- [ ] **PRIORITY** Use OpenAI goblins post as case study: RL reward design directly installs cognitive patterns - this is the empirical proof Polynize Brain's mechanism exists (Rosie)
+- [ ] **PRIORITY** Document DeepClaude as proof-of-concept for portable cognition — model-agnostic framework installation is technically validated (Rosie)
+- [ ] Use OpenAI o1 ER diagnosis study in sales narrative — "AI cognition outperforms human experts" is now empirically proven (Rosie)
+- [ ] Use OpenAI goblins post as case study: RL reward design directly installs cognitive patterns - this is the empirical proof Polynize Brain's mechanism exists (Rosie)
 - [ ] Study OpenAI goblins architecture for cognition transfer prevention - how NOT to accidentally transfer cognitive patterns between personas (Rosie)
 - [ ] Evaluate Hermes Agent GEPA vs Polynize Brain framework installation - different layers but same market attention (Rosie)
 - [ ] Document Polynize Brain positioning against Nuwa Skill persona distillation - same concept, different market phrasing ("cognitive operating system") (Rosie)
@@ -144,6 +150,7 @@ Extract and install cognition frameworks into AI agents.
 
 
 ## Recent Activity
+- 2026-05-04: Rosie — Cross-project research cycle (DeepClaude 17x cost reduction validates portable cognition architecture, OpenAI o1 ER diagnosis proves AI cognition outperforms humans)
 - 2026-05-03: Rosie — Cross-project research cycle (Specsmaxxing validates YAML-based cognition installation, Cloudflare Agents Week validates stateful cognition infrastructure)
 - 2026-05-02: Rosie — Cross-project research cycle (ACSC agentic AI guidance: least-privilege agent identities, human-in-the-loop checkpoints, and structured context hierarchy as deploy-time cognition governance defaults)
 - 2026-04-30: Rosie - Cross-project research cycle (OpenAI goblins postmortem = RL reward design is cognition installation, Zig anti-AI policy = cognition portability tension, IBM Granite 4.1 8B beats 32B MoE = model efficiency trend)

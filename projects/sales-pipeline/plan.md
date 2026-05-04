@@ -133,12 +133,19 @@ Research leads, market trends, and competitors for AI agent services.
 
 
 ## Recent Activity
+- 2026-05-04: Rosie — Cross-project research cycle (DeepClaude 17x cost = model commoditization proof, o1 ER diagnosis = AI outperforms humans proof, Credare AU SME report = implementation-first sales narrative)
 - 2026-05-03: Rosie — Cross-project research cycle (Cloudflare Agents Week = infrastructure validation for sales narrative, ACSC guidance = regulatory tailwind, Specsmaxxing = developer validation)
 - 2026-05-02: Rosie — Cross-project research cycle (Credare AU SME report: 34% active AI use, 5% beyond pilot, 67% cite implementation complexity as top blocker)
 - 2026-04-29: Rosie - Cross-project research cycle (Claude Code regression bug = 'you pay for their bugs' sales hook, model convergence = 'model choice matters less' argument, OpenAI ads = platform monetization concern, carb-counting failure = 'why you need structured agents' SME story)
 
+## Research Notes — 2026-05-04
+- [Sales Hook — DeepClaude 17x Cost Reduction = 'Model Commoditization Is Here' Proof]: DeepClaude (HN #11, 533 pts) delivers identical UX to Claude Code at 17x lower cost ($0.87/M vs $15/M). This is the strongest sales signal yet: models are pure commodities now. For SME sales conversations: "The brain is a commodity — the cognition framework is what matters. We don't charge you for expensive models, we charge you for agents that work." (Source: github.com/aattaran/DeepClaude)
+- [Sales Hook — OpenAI o1 ER Diagnosis 67% vs Doctors 50-55% = 'AI Outperforms Humans' Proof]: Major study shows o1 beating triage doctors on diagnosis accuracy. For sales: this shifts the conversation from "should we use AI?" to "can we afford NOT to use AI cognition that outperforms humans?" (Source: theguardian.com via HN, May 3 2026)
+- [Sales Hook — Credare Australian SME Report 2026 = Implementation-First Sales Narrative]: Credare's report confirms: only 34% of Australian SMEs actively use AI, only 5% beyond pilot stage, while global enterprise adoption is 78-88%. 56% of AI projects fail to move from pilot to production. Top blocker: implementation complexity (67%). For Polynize sales: this validates the "pilot-to-production in 90 days" narrative. Position as the implementation partner, not the tool vendor. (Source: credare.ai/research, May 2026)
+
 ## Next Actions
-- [ ] **PRIORITY** Add Cloudflare Agents Week to sales deck - "The infrastructure just arrived" narrative validates the market timing for Polynize (Rosie)
+- [ ] **PRIORITY** Update sales deck with DeepClaude example — "Models are commodities, cognition frameworks are the differentiator" (Rosie)
+- [ ] Add Cloudflare Agents Week to sales deck - "The infrastructure just arrived" narrative validates the market timing for Polynize (Rosie)
 - [ ] Add ACSC guidance to sales deck - "Australian government now recommends structured agent governance" - regulatory tailwind for Polynize (Rosie)
 - [ ] Add Specsmaxxing story to sales deck - "Why specs beat prompts" - trending developer validation of structured cognition (Rosie)
 - [ ] Add a new sales narrative block: "From AI Pilot to Production in 90 Days" with proof points around implementation bottlenecks and execution support (Rosie)
