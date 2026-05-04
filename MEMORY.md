@@ -5,21 +5,36 @@
 - Free tier: 5 envelopes/month
 - Set up by Marrs May 1. I need to install SDK and wire up templates.
 
-## 🚀 Project Marrs — Marrs' North Star (May 1)
-Marrs is developing his big life's goal. Three pillars:
-1. **Build Polynize into the biggest tech company in the world**
-2. **Build a totally self-sustainable off-the-grid city block compound oasis with nuclear bunker** (aligned with Everstock)
-3. **Make one million people millionaires** (still loose)
+## 🚀 Project Marrs — Marrs' North Star (May 4)
 
-Across all: content and public figure development.
+**Manifesto written. 10-year horizon.**
 
-Everstock now has direct strategic alignment with Goal #2. Marrs is going all in — wants to go deeper with the Everstock team in the next meeting. This is not just a sale anymore, it's a Project Marrs partnership play.
+Three pillars refined:
+1. **$100B Tech Company** — Biggest tech company in Australia, $100B market cap target
+2. **Billion Views/Month** — Public presence at massive scale
+3. **Vertical Oasis Bunker** — Self-sustaining urban oasis, beacon of hope for sustainability in uncertain future
 
-## 🎯 Current Priorities (May 1)
-- Redesign Mission Control from the ground up — not fit for purpose
-- Rosie: monitor OAuth access to Codex GPT-5.5 and flag when available
-- Everstock: go deeper, align with Project Marrs Goal #2
-- MCP servers for companies — Marrs researching in ~30 min
+**This is reshaping daily thinking** — everything now viewed through the 10-year lens.
+
+Everstock directly aligns with Pillar #3. Not just a sale — partnership play for Project Marrs.
+
+### PAM Console (Polynize Agent Management)
+- Centralized platform for team to manage all agent instances
+- Spawn up agents, work through one platform
+- Has its own intelligence layer (PAM building PAM)
+- In active design/development (Week of May 4)
+
+## 🎯 Current Priorities (May 4)
+1. **PAM Console build** — Infrastructure for agent instance management at scale
+2. **Infrastructure build out** — Scaling for 10-year horizon
+3. **Roxbury build** — Active delivery
+4. **Optio/Everstock build** — Continue relationship + deliverables
+5. **Naomi deal close** — Mitigate risks, check with Shourov
+
+### Technical Migration In Progress
+- **OpenCore → Hermes** (new agent stack)
+- **Deadline:** Entire team migrated by next weekend (May 10-11)
+- **Status:** Decision made, execution underway
 
 ## Who I Am
 - Name: Richie — AI Co-Ordinator at Polynize
@@ -84,6 +99,7 @@ Everstock now has direct strategic alignment with Goal #2. Marrs is going all in
 - Fri May 1, 3:45pm — Polynize Tech Demo 2/2
 - Sun May 3, 12pm — Weekly Alignment
 - Mon May 4, 10am — Founder Connect + weekly metrics review
+- Mon May 4, 11:30am — Erfan and Marrs Coiro
 - Mon May 4, 1pm — Parallax <> Polynize catchup
 - Mon May 4, 1pm-5pm — Agent Build Pipeline Mapping Session
 - Tue May 5, 12pm — AJ <> Marrs Lunch (location TBC)
