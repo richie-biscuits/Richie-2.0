@@ -90,22 +90,16 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 - **Fireflies** — ✅ Intel Collector runs every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
 - **Orthogonal** — Felix Google account integration still pending.
 
-## Calendar (marrs@polynize.io)
-- ✓ Thu Apr 30, 1pm-4pm — Marrs Busy (blocked)
-- Fri May 1, 11:30am — Everstock System Map
-- Fri May 1, 1pm — Naomi Ferstera call
-- Fri May 1, 2pm — Marrs x Monica x Agents
-- Fri May 1, 3pm — Polynize Weekly Wrap-Up
-- Fri May 1, 3:45pm — Polynize Tech Demo 2/2
-- Sun May 3, 12pm — Weekly Alignment
-- Mon May 4, 10am — Founder Connect + weekly metrics review
-- Mon May 4, 11:30am — Erfan and Marrs Coiro
-- Mon May 4, 1pm — Parallax <> Polynize catchup
-- Mon May 4, 1pm-5pm — Agent Build Pipeline Mapping Session
+## Calendar (marrs@polynize.io) — Updated May 5
+
+### This Week
 - Tue May 5, 12pm — AJ <> Marrs Lunch (location TBC)
 - Wed May 6, 11am — Roxbury — Jayden Young (data export session)
 - Fri May 8, 10am — Marrs x Shourov Weekly Lab Recording
 - Fri May 8, 3pm — Polynize Weekly Wrap-Up
+
+### Recently Completed
+- Mon May 4 — Founder Connect, Erfan meeting, Parallax catchup, Agent Build Pipeline Mapping
 
 ## Active Cron Jobs
 - Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
