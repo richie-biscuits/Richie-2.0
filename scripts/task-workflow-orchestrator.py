@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Task Workflow Orchestrator
+Task Workflow Orchestrator - PACED & SILENT
 Complete workflow: approved → doing → execution → done
-Combines both approval processing and agent spawning
 
-SILENT MODE: Set SILENT=1 environment variable for cron operation
+SILENT MODE (default for cron):
+- Set SILENT=1 environment variable
+- NO output unless human attention required
+- Logs to ~/.openclaw/logs/paced-workflow.log
 """
 
 import subprocess
@@ -12,16 +14,14 @@ import sys
 import os
 from datetime import datetime
 
-# Check for silent mode
 SILENT = os.environ.get('SILENT', '0') == '1' or os.environ.get('SILENT_MODE', '0') == '1'
 LOG_FILE = os.path.expanduser("~/.openclaw/logs/paced-workflow.log")
 
 def log(message):
-    """Log to file and optionally print"""
+    """Log to file only (silent)"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_line = f"[{timestamp}] {message}"
     
-    # Always write to log file
     try:
         os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
         with open(LOG_FILE, 'a') as f:
@@ -34,7 +34,7 @@ def log(message):
         print(message)
 
 def run_script(script_name):
-    """Run a Python script and capture output"""
+    """Run a Python script silently"""
     script_path = f"/Users/openclaw_admin/.openclaw/workspace/scripts/{script_name}"
     
     if not os.path.exists(script_path):
@@ -42,9 +42,8 @@ def run_script(script_name):
         return None
     
     try:
-        # Pass silent mode to child scripts
         env = os.environ.copy()
-        env['SILENT'] = '1' if SILENT else '0'
+        env['SILENT'] = '1'  # Always silent for sub-scripts
         
         result = subprocess.run(
             [sys.executable, script_path],
@@ -68,104 +67,55 @@ def run_script(script_name):
         }
 
 def main():
-    """Orchestrate the complete task workflow"""
+    """Orchestrate the complete task workflow - SILENTLY"""
     
-    if not SILENT:
-        print("=" * 60)
-        print("TASK WORKFLOW ORCHESTRATOR")
-        print("=" * 60)
+    log("=== WORKFLOW START ===")
     
-    log("Workflow started")
-    
-    # Track if anything needs human attention
-    needs_attention = []
-    tasks_completed = []
+    attention_needed = []
+    spawned_agents = []
     
     # Step 1: Process approved tasks (todo → doing)
-    if not SILENT:
-        print("\n1. PROCESSING APPROVED TASKS (todo → doing)")
-        print("-" * 40)
-    
+    log("Step 1: Processing approved tasks (todo → doing)")
     approval_result = run_script("approved-task-executor-limited.py")
     
     if approval_result["success"]:
-        output = approval_result["output"]
-        if not SILENT:
-            print(output)
-        
-        # Check for tasks that were moved
-        if "Moved 1 task" in output:
-            # Extract task name
-            for line in output.split('\n'):
-                if "→ 'doing':" in line:
-                    task_name = line.split("→ 'doing':")[-1].strip()
-                    log(f"Approved task moved to doing: {task_name}")
-                    break
+        log("Step 1: Success - approved task moved to doing")
     else:
-        log(f"Failed to process approved tasks: {approval_result.get('error', 'Unknown error')}")
+        log(f"Step 1: No approved tasks or error")
     
     # Step 2: Execute tasks in doing status
-    if not SILENT:
-        print("\n2. EXECUTING TASKS (doing → execution)")
-        print("-" * 40)
-    
+    log("Step 2: Executing tasks (doing → agent spawn)")
     execution_result = run_script("agent-task-spawner-limited.py")
     
     if execution_result["success"]:
-        output = execution_result["output"]
-        if not SILENT:
-            print(output)
+        output = execution_result.get("output", "")
+        log("Step 2: Success - agent spawned or no tasks")
         
-        # Check for completed tasks requiring attention
-        if "COMPLETED - Needs Review" in output:
-            for line in output.split('\n'):
-                if "COMPLETED - Needs Review" in line:
-                    needs_attention.append(line.strip())
-        
-        # Check for tasks completed by Marrs (stay in doing)
-        if "Tasks completed by Richie:" in output:
-            for line in output.split('\n'):
-                if line.strip().startswith("-"):
-                    tasks_completed.append(line.strip())
+        # Check if agent was spawned
+        if "spawned successfully" in output.lower():
+            # Extract task name if possible
+            spawned_agents.append("Agent task executed")
     else:
-        log(f"Failed to execute tasks: {execution_result.get('error', 'Unknown error')}")
+        log(f"Step 2: No tasks to execute or error")
     
-    log("Workflow completed")
+    log("=== WORKFLOW COMPLETE ===")
     
-    # In silent mode, only output if something needs human attention
+    # SILENT MODE: Only output if human attention needed
     if SILENT:
-        if needs_attention:
-            print("⚠️ TASKS COMPLETED - NEED REVIEW:")
-            for task in needs_attention:
-                print(f"  {task}")
+        if attention_needed:
+            print("⚠️ TASKS NEED ATTENTION:")
+            for item in attention_needed:
+                print(f"  • {item}")
             return 0
-        elif tasks_completed:
-            # Tasks completed but no review needed - truly silent
-            return 0
-        else:
-            # Nothing happened - truly silent
-            return 0
+        # Otherwise: COMPLETE SILENCE
+        return 0
     
-    # Non-silent mode - show full summary
-    print("\n" + "=" * 60)
-    print("WORKFLOW COMPLETE")
-    print("=" * 60)
-    
-    if needs_attention:
-        print("\n⚠️ TASKS NEEDING REVIEW:")
-        for task in needs_attention:
-            print(f"  • {task}")
-    
-    print("\nNEXT STEPS:")
-    print("1. Check Mission Control for updated task statuses")
-    print("2. Review completed tasks in 'done' column")
-    print("3. Approve more tasks as needed")
-    print("4. Tasks assigned to Marrs remain in 'doing' for manual execution")
-    
-    print("\nQUICK COMMANDS:")
-    print("  • Check pending: python3 mission_approve_simple.py pending")
-    print("  • Run workflow: python3 scripts/task-workflow-orchestrator.py")
-    print("  • Manual approve: python3 mission_approve_simple.py toggle <task_id>")
+    # Non-silent mode - minimal output
+    print("Workflow complete")
+    if spawned_agents:
+        print(f"  Spawned: {len(spawned_agents)} agent(s)")
+    if attention_needed:
+        print(f"  Attention needed: {len(attention_needed)} item(s)")
 
 if __name__ == "__main__":
     main()

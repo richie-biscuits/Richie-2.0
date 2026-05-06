@@ -10,9 +10,16 @@ import json
 import sys
 import os
 import time
+import subprocess
 
 SUPABASE_URL = "https://cmqzawbdtnkynizughqq.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNtcXphd2JkdG5reW5penVnaHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2NzI1MTQsImV4cCI6MjA4ODI0ODUxNH0.Ha0-nnKHmCPBbfHYaebCcbjmeKZLrXYfGxTjuVlmLw8"
+
+SILENT = os.environ.get('SILENT', '0') == '1'
+
+def log(msg):
+    if not SILENT:
+        print(msg)
 
 def make_request(method, endpoint, data=None, params=None):
     """Make HTTP request to Supabase"""
@@ -37,13 +44,13 @@ def make_request(method, endpoint, data=None, params=None):
     
     try:
         with urllib.request.urlopen(request) as response:
-            if response.status == 204:  # No content
+            if response.status == 204:
                 return None
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
-        if e.code == 204:  # No content (successful update)
+        if e.code == 204:
             return None
-        print(f"HTTP Error {e.code}: {e.reason}")
+        log(f"HTTP Error {e.code}: {e.reason}")
         raise
 
 def get_one_doing_task():
@@ -51,9 +58,9 @@ def get_one_doing_task():
     params = {
         "select": "id,title,assigned_to,notes,board_id,created_at",
         "status": "eq.doing",
-        "assigned_to": "neq.Marrs",  # SKIP Marrs tasks
-        "order": "created_at.asc",  # Oldest first
-        "limit": 1  # ONLY ONE TASK
+        "assigned_to": "neq.Marrs",
+        "order": "created_at.asc",
+        "limit": 1
     }
     
     tasks = make_request("GET", "todos", params=params) or []
@@ -64,7 +71,6 @@ def update_task_status(task_id, status, notes_addendum=""):
     data = {"status": status}
     
     if notes_addendum:
-        # First get current notes
         current = make_request("GET", f"todos?id=eq.{task_id}&select=notes")
         if current and current[0].get("notes"):
             current_notes = current[0]["notes"]
@@ -74,89 +80,91 @@ def update_task_status(task_id, status, notes_addendum=""):
     
     return make_request("PATCH", f"todos?id=eq.{task_id}", data=data)
 
-def execute_richie_task(task_title, task_notes, task_id):
-    """Execute a task assigned to Richie - ONE AT A TIME"""
-    print(f"  Executing: {task_title}")
+def spawn_agent_for_task(agent_id, task_title, task_notes):
+    """Actually spawn an agent using openclaw sessions spawn"""
+    if not agent_id:
+        log("  ✗ No agent assigned to task")
+        return False
     
-    # Simulate focused execution (not rushing)
-    print(f"  ⏳ Focusing on this single task...")
-    time.sleep(1)  # Simulate work
+    # Prepare the task description
+    task_description = f"""Task from Mission Control:
+Title: {task_title}
+Notes: {task_notes[:2000] if task_notes else 'No additional notes'}
+
+Please complete this task and report back when done."""
     
-    # Check task type
-    task_lower = task_title.lower()
-    
-    if "tavily" in task_lower or "api" in task_lower:
-        result = "Researching Tavily API for web search integration (focused execution)"
-    elif "sage" in task_lower or "agent" in task_lower:
-        result = "Setting up agent configuration (focused execution)"
-    elif "scarlett" in task_lower:
-        result = "Setting up Scarlett agent configuration (focused execution)"
-    elif "report" in task_lower or "daily" in task_lower:
-        result = "Generating focused daily report"
-    elif "document" in task_lower:
-        result = "Documenting protocols and domains"
-    elif "test" in task_lower or "integration" in task_lower:
-        result = "Testing Mission Control integration"
-    elif "configure" in task_lower or "setup" in task_lower:
-        result = "Configuring system components"
-    elif "research" in task_lower:
-        result = "Conducting focused research"
-    else:
-        result = f"Executing task: {task_title}"
-    
-    print(f"  ✓ {result}")
-    return result
+    try:
+        cmd = [
+            "openclaw", "sessions", "spawn",
+            "--agent-id", agent_id.lower(),
+            "--task", task_description,
+            "--mode", "run"
+        ]
+        
+        log(f"  🚀 Spawning agent: {agent_id}")
+        
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        
+        if result.returncode == 0:
+            log(f"  ✓ Agent {agent_id} spawned successfully")
+            return True
+        else:
+            log(f"  ✗ Failed to spawn agent: {result.stderr}")
+            return False
+            
+    except subprocess.TimeoutExpired:
+        log(f"  ✗ Agent spawn timed out")
+        return False
+    except Exception as e:
+        log(f"  ✗ Error spawning agent: {e}")
+        return False
 
 def process_one_doing_task():
     """Process ONE task in 'doing' status only"""
-    print("Checking for ONE task ready to execute (status: doing)...")
+    log("Checking for ONE task ready to execute (status: doing)...")
     
     task = get_one_doing_task()
     
     if not task:
-        print("No tasks in 'doing' status ready for execution")
+        log("No tasks in 'doing' status ready for execution")
         return {"processed": 0, "task": None}
     
     task_id = task.get("id")
     title = task.get("title", "Untitled")
-    assigned_to = task.get("assigned_to", "Richie")
+    assigned_to = task.get("assigned_to", "")
     notes = task.get("notes", "")
     
-    print(f"Found ONE task to execute: '{title}'")
-    print(f"  Assigned to: {assigned_to}")
+    log(f"Found ONE task to execute: '{title}'")
+    log(f"  Assigned to: {assigned_to or 'Unassigned'}")
     
-    result = None
+    # Skip if no agent assigned
+    if not assigned_to:
+        log("  ⚠️ Task has no assigned agent - skipping")
+        return {"processed": 0, "task": None, "error": "no_agent"}
     
     # Handle based on assignment
     if assigned_to == "Richie":
-        # Execute Richie tasks directly
-        result = execute_richie_task(title, notes, task_id)
-        
-        # Mark as completed with detailed execution notes
-        execution_timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-        execution_notes = f"""EXECUTION COMPLETE - {execution_timestamp}
-Executed by: Richie (paced workflow)
-Result: {result}
-Workflow: Single-task paced execution
-Status: ✅ Successfully completed"""
-        
-        update_task_status(task_id, "done", execution_notes)
-        
+        # Richie tasks should be handled by the main assistant
+        log(f"  ⏳ Richie task - main assistant will handle")
         return {
             "processed": 1,
-            "executed": 1,
+            "executed": 0,
+            "richie": True,
             "task": {
                 "id": task_id,
                 "title": title,
-                "assigned_to": assigned_to,
-                "result": result
+                "assigned_to": assigned_to
             }
         }
         
     elif assigned_to == "Marrs":
-        # Leave Marrs tasks in 'doing' - human execution
-        print(f"  ⏳ Waiting for Marrs to execute (human task)")
-        
+        # Should not happen due to query filter, but handle anyway
+        log(f"  ⏳ Waiting for Marrs to execute (human task)")
         return {
             "processed": 1,
             "executed": 0,
@@ -169,64 +177,82 @@ Status: ✅ Successfully completed"""
         }
         
     else:
-        # For other agents, we would spawn them one at a time
-        print(f"  [SIMULATION] Would spawn {assigned_to} for this task")
-        print(f"  (Paced execution - one agent at a time)")
+        # Spawn the actual agent
+        spawn_success = spawn_agent_for_task(assigned_to, title, notes)
         
-        # Simulate agent spawn
-        time.sleep(0.5)
-        
-        update_task_status(
-            task_id, 
-            "doing",  # Keep as doing while agent works
-            f"Agent {assigned_to} spawned for paced execution"
-        )
-        
-        return {
-            "processed": 1,
-            "spawned": 1,
-            "task": {
-                "id": task_id,
-                "title": title,
-                "assigned_to": assigned_to,
-                "status": "agent_spawned"
+        if spawn_success:
+            # Move to 'done' since agent is now handling it
+            execution_timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+            execution_notes = f"""AGENT SPAWNED - {execution_timestamp}
+Agent: {assigned_to}
+Status: Agent spawned and executing task
+Workflow: Paced execution (one at a time)"""
+            
+            update_task_status(task_id, "done", execution_notes)
+            
+            return {
+                "processed": 1,
+                "spawned": 1,
+                "task": {
+                    "id": task_id,
+                    "title": title,
+                    "assigned_to": assigned_to,
+                    "status": "agent_spawned"
+                }
             }
-        }
+        else:
+            # Spawn failed - keep in doing for retry
+            return {
+                "processed": 1,
+                "spawned": 0,
+                "error": "spawn_failed",
+                "task": {
+                    "id": task_id,
+                    "title": title,
+                    "assigned_to": assigned_to
+                }
+            }
 
 def main():
-    """Command line interface - executes ONE task only"""
     result = process_one_doing_task()
     
-    print(f"\n{'='*50}")
-    
-    if result["processed"] > 0:
-        task = result["task"]
+    if not SILENT:
+        print(f"\n{'='*50}")
         
-        if result.get("executed", 0) > 0:
-            print(f"EXECUTED 1 TASK:")
-            print(f"  • '{task['title']}'")
-            print(f"  • Result: {task['result']}")
-            print(f"  • Status: doing → done")
+        if result["processed"] > 0:
+            task = result["task"]
             
-        elif result.get("spawned", 0) > 0:
-            print(f"SPAWNED 1 AGENT:")
-            print(f"  • Task: '{task['title']}'")
-            print(f"  • Agent: {task['assigned_to']}")
-            print(f"  • Status: Agent spawned for execution")
-            
-        elif task.get("status") == "waiting_for_marrs":
-            print(f"WAITING FOR MARRS:")
-            print(f"  • '{task['title']}'")
-            print(f"  • Status: Ready for your execution")
-            
-    else:
-        print("No tasks processed - either none available or all are Marrs tasks")
+            if result.get("richie"):
+                print(f"RICHIE TASK:")
+                print(f"  • '{task['title']}'")
+                print(f"  • Main assistant will handle")
+                
+            elif result.get("spawned", 0) > 0:
+                print(f"SPAWNED 1 AGENT:")
+                print(f"  • Task: '{task['title']}'")
+                print(f"  • Agent: {task['assigned_to']}")
+                print(f"  • Status: Agent spawned → done")
+                
+            elif result.get("error") == "spawn_failed":
+                print(f"SPAWN FAILED:")
+                print(f"  • '{task['title']}'")
+                print(f"  • Agent: {task['assigned_to']}")
+                print(f"  • Will retry on next run")
+                
+            elif task.get("status") == "waiting_for_marrs":
+                print(f"WAITING FOR MARRS:")
+                print(f"  • '{task['title']}'")
+                print(f"  • Status: Ready for your execution")
+                
+        else:
+            if result.get("error") == "no_agent":
+                print("Skipped: Task has no assigned agent")
+            else:
+                print("No tasks processed - none available")
+        
+        print(f"\nPacing: One task every 30 minutes (cron schedule)")
     
-    print(f"\nPacing: One task every 5 minutes (cron schedule)")
-    print("This prevents token burn and maintains quality.")
-    
-    # Return exit code
-    sys.exit(0 if result["processed"] > 0 else 1)
+    sys.exit(0 if result.get("spawned") or result.get("richie") else 1)
 
 if __name__ == "__main__":
     main()

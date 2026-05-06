@@ -94,7 +94,7 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 
 ### This Week
 - Tue May 5, 12pm — AJ <> Marrs Lunch (location TBC)
-- Wed May 6, 11am — Roxbury — Jayden Young (data export session)
+- Thu May 7, 11am — Roxbury — Jayden Young (data export session)
 - Fri May 8, 10am — Marrs x Shourov Weekly Lab Recording
 - Fri May 8, 3pm — Polynize Weekly Wrap-Up
 
