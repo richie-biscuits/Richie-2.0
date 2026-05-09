@@ -24,17 +24,35 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 - Has its own intelligence layer (PAM building PAM)
 - In active design/development (Week of May 4)
 
-## 🎯 Current Priorities (May 4)
-1. **PAM Console build** — Infrastructure for agent instance management at scale
-2. **Infrastructure build out** — Scaling for 10-year horizon
-3. **Roxbury build** — Active delivery
-4. **Optio/Everstock build** — Continue relationship + deliverables
-5. **Naomi deal close** — Mitigate risks, check with Shourov
+## 🎯 Current Priorities (May 9)
+1. **Leo (Lead Gen Agent)** — Auto-nurture leads from polynize.ai bottleneck mapping. Priority for today (May 9).
+2. **Hermes mastery** — Marrs getting hands-on with agent setup, building PAM team
+3. **PAM Console build** — Infrastructure for agent instance management at scale
+4. **Roxbury build** — Active delivery
+5. **Optio/Everstock build** — Continue relationship + deliverables
 
-### Technical Migration In Progress
-- **OpenCore → Hermes** (new agent stack)
-- **Deadline:** Entire team migrated by next weekend (May 10-11)
-- **Status:** Decision made, execution underway
+## Leo — Lead Gen Agent (In Build, May 9)
+**Lead flow:** Supabase → webhook → Leo
+
+**Nurture buckets:**
+1. **Hot leads** — High-value, ready to buy now → Fast-track to booking
+2. **Warm leads** — High-value, right fit, not ready yet → 1-month nurture sequence
+3. **Cold leads** — Low-value/tire-kickers → Newsletter subscription + 7-day value nurture (educational content, team examples) to warm them toward booking
+
+### New Sales Process (Refined May 8)
+Post-Scott learnings — cleaner, less ambiguous:
+1. **Initial meeting** — Rough scope, what's in/out
+2. **Mapping session** — First payment point ($2k range), gets them over the line
+3. **By end of mapping** — Clear definitive scope, what's in/out
+4. **Definitive build price** — Based on detailed mapping output
+
+Three modeling sessions booked for next week using this process.
+
+### Technical Migration — Complete
+- **OpenCore → Hermes** — Migration complete (May 10-11 deadline met)
+- **Julian:** Working on Neo4j graph RAG architecture for client memory
+- **Marrs:** Getting operational on Hermes — first agent live, building Leo (lead gen) today
+- **Hermes vs OpenCore:** Comparable capability, significantly fewer bugs/errors. OpenCore stability issues drove the switch.
 
 ## Who I Am
 - Name: Richie — AI Co-Ordinator at Polynize
@@ -61,10 +79,12 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 ### 🟢 Active Clients (Delivery)
 - **Scott Waterman (Roxbury's Auction House)** — $9,900. Build session underway (Apr 24). Fireflies debrief captured: focus on cognitive load mapping, Zendesk/Slack/Airtable agent access, role-driven agent team design. Next: create data/access doc for Jaden, session for data export coordination.
 - **AJ/Everstock (Michael Cotton)** — Seed investors (via Optio Capital), special deal — we help them, they help us. They went for option 3 (revenue upfront for build + profit share). Survival supplies.
+- **Naomi Ferstera** — CLOSED May 8. $2,100 modeling + $5,000 build + $399/mo.
+- **Erfan (Kind Enterprises / New Kind Conference)** — CLOSED May 8. $2,000 modeling session. Building marketing + operations agent team for the conference.
 
 ### 🟡 Pipeline (Working)
 - **Jessica Cameron (Jess/Social Studio)** — $15k total ($5k+$10k) + $1k/mo. Warm. Follow-up pending.
-- **Naomi Ferstera** — $5k + $299/mo. Proposal sent Apr 20. Marrs emailed follow-up Apr 23. Naomi replied Apr 24 — she's now booked time to continue the conversation.
+- **Naomi Ferstera** — MOVED TO ACTIVE — CLOSED May 8.
 - **Simon (Aquallis)** — Meeting went well (Apr 27). Going to build him a team, using it as training ground for Julian. Marrs will know by end of this week.
 - **Felix (Cat Empire)** — Built, waiting on training session. $99 trial first month. Still waiting on reply from Felix.
 - **Monica Bratuti** — Follow-up meeting end of this week. Scoping out potential way forward depending on career direction decision. Warm lead.
