@@ -166,6 +166,15 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - 2026-05-06: Rosie — Cross-project research cycle (Computer Use 45x cost = strongest structured cognition hook, Cloudflare agents = infrastructure maturation story, Chrome 4GB AI install = privacy/control angle, HN AI content = analytical/framework-focused not promotional)
 - 2026-05-05: Rosie — Cross-project research cycle ('10 Lessons for Agentic Coding' trending on HN = developer education content hook, 'AI Product Graveyard' = anti-hype content opportunity, OpenAI voice AI architecture = technical deep-dive material, HN quiet on AI novelty = lean into expertise content)
 
+## Research Notes — 2026-05-11
+- [LinkedIn Algorithm May 2026 — 92% of Content Now Buried]: Major update confirmed: ~92% of content is now being buried, many creators seeing 40%+ drop in impressions. This is a structural change, not a dip. LinkedIn moved away from "who you know" to "how relevant your content is." (Source: LinkedIn Pulse analysis, May 4 2026)
+- [LinkedIn Ranking Signals — Three Factors Control Reach]: (1) Dwell time: 15+ seconds on post = distribution boost. Clear formatting and strong openers are now performance factors. (2) Saves and reposts > likes: saves signal lasting value, treated as personal endorsement. (3) Comment quality not volume: NLP analyzes comments, thoughtful responses carry more weight than generic ones. (Source: LinkedIn Pulse, May 4 2026)
+- [LinkedIn Anti-Patterns — What's Killing Reach]: External links significantly reduce distribution (even first-comment workaround failing). Hashtag overuse now harmful. Promotional language quickly deprioritized. Posting too often dilutes engagement — spaced consistency beats volume. (Source: LinkedIn Pulse, May 4 2026)
+- [LinkedIn Content Strategy Shift]: "The platform is measuring depth." Surface-level activity no longer enough. Content must hold attention, build trust, lead to genuine conversations. Higher barrier to entry = clearer opportunity for those who adapt. (Source: LinkedIn Pulse analysis)
+
+## Recent Activity
+- 2026-05-11: Rosie — Cross-project research cycle (LinkedIn May 2026 algorithm: 92% content buried, 40% reach drop, dwell time/saves/comment quality now dominant signals, external links/hashtag overuse/promotional language penalized)
+
 ## Next Actions
 - [ ] **PRIORITY** Create LinkedIn content on new algorithm rules: "LinkedIn just changed everything (again) — 9 changes affecting your reach in May 2026" — ride the Forbes story, establish authority (Rosie)
 - [ ] **PRIORITY** Create content: "The PhD-level research ChatGPT just did in one hour — and what it means for your business" — ride the Gowers story (653 HN points) (Rosie)

@@ -179,6 +179,15 @@ Research leads, market trends, and competitors for AI agent services.
 - 2026-05-06: Rosie — Cross-project research cycle (Computer Use 45x cost = hard numbers for structured agent sales, SMB pricing benchmarks $15K-$200K custom + 20-40% integration overhead, Cloudflare agents = infrastructure urgency, Chrome AI install = privacy/selling point)
 - 2026-05-05: Rosie — Cross-project research cycle (Credare AU SME report confirms implementation gap is #1 barrier with 67% citing complexity, ROI data now proven at $3.70 return per $1 invested, '10 Lessons for Agentic Coding' = customer education tool, Cloudflare Agents Week = infrastructure validation, AI Product Graveyard = skepticism opportunity)
 
+## Research Notes — 2026-05-11
+- [Pricing Benchmark — Agent Cost Advisor (aicost.cc)]: New tool for forecasting LLM spend with scenario modeling. Key benchmark data for cost conversations: Customer Support Automation scenario (18,000 monthly requests, 92% success target) shows how to model agent ROI. Tool covers 49 production-ready LLMs including GPT-5, Claude 4.5, Gemini 2.5, DeepSeek, Llama 4. (Source: aicost.cc)
+- [Framework Cost Comparison — Per-Task Pricing]: Reference costs using Claude 4.6: ~$0.04/task LangGraph, ~$0.06/task CrewAI, ~$0.09/task AutoGen. Token cost dominates, framework overhead is rounding error. For SME sales: framework choice impacts cost by ~50-100% depending on architecture pattern. (Source: examcert.app, May 2026)
+- [Cost Modeling — Scenario-Driven Calculator Pattern]: aicost.cc layers in retries, success targets, GPU utilization. Shows multi-step prompts, tool calls, fallbacks, and infrastructure trade-offs. For Polynize sales: use scenario modeling to justify pricing — show cost per successful task, not per token. (Source: aicost.cc)
+- [Market Validation — Three Frameworks Dominate]: LangGraph (90k+ stars), CrewAI (28k+ stars), AutoGen (42k+ stars) have separated from pack by mid-2026. Picking wrong framework = difference between 2-week prototype and 4-month rewrite. Polynize should help clients make this choice correctly. (Source: examcert.app framework comparison)
+
+## Recent Activity
+- 2026-05-11: Rosie — Cross-project research cycle (Agent Cost Advisor = new pricing benchmark tool, per-task costs: LangGraph $0.04, CrewAI $0.06, AutoGen $0.09, scenario-driven calculator pattern for ROI justification)
+
 ## Next Actions
 - [ ] **PRIORITY** Add "superhuman AI cognition" narrative to sales deck — ChatGPT 5.5 Pro PhD research story shifts conversation from cost-justification to competitive necessity (Rosie)
 - [ ] **PRIORITY** Update pricing positioning: "Models cost $0.05, frameworks are the differentiator" — ivern.ai data shows compute is now negligible, cognition is the value (Rosie)

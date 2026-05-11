@@ -179,6 +179,16 @@ Research agent build patterns and tools.
 - 2026-05-06: Rosie — Cross-project research cycle (Computer Use 45x cost validates API-first over vision-based architecture, Cloudflare agents = infrastructure layer maturing with full resource provisioning, Three Inverse Laws = design constraints for agent architecture, Chrome 4GB AI = on-device model execution pattern)
 - 2026-05-05: Rosie — Cross-project research cycle ('10 Lessons for Agentic Coding' = converging build patterns for PAM, spec-driven development triangle = architecture reference, Mem0 proactive memory = pattern for cognition layer, OpenAI voice AI WebRTC = real-time agent pattern, AI Product Graveyard = anti-patterns to study)
 
+## Research Notes — 2026-05-11
+- [Framework Comparison — LangGraph vs CrewAI vs AutoGen Mid-2026]: Three frameworks have separated from pack. LangGraph (90k+ stars): stateful workflows, graph-based, best $/result for cost-sensitive workloads. CrewAI (28k+ stars): role-based multi-agent, ~30-50% token inflation vs hand-tuned LangGraph but faster to ship. AutoGen (42k+ stars): conversation-first, multi-turn inflates tokens further, best when negotiation/debate required. (Source: examcert.app, May 2026)
+- [Build Decision Factor — Debuggability]: "Debuggability is the #1 reason teams switch frameworks in year 2." LangGraph wins on incident postmortems (explicit state, LangSmith traces, time-travel). CrewAI improved with Enterprise tracing UI. AutoGen harder due to free-form conversation paradigm. For PAM: pick the framework whose debugging matches team thinking. (Source: examcert.app analysis)
+- [Cost Architecture — Token Cost Dominates]: Framework overhead is rounding error. Reference (Claude 4.6): ~$0.04/task LangGraph, ~$0.06/task CrewAI, ~$0.09/task AutoGen. CrewAI's role-based prompts inflate tokens ~30-50% vs LangGraph. AutoGen multi-turn conversation inflates further. For PAM: default to LangGraph for cost-sensitive deployments. (Source: examcert.app benchmarks)
+- [Production Pattern — Mixing Frameworks]: Common pattern: LangGraph for orchestration, CrewAI for role-based subtasks, AutoGen for conversational tools. Cost is operational (three SDKs to maintain). Only worth it for clear wins. For PAM: architect for primary framework with escape hatches. (Source: examcert.app FAQ)
+- [Build Tool — Agent Cost Advisor]: aicost.cc provides scenario-driven cost modeling for 49 LLMs including GPU hosting options. Useful for PAM architecture decisions — model cost tradeoffs are now calculable before deployment. (Source: aicost.cc)
+
+## Recent Activity
+- 2026-05-11: Rosie — Cross-project research cycle (LangGraph/CrewAI/AutoGen comparison: 90k/28k/42k stars, debuggability = #1 framework switch reason, token costs: $0.04/$0.06/$0.09 per task, mixing frameworks pattern documented)
+
 ## Next Actions
 - [ ] **PRIORITY** Update PAM architecture assumptions to "superhuman cognition baseline" — ChatGPT 5.5 Pro doing PhD work in one hour means PAM agents should assume superhuman reasoning capabilities (Rosie)
 - [ ] **PRIORITY** Implement multi-model cost routing — ivern.ai data shows 14x cost difference ($0.004 Gemini vs $0.057 Claude) with quality tradeoffs; PAM should route tasks by complexity (Rosie)
