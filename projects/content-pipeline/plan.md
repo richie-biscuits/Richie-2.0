@@ -93,6 +93,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] Create "I cancelled Claude" backlash content — multi-provider strategy content hook, capitalises on HN 898-pt story (Rosie)
 - [ ] **PRIORITY** Create LinkedIn post/30 Days piece: "The 23-year-old who solved a 60-year math problem with ChatGPT — and what it tells us about human cognitive bias" — strongest AI story of the week, perfect for Polynize positioning (Rosie)
 
+## Research Notes — 2026-05-12
+- [LinkedIn Algorithm May 2026 — 47% Reach Drop Confirmed]: Multiple sources confirm major algorithm changes. Forbes analysis (May 6): saves are now the #1 metric (more than likes), profile-topic alignment required for distribution, '360 Brew' reads headline/about/experience to verify authority BEFORE distributing posts. Christopher Penn analysis (May 1): LLM-powered retrieval + transformer ranking stack now maps semantic topic relationships. Key changes: 15+ seconds dwell time = distribution boost, thoughtful comments > volume, engagement pods detected and suppressed. (Source: forbes.com/sites/jodiecook, christopherspenn.com)
+- [LinkedIn Content Strategy Shift — 'The Platform Measures Depth']: Chris Donnelly (1.2M followers, 300K post dataset): 'Saves have been the most important factor for ages.' Content that people save resurfaces for weeks. Carousels now penalized for low completion rates — 8-10 slides maximum. Polls = highest reach but 'truly terrible for your profile generally.' Hashtags 'haven't worked in years, literally.' External links now safe in post body (first-comment workaround outdated). (Source: forbes.com, 64-page LinkedIn algorithm report)
+- [HN Content Trend — 'If AI Writes Your Code, Why Use Python?' = 612 Points]: Major HN discussion (644 comments) on programming language relevance in AI-generated code era. Content angle: 'As AI writes more code, the language choice matters less — what matters is the cognition framework directing it.' This parallels Polynize's 'cognition over implementation' thesis. (Source: news.ycombinator.com, May 12 2026)
+- [AI Cost Story — $0.20-$2.85 Per Day for Full Agent Work]: ivern.ai benchmarks show a full day of AI agent work (50 tasks) costs just $0.20-$2.85 depending on model. Per-task costs: Gemini 2.5 Flash $0.004, GPT-4o $0.050, Claude Sonnet 4 $0.057. Content hook: 'A full day of AI work costs less than a coffee — here's what that means for your business.' Removes cost objection for SME audience. (Source: ivern.ai/blog, May 2026)
+
 ## Blockers
 - Web search blocked by bot detection (DuckDuckGo CAPTCHA) — Brave API key needed for automated research
 
@@ -173,6 +179,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [LinkedIn Content Strategy Shift]: "The platform is measuring depth." Surface-level activity no longer enough. Content must hold attention, build trust, lead to genuine conversations. Higher barrier to entry = clearer opportunity for those who adapt. (Source: LinkedIn Pulse analysis)
 
 ## Recent Activity
+- 2026-05-12: Rosie — Cross-project research cycle (LinkedIn 47% reach drop confirmed — saves > likes, 360 Brew authority verification, carousel 8-10 slide limit, HN 'If AI writes your code, why use Python?' = 612 pts, AI costs $0.20-$2.85/day content hook)
 - 2026-05-11: Rosie — Cross-project research cycle (LinkedIn May 2026 algorithm: 92% content buried, 40% reach drop, dwell time/saves/comment quality now dominant signals, external links/hashtag overuse/promotional language penalized)
 
 ## Next Actions

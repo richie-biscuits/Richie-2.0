@@ -187,6 +187,7 @@ Research agent build patterns and tools.
 - [Build Tool — Agent Cost Advisor]: aicost.cc provides scenario-driven cost modeling for 49 LLMs including GPU hosting options. Useful for PAM architecture decisions — model cost tradeoffs are now calculable before deployment. (Source: aicost.cc)
 
 ## Recent Activity
+- 2026-05-12: Rosie — Cross-project research cycle (Framework comparison: LangGraph wins debuggability/cost at $0.04/task, multi-model routing saves 60-70% tokens, Agent Cost Advisor tool for scenario modeling, 'If AI writes code why use Python?' = 612 pts)
 - 2026-05-11: Rosie — Cross-project research cycle (LangGraph/CrewAI/AutoGen comparison: 90k/28k/42k stars, debuggability = #1 framework switch reason, token costs: $0.04/$0.06/$0.09 per task, mixing frameworks pattern documented)
 
 ## Next Actions
@@ -207,6 +208,12 @@ Research agent build patterns and tools.
 - [Agent Harness Architecture - Mendral 'Outside Sandbox' Pattern]: Mendral's HN-front-page post (119 pts) documents why the agent harness should run OUTSIDE the sandbox - credentials stay out of the sandbox, suspendable when idle, cattle-not-pets sandboxes. Uses Inngest for durable execution and Blaxel for 25ms sandbox resume. For PAM: this is the production reference for multi-user agent architecture. (Source: mendral.com/blog/agent-harness-belongs-outside-sandbox)
 - [Spec-Driven Development - 'Specsmaxxing' Trending on HN]: acai.sh's "Specsmaxxing" post (161 pts, 178 comments) on overcoming AI psychosis with YAML specs validates structured cognition approach. Key insight: "the context window is the limit" - when context fills, requirements get lost. Structured specs (YAML) are the mitigation. This validates Polynize Brain's framework extraction concept - specs as portable cognition. (Source: acai.sh/blog/specsmaxxing)
 - [Cloudflare Agents SDK - Reference Architecture]: The Agents SDK provides the complete reference: npx create-cloudflare@latest --template cloudflare/agents-starter. Features include streaming AI chat, server-side and client-side tools, human-in-the-loop approval, task scheduling. PAM should evaluate Cloudflare as a deployment target - it's a full agent platform. (Source: developers.cloudflare.com/agents/)
+
+## Research Notes — 2026-05-12
+- [Build Decision — Framework Comparison May 2026]: Three frameworks have separated from pack. LangGraph (90k+ stars): stateful workflows, graph-based, best $/result at ~$0.04/task, wins on debuggability (explicit state, time-travel). CrewAI (28k+ stars): role-based multi-agent, ~30-50% token inflation vs LangGraph but faster to ship. AutoGen (42k+ stars): conversation-first, multi-turn inflates tokens further (~$0.09/task), best when negotiation/debate required. PAM default: LangGraph for cost/debuggability, with escape hatches to others. (Source: examcert.app, May 2026)
+- [Build Pattern — Multi-Model Routing Saves 60-70% on Token Costs]: Technical guide (March 2026) shows model routing strategies — directing simple tasks to cheaper models (Gemini Flash $0.004/task) and complex reasoning to premium models (Claude $0.057/task) — can reduce token costs by 60-70% vs flat-rate model use. PAM must implement intelligent task routing by complexity. (Source: the-ai-corner.com, insights.reinventing.ai)
+- [Build Reference — 'If AI Writes Your Code, Why Use Python?' = 612 pts]: HN discussion reveals debate on programming language relevance as AI generates more code. Technical insight: abstraction layers (frameworks, cognition patterns) matter more than language syntax when AI handles implementation. PAM architecture should prioritize cognition patterns over language-specific implementations. (Source: news.ycombinator.com, May 12 2026)
+- [Build Tool — Agent Cost Advisor (aicost.cc)]: New scenario-driven cost modeling tool for 49 LLMs. Covers GPT-5, Claude 4.5, Gemini 2.5, DeepSeek, Llama 4. Models customer support scenarios with retry logic, success targets, GPU hosting options. PAM should integrate similar cost projection capabilities for transparent client budgeting. (Source: aicost.cc, May 2026)
 
 ## Notes
 - Key insight: MCP = tool connection, Skills = tool documentation/context

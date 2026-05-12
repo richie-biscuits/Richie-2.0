@@ -186,6 +186,7 @@ Research leads, market trends, and competitors for AI agent services.
 - [Market Validation — Three Frameworks Dominate]: LangGraph (90k+ stars), CrewAI (28k+ stars), AutoGen (42k+ stars) have separated from pack by mid-2026. Picking wrong framework = difference between 2-week prototype and 4-month rewrite. Polynize should help clients make this choice correctly. (Source: examcert.app framework comparison)
 
 ## Recent Activity
+- 2026-05-12: Rosie — Cross-project research cycle (Real AI task costs $0.004-$0.057 — model costs negligible, cognition framework is value; BYOK vs bundled = 3,500%-175,000% markup; 55% efficiency + 35% cost reduction data; framework convergence = model commoditization)
 - 2026-05-11: Rosie — Cross-project research cycle (Agent Cost Advisor = new pricing benchmark tool, per-task costs: LangGraph $0.04, CrewAI $0.06, AutoGen $0.09, scenario-driven calculator pattern for ROI justification)
 
 ## Next Actions
@@ -201,6 +202,12 @@ Research leads, market trends, and competitors for AI agent services.
 - [ ] Add a new sales narrative block: "From AI Pilot to Production in 90 Days" with proof points around implementation bottlenecks and execution support (Rosie)
 - [ ] Add Claude Code #49363 to sales deck - concrete proof of platform-incentive conflict that any Claude Code user understands (Rosie)
 - [ ] Create carb-counting story as SME-friendly "why you need structured AI agents" sales opener (Rosie)
+
+## Research Notes — 2026-05-12
+- [Sales Data — Real AI Task Costs Now $0.004-$0.057 Per Task]: ivern.ai benchmarked 100 real tasks across Claude Sonnet 4 ($0.057 avg), GPT-4o ($0.050), and Gemini 2.5 Flash ($0.004). Full day of AI work (50 tasks): $0.20-$2.85. Bug fix success rates: Claude 90%, GPT-4o 85%, Gemini 65%. For sales: model costs are now negligible. Value is in the COGNITION FRAMEWORK, not the tokens. Position Polynize as the intelligence layer that maximizes ROI on cheap compute — 'The model is $0.05, the framework is the differentiator.' (Source: ivern.ai/blog, May 2026)
+- [Sales Hook — BYOK vs Bundled Pricing = 3,500%-175,000% Markup]: Platform pricing comparison reveals massive markup on bundled AI: ChatGPT Plus $20/mo = 3,500-35,000% markup vs BYOK, Jasper AI $49-125/mo = 17,500-87,500% markup, Copy.ai $49-249/mo = 17,500-175,000% markup. For SME sales: 'Bring your own key' is 35x-1,750x cheaper than bundled platforms. Polynize's value isn't model access — it's the cognition framework that makes models useful. (Source: ivern.ai/blog)
+- [Sales Data — AI Agents Deliver 55% Efficiency, 35% Cost Reduction]: Market data shows businesses using AI agents report 55% higher operational efficiency and 35% cost reductions. Deloitte 2026 State of AI report documents 171% average ROI across enterprise deployments (192% for US implementations). Labor cost avoidance is primary ROI driver — agents automate tasks that would require intern-level staff. (Source: insights.reinventing.ai, Deloitte 2026)
+- [Sales Hook — Framework Cost Convergence = 'Model Commoditization']]: New data shows framework overhead is rounding error: LangGraph $0.04/task, CrewAI $0.06/task, AutoGen $0.09/task. Token cost dominates, framework choice impacts cost by only ~50-100%. For sales: the framework choice barely affects cost — what matters is the cognition installed ON the framework. (Source: examcert.app, May 2026)
 
 ## Notes
 - Priority: Get Brave API key configured
