@@ -24,12 +24,12 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 - Has its own intelligence layer (PAM building PAM)
 - In active design/development (Week of May 4)
 
-## 🎯 Current Priorities (May 9)
-1. **Leo (Lead Gen Agent)** — Auto-nurture leads from polynize.ai bottleneck mapping. Priority for today (May 9).
-2. **Hermes mastery** — Marrs getting hands-on with agent setup, building PAM team
-3. **PAM Console build** — Infrastructure for agent instance management at scale
-4. **Roxbury build** — Active delivery
-5. **Optio/Everstock build** — Continue relationship + deliverables
+## 🎯 Current Priorities (May 14)
+1. **Everstock mapping** — $2k phase, sandbox live in 1 month, digital funnel with 3 user personas
+2. **Remynd mapping** — Today (May 14), 10am-12pm cognitive session
+3. **Roxbury build** — Roxy V1 in Slack, 75% triage target, ~$5.4k remainder due
+4. **Hermes/PAM** — Migration complete, 85-90% automation in Discovery/Pre-Proposal
+5. **GitHub shift** — Moving all artefacts from Google Drive to structured repos
 
 ## Leo — Lead Gen Agent (In Build, May 9)
 **Lead flow:** Supabase → webhook → Leo
@@ -156,12 +156,12 @@ Three modeling sessions booked for next week using this process.
 
 ## Strategic Intel — From Founder Align (Apr 30)
 
-### Everstock Deal — Confirmed
-- **Option 3 (Skin in the game):** $2k mapping + $8k install + $999/mo + profit share for 1st year (12-month experiment)
-- Less than half the original quote, but special deal for seed investors (AJ/MC via Optio Capital)
-- Everstock team is now prepping pricing structure detail + defining "what good looks like"
-- Marrs creating systems map: what assets are being created vs not
-- Timeline: mapping phase first, aiming for live within the month
+### Everstock Deal — In Mapping Phase
+- **Option 3 (Skin in the game):** $2k mapping + $8k install + $999/mo + profit share for 1st year
+- **User personas locked**: Normies, City Preppers, Rural Preppers
+- **Digital funnel**: Risk map → $99 preparedness plan with real-time data integration
+- **Timeline**: Sandbox live in 1 month, payment systems 4-6 weeks
+- **Team structure**: Conductor agent leading operations
 - Plus $100/mo for AJ's 2 personal agents
 
 ### Roxbury — Cash Flow Detail
@@ -169,8 +169,8 @@ Three modeling sessions booked for next week using this process.
 - 2nd half: ~$4.5k + $900 GST = due within next month (certain)
 - Phase 2: $17k across 4 more agents — timing depends on Scott's speed
 - Monthly recurring ($999/mo) starts once mapping phase signed off
-- **Roxbury Data Export Session:** Wed May 6, 11am — Jaden + Lacey (doing automation), Zendesk data export of ~1yr history. Marrs will design with Shourov's help on database architecture.
-- Shourov invited — will try to move any clash.
+- **Roxy V1**: Sandbox operational in Slack, targeting 75% of support noise triage
+- Zendesk API access: 1 month out, collecting manual training data now
 
 ### Simon (Aquallis) — Updated
 - Will be one of Julian's training teams to build himself
@@ -211,10 +211,11 @@ Three modeling sessions booked for next week using this process.
 - **Key insight:** Outsourced functions (legal, accounting, etc.) already have budget allocated = easier sell than insourced (recruitment, cybersecurity) where you're replacing internal spend
 
 ### Build Process Upskill
-- **Monday session planned:** Marrs + Shourov + Julian — whiteboard mapping the full build process in detail
+- **Roles clarified**: Julian = engineering owner, Marrs = client engagement
+- **Cognitive Studio automation**: 85-90% in Discovery/Pre-Proposal phases
 - Marrs has 1 agent already live in Slack (Polynize team agents)
-- Goal: identify where time is spent, what can be automated to 0, model the efficiency curve over 3 months
-- Current: max 2 builds/month due to high cognitive load (everything is new)
+- **GitHub shift**: All artefacts moving from Google Drive to structured repos
+- Current: max 2 builds/month due to high cognitive load
 - **2-month outlook:** 3-4x pricing, 10-20x less time per build (systems compounding)
 
 ### Revenue Forecast (Next 4 Weeks)
