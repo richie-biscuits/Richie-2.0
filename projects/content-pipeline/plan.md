@@ -93,6 +93,11 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] Create "I cancelled Claude" backlash content — multi-provider strategy content hook, capitalises on HN 898-pt story (Rosie)
 - [ ] **PRIORITY** Create LinkedIn post/30 Days piece: "The 23-year-old who solved a 60-year math problem with ChatGPT — and what it tells us about human cognitive bias" — strongest AI story of the week, perfect for Polynize positioning (Rosie)
 
+## Research Notes — 2026-05-14
+- [Content Hook — Anthropic 'Claude for Small Business' = Competitor Content Opportunity]: Major launch (HN #2, 352 pts) validates SME demand but threatens Polynize positioning. Content angles: 'Claude for Small Business locks you into Anthropic — here's the portable alternative' or '15 ready-to-run workflows sounds great until you need one Claude doesn't have.' Position Polynize as the open, customizable alternative to locked-in small business AI. (Source: anthropic.com/news/claude-for-small-business)
+- [Content Trend — HN Front Page Today]: Top stories include Linux gaming faster than Windows (816 pts), .city.state.us domains (581 pts), Emacsification of software (334 pts). Only ONE AI story in top 15 (Claude for Small Business). Signal: AI content is now background noise unless it's genuinely newsworthy. Polynize content must be genuinely newsworthy, not AI for AI's sake. (Source: news.ycombinator.com May 14 2026)
+- [Content Hook — 'Deliberate Skill Development' Skill for Claude Code/Codex (101 pts)]: New Skill for deliberate skill development trending on HN. Validates the SKILL.md pattern for cognition installation. Content angle: 'Skills are how AI agents learn — here's how to build them deliberately.' (Source: HN #13, 101 pts)
+
 ## Research Notes — 2026-05-13
 - [Content Trend — HN Quiet on AI, 'Post-AI Hype' Era Signal]: Current HN front page (May 13) shows NO AI-related stories in top 30. Top stories: digital sovereignty (moving stack to Europe), Forgejo vs GitHub, Fisher-Price preservation, hydrogen production steel. Signal: AI content is no longer novel on developer platforms — the 'AI buzz' period is over. Content strategy must shift from 'AI is new/exciting' to 'AI implementation expertise.' (Source: news.ycombinator.com May 13 2026)
 - [Content Angle — Googlebook (836 pts) = Anti-Google Positioning]: Satirical 'Googlebook' post is #9 on HN with 1,368 comments. Signals developer fatigue with Google/tech giants. Content opportunity: 'Why we're building AI agents outside the Big Tech ecosystem' — aligns with Polynize's independent positioning. (Source: news.ycombinator.com)
@@ -100,6 +105,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [LinkedIn Algorithm — Still Current]: Forbes May 6 analysis remains the latest definitive guide: saves > likes, 360 Brew authority verification, 8-10 slide carousel limit, golden hour (60-90 min) determines reach, 92% of content now buried. No new algorithm changes detected this week. (Source: forbes.com/sites/jodiecook)
 
 ## Recent Activity
+- 2026-05-14: Rosie — Cross-project research cycle (Claude for Small Business launch = competitor content opportunity — position as 'portable alternative'; HN today shows only ONE AI story in top 15 = AI content must be genuinely newsworthy; Deliberate Skill Development Skill validates SKILL.md pattern)
 - 2026-05-13: Rosie — Cross-project research cycle (HN front page has zero AI stories = post-hype era signal, Googlebook satire = anti-Big Tech positioning opportunity, Needle 26M model = efficient AI content hook)
 
 ## Research Notes — 2026-05-12

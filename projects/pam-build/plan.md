@@ -209,6 +209,10 @@ Research agent build patterns and tools.
 - [Spec-Driven Development - 'Specsmaxxing' Trending on HN]: acai.sh's "Specsmaxxing" post (161 pts, 178 comments) on overcoming AI psychosis with YAML specs validates structured cognition approach. Key insight: "the context window is the limit" - when context fills, requirements get lost. Structured specs (YAML) are the mitigation. This validates Polynize Brain's framework extraction concept - specs as portable cognition. (Source: acai.sh/blog/specsmaxxing)
 - [Cloudflare Agents SDK - Reference Architecture]: The Agents SDK provides the complete reference: npx create-cloudflare@latest --template cloudflare/agents-starter. Features include streaming AI chat, server-side and client-side tools, human-in-the-loop approval, task scheduling. PAM should evaluate Cloudflare as a deployment target - it's a full agent platform. (Source: developers.cloudflare.com/agents/)
 
+## Research Notes — 2026-05-14
+- [Build Reference — Claude for Small Business Architecture Pattern]: Anthropic's launch includes 15 pre-built workflows across finance, ops, sales, marketing, HR, customer service. Toggle install inside Claude Cowork with tool connectors (QuickBooks, PayPal, HubSpot, etc.). For PAM: study this as the reference for 'workflow marketplace' architecture — pre-built, toggle-enabled, tool-integrated. PAM should support similar skill/workflow marketplace patterns. (Source: anthropic.com/news/claude-for-small-business)
+- [Build Pattern — Agent Cost Modeling Now Standardized]: Agent Cost Advisor (aicost.cc) launched as scenario-driven cost modeling tool for 49 LLMs. PAM should integrate similar transparent cost projection — clients increasingly expect upfront cost estimates before deployment. Multi-model routing can save 60-70% on token costs (Gemini Flash $0.004 vs Claude $0.057). (Source: aicost.cc)
+
 ## Research Notes — 2026-05-13
 - [Framework Updates — LangGraph v1.1.3 + CrewAI v1.12]: LangGraph released v1.1.3 with deep agent templates and distributed runtime support in CLI. CrewAI shipped v1.12 with agent skills, native OpenAI-compatible providers (OpenRouter, DeepSeek, Ollama, vLLM, Cerebras, Dashscope), Qdrant Edge. PAM should evaluate CrewAI's new provider-agnostic routing for multi-backend support. (Source: softmaxdata.com blog March 30 2026)
 - [Cost Architecture — Framework Convergence Confirmed]: examcert.app benchmarks (May 2026) show cost-per-task has converged: LangGraph ~$0.04/task, CrewAI ~$0.06/task, AutoGen ~$0.09/task (Claude 4.6). Framework overhead is rounding error vs token costs. Debuggability is #1 reason teams switch frameworks — LangGraph wins on explicit state and time-travel. PAM default: LangGraph for cost/debuggability, with escape hatches. (Source: examcert.app)
@@ -216,6 +220,7 @@ Research agent build patterns and tools.
 - [HN Trend — 'If AI Writes Your Code, Why Use Python?' (612 pts)]: Major discussion on programming language relevance as AI generates code. Technical insight: abstraction layers (frameworks, cognition patterns) matter more than language syntax. PAM architecture should prioritize cognition patterns over language-specific implementations. (Source: news.ycombinator.com May 12 2026)
 
 ## Recent Activity
+- 2026-05-14: Rosie — Cross-project research cycle (Claude for Small Business architecture = reference for workflow marketplace pattern; Agent Cost Advisor now standard — PAM needs transparent cost projection; multi-model routing saves 60-70%)
 - 2026-05-13: Rosie — Cross-project research cycle (LangGraph v1.1.3 + CrewAI v1.12 released with provider-agnostic routing; framework cost convergence at $0.04-$0.09/task; Agent Cost Advisor tool launched; abstraction layers > language syntax trend)
 
 ## Research Notes — 2026-05-12
