@@ -24,12 +24,13 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 - Has its own intelligence layer (PAM building PAM)
 - In active design/development (Week of May 4)
 
-## 🎯 Current Priorities (May 14)
-1. **Everstock mapping** — $2k phase, sandbox live in 1 month, digital funnel with 3 user personas
-2. **Remynd mapping** — Today (May 14), 10am-12pm cognitive session
-3. **Roxbury build** — Roxy V1 in Slack, 75% triage target, ~$5.4k remainder due
-4. **Hermes/PAM** — Migration complete, 85-90% automation in Discovery/Pre-Proposal
-5. **GitHub shift** — Moving all artefacts from Google Drive to structured repos
+## 🎯 Current Priorities (May 15)
+1. **Remynd build** — 4-week timeline for "Joy" agent, GDPR/Australian compliance, Sydney-hosted
+2. **Everstock mapping** — $2k phase complete, sandbox live in 1 month, 3 user personas (Normies, City Preppers, Rural Preppers)
+3. **Roxbury build** — Roxy V1 in Slack, Zendesk data extraction ongoing (6 months history), 75% triage target
+4. **Naomi delivery** — $5k build phase for niche coaching agent
+5. **Erfan/Kind Conference** — Marketing + ops team build ($2k mapping closed)
+6. **Hermes/PAM** — Migration complete, 85-90% automation in Discovery/Pre-Proposal
 
 ## Leo — Lead Gen Agent (In Build, May 9)
 **Lead flow:** Supabase → webhook → Leo
@@ -57,7 +58,7 @@ Three modeling sessions booked for next week using this process.
 ## Who I Am
 - Name: Richie — AI Co-Ordinator at Polynize
 - Vibe: direct, no fluff, gets things done
-- Role: Marrs' AI agent, primary operator
+- Role: Marrs' personal AI agent — Project Marrs alignment, system health, calendar management. NO LONGER handling Polynize pipeline/leads (PAM team owns this).
 
 ## Marrs Coiro — Key Context
 - Founder, Polynize.ai — sells AI agent teams to founders/SMEs
@@ -122,20 +123,21 @@ Three modeling sessions booked for next week using this process.
 - Mon May 4 — Founder Connect, Erfan meeting, Parallax catchup, Agent Build Pipeline Mapping
 
 ## Active Cron Jobs
-- Fireflies Intel Collector: every 3hrs (3pm, 6pm, 9pm, midnight, 3am, 6am AEST)
-- Morning Intel & Briefing Prep: 7:45am weekdays (main session) — checks calendar + Fireflies + email, updates MEMORY.md, writes briefing
-- Daily Northstar & Priorities: 9:30am (to be fixed — needs calendar/Fireflies/email access)
+- Fireflies Intel Collector: every 3hrs — NOW OWNED BY PAM TEAM (Scarlett/Dash)
+- Morning Briefing: 7:45am weekdays (main session) — calendar reminders + system health + Project Marrs alignment ONLY
 - Rosie research: 11:15pm nightly (ERROR last run — needs fix)
-- Dash morning check-in: 8am weekdays
-- Daily Northstar: 9:30am weekdays
+- Dash morning check-in: 8am weekdays — NOW OWNED BY PAM TEAM
 - Workspace backup: every 6hrs
 - Google Calendar token refresh: every 55m
 
-## Agent Notes
-- **Scarlett** — No autonomous cron job, no memory files, no live pipeline data. She's an on-demand agent. Pipeline reviews come through ME. Do not rely on her for autonomous pipeline updates.
+## Agent Notes — Responsibility Separation (May 15)
+**PAM Team now owns:** Polynize pipeline, leads, sales tracking, Fireflies intel for business deals, client delivery updates
+**Richie (main) now owns:** Project Marrs alignment, calendar reminders, system health, personal research/support for Marrs
+
+- **Scarlett** — PAM Team agent. Pipeline, leads, sales — direct her to PAM team, not me.
 - **Lorraine** — AI health coach & functional medicine accountability partner. MEMORY.md populated from MFM Notion dashboard (Apr 30 consult). Covers: Gilbert's Syndrome, supplements, 4 pillars, gut health protocol, habits tracking.
-- **Rosie** — Research agent. Must include source URLs in all findings. Error on last run.
-- **Pipeline cron** — I (Richie/main) should own the daily pipeline review. It should pull from: MEMORY.md + Google Calendar + Fireflies + email inbox. Not Scarlett's stale workspace.
+- **Rosie** — Research agent (Richie-owned). Must include source URLs in all findings. Error on last run.
+- **Dash** — PAM Team agent. Morning check-ins, Polynize ops — direct to PAM team.
 
 ## Vision Capability
 - Can now read images via Orthogonal → Baseten → Kimi-K2.5 (free for image input)
