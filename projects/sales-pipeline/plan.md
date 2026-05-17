@@ -3,14 +3,20 @@
 ## Project Goal
 Research leads, market trends, and competitors for AI agent services.
 
+## Research Notes — 2026-05-17
+
+- [Pricing Benchmarks]: Integration complexity is primary cost driver — basic setup included, but CRM/legacy connections start at $500-$30,000; multi-system compliance deployments exceed $5,000 — Unity Connect analysis
+- [Pricing Benchmarks]: Pre-implementation technical audit ($500-$2,000) can save 10x in avoided rework — hidden integration complexity is biggest source of budget surprises
+- [ROI Data]: Support automation example: 5 staff × $2,500/month = $12,500 cost; 70% automation = $8,750 savings; net $7,250/month = 483% ROI year one — TheCrunch
+- [ROI Data]: Conservative 40% automation = 67% ROI; optimistic 90% = 400% returns; revenue-side gains often exceed ops savings within 12-18 months
+- [Market Trend]: "AI-nomics" emerging as discipline — SMBs demanding hard usage caps, overage notifications, granular dashboards for inference/API/storage costs — Techaisle 2026 predictions
+- [Sales Strategy]: Offer pre-implementation audit as paid service ($500-$2K) — positions as risk reduction, saves client 10x in rework, creates paid engagement before full build
+
 ## Research Notes — 2026-05-15
 
 - [Pricing Benchmarks]: SMB AI agent spend now $500-$5,000/month off-the-shelf, or $30,000-$100,000 upfront custom builds — Reinventing.ai analysis
 - [Pricing Benchmarks]: Mid-tier platforms (Intercom, Drift): $500-$2,000/month; Enterprise (IBM Watson, Microsoft): $5,000-$50,000/month — TheCrunch.io
 - [Pricing Benchmarks]: Hidden costs add 20-40%: integration ($1,000-$30,000), data prep, model retraining (can double infrastructure costs year 1) — Unity Connect
-- [ROI Data]: Support automation example: 5 staff × $2,500/month = $12,500 cost; 70% automation = $8,750 savings; net $7,250/month = 483% ROI year one — TheCrunch
-- [ROI Data]: Conservative 40% automation = 67% ROI; optimistic 90% = 400% returns; revenue-side gains often exceed ops savings within 12-18 months
-- [Market Trend]: "AI-nomics" emerging as discipline — SMBs demanding hard usage caps, overage notifications, granular dashboards for inference/API/storage costs — Techaisle 2026 predictions
 
 ## Research Notes — 2026-04-26
 
@@ -73,9 +79,11 @@ Research leads, market trends, and competitors for AI agent services.
 4. **AJ/Everstock** — Send $30k proposal tomorrow (Marrs)
 5. **Felix wrap-up** — Orthogonal integration + training → invoice (Richie)
 6. **Add ROI calculator** to proposals — Use 70% automation = 483% ROI benchmark (Rosie research → Dash/Richie)
+7. **Pre-implementation audit offering** — Create $500-$2K technical audit service to reduce client risk and create paid entry point (Rosie research → Marrs)
 
 ## Recent Activity
 
+- 2026-05-17: Rosie identified pre-implementation audit opportunity — $500-$2K service saves clients 10x in rework, creates paid entry point before full build
 - 2026-05-15: Rosie captured updated SMB pricing benchmarks and ROI data — 483% ROI possible with 70% support automation
 - 2026-05-15: Rosie identified "AI-nomics" trend — SMBs now demanding usage caps and cost transparency
 - 2026-05-08: Rosie refreshed pricing data

@@ -3,6 +3,14 @@
 ## Project Goal
 Research agent build patterns and tools.
 
+## Research Notes — 2026-05-17
+
+- [Agent Frameworks — 2026 Production Data]: LangGraph now dominates production — 44% usage, 81% satisfaction, +210% YoY growth; LangChain 68% usage (as integration layer), 62% satisfaction; AutoGen 31% usage, 74% satisfaction, +180% YoY; CrewAI 28% usage, 69% satisfaction, +340% YoY — AgileSoftLabs May 2026 analysis
+- [Agent Frameworks]: LangGraph checkpointing enables true state persistence — survives server restarts, rate limits, user interruptions; human-in-the-loop via interrupt_before parameter; cycles support self-correcting agents — production-grade features
+- [Agent Frameworks]: LangGraph + LangChain are complementary — LangGraph nodes use LangChain tools/models; LangChain is integration layer, LangGraph is orchestration layer
+- [Build Patterns]: Hybrid architecture pattern confirmed — LangGraph for orchestration layer, CrewAI for role-based subtasks, AutoGen for conversational tools — operational cost is managing 3 SDKs
+- [Cost Optimization]: Real-time usage monitoring reduces infrastructure waste 30%; pre-implementation technical audit ($500-$2,000) can save 10x in avoided rework — Reinventing.ai
+
 ## Research Notes — 2026-05-15
 
 - [Agent Frameworks]: LangGraph (90k stars) — stateful workflows, explicit control flow, time-travel debugging, best $/result for cost-sensitive workloads (~$0.04/task) — ExamCert.ai
@@ -48,3 +56,18 @@ Research agent build patterns and tools.
 ## Research Notes — 2026-04-17
 - [Build Pattern - Android CLI as Reference Implementation]: Google's Android CLI (released April 17) uses Skills (SKILL.md format) that auto-trigger based on prompt metadata matching. It reduced agent token usage by 70% and task completion time by 3x. This is the exact pattern PAM should follow: lightweight CLI interface + auto-triggering Skills + explicit SDK management. (Source: android-developers.googleblog.com)
 - [Build Pattern - Codex Background Execution + Memory]: Codex now supports background computer use (multiple agents on Mac in parallel), persistent memory, scheduled future work, and MCP plugins. This is the production reference for what a fully-capable agent desktop assistant looks like. PAM's feature set should map to this as a baseline. (Source: openai.com/codex
+
+## Blockers
+- None
+
+## Next Actions
+
+1. **Framework decision matrix** — Create client selection guide: LangGraph (stateful/production), CrewAI (role-based/fastest prototype), AutoGen (conversational/multi-agent) — based on Rosie May 2026 research
+2. **Hybrid architecture guide** — Document when to use LangGraph + CrewAI + AutoGen together vs single framework
+3. **Checkpointing implementation** — Add LangGraph state persistence to PAM for production reliability
+
+## Recent Activity
+
+- 2026-05-17: Rosie added 2026 framework production data — LangGraph dominates (44% usage, 81% satisfaction), clear framework domains established
+- 2026-04-26: Rosie added OpenAI Codex MCP support research
+- 2026-04-22: Rosie researched Hermes Agent v0.10 for self-improving patterns

@@ -3,6 +3,15 @@
 ## Project Goal
 Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
+## Research Notes — 2026-05-17
+
+- [LinkedIn Algorithm]: March 2026 complete rebuild — replaced 5 retrieval systems with single LLM-powered ranking model, organic reach dropped 50% but impressions more targeted — LinkedIn engineering blog
+- [LinkedIn Algorithm]: Personal profiles now get 65% of feed allocation, company pages only 5% — employee advocacy strategy critical
+- [LinkedIn Algorithm]: Comments carry 8-15x more algorithmic weight than likes; dwell time 60+ seconds = 15.6% engagement vs <3 seconds = 1.2%
+- [LinkedIn Algorithm]: Responding to comments within first hour = 35% visibility boost (Golden Hour critical)
+- [LinkedIn Algorithm]: Carousels/docs generate 3x more engagement than video, 6x more than text-only; native video = 69% improvement, LinkedIn Live = 24x engagement
+- [LinkedIn Algorithm]: External links reduce reach by 25-68% even with standalone value; engagement bait and generic AI content actively demoted
+
 ## Research Notes — 2026-05-15
 
 - [LinkedIn Algorithm]: May 2026 major update — 92% of content now buried, AI system prioritizes dwell time (15+ seconds), saves/reposts > likes, comment quality over volume — John Wicks LinkedIn analysis
@@ -65,11 +74,14 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Next Actions
 
-- [ ] **Refine content angles** based on May 2026 algorithm update — focus on dwell time optimization, save-worthy content (Scarlett)
+- [ ] **LinkedIn content pivot** — Focus on carousels/docs (highest engagement), native video second; avoid external links entirely (Scarlett)
+- [ ] **Golden Hour protocol** — Respond to all comments within 60 minutes for 35% visibility boost (Scarlett)
+- [ ] **Employee advocacy program** — Personal profiles get 65% feed allocation vs 5% for company pages (Scarlett)
 - [ ] **Remove external links** from posts — algorithm now penalizes even first-comment links (Scarlett)
 - [ ] **Reduce hashtag usage** — many high-performers using few or none (Scarlett)
 
 ## Recent Activity
 
+- 2026-05-17: Rosie captured LinkedIn's March 2026 LLM-powered feed rebuild — 50% reach drop, personal profiles dominate (65% vs 5%), Golden Hour protocol identified
 - 2026-05-15: Rosie captured May 2026 LinkedIn algorithm shift — 92% content buried, new ranking signals identified
 - 2026-04-22: Rosie researched LinkedIn algorithm changes (dwell time, saves > likes)

@@ -3,6 +3,12 @@
 ## Project Goal
 Extract and install cognition frameworks into AI agents.
 
+## Research Notes — 2026-05-17
+
+- [Cognition Governance]: Enterprise agent governance frameworks now define 5-tier authorization model (Tier 0 Observe → Tier 4 Autonomous) — agents start at Tier 1, promote after <2% error rate for 30 days, demote on safety incidents — Thinking Inc analysis
+- [Cognition Governance]: Action boundary specifications critical — allowlists preferred over blocklists, programmatic enforcement layer required (34% of incidents occur with prompt-only boundaries) — BCG 2025 analysis
+- [Cognition Governance]: Escalation rules now standard — mandatory triggers include financial thresholds, external stakeholder impact, confidence below threshold, PII encounters — audit trails required for regulatory compliance
+
 ## Research Notes — 2026-05-15
 
 - [Cognition Frameworks]: LangGraph leads production deployments (Klarna, LinkedIn, Uber) with 90k+ GitHub stars — stateful workflows, explicit control flow, time-travel debugging, lowest $/task (~$0.04) — ExamCert.ai analysis
@@ -73,6 +79,7 @@ Latest research findings go here.
 1. **Update Polynize positioning** — Shift from "external team" to "cognition direction" (Marrs)
 2. **Task cost data** — Add per-task execution costs to client proposals (Dash)
 3. **Framework selection guidance** — Create decision matrix for clients: LangGraph (control flow), CrewAI (role-based), AutoGen (conversational) — based on Rosie research
+4. **Governance layer design** — Add 5-tier authorization model to cognition framework spec (Rosie research → Marrs)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
@@ -81,6 +88,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-17: Rosie added enterprise governance framework research — 5-tier authorization model, action boundaries, escalation rules — cognition installation must include governance layer
 - 2026-05-15: Rosie added framework comparison research — LangGraph, CrewAI, AutoGen production patterns and costs
 - 2026-05-08: Rosie completed framework extraction phase 1 (20 frameworks → 6 high-priority)
 - 2026-05-05: Initial memory schema drafted and committed
