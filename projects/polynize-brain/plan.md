@@ -70,6 +70,13 @@ Latest research findings go here.
 - [OpenAI Codex - GitHub Repository Context Now Default]: Codex now automatically includes GitHub repository context by default (opt-out in Personal Settings → GitHub → "Include GitHub repository context"). This is a major change - Codex is now "aware" of your entire codebase when you chat with it. For cognition framework extraction, this means Codex can read SOUL.md, USER.md, TOOLS.md, SKILL.md files automatically and apply that context. Major upgrade to extraction quality. (Source: help.github.com/en/copilot/customizing-copilot/copilot-code-review)
 - [Skill Framework Standardization Update]: SKILL.md format now supported by: Mem0 (Skill Graph), Google (Android Studio Skills), OpenClaw (ClawHub), Hermes (skills/ folder). The standard is converging: YAML frontmatter with metadata, markdown body with instructions/examples, optional attachments/ folder. Polynize Brain should adopt this exact format for cognition framework artifacts. (Source: multiple project docs, April 20 2026)
 
+## Research Notes — 2026-05-18
+
+- [Production Agent Patterns]: Frameworks have consolidated around 3 winners: LangGraph (stateful workflows), AutoGen (multi-agent conversation), CrewAI (role-based crews) — 68% of new agent projects in 2025 used a framework rather than raw SDK calls — Forde Studios analysis
+- [Production Failure Modes]: 4 patterns break agents in production: (1) tool output schema drift, (2) context window exhaustion, (3) cost runaway without circuit breakers, (4) non-deterministic replay — none are framework bugs, they're integration failures — Forde Studios
+- [Cognition Transfer Insight]: Teams that operate agents reliably treat workflows like distributed systems — retries with backoff, timeouts, fallback paths, dead-letter queues for failed runs — the framework is not the hard part, production resilience is
+- [Skill Installation > Framework]: LlamaIndex evolved to dominate the retrieval layer, not orchestration — the pattern is emerging: separate knowledge/cognition (Skills) from orchestration (frameworks) — aligns with Polynize Brain's SKILL.md approach
+
 ## Blockers
 - None
 
@@ -80,14 +87,17 @@ Latest research findings go here.
 2. **Task cost data** — Add per-task execution costs to client proposals (Dash)
 3. **Framework selection guidance** — Create decision matrix for clients: LangGraph (control flow), CrewAI (role-based), AutoGen (conversational) — based on Rosie research
 4. **Governance layer design** — Add 5-tier authorization model to cognition framework spec (Rosie research → Marrs)
+5. **Production resilience messaging** — Update sales materials to emphasize distributed systems reliability over framework features (Rosie research → Marrs)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
 2. **Install mechanism** — Build SKILL.md installer
 3. **Validation system** — Add framework verification post-install
+4. **Cognition framework failure modes** — Document 4 production failure patterns (schema drift, context exhaustion, cost runaway, non-determinism) as part of framework extraction (Rosie → Marrs)
 
 ## Recent Activity
 
+- 2026-05-18: Rosie added production agent pattern research — 3 framework winners consolidated, 4 production failure modes identified, cognition transfer = distributed systems thinking — Forde Studios analysis
 - 2026-05-17: Rosie added enterprise governance framework research — 5-tier authorization model, action boundaries, escalation rules — cognition installation must include governance layer
 - 2026-05-15: Rosie added framework comparison research — LangGraph, CrewAI, AutoGen production patterns and costs
 - 2026-05-08: Rosie completed framework extraction phase 1 (20 frameworks → 6 high-priority)

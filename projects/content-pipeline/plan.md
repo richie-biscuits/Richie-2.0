@@ -69,6 +69,14 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 ## Research Notes — 2026-04-25
 - [Content Hook — DeepSeek V4 Launch = Massive AI Story]: DeepSeek V4 Preview released April 24. Scored 1,973 points on HN (biggest story of the day by 3x), with 1,509 comments. Content angles: "DeepSeek V4 vs Claude/GPT — the open-source AI agent just leapfrogged everyone," "1M context is now standard — what it means for your business," "DeepSeek V4 integrated with Claude Code and OpenClaw — the agent ecosystem is converging." This is the biggest AI launch since... well, maybe DeepSeek V3. Must create content around this. (Source: news.ycombinator.com, api-docs.deepseek.com)
 
+## Research Notes — 2026-05-18
+
+- [LinkedIn Algorithm]: Personal profiles now get 65% of feed allocation, company pages only 5% — employee advocacy strategy is now mandatory, not optional — Vulse analysis
+- [LinkedIn Algorithm]: Golden Hour protocol confirmed critical — responding to comments within first 60 minutes = 35% visibility boost — Vulse
+- [LinkedIn Algorithm]: Dwell time is key ranking signal — 60+ seconds dwell = 15.6% engagement rate vs <3 seconds = 1.2% — 13x difference — Vulse
+- [LinkedIn Algorithm]: Carousels/docs generate 3x more engagement than video, 6x more than text-only — native video still +69% improvement over other formats — Buffer/Vulse
+- [LinkedIn Algorithm]: External links reduce reach by 25-68% even with standalone value — LinkedIn wants content consumption on-platform — Vulse
+
 ## Blockers
 - None
 
@@ -76,12 +84,14 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 - [ ] **LinkedIn content pivot** — Focus on carousels/docs (highest engagement), native video second; avoid external links entirely (Scarlett)
 - [ ] **Golden Hour protocol** — Respond to all comments within 60 minutes for 35% visibility boost (Scarlett)
-- [ ] **Employee advocacy program** — Personal profiles get 65% feed allocation vs 5% for company pages (Scarlett)
-- [ ] **Remove external links** from posts — algorithm now penalizes even first-comment links (Scarlett)
-- [ ] **Reduce hashtag usage** — many high-performers using few or none (Scarlett)
+- [ ] **Employee advocacy program** — Personal profiles get 65% feed allocation vs 5% for company pages — Marrs/Shourov/Julian personal posts prioritized (Scarlett)
+- [ ] **Remove external links** from posts — algorithm now penalizes even first-comment links 25-68% (Scarlett)
+- [ ] **Dwell time optimization** — Design carousels/docs for 60+ second consumption (15.6% vs 1.2% engagement) (Scarlett)
+- [ ] **Engagement quality focus** — Comments carry 8-15x more weight than likes — prioritize thoughtful responses over vanity metrics (Scarlett)
 
 ## Recent Activity
 
+- 2026-05-18: Rosie captured LinkedIn algorithm data — Golden Hour 35% boost confirmed, dwell time 13x engagement differential, external links reduce reach 25-68% — Vulse analysis
 - 2026-05-17: Rosie captured LinkedIn's March 2026 LLM-powered feed rebuild — 50% reach drop, personal profiles dominate (65% vs 5%), Golden Hour protocol identified
 - 2026-05-15: Rosie captured May 2026 LinkedIn algorithm shift — 92% content buried, new ranking signals identified
 - 2026-04-22: Rosie researched LinkedIn algorithm changes (dwell time, saves > likes)

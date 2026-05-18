@@ -68,6 +68,13 @@ Research leads, market trends, and competitors for AI agent services.
 - [MemoryLake - Cross-Agent Memory Competitor]: Platform-neutral "memory passport for agents" emerges as direct competitor to Polynize Brain concept. Cross-session, cross-agent portability with multimodal support. Enterprise governance (provenance, traceability, deletion) strongest in class. Polynize needs differentiation story against MemoryLake's "memory infrastructure" positioning. (Source: powerdrill.ai, April 8 2026)
 - [Memory Benchmark Summary]: OMEGA 95.4% | Zep 63.8% | Mem0 49.0% on LongMemEval. Zep leads temporal reasoning with validity windows. Mem0 self-edits to avoid duplicates. Both gate graph features behind paywalls ($249/mo Pro). Mem0 fully self-hostable Apache 2.0; Zep requires Graphiti + Neo4j. (Source: Atlan, Vectorize, OMEGA comparisons)
 
+## Research Notes — 2026-05-18
+
+- [Pricing Benchmarks]: Real AI agent task costs: $0.004-$0.057 per task (Gemini 2.5 Flash vs Claude Sonnet 4) — full day of AI work (50 tasks) = $0.20-$2.85 — Ivern AI benchmark of 100 real tasks
+- [Pricing Benchmarks]: Platform markup analysis: BYOK vs bundled pricing shows 3,500%-175,000% markups — ChatGPT Plus/Claude Pro ~$20/mo vs actual API cost $0.57-$5.70 for 100 tasks — Ivern AI
+- [ROI Calculator Data]: Bug fixes: $0.042/task (Claude), $0.003/task (Gemini) — Code reviews: $0.051/task — Content writing: $0.065/task — Data analysis: $0.038/task — Ivern AI
+- [Sales Positioning]: "The framework is not the hard part" — production resilience (retries, timeouts, fallbacks) is the real value — Polynize should sell reliability engineering, not just agents
+
 ## Blockers
 - None
 
@@ -80,9 +87,12 @@ Research leads, market trends, and competitors for AI agent services.
 5. **Felix wrap-up** — Orthogonal integration + training → invoice (Richie)
 6. **Add ROI calculator** to proposals — Use 70% automation = 483% ROI benchmark (Rosie research → Dash/Richie)
 7. **Pre-implementation audit offering** — Create $500-$2K technical audit service to reduce client risk and create paid entry point (Rosie research → Marrs)
+8. **Add per-task pricing transparency** — Include $0.004-$0.057 per task benchmarks in proposals to show cost efficiency vs competitors (Rosie research → Dash/Marrs)
+9. **BYOK messaging** — Position Polynize BYOK approach vs bundled platform markups (3,500%-175,000%) as cost transparency advantage (Rosie research → Marrs)
 
 ## Recent Activity
 
+- 2026-05-18: Rosie added real task pricing benchmarks — $0.004-$0.057 per task, 50 tasks/day = $0.20-$2.85, platform markups 3,500%-175,000% — Ivern AI research
 - 2026-05-17: Rosie identified pre-implementation audit opportunity — $500-$2K service saves clients 10x in rework, creates paid entry point before full build
 - 2026-05-15: Rosie captured updated SMB pricing benchmarks and ROI data — 483% ROI possible with 70% support automation
 - 2026-05-15: Rosie identified "AI-nomics" trend — SMBs now demanding usage caps and cost transparency

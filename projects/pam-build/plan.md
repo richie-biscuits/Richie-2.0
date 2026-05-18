@@ -57,6 +57,14 @@ Research agent build patterns and tools.
 - [Build Pattern - Android CLI as Reference Implementation]: Google's Android CLI (released April 17) uses Skills (SKILL.md format) that auto-trigger based on prompt metadata matching. It reduced agent token usage by 70% and task completion time by 3x. This is the exact pattern PAM should follow: lightweight CLI interface + auto-triggering Skills + explicit SDK management. (Source: android-developers.googleblog.com)
 - [Build Pattern - Codex Background Execution + Memory]: Codex now supports background computer use (multiple agents on Mac in parallel), persistent memory, scheduled future work, and MCP plugins. This is the production reference for what a fully-capable agent desktop assistant looks like. PAM's feature set should map to this as a baseline. (Source: openai.com/codex
 
+## Research Notes — 2026-05-18
+
+- [Framework Selection Matrix]: LangGraph = production workhorse (stateful, explicit state, checkpointing, human-in-the-loop, LangSmith observability) — AutoGen = multi-agent conversation (good for critique/synthesis, cost control challenges) — CrewAI = rapid prototyping (role-based, hits ceilings at scale) — Forde Studios 2026 analysis
+- [LangGraph Production Features]: Checkpointer interface (SQLite/PostgreSQL/Redis) enables state persistence across interruptions — interrupt() primitive for human-in-the-loop — native LangSmith integration for traces/token counts/latency — explicit graph topology for auditability
+- [AutoGen Cost Warning]: Multi-agent conversations can balloon 10x token counts vs single well-prompted agent — termination conditions and message truncation are critical cost controls
+- [Build Pattern]: Teams use LlamaIndex for retrieval layer + LangGraph/AutoGen for orchestration — this separation of concerns is now a stable pattern
+- [PAM Architecture Decision]: PAM should implement checkpointing (LangGraph pattern) for production reliability — state persistence is not optional for long-running agents
+
 ## Blockers
 - None
 
@@ -64,10 +72,14 @@ Research agent build patterns and tools.
 
 1. **Framework decision matrix** — Create client selection guide: LangGraph (stateful/production), CrewAI (role-based/fastest prototype), AutoGen (conversational/multi-agent) — based on Rosie May 2026 research
 2. **Hybrid architecture guide** — Document when to use LangGraph + CrewAI + AutoGen together vs single framework
-3. **Checkpointing implementation** — Add LangGraph state persistence to PAM for production reliability
+3. **Checkpointing implementation** — Add LangGraph state persistence to PAM for production reliability — checkpointing interface for SQLite/PostgreSQL/Redis (Rosie research)
+4. **Human-in-the-loop primitive** — Implement interrupt()/resume capability for PAM agents — required for regulated/high-stakes workflows (Rosie research)
+5. **LangSmith integration** — Add observability layer for traces, token counts, latency breakdowns — debuggability is #1 framework switch reason (Rosie research)
+6. **AutoGen cost controls** — Implement token budget ceilings and message truncation for multi-agent conversations — prevents 10x token ballooning (Rosie research)
 
 ## Recent Activity
 
+- 2026-05-18: Rosie added framework selection matrix — LangGraph (production/stateful), AutoGen (multi-agent conversation), CrewAI (rapid proto) — checkpointing and interrupt() primitives identified as PAM requirements
 - 2026-05-17: Rosie added 2026 framework production data — LangGraph dominates (44% usage, 81% satisfaction), clear framework domains established
 - 2026-04-26: Rosie added OpenAI Codex MCP support research
 - 2026-04-22: Rosie researched Hermes Agent v0.10 for self-improving patterns
