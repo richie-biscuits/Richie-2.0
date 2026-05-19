@@ -89,8 +89,16 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Dwell time optimization** — Design carousels/docs for 60+ second consumption (15.6% vs 1.2% engagement) (Scarlett)
 - [ ] **Engagement quality focus** — Comments carry 8-15x more weight than likes — prioritize thoughtful responses over vanity metrics (Scarlett)
 
+## Research Notes — 2026-05-19
+
+- [Content Angle — Australian SMB AI Costs]: Australian SMB AI automation costs: $99-$500/mo for SaaS tools, $5,000-$25,000 for custom implementations. This confirms Polynize's $5K-50K+ pricing sits at the upper end of the custom tier. Content opportunity: "What you get at each AI price tier" comparison post — Solve8 analysis
+- [Content Angle — Quick Wins Under $500/mo]: Top 4 SMB AI quick wins: (1) Appointment booking ($99-199/mo), (2) After-hours call answering ($5/day), (3) Receipt/expense capture ($50-100/mo), (4) Review request automation ($29-79/mo). Total stack: $283-478/mo delivers $28,540+ annual value. Perfect "AI starter pack" content series — Solve8 analysis
+- [Content Angle — ROI Timeline]: Australian SMBs see AI ROI in 30-60 days for simple automations, 1-4 weeks deployment vs 6-12 months for enterprises. Agility as competitive advantage is a strong messaging angle for Polynize's SME focus — Solve8 analysis
+- [Content Angle — Data Sovereignty]: Australian compliance requirements (Privacy Act, ATO, Fair Work) create content opportunity. Checklist: Australian data hosting, 7-year record retention, GST-compliant invoices, encryption at rest/in transit. Position Polynize as AU-compliant by default — Solve8 analysis
+
 ## Recent Activity
 
+- 2026-05-19: Rosie added Australian SMB AI cost research — confirms Polynize pricing tier, quick wins content angles, 30-60 day ROI timeline, AU compliance checklist — Solve8 analysis
 - 2026-05-18: Rosie captured LinkedIn algorithm data — Golden Hour 35% boost confirmed, dwell time 13x engagement differential, external links reduce reach 25-68% — Vulse analysis
 - 2026-05-17: Rosie captured LinkedIn's March 2026 LLM-powered feed rebuild — 50% reach drop, personal profiles dominate (65% vs 5%), Golden Hour protocol identified
 - 2026-05-15: Rosie captured May 2026 LinkedIn algorithm shift — 92% content buried, new ranking signals identified

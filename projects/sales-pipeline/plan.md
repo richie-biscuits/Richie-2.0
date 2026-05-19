@@ -90,8 +90,16 @@ Research leads, market trends, and competitors for AI agent services.
 8. **Add per-task pricing transparency** — Include $0.004-$0.057 per task benchmarks in proposals to show cost efficiency vs competitors (Rosie research → Dash/Marrs)
 9. **BYOK messaging** — Position Polynize BYOK approach vs bundled platform markups (3,500%-175,000%) as cost transparency advantage (Rosie research → Marrs)
 
+## Research Notes — 2026-05-19
+
+- [Australian SMB Market — Pricing Validation]: Australian SMB AI costs: $99-$500/mo for SaaS tools, $5,000-$25,000 for custom implementations. Polynize's $5K-50K+ pricing is validated — sits at upper end of custom tier. Entry-level hook: "Quick wins under $500/mo" can drive leads toward larger custom builds — Solve8 analysis
+- [Australian SMB Market — ROI Proof Points]: SMB AI delivers measurable ROI: appointment booking saves $9,100/yr, after-hours calls capture $10,800/yr, receipt processing saves $3,640/yr, review automation worth $5,000+/yr. Total: $28,540+ annual value from $283-478/mo stack. Use these figures in proposals — Solve8 analysis
+- [Australian SMB Market — Deployment Speed Advantage]: SMBs deploy AI in 1-4 weeks vs 6-12 months for enterprises. This agility is their competitive advantage — and why they can justify $5K-25K custom builds (faster time-to-value). Position speed-to-deploy as key differentiator vs enterprise vendors — Solve8 analysis
+- [Sales Strategy — Australian Compliance as Feature]: Australian data sovereignty requirements (Privacy Act, ATO, Fair Work) are compliance hurdles for offshore competitors. Position Polynize's AU presence as built-in compliance advantage: Australian data hosting, 7-year retention, GST-compliant, ISO 27001 — Solve8 analysis
+
 ## Recent Activity
 
+- 2026-05-19: Rosie added Australian SMB market validation — pricing tiers confirmed, ROI proof points ($28,540+ value), deployment speed advantage, AU compliance as differentiator — Solve8 analysis
 - 2026-05-18: Rosie added real task pricing benchmarks — $0.004-$0.057 per task, 50 tasks/day = $0.20-$2.85, platform markups 3,500%-175,000% — Ivern AI research
 - 2026-05-17: Rosie identified pre-implementation audit opportunity — $500-$2K service saves clients 10x in rework, creates paid entry point before full build
 - 2026-05-15: Rosie captured updated SMB pricing benchmarks and ROI data — 483% ROI possible with 70% support automation

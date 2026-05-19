@@ -95,8 +95,15 @@ Latest research findings go here.
 3. **Validation system** — Add framework verification post-install
 4. **Cognition framework failure modes** — Document 4 production failure patterns (schema drift, context exhaustion, cost runaway, non-determinism) as part of framework extraction (Rosie → Marrs)
 
+## Research Notes — 2026-05-19
+
+- [Memory Architecture — Institutional vs Personalization Split]: The agent memory landscape is bifurcating into two distinct categories: (1) Personalization memory (conversation history, user preferences) and (2) Institutional knowledge (extracted, structured understanding that compounds over time). Most frameworks handle personalization well; institutional memory is the harder problem and the differentiation opportunity. Frameworks like Hindsight are emerging specifically for institutional knowledge capture — turning raw interaction history into structured, actionable domain knowledge — Vectorize analysis
+- [Memory Retrieval — Multi-Strategy Required]: Vector-only retrieval fails on terminology mismatches (e.g., "template" vs "format"). Production memory systems need multi-strategy retrieval: vector similarity + entity-aware graph + keyword index. If retrieval misses facts, summarization has nothing to work with — retrieval architecture, not post-processing, determines effectiveness — Vectorize analysis
+- [Cognition Transfer — The Amnesia Problem]: Most AI agents have no persistent memory — every session starts from scratch. The real value of cognition frameworks is preventing institutional knowledge loss: a procurement agent shouldn't repeat the same mistakes and require the same corrections every session. This is the core problem Polynize Brain solves — Vectorize analysis
+
 ## Recent Activity
 
+- 2026-05-19: Rosie added memory architecture bifurcation research — institutional vs personalization memory split, multi-strategy retrieval requirement, institutional knowledge as core value prop — Vectorize analysis
 - 2026-05-18: Rosie added production agent pattern research — 3 framework winners consolidated, 4 production failure modes identified, cognition transfer = distributed systems thinking — Forde Studios analysis
 - 2026-05-17: Rosie added enterprise governance framework research — 5-tier authorization model, action boundaries, escalation rules — cognition installation must include governance layer
 - 2026-05-15: Rosie added framework comparison research — LangGraph, CrewAI, AutoGen production patterns and costs

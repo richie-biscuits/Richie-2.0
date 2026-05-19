@@ -77,8 +77,16 @@ Research agent build patterns and tools.
 5. **LangSmith integration** — Add observability layer for traces, token counts, latency breakdowns — debuggability is #1 framework switch reason (Rosie research)
 6. **AutoGen cost controls** — Implement token budget ceilings and message truncation for multi-agent conversations — prevents 10x token ballooning (Rosie research)
 
+## Research Notes — 2026-05-19
+
+- [Framework Costs — Per-Task Pricing Confirmed]: Production task costs (Claude 4.6 reference): LangGraph ~$0.04/task, CrewAI ~$0.06/task, AutoGen ~$0.09/task. Token cost dominates; framework overhead is rounding error. LangGraph wins on cost-sensitive workloads due to explicit prompt control — ExamCert analysis
+- [Framework Production Usage — Market Consolidation]: LangGraph = 90k+ stars, dominates production (Klarna, LinkedIn, Uber). CrewAI = 28k stars, fastest prototype velocity. AutoGen = 42k stars, best for conversational/debate scenarios. 80% of production needs covered by these three — ExamCert analysis
+- [Debuggability — Year 2 Framework Switch Driver]: Debuggability is the #1 reason teams switch frameworks in year 2. LangGraph wins on incident postmortems: explicit state, LangSmith traces, time-travel replay. PAM must prioritize observability from day one — ExamCert analysis
+- [Hybrid Architecture Pattern — Confirmed Viable]: Common pattern: LangGraph for orchestration layer, CrewAI for role-based subtasks, AutoGen for conversational tools. Operational cost is maintaining 3 SDKs — only worth it for clear wins. PAM default: LangGraph single framework, hybrid when justified — ExamCert analysis
+
 ## Recent Activity
 
+- 2026-05-19: Rosie added framework cost benchmarking — LangGraph $0.04/task, CrewAI $0.06/task, AutoGen $0.09/task; debuggability as #1 switch driver; hybrid pattern validated — ExamCert analysis
 - 2026-05-18: Rosie added framework selection matrix — LangGraph (production/stateful), AutoGen (multi-agent conversation), CrewAI (rapid proto) — checkpointing and interrupt() primitives identified as PAM requirements
 - 2026-05-17: Rosie added 2026 framework production data — LangGraph dominates (44% usage, 81% satisfaction), clear framework domains established
 - 2026-04-26: Rosie added OpenAI Codex MCP support research
