@@ -65,6 +65,13 @@ Research agent build patterns and tools.
 - [Build Pattern]: Teams use LlamaIndex for retrieval layer + LangGraph/AutoGen for orchestration — this separation of concerns is now a stable pattern
 - [PAM Architecture Decision]: PAM should implement checkpointing (LangGraph pattern) for production reliability — state persistence is not optional for long-running agents
 
+## Research Notes — 2026-05-20
+
+- [Memory Infrastructure — Three Tiers]: Tier 1: Storage (Pinecone managed, Weaviate/Qdrant open-source) — vector DBs only, no intelligence. Tier 2: Framework-integrated (LangChain Memory, etc.) — coupled to specific frameworks. Tier 3: Purpose-built memory layers (Mem0, Zep, etc.) — full memory intelligence. PAM should target Tier 3 architecture pattern
+- [Voice Agent Memory — Emerging Use Case]: Voice agents have unique memory problem — users can't scroll back or manually remind. ElevenLabs, LiveKit, Pipecat integrations now standard. If agent doesn't remember, friction is immediate. Voice-first memory = new design requirement — Mem0 2026 integration data
+- [Retrieval Architecture — Three Signals Required]: Production memory needs multi-signal retrieval: semantic similarity + keyword matching + entity matching, fused. Single-signal (vector-only) fails on terminology mismatches. "If retrieval misses facts, summarization has nothing to work with" — retrieval architecture determines effectiveness
+- [Production Benchmarks — BEAM at Scale]: BEAM benchmark tests 1M and 10M token scales — cannot be solved by expanding context window. Most relevant for production deployments. Current scores: BEAM 1M = 64.1%, BEAM 10M = 48.6% (Mem0 new algorithm). Memory staleness = hardest open problem
+
 ## Blockers
 - None
 
@@ -76,6 +83,9 @@ Research agent build patterns and tools.
 4. **Human-in-the-loop primitive** — Implement interrupt()/resume capability for PAM agents — required for regulated/high-stakes workflows (Rosie research)
 5. **LangSmith integration** — Add observability layer for traces, token counts, latency breakdowns — debuggability is #1 framework switch reason (Rosie research)
 6. **AutoGen cost controls** — Implement token budget ceilings and message truncation for multi-agent conversations — prevents 10x token ballooning (Rosie research)
+7. **Multi-signal retrieval** — Implement semantic + keyword + entity matching retrieval fusion — single-signal fails on terminology mismatches (Rosie research → Julian)
+8. **Voice agent memory design** — Add voice-first memory patterns — users can't scroll back, agent must remember or friction is immediate (Rosie research → Julian)
+9. **BEAM benchmark testing** — Run PAM memory through BEAM 1M/10M scale tests for production validation (Rosie research → Julian)
 
 ## Research Notes — 2026-05-19
 
@@ -86,6 +96,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-20: Rosie added memory infrastructure research — three-tier architecture (storage/framework/purpose-built), voice agent memory requirements, multi-signal retrieval pattern, BEAM production benchmarks — Mem0 + Vektor Memory analysis
 - 2026-05-19: Rosie added framework cost benchmarking — LangGraph $0.04/task, CrewAI $0.06/task, AutoGen $0.09/task; debuggability as #1 switch driver; hybrid pattern validated — ExamCert analysis
 - 2026-05-18: Rosie added framework selection matrix — LangGraph (production/stateful), AutoGen (multi-agent conversation), CrewAI (rapid proto) — checkpointing and interrupt() primitives identified as PAM requirements
 - 2026-05-17: Rosie added 2026 framework production data — LangGraph dominates (44% usage, 81% satisfaction), clear framework domains established

@@ -75,6 +75,12 @@ Research leads, market trends, and competitors for AI agent services.
 - [ROI Calculator Data]: Bug fixes: $0.042/task (Claude), $0.003/task (Gemini) — Code reviews: $0.051/task — Content writing: $0.065/task — Data analysis: $0.038/task — Ivern AI
 - [Sales Positioning]: "The framework is not the hard part" — production resilience (retries, timeouts, fallbacks) is the real value — Polynize should sell reliability engineering, not just agents
 
+## Research Notes — 2026-05-20
+
+- [Pricing Benchmarks — AI Cost Calculator Live]: aicost.cc provides scenario-driven LLM cost forecasting with retry/success targeting. Models benchmarked: GPT-4o mini ($0.0018/success), Claude Sonnet 4.5 ($0.0042/success), Mixtral 8x7B self-hosted ($0.0024/success) — aicost.cc
+- [Pricing Scenarios — Four Templates]: Customer Support Automation (18k req/mo, 670 tokens, 92% success), Long-form Summarization (4k req, 3,850 tokens, 90% success), Developer Copilot (25k req, 1,200 tokens, 88% success), Structured Data Agent (55k req, 660 tokens, 95% success) — use for client ROI modeling
+- [Cost Transparency Advantage]: BYOK vs bundled pricing shows 3,500%-175,000% platform markups. Position Polynize's cost-plus-transparent-markup model vs black-box bundled pricing as trust advantage — combine with aicost.cc data for credibility
+
 ## Blockers
 - None
 
@@ -89,6 +95,8 @@ Research leads, market trends, and competitors for AI agent services.
 7. **Pre-implementation audit offering** — Create $500-$2K technical audit service to reduce client risk and create paid entry point (Rosie research → Marrs)
 8. **Add per-task pricing transparency** — Include $0.004-$0.057 per task benchmarks in proposals to show cost efficiency vs competitors (Rosie research → Dash/Marrs)
 9. **BYOK messaging** — Position Polynize BYOK approach vs bundled platform markups (3,500%-175,000%) as cost transparency advantage (Rosie research → Marrs)
+10. **Use aicost.cc in proposals** — Link to scenario calculator for credibility, use their four templates for client ROI modeling (Rosie research → Marrs/Dash)
+11. **Cost transparency calculator** — Build simple Polynize-branded cost estimator using aicost.cc methodology (Rosie research → Dash)
 
 ## Research Notes — 2026-05-19
 
@@ -99,6 +107,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-20: Rosie added aicost.cc research — scenario-driven cost calculator, four pricing templates (Support/Copilot/Summarization/Data Agent), BYOK vs bundled markup data — aicost.cc analysis
 - 2026-05-19: Rosie added Australian SMB market validation — pricing tiers confirmed, ROI proof points ($28,540+ value), deployment speed advantage, AU compliance as differentiator — Solve8 analysis
 - 2026-05-18: Rosie added real task pricing benchmarks — $0.004-$0.057 per task, 50 tasks/day = $0.20-$2.85, platform markups 3,500%-175,000% — Ivern AI research
 - 2026-05-17: Rosie identified pre-implementation audit opportunity — $500-$2K service saves clients 10x in rework, creates paid entry point before full build

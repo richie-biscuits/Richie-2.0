@@ -77,6 +77,14 @@ Latest research findings go here.
 - [Cognition Transfer Insight]: Teams that operate agents reliably treat workflows like distributed systems — retries with backoff, timeouts, fallback paths, dead-letter queues for failed runs — the framework is not the hard part, production resilience is
 - [Skill Installation > Framework]: LlamaIndex evolved to dominate the retrieval layer, not orchestration — the pattern is emerging: separate knowledge/cognition (Skills) from orchestration (frameworks) — aligns with Polynize Brain's SKILL.md approach
 
+## Research Notes — 2026-05-20
+
+- [Market Size — Agent Memory Now $52B Category]: AI agent memory market: $7.84B (2025) → $52.62B by 2030 (46.3% CAGR). 88% of organizations use AI in at least one function, but only 6% qualify as "AI high performers" (>5% EBIT from AI). The gap = agents that don't retain what they learn — Vektor Memory analysis
+- [Memory Architecture — Four Dimensions]: Complete memory systems must handle: (1) Storage — where memories live, (2) Curation — contradiction/duplicate handling, (3) Retrieval — multi-strategy search, (4) Lifecycle — consolidation/promotion/retirement. No single approach solves all four — this is the architectural opportunity space
+- [Production Reality — Full Context Unusable]: Full-context memory (dumping entire history) delivers highest accuracy ceiling BUT 9.87s median latency, 17.12s p95, ~26k tokens/conv. "Categorically unusable in production" — selective memory is the only viable path for real deployments
+- [Benchmark Leadership — Mem0 New Algorithm]: Mem0's April 2026 token-efficient algorithm: 92.5 LoCoMo, 94.4 LongMemEval, ~6,900 tokens/query. Biggest gains: +29.6 points temporal reasoning, +23.1 multi-hop. Driven by single-pass ADD-only extraction + multi-signal retrieval — Mem0 ECAI 2025 + 2026 update
+- [Integration Breadth — 21 Frameworks]: Memory layer that locks to one framework won't scale. Current coverage: LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen, Agno, CAMEL AI, Dify, Flowise, Google ADK, OpenAI Agents SDK, Mastra (TypeScript), plus voice agents (ElevenLabs, LiveKit, Pipecat) — Mem0 docs
+
 ## Blockers
 - None
 
@@ -88,6 +96,8 @@ Latest research findings go here.
 3. **Framework selection guidance** — Create decision matrix for clients: LangGraph (control flow), CrewAI (role-based), AutoGen (conversational) — based on Rosie research
 4. **Governance layer design** — Add 5-tier authorization model to cognition framework spec (Rosie research → Marrs)
 5. **Production resilience messaging** — Update sales materials to emphasize distributed systems reliability over framework features (Rosie research → Marrs)
+6. **Market sizing narrative** — Incorporate $52B memory market growth into investor/pitch materials (Rosie research → Marrs)
+7. **Four dimensions framework** — Build cognition extraction around Storage/Curation/Retrieval/Lifecycle model (Rosie research → Marrs/Julian)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
@@ -103,6 +113,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-20: Rosie added market sizing research — $7.84B → $52.62B by 2030, four memory dimensions framework, full-context latency unsuitable for production, Mem0 benchmark leadership data — Vektor Memory + Mem0 analysis
 - 2026-05-19: Rosie added memory architecture bifurcation research — institutional vs personalization memory split, multi-strategy retrieval requirement, institutional knowledge as core value prop — Vectorize analysis
 - 2026-05-18: Rosie added production agent pattern research — 3 framework winners consolidated, 4 production failure modes identified, cognition transfer = distributed systems thinking — Forde Studios analysis
 - 2026-05-17: Rosie added enterprise governance framework research — 5-tier authorization model, action boundaries, escalation rules — cognition installation must include governance layer

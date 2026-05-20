@@ -77,6 +77,13 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [LinkedIn Algorithm]: Carousels/docs generate 3x more engagement than video, 6x more than text-only — native video still +69% improvement over other formats — Buffer/Vulse
 - [LinkedIn Algorithm]: External links reduce reach by 25-68% even with standalone value — LinkedIn wants content consumption on-platform — Vulse
 
+## Research Notes — 2026-05-20
+
+- [LinkedIn Algorithm — The 92% Burial Rate]: LinkedIn now buries ~92% of content. Many creators seeing 40%+ drop in impressions. This is structural, not cyclical — the platform replaced distribution with LLM-powered relevance scoring — John Wicks analysis
+- [LinkedIn — Three Signals That Control Reach]: (1) Dwell time: 15+ seconds = distribution boost, <3 seconds = deprioritized, (2) Saves/reposts > likes — algorithm treats saves as "personal endorsement", (3) Comment quality over volume — NLP-analyzed, thoughtful comments from niche outsiders carry most weight
+- [LinkedIn — Tactics That Now Hurt]: External links significantly reduce distribution (even first-comment workaround failing), hashtags harm if overused, promotional language actively deprioritized, high-volume posting dilutes engagement — spaced cadence wins
+- [LinkedIn — Content That Works Now]: Clear formatting, short paragraphs, strong openers (dwell time optimization), content people save and return to, discussion-inviting posts over passive reactions. Success metric shift: reach matters less, attention and intent matter more
+
 ## Blockers
 - None
 
@@ -88,6 +95,9 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Remove external links** from posts — algorithm now penalizes even first-comment links 25-68% (Scarlett)
 - [ ] **Dwell time optimization** — Design carousels/docs for 60+ second consumption (15.6% vs 1.2% engagement) (Scarlett)
 - [ ] **Engagement quality focus** — Comments carry 8-15x more weight than likes — prioritize thoughtful responses over vanity metrics (Scarlett)
+- [ ] **Dwell time content strategy** — Rewrite content for 15+ second dwell time: strong openers, short paragraphs, clear formatting (Rosie research → Scarlett)
+- [ ] **Save-worthy content series** — Create reference content people save/return to (saves > likes in algorithm) (Rosie research → Scarlett)
+- [ ] **Comment quality playbook** — Draft discussion-inviting prompts that generate thoughtful comments, not quick reactions (Rosie research → Scarlett)
 
 ## Research Notes — 2026-05-19
 
@@ -98,6 +108,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-20: Rosie added LinkedIn burial rate research — 92% of content buried, 40%+ impression drops, three signals controlling reach (dwell/saves/comment quality), tactics that now hurt — John Wicks analysis
 - 2026-05-19: Rosie added Australian SMB AI cost research — confirms Polynize pricing tier, quick wins content angles, 30-60 day ROI timeline, AU compliance checklist — Solve8 analysis
 - 2026-05-18: Rosie captured LinkedIn algorithm data — Golden Hour 35% boost confirmed, dwell time 13x engagement differential, external links reduce reach 25-68% — Vulse analysis
 - 2026-05-17: Rosie captured LinkedIn's March 2026 LLM-powered feed rebuild — 50% reach drop, personal profiles dominate (65% vs 5%), Golden Hour protocol identified
