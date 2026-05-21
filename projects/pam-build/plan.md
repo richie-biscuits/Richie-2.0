@@ -72,6 +72,12 @@ Research agent build patterns and tools.
 - [Retrieval Architecture — Three Signals Required]: Production memory needs multi-signal retrieval: semantic similarity + keyword matching + entity matching, fused. Single-signal (vector-only) fails on terminology mismatches. "If retrieval misses facts, summarization has nothing to work with" — retrieval architecture determines effectiveness
 - [Production Benchmarks — BEAM at Scale]: BEAM benchmark tests 1M and 10M token scales — cannot be solved by expanding context window. Most relevant for production deployments. Current scores: BEAM 1M = 64.1%, BEAM 10M = 48.6% (Mem0 new algorithm). Memory staleness = hardest open problem
 
+## Research Notes — 2026-05-21
+
+- [Framework Landscape — AutoGen Maintenance Mode]: AutoGen officially in maintenance mode as of late 2025. No new features, community-managed only. Microsoft directing new users to Microsoft Agent Framework. For PAM: remove AutoGen from recommended stack for new builds. Existing AutoGen deployments should plan migration path. — Groundy analysis, May 2026
+- [Framework Performance — CrewAI vs LangGraph Trade-offs]: Verified benchmark data (Kunpeng AI, March 2026): CrewAI 30-60% faster than AutoGen on structured tasks, uses ~33% fewer tokens (8k vs 12k). However, CrewAI carries 3x token overhead vs LangGraph on simple one-tool workflows. LangGraph wins on latency for simple tasks; CrewAI wins on structured pipelines. Choose based on workload shape. — Kunpeng AI benchmark, Uvik study
+- [LangGraph 1.2 — Production Features]: Released May 12, 2026. New: per-node timeouts, node-level error handlers, graceful shutdown with resumable checkpoints, DeltaChannel (beta). These directly address production failure modes (rate-limit cascades, zombie processes). PAM should adopt LangGraph 1.2+ patterns for checkpointing and error isolation. — Groundy analysis, May 2026
+
 ## Blockers
 - None
 
@@ -96,6 +102,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-21: Rosie added framework landscape update — AutoGen maintenance mode, CrewAI vs LangGraph trade-offs verified, LangGraph 1.2 production features — Groundy + Kunpeng AI analysis
 - 2026-05-20: Rosie added memory infrastructure research — three-tier architecture (storage/framework/purpose-built), voice agent memory requirements, multi-signal retrieval pattern, BEAM production benchmarks — Mem0 + Vektor Memory analysis
 - 2026-05-19: Rosie added framework cost benchmarking — LangGraph $0.04/task, CrewAI $0.06/task, AutoGen $0.09/task; debuggability as #1 switch driver; hybrid pattern validated — ExamCert analysis
 - 2026-05-18: Rosie added framework selection matrix — LangGraph (production/stateful), AutoGen (multi-agent conversation), CrewAI (rapid proto) — checkpointing and interrupt() primitives identified as PAM requirements

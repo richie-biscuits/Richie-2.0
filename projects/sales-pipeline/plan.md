@@ -81,6 +81,12 @@ Research leads, market trends, and competitors for AI agent services.
 - [Pricing Scenarios — Four Templates]: Customer Support Automation (18k req/mo, 670 tokens, 92% success), Long-form Summarization (4k req, 3,850 tokens, 90% success), Developer Copilot (25k req, 1,200 tokens, 88% success), Structured Data Agent (55k req, 660 tokens, 95% success) — use for client ROI modeling
 - [Cost Transparency Advantage]: BYOK vs bundled pricing shows 3,500%-175,000% platform markups. Position Polynize's cost-plus-transparent-markup model vs black-box bundled pricing as trust advantage — combine with aicost.cc data for credibility
 
+## Research Notes — 2026-05-21
+
+- [Australian SMB Market — Pay-on-Results Model Emerging]: New competitive dynamic: AI automation providers offering "pay only on proven savings" models. Example: Logic8 (Australian team) builds AI automation in 10-14 days, client keeps it for life, payment tied to demonstrated savings. This is a shift from upfront custom build pricing to outcome-based pricing. Polynize should evaluate if this model applies to any service tiers. — DuckDuckGo search, May 2026
+- [Competitor Landscape — Melbourne AI Companies]: F6S data shows 41 active AI companies/startups in Melbourne as of May 2026. Market is crowded but fragmented. Key insight: most competitors focus on either SaaS tools ($99-500/mo) or enterprise consulting. Polynize's $5K-50K+ custom agent tier occupies the middle ground with less direct competition. — F6S, May 2026
+- [Microsoft Copilot Studio Pricing]: Copilot Studio at $200/month per tenant (Australia) for unlimited agents. This is the bundled-platform pricing Polynize competes against. BYOK positioning should emphasize cost transparency vs black-box bundled pricing. — Microsoft Australia, May 2026
+
 ## Blockers
 - None
 
@@ -107,6 +113,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-21: Rosie added Australian SMB market research — pay-on-results model emerging, 41 Melbourne AI companies tracked, Microsoft Copilot Studio $200/mo pricing — DuckDuckGo + F6S analysis
 - 2026-05-20: Rosie added aicost.cc research — scenario-driven cost calculator, four pricing templates (Support/Copilot/Summarization/Data Agent), BYOK vs bundled markup data — aicost.cc analysis
 - 2026-05-19: Rosie added Australian SMB market validation — pricing tiers confirmed, ROI proof points ($28,540+ value), deployment speed advantage, AU compliance as differentiator — Solve8 analysis
 - 2026-05-18: Rosie added real task pricing benchmarks — $0.004-$0.057 per task, 50 tasks/day = $0.20-$2.85, platform markups 3,500%-175,000% — Ivern AI research

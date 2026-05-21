@@ -85,6 +85,12 @@ Latest research findings go here.
 - [Benchmark Leadership — Mem0 New Algorithm]: Mem0's April 2026 token-efficient algorithm: 92.5 LoCoMo, 94.4 LongMemEval, ~6,900 tokens/query. Biggest gains: +29.6 points temporal reasoning, +23.1 multi-hop. Driven by single-pass ADD-only extraction + multi-signal retrieval — Mem0 ECAI 2025 + 2026 update
 - [Integration Breadth — 21 Frameworks]: Memory layer that locks to one framework won't scale. Current coverage: LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen, Agno, CAMEL AI, Dify, Flowise, Google ADK, OpenAI Agents SDK, Mastra (TypeScript), plus voice agents (ElevenLabs, LiveKit, Pipecat) — Mem0 docs
 
+## Research Notes — 2026-05-21
+
+- [Cognition Frameworks — AutoGen Maintenance Mode]: AutoGen officially entered maintenance mode in late 2025. Microsoft README: "AutoGen is now in maintenance mode. It will not receive new features or enhancements and is community managed going forward." Microsoft directing new users to Microsoft Agent Framework. This is a major landscape shift — the framework choice for new projects is now essentially CrewAI vs LangGraph. — Groundy analysis, May 2026
+- [Cognition Frameworks — LangGraph 1.2 Production Hardening]: LangGraph v1.2 released May 12, 2026 with per-node timeouts, node-level error handlers, graceful shutdown with resumable checkpoints, and DeltaChannel (beta). These features directly address the coordination infrastructure failures (rate-limit cascades, zombie processes) identified in AgentRM research. For cognition framework installation, LangGraph's checkpointing and state persistence should be the default production pattern. — Groundy analysis, May 2026
+- [Cognition Transfer — Production Failure Modes]: Academic research (Semantic Consensus study, arXiv 2026) analyzed 600+ runs across frameworks: production failure rates 41-86.7%, with 79% of failures originating from specification and coordination issues, not model capability. Key failure categories: 36.9% inter-agent misalignment, 21.3% task verification breakdowns. Cognition frameworks must include explicit coordination specifications, not just persona/identity. — arXiv 2026, Groundy analysis
+
 ## Blockers
 - None
 
@@ -113,6 +119,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-21: Rosie added framework landscape shift research — AutoGen maintenance mode, LangGraph 1.2 production features, production failure mode analysis — Groundy + arXiv analysis
 - 2026-05-20: Rosie added market sizing research — $7.84B → $52.62B by 2030, four memory dimensions framework, full-context latency unsuitable for production, Mem0 benchmark leadership data — Vektor Memory + Mem0 analysis
 - 2026-05-19: Rosie added memory architecture bifurcation research — institutional vs personalization memory split, multi-strategy retrieval requirement, institutional knowledge as core value prop — Vectorize analysis
 - 2026-05-18: Rosie added production agent pattern research — 3 framework winners consolidated, 4 production failure modes identified, cognition transfer = distributed systems thinking — Forde Studios analysis

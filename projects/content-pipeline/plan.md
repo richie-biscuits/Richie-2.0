@@ -84,6 +84,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [LinkedIn — Tactics That Now Hurt]: External links significantly reduce distribution (even first-comment workaround failing), hashtags harm if overused, promotional language actively deprioritized, high-volume posting dilutes engagement — spaced cadence wins
 - [LinkedIn — Content That Works Now]: Clear formatting, short paragraphs, strong openers (dwell time optimization), content people save and return to, discussion-inviting posts over passive reactions. Success metric shift: reach matters less, attention and intent matter more
 
+## Research Notes — 2026-05-21
+
+- [LinkedIn Algorithm — May 2026 Confirmation]: Forbes-verified data: LinkedIn organic views down 50%, engagement down 25%, follower growth down 59% year-over-year. Algorithm now uses LLMs to match content to user interests with "scary accuracy" — rewards consistent niche focus. Golden Hour (first 60-90 min) engagement predicts wider distribution. Dwell time now outweighs likes as ranking signal. — Forbes, May 6 2026
+- [LinkedIn Algorithm — Comment Quality Signal]: Comment quality now influences distribution more than vanity metrics. "Great post!" signals nothing. Thoughtful responses that add perspective and spark discussion are weighted heavily. Posts with fewer but deeper comment threads reached 3.2x more people and drove 8x more profile visits than posts with generic engagement. — Forbes, May 6 2026
+- [LinkedIn Algorithm — Content Format Hierarchy]: Image posts get 2x comments. Native video gets 69% performance boost (brand appearance in first 4 seconds critical). LinkedIn Live gets 7x reactions, 24x comments vs native video. Long-form 1,200-1,500 characters performs best when structured with short paragraphs and line breaks. — Forbes, May 6 2026
+
 ## Blockers
 - None
 
@@ -108,6 +114,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-21: Rosie added Forbes-verified LinkedIn algorithm data — views down 50%, engagement down 25%, Golden Hour confirmed, dwell time > likes, comment quality hierarchy — Forbes May 6 analysis
 - 2026-05-20: Rosie added LinkedIn burial rate research — 92% of content buried, 40%+ impression drops, three signals controlling reach (dwell/saves/comment quality), tactics that now hurt — John Wicks analysis
 - 2026-05-19: Rosie added Australian SMB AI cost research — confirms Polynize pricing tier, quick wins content angles, 30-60 day ROI timeline, AU compliance checklist — Solve8 analysis
 - 2026-05-18: Rosie captured LinkedIn algorithm data — Golden Hour 35% boost confirmed, dwell time 13x engagement differential, external links reduce reach 25-68% — Vulse analysis
