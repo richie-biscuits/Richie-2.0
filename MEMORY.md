@@ -35,6 +35,7 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 ## 📝 Marrs To-Dos (May 21)
 - **Email access** — Set up Richie access to mmcoiro@me.com for email checking/queries
 - **MainArt rebrand** — Considering rebranding MainArt team → Executive Assistant cloud team
+- **Stored prompt** — /agent flow redesign prompt saved (for Shourov). Ask Richie for it when ready.
 
 ## Leo — Lead Gen Agent (In Build, May 9)
 **Lead flow:** Supabase → webhook → Leo
