@@ -32,6 +32,10 @@ Everstock directly aligns with Pillar #3. Not just a sale — partnership play f
 5. **Erfan/Kind Conference** — Marketing + ops team build ($2k mapping closed)
 6. **Hermes/PAM** — Migration complete, 85-90% automation in Discovery/Pre-Proposal
 
+## 📝 Marrs To-Dos (May 21)
+- **Email access** — Set up Richie access to mmcoiro@me.com for email checking/queries
+- **MainArt rebrand** — Considering rebranding MainArt team → Executive Assistant cloud team
+
 ## Leo — Lead Gen Agent (In Build, May 9)
 **Lead flow:** Supabase → webhook → Leo
 
