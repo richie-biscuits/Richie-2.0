@@ -14,7 +14,6 @@ import sys
 import os
 from datetime import datetime
 
-SILENT = os.environ.get('SILENT', '0') == '1' or os.environ.get('SILENT_MODE', '0') == '1'
 LOG_FILE = os.path.expanduser("~/.openclaw/logs/paced-workflow.log")
 
 def log(message):
@@ -28,10 +27,7 @@ def log(message):
             f.write(log_line + '\n')
     except:
         pass
-    
-    # Only print if not in silent mode
-    if not SILENT:
-        print(message)
+    # Note: This function NEVER prints to stdout - always silent
 
 def run_script(script_name):
     """Run a Python script silently"""
@@ -42,15 +38,11 @@ def run_script(script_name):
         return None
     
     try:
-        env = os.environ.copy()
-        env['SILENT'] = '1'  # Always silent for sub-scripts
-        
         result = subprocess.run(
             [sys.executable, script_path],
             capture_output=True,
             text=True,
-            cwd=os.path.dirname(script_path),
-            env=env
+            cwd=os.path.dirname(script_path)
         )
         
         return {
@@ -101,21 +93,11 @@ def main():
     log("=== WORKFLOW COMPLETE ===")
     
     # SILENT MODE: Only output if human attention needed
-    if SILENT:
-        if attention_needed:
-            print("⚠️ TASKS NEED ATTENTION:")
-            for item in attention_needed:
-                print(f"  • {item}")
-            return 0
-        # Otherwise: COMPLETE SILENCE
-        return 0
-    
-    # Non-silent mode - minimal output
-    print("Workflow complete")
-    if spawned_agents:
-        print(f"  Spawned: {len(spawned_agents)} agent(s)")
     if attention_needed:
-        print(f"  Attention needed: {len(attention_needed)} item(s)")
+        print("⚠️ TASKS NEED ATTENTION:")
+        for item in attention_needed:
+            print(f"  • {item}")
+    # Otherwise: COMPLETE SILENCE - no output at all
 
 if __name__ == "__main__":
     main()
