@@ -100,8 +100,18 @@ Research agent build patterns and tools.
 - [Debuggability — Year 2 Framework Switch Driver]: Debuggability is the #1 reason teams switch frameworks in year 2. LangGraph wins on incident postmortems: explicit state, LangSmith traces, time-travel replay. PAM must prioritize observability from day one — ExamCert analysis
 - [Hybrid Architecture Pattern — Confirmed Viable]: Common pattern: LangGraph for orchestration layer, CrewAI for role-based subtasks, AutoGen for conversational tools. Operational cost is maintaining 3 SDKs — only worth it for clear wins. PAM default: LangGraph single framework, hybrid when justified — ExamCert analysis
 
+## Research Notes — 2026-05-22
+
+- [Framework Update — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. CLI extracted to standalone crewai-cli package. PAM should evaluate CrewAI Skills for interoperability with Polynize SKILL.md format. — CrewAI GitHub releases
+- [Framework Update — LangGraph v1.2.1]: Released May 21 with durable error-handler resume across host crashes (key for production resilience), set_node_defaults() API, DeltaChannel beta for checkpointing. PAM should adopt 1.2.1+ for production deployments. — LangGraph releases
+- [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
+- [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
+
 ## Recent Activity
 
+- 2026-05-22: Rosie added CrewAI Skills Repository research — new registry/cache/CLI/SDK integration launched May 21
+- 2026-05-22: Rosie added LangGraph v1.2.1 release notes — durable error-handlers across host crashes, set_node_defaults(), DeltaChannel beta
+- 2026-05-22: Rosie added Mem0 context-is-RAM architectural insight — validates selective memory approach
 - 2026-05-21: Rosie added framework landscape update — AutoGen maintenance mode, CrewAI vs LangGraph trade-offs verified, LangGraph 1.2 production features — Groundy + Kunpeng AI analysis
 - 2026-05-20: Rosie added memory infrastructure research — three-tier architecture (storage/framework/purpose-built), voice agent memory requirements, multi-signal retrieval pattern, BEAM production benchmarks — Mem0 + Vektor Memory analysis
 - 2026-05-19: Rosie added framework cost benchmarking — LangGraph $0.04/task, CrewAI $0.06/task, AutoGen $0.09/task; debuggability as #1 switch driver; hybrid pattern validated — ExamCert analysis

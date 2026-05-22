@@ -117,8 +117,16 @@ Latest research findings go here.
 - [Memory Retrieval — Multi-Strategy Required]: Vector-only retrieval fails on terminology mismatches (e.g., "template" vs "format"). Production memory systems need multi-strategy retrieval: vector similarity + entity-aware graph + keyword index. If retrieval misses facts, summarization has nothing to work with — retrieval architecture, not post-processing, determines effectiveness — Vectorize analysis
 - [Cognition Transfer — The Amnesia Problem]: Most AI agents have no persistent memory — every session starts from scratch. The real value of cognition frameworks is preventing institutional knowledge loss: a procurement agent shouldn't repeat the same mistakes and require the same corrections every session. This is the core problem Polynize Brain solves — Vectorize analysis
 
+## Research Notes — 2026-05-22
+
+- [Cognition Transfer — Institutional Knowledge Loss]: Companies cutting headcount for AI are losing institutional knowledge that cannot be rebuilt. The real value is not the work produced but the knowledge carried — how the business operates, where edge cases live, why decisions are made. AI multiplies judgment; it does not replace it. This validates Polynize Brain's core thesis: cognition frameworks preserve institutional knowledge as installable artifacts. — Libertas Software, May 2026 (HN trending)
+- [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
+- [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
+
 ## Recent Activity
 
+- 2026-05-22: Rosie added institutional knowledge research — cutting headcount for AI destroys organizational memory, validates cognition preservation thesis (Libertas)
+- 2026-05-22: Rosie added CrewAI Skills Repository validation — v1.14.5 official Skills registry confirms SKILL.md approach is market-standard
 - 2026-05-21: Rosie added framework landscape shift research — AutoGen maintenance mode, LangGraph 1.2 production features, production failure mode analysis — Groundy + arXiv analysis
 - 2026-05-20: Rosie added market sizing research — $7.84B → $52.62B by 2030, four memory dimensions framework, full-context latency unsuitable for production, Mem0 benchmark leadership data — Vektor Memory + Mem0 analysis
 - 2026-05-19: Rosie added memory architecture bifurcation research — institutional vs personalization memory split, multi-strategy retrieval requirement, institutional knowledge as core value prop — Vectorize analysis

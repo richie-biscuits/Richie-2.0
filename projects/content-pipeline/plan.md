@@ -112,8 +112,16 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — ROI Timeline]: Australian SMBs see AI ROI in 30-60 days for simple automations, 1-4 weeks deployment vs 6-12 months for enterprises. Agility as competitive advantage is a strong messaging angle for Polynize's SME focus — Solve8 analysis
 - [Content Angle — Data Sovereignty]: Australian compliance requirements (Privacy Act, ATO, Fair Work) create content opportunity. Checklist: Australian data hosting, 7-year record retention, GST-compliant invoices, encryption at rest/in transit. Position Polynize as AU-compliant by default — Solve8 analysis
 
+## Research Notes — 2026-05-22
+
+- [Content Angle — "AI Layoffs Are Wrong" Narrative]: HN trending article (184 pts) argues companies cutting headcount for AI will lose to those who didn't. Key insight: institutional knowledge is the asset being destroyed. Content opportunity: "The AI Layoff Mistake" or "Why AI Should Multiply Your Team, Not Replace It" — contrarian angle with strong engagement potential. — Libertas Software, May 2026
+- [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
+- [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
+
 ## Recent Activity
 
+- 2026-05-22: Rosie added trending narrative research — "AI layoffs are wrong" angle with institutional knowledge preservation theme (Libertas, HN trending)
+- 2026-05-22: Rosie added Skills-as-standard content angle — CrewAI Skills Repository launch creates education opportunity
 - 2026-05-21: Rosie added Forbes-verified LinkedIn algorithm data — views down 50%, engagement down 25%, Golden Hour confirmed, dwell time > likes, comment quality hierarchy — Forbes May 6 analysis
 - 2026-05-20: Rosie added LinkedIn burial rate research — 92% of content buried, 40%+ impression drops, three signals controlling reach (dwell/saves/comment quality), tactics that now hurt — John Wicks analysis
 - 2026-05-19: Rosie added Australian SMB AI cost research — confirms Polynize pricing tier, quick wins content angles, 30-60 day ROI timeline, AU compliance checklist — Solve8 analysis

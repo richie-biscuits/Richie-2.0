@@ -111,8 +111,16 @@ Research leads, market trends, and competitors for AI agent services.
 - [Australian SMB Market — Deployment Speed Advantage]: SMBs deploy AI in 1-4 weeks vs 6-12 months for enterprises. This agility is their competitive advantage — and why they can justify $5K-25K custom builds (faster time-to-value). Position speed-to-deploy as key differentiator vs enterprise vendors — Solve8 analysis
 - [Sales Strategy — Australian Compliance as Feature]: Australian data sovereignty requirements (Privacy Act, ATO, Fair Work) are compliance hurdles for offshore competitors. Position Polynize's AU presence as built-in compliance advantage: Australian data hosting, 7-year retention, GST-compliant, ISO 27001 — Solve8 analysis
 
+## Research Notes — 2026-05-22
+
+- [Sales Narrative — Institutional Knowledge Preservation]: HN-trending research confirms companies cutting headcount for AI lose institutional knowledge that cannot be rebuilt. Sales positioning: Polynize agents preserve institutional knowledge as installable cognition frameworks — sell knowledge preservation, not just automation. — Libertas Software, May 2026
+- [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
+- [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
+
 ## Recent Activity
 
+- 2026-05-22: Rosie added institutional knowledge preservation narrative — reframes Polynize value from automation to knowledge preservation (Libertas research)
+- 2026-05-22: Rosie added Skills standardization competitive intel — CrewAI Skills Repository confirms market moving toward SKILL.md pattern
 - 2026-05-21: Rosie added Australian SMB market research — pay-on-results model emerging, 41 Melbourne AI companies tracked, Microsoft Copilot Studio $200/mo pricing — DuckDuckGo + F6S analysis
 - 2026-05-20: Rosie added aicost.cc research — scenario-driven cost calculator, four pricing templates (Support/Copilot/Summarization/Data Agent), BYOK vs bundled markup data — aicost.cc analysis
 - 2026-05-19: Rosie added Australian SMB market validation — pricing tiers confirmed, ROI proof points ($28,540+ value), deployment speed advantage, AU compliance as differentiator — Solve8 analysis
