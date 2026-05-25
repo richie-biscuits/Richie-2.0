@@ -117,8 +117,16 @@ Research leads, market trends, and competitors for AI agent services.
 - [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
 - [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
 
+## Research Notes — 2026-05-25
+
+- [Token Cost Benchmarks — Hidden Budget Killer]: Independent March 2026 benchmark (verified on Claude Opus 4.7): LangGraph 18,500 tokens, Claude SDK 22,000 tokens, CrewAI 41,000 tokens per comparable workflow. At Anthropic pricing ($15/M input, $75/M output): LangGraph $0.35 vs CrewAI $0.78 per execution. Over 10K monthly executions = $4,300/month difference ($51,600/year). Sales positioning: Polynize's framework-agnostic approach lets clients optimize for cost — fp8.co/Pasquale Pillitteri analysis
+- [Model Routing — 60-70% Cost Reduction]: Model routing strategies (directing simple tasks to cheaper models, complex reasoning to premium) can reduce token costs 60-70% vs flat-rate model use. Sales implication: Polynize BYOK approach enables cost optimization that bundled platforms can't match — The AI Corner March 2026
+- [ROI Benchmarks — Enterprise Baseline]: Deloitte 2026 State of AI report: 171% average ROI on enterprise AI agent deployments, US implementations averaging 192%. SMB AI delivers 55% higher operational efficiency, 35% cost reductions. Use these as anchor points in proposals — The AI Corner/Deloitte 2026
+- [SMB Pricing Validation]: SaaS AI agent platforms $20-$249/month production tiers (Ajelix $20, Copilot Business $21, Gemini Pro $19.99). Custom agents $5K-$50K+. Token-based custom builds $15-$75/month for 100-1,000 inference calls. Polynize's custom tier positioning is validated — Reinventing.ai/Ajelix analysis
+
 ## Recent Activity
 
+- 2026-05-25: Rosie added token cost benchmarks — CrewAI burns 3x tokens vs LangGraph, $4,300/month difference at scale, model routing saves 60-70%
 - 2026-05-22: Rosie added institutional knowledge preservation narrative — reframes Polynize value from automation to knowledge preservation (Libertas research)
 - 2026-05-22: Rosie added Skills standardization competitive intel — CrewAI Skills Repository confirms market moving toward SKILL.md pattern
 - 2026-05-21: Rosie added Australian SMB market research — pay-on-results model emerging, 41 Melbourne AI companies tracked, Microsoft Copilot Studio $200/mo pricing — DuckDuckGo + F6S analysis

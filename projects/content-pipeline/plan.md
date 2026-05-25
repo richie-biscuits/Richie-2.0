@@ -118,8 +118,15 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
 - [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-25
+
+- [HN Content Audit — May 25]: Top AI stories trending: DeepSeek Reasonix (607 pts, #11) — native DeepSeek coding agent; Audiomass (419 pts, #7) — open-source web audio editor; Go-to-Rust migration guide (331 pts, #12). Pattern: developer tooling dominates, coding agents resonate, practical open-source tools get traction. No generic AI productivity content in top 15 — HN front page
+- [Content Angle — DeepSeek Ecosystem]: DeepSeek Reasonix (native coding agent) trending hard on HN signals DeepSeek is becoming a credible dev platform. Content opportunity: "DeepSeek for AI agents" or "Beyond OpenAI: Building agents with DeepSeek" — contrarian angle with technical credibility — HN May 2026
+- [Content Angle — Framework Cost Reality]: New benchmark shows CrewAI burns 3x tokens vs LangGraph ($4,300/month difference at 10K executions). Tutorial angle: "Why your agent framework is burning your budget" or "The hidden cost of multi-agent orchestration" — fp8.co analysis
+
 ## Recent Activity
 
+- 2026-05-25: Rosie added HN content audit — DeepSeek Reasonix trending (607 pts), developer tooling dominates, no generic AI content in top stories
 - 2026-05-22: Rosie added trending narrative research — "AI layoffs are wrong" angle with institutional knowledge preservation theme (Libertas, HN trending)
 - 2026-05-22: Rosie added Skills-as-standard content angle — CrewAI Skills Repository launch creates education opportunity
 - 2026-05-21: Rosie added Forbes-verified LinkedIn algorithm data — views down 50%, engagement down 25%, Golden Hour confirmed, dwell time > likes, comment quality hierarchy — Forbes May 6 analysis

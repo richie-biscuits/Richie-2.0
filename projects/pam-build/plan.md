@@ -107,8 +107,16 @@ Research agent build patterns and tools.
 - [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
 - [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
 
+## Research Notes — 2026-05-25
+
+- [Framework Production Reality — Only 2 of 6 Production-Ready]: FP8 tested LangChain, AgentCore, LangGraph, CrewAI, AutoGen, Strands — only 2 are truly production-ready. LangGraph for deterministic state machines with checkpointing; AgentCore for fully managed AWS runtime. Key insight: "orchestration layer is now boring infrastructure" — trust boundaries and deployment shape matter more than framework features — fp8.co May 2026
+- [Token Cost Benchmarks — Framework Choice = $51K/Year Difference]: Verified March 2026 benchmarks on Claude Opus 4.7: LangGraph 18,500 tokens, Claude SDK 22,000 tokens, CrewAI 41,000 tokens per workflow. At scale (10K execs/month): $4,300/month gap between LangGraph and CrewAI ($51,600/year). PAM should default to LangGraph for cost-sensitive deployments — Pasquale Pillitteri benchmark
+- [Memory Architecture Comparison — May 2026]: Five architectures compared: Mem0 (SDK, 92.5% LoCoMo), Letta (runtime, high lock-in), Zep (temporal graph, SOC 2/HIPAA/GDPR), Hermes (open-source server, self-improving), OpenClaude (skill patterns). PAM's architecture should expose swapable memory layer to match use case — Innobu analysis
+- [DeepSeek Ecosystem — New Player]: DeepSeek Reasonix (native coding agent) trending on HN (607 pts). DeepSeek becoming credible alternative to OpenAI/Anthropic. PAM should evaluate DeepSeek API support for cost-sensitive clients — HN May 2026
+
 ## Recent Activity
 
+- 2026-05-25: Rosie added framework production reality research — only 2 of 6 frameworks production-ready, token costs vary 3x, memory architecture landscape mapped
 - 2026-05-22: Rosie added CrewAI Skills Repository research — new registry/cache/CLI/SDK integration launched May 21
 - 2026-05-22: Rosie added LangGraph v1.2.1 release notes — durable error-handlers across host crashes, set_node_defaults(), DeltaChannel beta
 - 2026-05-22: Rosie added Mem0 context-is-RAM architectural insight — validates selective memory approach

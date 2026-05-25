@@ -123,8 +123,16 @@ Latest research findings go here.
 - [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
 - [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-25
+
+- [Framework Consolidation — Only 2 Production-Ready]: FP8 analysis of 6 major frameworks (LangChain, AgentCore, LangGraph, CrewAI, AutoGen, Strands) concludes only 2 are truly production-ready. LangGraph wins on deterministic state machines, checkpointing, human-in-the-loop; AgentCore wins as fully managed AWS runtime. The "orchestration layer is now boring infrastructure" — trust boundaries and deployment shape are the new differentiators — fp8.co analysis
+- [Memory as Decision Layer 2026]: Innobu analysis confirms memory is where AI agents become production infrastructure vs toys. Five architectures compared across 7 dimensions (shape, persistence, decision locus, proactive, user veto, audit, adaptive ask rate). Mem0 leads benchmarks (92.5% LoCoMo), Zep leads compliance (SOC 2/HIPAA/GDPR), Letta has highest lock-in, Hermes is open-source server model, OpenClaude formalizes skill patterns — Innobu May 2026
+- [DeepSeek Reasonix Trending]: DeepSeek-native coding agent (Reasonix) hit #11 on HN with 607 points, 253 comments. Native DeepSeek integration with high caching and low cost is resonating with developers. Signal: DeepSeek ecosystem is becoming a credible alternative to OpenAI/Anthropic for agent tooling — HN May 2026
+- [Memory Benchmarks — May 2026 Update]: Mem0 token-efficient algorithm now at 92.5% LoCoMo, 94.4% LongMemEval with <7,000 tokens per retrieval vs 25,000+ full-context. +29.6 points temporal reasoning, +23.1 multi-hop. Three parallel scoring passes (semantic + keyword + entity) fused at retrieval — Mem0 ECAI 2025 + May 2026 update
+
 ## Recent Activity
 
+- 2026-05-25: Rosie added framework consolidation research — only 2 of 6 frameworks production-ready, memory as strategic decision layer, DeepSeek Reasonix trending (Innobu, fp8, HN)
 - 2026-05-22: Rosie added institutional knowledge research — cutting headcount for AI destroys organizational memory, validates cognition preservation thesis (Libertas)
 - 2026-05-22: Rosie added CrewAI Skills Repository validation — v1.14.5 official Skills registry confirms SKILL.md approach is market-standard
 - 2026-05-21: Rosie added framework landscape shift research — AutoGen maintenance mode, LangGraph 1.2 production features, production failure mode analysis — Groundy + arXiv analysis
