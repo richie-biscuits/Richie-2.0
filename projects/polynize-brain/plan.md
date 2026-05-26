@@ -123,6 +123,12 @@ Latest research findings go here.
 - [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
 - [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-26
+
+- [Framework Landscape — TypeScript Camp Rising]: Mastra (from Gatsby team) is now the definitive TypeScript agent framework with React/Next.js integration. Agno (ex-Phidata) rebranded with AgentOS enterprise runtime. Both prioritize type safety (Pydantic/Zod) over LangChain's convention-based approach. Signal: Type safety is becoming a framework differentiator for enterprise adoption — youngju.dev framework analysis, May 2026
+- [Cognition Transfer — MCP Now De-Facto Standard]: Model Context Protocol (Anthropic) has become the de-facto tool standard, weakening framework lock-in. Frameworks now competing on orchestration, not integration breadth. Polynize Brain's SKILL.md approach sits above MCP — portable cognition that survives framework churn — youngju.dev May 2026
+- [Framework Selection — Three Camps Emerging]: 2026 framework market split into three: (1) LangChain camp (broad integration), (2) Python-native camp (PydanticAI, Instructor), (3) TypeScript camp (Mastra, Vercel AI SDK). No single winner — integration breadth matters less than type safety and deployment shape — youngju.dev May 2026
+
 ## Research Notes — 2026-05-25
 
 - [Framework Consolidation — Only 2 Production-Ready]: FP8 analysis of 6 major frameworks (LangChain, AgentCore, LangGraph, CrewAI, AutoGen, Strands) concludes only 2 are truly production-ready. LangGraph wins on deterministic state machines, checkpointing, human-in-the-loop; AgentCore wins as fully managed AWS runtime. The "orchestration layer is now boring infrastructure" — trust boundaries and deployment shape are the new differentiators — fp8.co analysis
@@ -132,6 +138,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-26: Rosie added framework landscape research — TypeScript camp rising (Mastra, Agno), MCP now de-facto standard, three framework camps emerging (youngju.dev)
 - 2026-05-25: Rosie added framework consolidation research — only 2 of 6 frameworks production-ready, memory as strategic decision layer, DeepSeek Reasonix trending (Innobu, fp8, HN)
 - 2026-05-22: Rosie added institutional knowledge research — cutting headcount for AI destroys organizational memory, validates cognition preservation thesis (Libertas)
 - 2026-05-22: Rosie added CrewAI Skills Repository validation — v1.14.5 official Skills registry confirms SKILL.md approach is market-standard

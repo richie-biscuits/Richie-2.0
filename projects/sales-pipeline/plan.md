@@ -117,6 +117,12 @@ Research leads, market trends, and competitors for AI agent services.
 - [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
 - [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
 
+## Research Notes — 2026-05-26
+
+- [Real Task Costs — 100 Task Benchmark]: Ivern AI tested 100 real tasks (bug fixes, research, content, code reviews, data analysis). Cost per task: Gemini 2.5 Flash $0.004, GPT-4o $0.050, Claude Sonnet 4 $0.057. Full day of AI work (50 tasks) = $0.20-$2.85. Sales use: concrete per-task pricing beats vague "affordable" claims — Ivern AI April 2026
+- [BYOK vs Bundled — The Real Markup]: Platform bundling markups: ChatGPT Plus/Claude Pro ~3,500-35,000%, Jasper AI 17,500-87,500%, Copy.ai up to 175,000%. BYOK (Ivern + Anthropic API) for 100 tasks/month = $0.57-$5.70 vs ChatGPT Plus $20. Sales positioning: Polynize BYOK = 3,500-175,000% cost advantage vs bundled platforms — Ivern AI analysis
+- [ROI Calculator Data]: Bug fixes $0.042/task (Claude), code reviews $0.051/task, content writing $0.065/task, data analysis $0.038/task. Quality scores: Claude 4.3/5, GPT-4o 4.0/5, Gemini 3.2/5. Use for client ROI modeling: 50 tasks/day = $2-3/day for quality AI work — Ivern AI benchmarks
+
 ## Research Notes — 2026-05-25
 
 - [Token Cost Benchmarks — Hidden Budget Killer]: Independent March 2026 benchmark (verified on Claude Opus 4.7): LangGraph 18,500 tokens, Claude SDK 22,000 tokens, CrewAI 41,000 tokens per comparable workflow. At Anthropic pricing ($15/M input, $75/M output): LangGraph $0.35 vs CrewAI $0.78 per execution. Over 10K monthly executions = $4,300/month difference ($51,600/year). Sales positioning: Polynize's framework-agnostic approach lets clients optimize for cost — fp8.co/Pasquale Pillitteri analysis
@@ -126,6 +132,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-26: Rosie added real task pricing research — 100 task benchmark from Ivern AI, per-task costs $0.004-$0.057, BYOK markup 3,500-175,000% vs bundled platforms (Ivern AI)
 - 2026-05-25: Rosie added token cost benchmarks — CrewAI burns 3x tokens vs LangGraph, $4,300/month difference at scale, model routing saves 60-70%
 - 2026-05-22: Rosie added institutional knowledge preservation narrative — reframes Polynize value from automation to knowledge preservation (Libertas research)
 - 2026-05-22: Rosie added Skills standardization competitive intel — CrewAI Skills Repository confirms market moving toward SKILL.md pattern

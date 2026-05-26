@@ -107,6 +107,13 @@ Research agent build patterns and tools.
 - [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
 - [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
 
+## Research Notes — 2026-05-26
+
+- [Framework Landscape — May 2026 State]: Three framework camps consolidated: (1) LangChain camp (broad ecosystem, 60M+ PyPI downloads), (2) Python-native camp (PydanticAI, Instructor, Agno), (3) TypeScript camp (Mastra, Vercel AI SDK). MCP (Model Context Protocol) now de-facto tool standard — frameworks competing on orchestration, not integration — youngju.dev deep dive
+- [Mastra — TypeScript Production Framework]: From Gatsby team. Full-stack TypeScript with React/Next.js integration. Deploy anywhere as standalone server. Key features: built-in evals, observability, workflow engine. For PAM: evaluate Mastra as alternative to Python stack for TS-heavy projects — mastra.ai, May 2026
+- [Agno — Rebranded from Phidata]: Now includes AgentOS (enterprise runtime). MPL-2.0 license. Positions as "fastest framework + first enterprise-ready agentic OS." For PAM: another Python-native alternative to LangChain worth evaluating — agno.com, May 2026
+- [Type Safety as Differentiator]: PydanticAI (Python) and Mastra (TypeScript Zod) prioritize type safety over LangChain's convention-based approach. Enterprise teams increasingly choosing type-safe frameworks — production error reduction is the selling point — youngju.dev analysis
+
 ## Research Notes — 2026-05-25
 
 - [Framework Production Reality — Only 2 of 6 Production-Ready]: FP8 tested LangChain, AgentCore, LangGraph, CrewAI, AutoGen, Strands — only 2 are truly production-ready. LangGraph for deterministic state machines with checkpointing; AgentCore for fully managed AWS runtime. Key insight: "orchestration layer is now boring infrastructure" — trust boundaries and deployment shape matter more than framework features — fp8.co May 2026
@@ -116,6 +123,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-26: Rosie added framework landscape update — Mastra (TypeScript) and Agno (Python-native) emerging, type safety becoming differentiator, MCP now standard (youngju.dev)
 - 2026-05-25: Rosie added framework production reality research — only 2 of 6 frameworks production-ready, token costs vary 3x, memory architecture landscape mapped
 - 2026-05-22: Rosie added CrewAI Skills Repository research — new registry/cache/CLI/SDK integration launched May 21
 - 2026-05-22: Rosie added LangGraph v1.2.1 release notes — durable error-handlers across host crashes, set_node_defaults(), DeltaChannel beta

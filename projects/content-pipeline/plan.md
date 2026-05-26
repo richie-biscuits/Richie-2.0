@@ -118,6 +118,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
 - [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-26
+
+- [LinkedIn Algorithm 2026 — Expertise Over Virality]: LinkedIn team confirmed algorithm shift: virality no longer drives distribution. New priorities: (1) Connections/followers see posts first, (2) Expert content prioritized — algorithm evaluates who you are + engagement quality, (3) Knowledge-rich posts extend reach beyond immediate network. Key insight: "Treat LinkedIn like a work conference" — keynote presentations > viral content — Buffer/LinkedIn team interview, May 2026
+- [LinkedIn Success Metrics — Three Signals]: Relevance (match to defined audience), Expertise (demonstrated subject knowledge), Engagement (meaningful comments from topic-interested users). Tactical: niche focus lets algorithm direct content to right Feeds; broad/generic content gets deprioritized — Buffer analysis, May 2026
+- [HN Content Audit — May 26]: Top stories: "Using AI to write better code more slowly" (804 pts, #3) — quality over speed narrative resonates; California Linux exemption (938 pts). Pattern: contrarian takes on AI hype cycle perform well. No generic AI productivity content in top 10 — developer skepticism of AI claims is rising — HN front page
+
 ## Research Notes — 2026-05-25
 
 - [HN Content Audit — May 25]: Top AI stories trending: DeepSeek Reasonix (607 pts, #11) — native DeepSeek coding agent; Audiomass (419 pts, #7) — open-source web audio editor; Go-to-Rust migration guide (331 pts, #12). Pattern: developer tooling dominates, coding agents resonate, practical open-source tools get traction. No generic AI productivity content in top 15 — HN front page
@@ -126,6 +132,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-26: Rosie added LinkedIn algorithm research — expertise over virality confirmed, three success signals identified (relevance/expertise/engagement), contrarian AI takes perform on HN (Buffer/LinkedIn team)
 - 2026-05-25: Rosie added HN content audit — DeepSeek Reasonix trending (607 pts), developer tooling dominates, no generic AI content in top stories
 - 2026-05-22: Rosie added trending narrative research — "AI layoffs are wrong" angle with institutional knowledge preservation theme (Libertas, HN trending)
 - 2026-05-22: Rosie added Skills-as-standard content angle — CrewAI Skills Repository launch creates education opportunity
