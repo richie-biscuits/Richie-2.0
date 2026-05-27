@@ -104,6 +104,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Dwell time content strategy** — Rewrite content for 15+ second dwell time: strong openers, short paragraphs, clear formatting (Rosie research → Scarlett)
 - [ ] **Save-worthy content series** — Create reference content people save/return to (saves > likes in algorithm) (Rosie research → Scarlett)
 - [ ] **Comment quality playbook** — Draft discussion-inviting prompts that generate thoughtful comments, not quick reactions (Rosie research → Scarlett)
+- [ ] **LinkedIn algorithm update briefing** — Update entire team on May 2026 changes: 92% burial rate, three signals (dwell/saves/comment quality), tactics that hurt (Rosie research → Scarlett/Marrs)
 
 ## Research Notes — 2026-05-19
 
@@ -117,6 +118,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — "AI Layoffs Are Wrong" Narrative]: HN trending article (184 pts) argues companies cutting headcount for AI will lose to those who didn't. Key insight: institutional knowledge is the asset being destroyed. Content opportunity: "The AI Layoff Mistake" or "Why AI Should Multiply Your Team, Not Replace It" — contrarian angle with strong engagement potential. — Libertas Software, May 2026
 - [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
 - [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
+
+## Research Notes — 2026-05-27
+
+- [LinkedIn Algorithm — May 2026 Update Confirmed]: 92% of content now buried, 40%+ drop in impressions for many creators. Structural change — not cyclical. Platform moved from "who you know/how many likes" to "relevance to topic, dwell time, intent." Surface-level activity no longer enough; platform measures depth — John Wicks LinkedIn analysis, May 2026
+- [LinkedIn Three Ranking Signals]: (1) Dwell time — 15+ seconds = distribution boost, scroll-past = deprioritized; (2) Saves/reposts > likes — saves signal lasting value, treated as "personal endorsement"; (3) Comment quality (NLP-analyzed) — thoughtful comments from niche outsiders carry most weight. Content must invite discussion, not passive reactions — John Wicks May 2026
+- [LinkedIn Tactics That Hurt]: External links significantly reduce distribution (first-comment workaround failing), hashtags harm if overused, promotional language actively deprioritized, high-volume posting dilutes engagement. Spaced cadence wins — John Wicks May 2026
 
 ## Research Notes — 2026-05-26
 
@@ -132,6 +139,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-27: Rosie added LinkedIn May 2026 algorithm research — 92% content burial rate confirmed, three ranking signals (dwell time/saves/comment quality), tactics that hurt identified (external links, overused hashtags, promotional language) (John Wicks LinkedIn analysis)
 - 2026-05-26: Rosie added LinkedIn algorithm research — expertise over virality confirmed, three success signals identified (relevance/expertise/engagement), contrarian AI takes perform on HN (Buffer/LinkedIn team)
 - 2026-05-25: Rosie added HN content audit — DeepSeek Reasonix trending (607 pts), developer tooling dominates, no generic AI content in top stories
 - 2026-05-22: Rosie added trending narrative research — "AI layoffs are wrong" angle with institutional knowledge preservation theme (Libertas, HN trending)

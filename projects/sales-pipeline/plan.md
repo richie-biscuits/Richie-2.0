@@ -103,6 +103,7 @@ Research leads, market trends, and competitors for AI agent services.
 9. **BYOK messaging** — Position Polynize BYOK approach vs bundled platform markups (3,500%-175,000%) as cost transparency advantage (Rosie research → Marrs)
 10. **Use aicost.cc in proposals** — Link to scenario calculator for credibility, use their four templates for client ROI modeling (Rosie research → Marrs/Dash)
 11. **Cost transparency calculator** — Build simple Polynize-branded cost estimator using aicost.cc methodology (Rosie research → Dash)
+12. **Model routing messaging** — Add smart model routing to sales pitch (Gemini Flash for simple tasks, Claude for complex = 60-70% cost reduction) (Rosie research → Marrs)
 
 ## Research Notes — 2026-05-19
 
@@ -116,6 +117,11 @@ Research leads, market trends, and competitors for AI agent services.
 - [Sales Narrative — Institutional Knowledge Preservation]: HN-trending research confirms companies cutting headcount for AI lose institutional knowledge that cannot be rebuilt. Sales positioning: Polynize agents preserve institutional knowledge as installable cognition frameworks — sell knowledge preservation, not just automation. — Libertas Software, May 2026
 - [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
 - [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
+
+## Research Notes — 2026-05-27
+
+- [BYOK vs Bundled — Updated Benchmarks]: Confirmed pricing markups for bundled platforms vs BYOK: ChatGPT Plus/Claude Pro ~3,500-35,000%, Jasper AI 17,500-87,500%, Copy.ai up to 175,000%. 100 tasks/month actual API cost: $0.57-$5.70. Same tasks on bundled platforms: $20-$249/month. BYOK delivers 3x-100x lower cost plus multi-agent orchestration — Ivern AI April 2026
+- [Cost Optimization — Model Routing Strategy]: Use Gemini Flash for data analysis/simple formatting ($0.002-0.004/task), GPT-4o for general content/emails, Claude Sonnet 4 for complex reasoning/code/bug fixes. Smart routing reduces costs 60-70% vs flat-rate model use. Sales pitch: Polynize BYOK enables optimization bundled platforms can't match — Ivern AI benchmarks
 
 ## Research Notes — 2026-05-26
 
@@ -132,6 +138,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-27: Rosie added updated BYOK vs bundled pricing research — confirmed 3,500-175,000% markups, model routing strategy for 60-70% cost reduction (Gemini Flash for simple tasks, Claude for complex) (Ivern AI benchmarks)
 - 2026-05-26: Rosie added real task pricing research — 100 task benchmark from Ivern AI, per-task costs $0.004-$0.057, BYOK markup 3,500-175,000% vs bundled platforms (Ivern AI)
 - 2026-05-25: Rosie added token cost benchmarks — CrewAI burns 3x tokens vs LangGraph, $4,300/month difference at scale, model routing saves 60-70%
 - 2026-05-22: Rosie added institutional knowledge preservation narrative — reframes Polynize value from automation to knowledge preservation (Libertas research)

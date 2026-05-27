@@ -92,6 +92,8 @@ Research agent build patterns and tools.
 7. **Multi-signal retrieval** — Implement semantic + keyword + entity matching retrieval fusion — single-signal fails on terminology mismatches (Rosie research → Julian)
 8. **Voice agent memory design** — Add voice-first memory patterns — users can't scroll back, agent must remember or friction is immediate (Rosie research → Julian)
 9. **BEAM benchmark testing** — Run PAM memory through BEAM 1M/10M scale tests for production validation (Rosie research → Julian)
+10. **2026 Framework Selection Guide** — Update technical documentation with 2026 consolidation reality: LangGraph for 5+ engineer teams with DevOps, CrewAI for 1-4 engineer rapid prototyping, AutoGen maintenance mode warning (Rosie research → Julian)
+11. **Framework vs Platform Decision Tree** — Document when to recommend self-hosted (LangGraph) vs managed platform (LangGraph Cloud, etc.) (Rosie research → Marrs/Julian)
 
 ## Research Notes — 2026-05-19
 
@@ -106,6 +108,12 @@ Research agent build patterns and tools.
 - [Framework Update — LangGraph v1.2.1]: Released May 21 with durable error-handler resume across host crashes (key for production resilience), set_node_defaults() API, DeltaChannel beta for checkpointing. PAM should adopt 1.2.1+ for production deployments. — LangGraph releases
 - [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
 - [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
+
+## Research Notes — 2026-05-27
+
+- [Framework Selection — 2026 Decision Matrix]: Six frameworks dominate: Claude Agent SDK (stateful runtime, Anthropic-only), Strands Agents (AWS, model-driven minimalist), LangGraph (production default, 47M+ downloads), OpenAI Agents SDK (handoff-centric), CrewAI (60% Fortune 500, role-based), AG2 (AutoGen successor). AutoGen in maintenance mode — avoid for new builds — qubittool.com framework analysis, May 2026
+- [LangGraph vs CrewAI Trade-offs]: LangGraph = building infrastructure (orchestration + DevOps + auth + logging). CrewAI = fastest prototype velocity but linear workflows hit complexity ceiling, no built-in checkpointing. Decision: LangGraph for 5+ engineer teams with DevOps; CrewAI for 1-4 engineer teams prioritizing time-to-prototype — dev.to framework comparison, May 2026
+- [2026 Framework Reality Check]: Most important decision isn't "which framework" — it's "framework vs managed platform." Progenix, Nexus and others now offer managed multi-agent platforms. Teams must choose: build infra yourself (LangGraph self-hosted) or buy platform (LangGraph Cloud, etc.) — dev.to May 2026
 
 ## Research Notes — 2026-05-26
 
@@ -123,6 +131,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-27: Rosie added 2026 framework decision matrix — six frameworks dominate, LangGraph production default, CrewAI for rapid prototyping, AutoGen maintenance mode warning, framework vs platform decision highlighted (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape update — Mastra (TypeScript) and Agno (Python-native) emerging, type safety becoming differentiator, MCP now standard (youngju.dev)
 - 2026-05-25: Rosie added framework production reality research — only 2 of 6 frameworks production-ready, token costs vary 3x, memory architecture landscape mapped
 - 2026-05-22: Rosie added CrewAI Skills Repository research — new registry/cache/CLI/SDK integration launched May 21

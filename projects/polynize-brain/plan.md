@@ -104,6 +104,7 @@ Latest research findings go here.
 5. **Production resilience messaging** — Update sales materials to emphasize distributed systems reliability over framework features (Rosie research → Marrs)
 6. **Market sizing narrative** — Incorporate $52B memory market growth into investor/pitch materials (Rosie research → Marrs)
 7. **Four dimensions framework** — Build cognition extraction around Storage/Curation/Retrieval/Lifecycle model (Rosie research → Marrs/Julian)
+8. **2026 Framework Landscape Update** — Update framework guidance to reflect 2026 consolidation: six major players, AutoGen maintenance mode warning, framework vs platform decision tree (Rosie research → Marrs/Julian)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
@@ -123,6 +124,11 @@ Latest research findings go here.
 - [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
 - [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-27
+
+- [Framework Landscape — 2026 Consolidation Complete]: The ecosystem has crystallized into six major frameworks: Claude Agent SDK (Anthropic), Strands Agents (AWS), LangGraph (LangChain), OpenAI Agents SDK, CrewAI, and AG2 (AutoGen successor). LangGraph dominates production (47M+ monthly downloads, powers Klarna/Uber/LinkedIn). CrewAI hit 60% Fortune 500 adoption (backed by Insight Partners). AutoGen officially in maintenance mode — Microsoft shifted to Microsoft Agent Framework. Key insight: Framework vs platform is the most important 2026 decision — qubittool.com framework analysis, May 2026
+- [Cognition Transfer — Architectural Philosophies]: Six frameworks = six philosophies. Claude Agent SDK = Agent-as-Runtime (stateful sandboxed sessions). Strands = Model-Driven Minimalist (LLM drives the loop). LangGraph = Stateful Graph Engine (explicit topology, checkpointed). OpenAI = Handoff-Centric. Understanding these philosophies is key to framework selection — qubittool.com May 2026
+
 ## Research Notes — 2026-05-26
 
 - [Framework Landscape — TypeScript Camp Rising]: Mastra (from Gatsby team) is now the definitive TypeScript agent framework with React/Next.js integration. Agno (ex-Phidata) rebranded with AgentOS enterprise runtime. Both prioritize type safety (Pydantic/Zod) over LangChain's convention-based approach. Signal: Type safety is becoming a framework differentiator for enterprise adoption — youngju.dev framework analysis, May 2026
@@ -138,6 +144,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-27: Rosie added 2026 framework consolidation research — six major frameworks crystallized (Claude SDK, Strands, LangGraph, OpenAI SDK, CrewAI, AG2), LangGraph dominates production (47M+ downloads), CrewAI at 60% Fortune 500, AutoGen in maintenance mode (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape research — TypeScript camp rising (Mastra, Agno), MCP now de-facto standard, three framework camps emerging (youngju.dev)
 - 2026-05-25: Rosie added framework consolidation research — only 2 of 6 frameworks production-ready, memory as strategic decision layer, DeepSeek Reasonix trending (Innobu, fp8, HN)
 - 2026-05-22: Rosie added institutional knowledge research — cutting headcount for AI destroys organizational memory, validates cognition preservation thesis (Libertas)
