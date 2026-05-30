@@ -104,6 +104,8 @@ Research leads, market trends, and competitors for AI agent services.
 10. **Use aicost.cc in proposals** — Link to scenario calculator for credibility, use their four templates for client ROI modeling (Rosie research → Marrs/Dash)
 11. **Cost transparency calculator** — Build simple Polynize-branded cost estimator using aicost.cc methodology (Rosie research → Dash)
 12. **Model routing messaging** — Add smart model routing to sales pitch (Gemini Flash for simple tasks, Claude for complex = 60-70% cost reduction) (Rosie research → Marrs)
+13. **Pricing review** — Digital One Agency anchors Australian custom AI at $50K+. Evaluate whether Polynize's $5K-$50K+ range is leaving money on the table. Consider raising floor or adding premium tier — Rosie research → Marrs/Shourov
+14. **Competitor differentiation** — Digital One Agency positions identically ("bespoke, not ChatGPT wrapper"). Draft clear differentiation: Polynize delivers faster (weeks not months) with installed cognition frameworks that compound value over time — Rosie research → Marrs
 
 ## Research Notes — 2026-05-19
 
@@ -117,6 +119,11 @@ Research leads, market trends, and competitors for AI agent services.
 - [Sales Narrative — Institutional Knowledge Preservation]: HN-trending research confirms companies cutting headcount for AI lose institutional knowledge that cannot be rebuilt. Sales positioning: Polynize agents preserve institutional knowledge as installable cognition frameworks — sell knowledge preservation, not just automation. — Libertas Software, May 2026
 - [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
 - [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
+
+## Research Notes — 2026-05-30
+
+- [Competitor Pricing — Digital One Agency Australia]: Melbourne/Gold Coast agency published May 26, 2026 guide: custom AI agents start at AUD $50,000 and range to $150,000. Projects take 3–6 months. They position as "bespoke, not SaaS reseller" and "not ChatGPT wrappers." Key signal: their price floor ($50K) is HIGHER than Polynize's typical range ($5K–$50K+). Either Polynize is underpricing, or Digital One targets larger enterprises. Either way, $50K+ is now an established anchor in the Australian market. — digitaloneagency.com.au, May 26 2026
+- [Competitor Positioning — "Bespoke Code You Own"]: Digital One Agency's messaging: "Every line of code is custom-built, ensuring clients receive unique, high-performance solutions." They refuse to sell ChatGPT wrappers. This is similar to Polynize's positioning but at 2–3x the price point. Sales implication: Polynize can compete on value (similar bespoke quality at lower price) OR raise prices to match market anchor. — digitaloneagency.com.au, May 26 2026
 
 ## Research Notes — 2026-05-27
 
@@ -138,6 +145,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-30: Rosie added competitor pricing research — Digital One Agency (Australian) pricing custom AI at $50K-$150K with 3-6 month timelines. Suggests Polynize may be underpricing vs market anchor. Their "bespoke not SaaS" positioning mirrors Polynize's (digitaloneagency.com.au)
 - 2026-05-27: Rosie added updated BYOK vs bundled pricing research — confirmed 3,500-175,000% markups, model routing strategy for 60-70% cost reduction (Gemini Flash for simple tasks, Claude for complex) (Ivern AI benchmarks)
 - 2026-05-26: Rosie added real task pricing research — 100 task benchmark from Ivern AI, per-task costs $0.004-$0.057, BYOK markup 3,500-175,000% vs bundled platforms (Ivern AI)
 - 2026-05-25: Rosie added token cost benchmarks — CrewAI burns 3x tokens vs LangGraph, $4,300/month difference at scale, model routing saves 60-70%

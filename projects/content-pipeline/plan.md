@@ -105,6 +105,9 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Save-worthy content series** — Create reference content people save/return to (saves > likes in algorithm) (Rosie research → Scarlett)
 - [ ] **Comment quality playbook** — Draft discussion-inviting prompts that generate thoughtful comments, not quick reactions (Rosie research → Scarlett)
 - [ ] **LinkedIn algorithm update briefing** — Update entire team on May 2026 changes: 92% burial rate, three signals (dwell/saves/comment quality), tactics that hurt (Rosie research → Scarlett/Marrs)
+- [ ] **Content format pivot to save-worthy** — Shift content strategy toward practical frameworks, data, step-by-step breakdowns that get saved/sent (not just liked). Saves now drive distribution more than likes — Giraffe Social research (Rosie research → Scarlett)
+- [ ] **Golden Hour comment response protocol** — Reply to ALL comments within 2 hours of posting for ~30% engagement boost. Consider setting phone reminders for post timing — Giraffe Social research (Rosie research → Scarlett)
+- [ ] **Topic consistency strategy** — Post repeatedly on same topic to build algorithmic "topic profile." Inconsistent subjects confuse the system and kill reach — Giraffe Social research (Rosie research → Scarlett)
 
 ## Research Notes — 2026-05-19
 
@@ -118,6 +121,13 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — "AI Layoffs Are Wrong" Narrative]: HN trending article (184 pts) argues companies cutting headcount for AI will lose to those who didn't. Key insight: institutional knowledge is the asset being destroyed. Content opportunity: "The AI Layoff Mistake" or "Why AI Should Multiply Your Team, Not Replace It" — contrarian angle with strong engagement potential. — Libertas Software, May 2026
 - [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
 - [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
+
+## Research Notes — 2026-05-30
+
+- [LinkedIn Algorithm — Three-Stage Distribution Confirmed]: Fresh May 28 analysis confirms LinkedIn's sequential distribution model: Stage 1 = quality filter (spam/promotional content suppressed before anyone sees it); Stage 2 = small slice test (2–5% of network distributed to, watched for 30–60 min); Stage 3 = wider promotion (only if strong early signals). This means the first hour is make-or-break for every post — Giraffe Social Media, May 28 2026
+- [LinkedIn — Interest-Based Distribution Replacing Network-Based]: LinkedIn moved from "show content because of who you know" to "show content because of what you engage with." Posts repeatedly about the same topic build a "topic profile" and get distributed to interested users regardless of connection. Inconsistent posting across subjects confuses the algorithm and kills reach — Giraffe Social Media, May 28 2026
+- [LinkedIn — Comments vs Likes Weighting]: A comment is worth significantly more than a like. Comment threads (back-and-forth conversations) trigger aggressive reach expansion. A post with 10 substantive comments reliably outperforms a post with 100 likes. Replying to comments within 2 hours increases overall engagement by ~30% — Giraffe Social Media, May 28 2026
+- [LinkedIn — Saves and Sends as New Signals]: LinkedIn added Saves and Sends to post analytics in late 2025 deliberately to signal what it values. Practical frameworks, useful data, step-by-step breakdowns, and original insights get saved/sent. "Entertaining content gets likes, genuine utility gets saves and sends" — Giraffe Social Media, May 28 2026
 
 ## Research Notes — 2026-05-27
 
@@ -139,6 +149,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-30: Rosie added LinkedIn three-stage distribution model research — quality filter → 2-5% test → wider promotion; interest-based replacing network-based; comments > likes by wide margin; saves/sends signal utility content; reply within 2h = +30% engagement (Giraffe Social Media, May 28)
 - 2026-05-27: Rosie added LinkedIn May 2026 algorithm research — 92% content burial rate confirmed, three ranking signals (dwell time/saves/comment quality), tactics that hurt identified (external links, overused hashtags, promotional language) (John Wicks LinkedIn analysis)
 - 2026-05-26: Rosie added LinkedIn algorithm research — expertise over virality confirmed, three success signals identified (relevance/expertise/engagement), contrarian AI takes perform on HN (Buffer/LinkedIn team)
 - 2026-05-25: Rosie added HN content audit — DeepSeek Reasonix trending (607 pts), developer tooling dominates, no generic AI content in top stories

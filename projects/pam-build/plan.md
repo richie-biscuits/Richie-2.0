@@ -94,6 +94,9 @@ Research agent build patterns and tools.
 9. **BEAM benchmark testing** — Run PAM memory through BEAM 1M/10M scale tests for production validation (Rosie research → Julian)
 10. **2026 Framework Selection Guide** — Update technical documentation with 2026 consolidation reality: LangGraph for 5+ engineer teams with DevOps, CrewAI for 1-4 engineer rapid prototyping, AutoGen maintenance mode warning (Rosie research → Julian)
 11. **Framework vs Platform Decision Tree** — Document when to recommend self-hosted (LangGraph) vs managed platform (LangGraph Cloud, etc.) (Rosie research → Marrs/Julian)
+12. **Protocol standardization** — ACP merged into A2A under Linux Foundation; MCP at 200+ servers. PAM should standardize on MCP for tools + A2A for cross-agent communication. Document this decision — Rosie research → Julian
+13. **Google ADK evaluation** — Four-language support (Python, TS, Java, Go) with native A2A and Agent Designer. Evaluate for enterprise clients already on Google Cloud — Rosie research → Julian
+14. **Claude Agent SDK evaluation** — Deepest MCP integration, built-in OS access, hooks lifecycle system. Evaluate for coding-agent and deep-tooling use cases. Note: locked to Claude models — Rosie research → Julian
 
 ## Research Notes — 2026-05-19
 
@@ -108,6 +111,14 @@ Research agent build patterns and tools.
 - [Framework Update — LangGraph v1.2.1]: Released May 21 with durable error-handler resume across host crashes (key for production resilience), set_node_defaults() API, DeltaChannel beta for checkpointing. PAM should adopt 1.2.1+ for production deployments. — LangGraph releases
 - [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
 - [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
+
+## Research Notes — 2026-05-30
+
+- [Framework Comparison — 8 SDKs + Protocols]: Comprehensive May 2026 analysis of 8 frameworks + 3 protocols. Key updates: Claude Agent SDK renamed from Claude Code SDK in early 2026. OpenAI Agents SDK shipped March 2025 as Swarm successor. Google ADK launched with 4 language SDKs (Python, TS, Java, Go) — first framework to support Java/Go natively. ACP merged into A2A under Linux Foundation. MCP crossed 200 server implementations. LangGraph's persistent checkpointing with crash recovery and time-travel debugging remains unmatched. — morphllm.com, May 2026
+- [Protocol Layer Consolidation]: ACP merged into A2A under Linux Foundation. MCP now has 200+ server implementations and is the de-facto tool standard. The protocol question is now settled: MCP for tools, A2A for cross-agent communication. PAM should standardize on both. — morphllm.com, May 2026
+- [Claude Agent SDK Deep Dive]: Deepest MCP integration of any framework (200+ servers, single-line config). Built-in file system and shell access. Hooks system for lifecycle control. Locked to Claude models — no model swapping without rewriting schemas. Python and TypeScript only. — morphllm.com, May 2026
+- [OpenAI Agents SDK Deep Dive]: Cleanest handoff model (agent-to-agent delegation as typed tool calls). Three-tier guardrails (input/output/tool) running in parallel. No built-in state persistence — you manage checkpointing yourself. Lightweight with few abstractions. — morphllm.com, May 2026
+- [Google ADK Deep Dive]: Four language SDKs (widest support). Native A2A with auto-generated Agent Cards. Agent Designer for low-code visual prototyping. Heavy Google Cloud dependency for production. MCP support through adapters, not native. — morphllm.com, May 2026
 
 ## Research Notes — 2026-05-27
 
@@ -131,6 +142,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-30: Rosie added comprehensive 8-framework + 3-protocol comparison — Claude Agent SDK renamed, OpenAI Agents SDK as Swarm successor, Google ADK with 4 languages, ACP merged into A2A, MCP at 200+ servers, LangGraph checkpointing unmatched (morphllm.com)
 - 2026-05-27: Rosie added 2026 framework decision matrix — six frameworks dominate, LangGraph production default, CrewAI for rapid prototyping, AutoGen maintenance mode warning, framework vs platform decision highlighted (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape update — Mastra (TypeScript) and Agno (Python-native) emerging, type safety becoming differentiator, MCP now standard (youngju.dev)
 - 2026-05-25: Rosie added framework production reality research — only 2 of 6 frameworks production-ready, token costs vary 3x, memory architecture landscape mapped

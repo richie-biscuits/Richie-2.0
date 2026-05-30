@@ -124,6 +124,11 @@ Latest research findings go here.
 - [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
 - [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
 
+## Research Notes — 2026-05-30
+
+- [Cognition Architecture — DualMem Validates Persona-Memory Separation]: New arXiv paper (May 25, 2026) proposes DualMem — a persona-driven dual memory framework that decouples memory into two streams: (1) factual cognition and (2) persona-conditioned insight. A 4B-parameter model trained with SFT+RL outperforms zero-shot persona-agnostic frameworks powered by DeepSeek-V3.2 on sustained persona fidelity. This is direct academic validation of Polynize Brain's core thesis: cognition (persona, identity, expertise) must be installed separately from raw memory. — arXiv:2605.25693, Hu et al.
+- [Persona Design — Five-Element Framework]: AgenticThinking.ai published a practical "Designing Agent Personas That Actually Work" guide defining five elements: (1) Role — specific title/domain/stance, (2) Expertise — bounded knowledge areas, (3) Process — step-by-step methodology, (4) Output — exact format/template, (5) Constraints — explicit boundaries/anti-patterns. This maps directly to what Polynize Brain's cognition extraction should produce as installable artifacts. — agenticthinking.ai, May 2026
+
 ## Research Notes — 2026-05-27
 
 - [Framework Landscape — 2026 Consolidation Complete]: The ecosystem has crystallized into six major frameworks: Claude Agent SDK (Anthropic), Strands Agents (AWS), LangGraph (LangChain), OpenAI Agents SDK, CrewAI, and AG2 (AutoGen successor). LangGraph dominates production (47M+ monthly downloads, powers Klarna/Uber/LinkedIn). CrewAI hit 60% Fortune 500 adoption (backed by Insight Partners). AutoGen officially in maintenance mode — Microsoft shifted to Microsoft Agent Framework. Key insight: Framework vs platform is the most important 2026 decision — qubittool.com framework analysis, May 2026
@@ -144,6 +149,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-30: Rosie added cognition architecture research — DualMem paper validates persona-memory separation thesis; AgenticThinking five-element persona framework maps to Polynize Brain extraction output (arXiv:2605.25693, agenticthinking.ai)
 - 2026-05-27: Rosie added 2026 framework consolidation research — six major frameworks crystallized (Claude SDK, Strands, LangGraph, OpenAI SDK, CrewAI, AG2), LangGraph dominates production (47M+ downloads), CrewAI at 60% Fortune 500, AutoGen in maintenance mode (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape research — TypeScript camp rising (Mastra, Agno), MCP now de-facto standard, three framework camps emerging (youngju.dev)
 - 2026-05-25: Rosie added framework consolidation research — only 2 of 6 frameworks production-ready, memory as strategic decision layer, DeepSeek Reasonix trending (Innobu, fp8, HN)
