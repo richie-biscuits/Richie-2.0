@@ -97,6 +97,10 @@ Research agent build patterns and tools.
 12. **Protocol standardization** — ACP merged into A2A under Linux Foundation; MCP at 200+ servers. PAM should standardize on MCP for tools + A2A for cross-agent communication. Document this decision — Rosie research → Julian
 13. **Google ADK evaluation** — Four-language support (Python, TS, Java, Go) with native A2A and Agent Designer. Evaluate for enterprise clients already on Google Cloud — Rosie research → Julian
 14. **Claude Agent SDK evaluation** — Deepest MCP integration, built-in OS access, hooks lifecycle system. Evaluate for coding-agent and deep-tooling use cases. Note: locked to Claude models — Rosie research → Julian
+15. **Skills + Interpreters pattern evaluation** — LangChain's new workflow primitives (May 29) align with Polynize Brain's SKILL.md approach. Evaluate for PAM build automation layer. — Rosie research → Julian
+16. **Pre-compression cognition extraction** — Implement constraint extraction to persistent memory BEFORE context compression fires. Both Hermes and Claude Code silently collapse preferences under compression. — Rosie research → Julian
+17. **Agent-First memory provisioning** — Evaluate Mem0's `mem0 init --agent --json` for PAM agent self-provisioning. Shadow account isolation + one-step claim pattern. — Rosie research → Julian
+18. **Lyft case study architecture review** — Study Lyft's LangGraph + LangSmith self-serve platform patterns for production reliability insights. — Rosie research → Julian
 
 ## Research Notes — 2026-05-19
 
@@ -111,6 +115,13 @@ Research agent build patterns and tools.
 - [Framework Update — LangGraph v1.2.1]: Released May 21 with durable error-handler resume across host crashes (key for production resilience), set_node_defaults() API, DeltaChannel beta for checkpointing. PAM should adopt 1.2.1+ for production deployments. — LangGraph releases
 - [Memory Architecture — Context is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Agent failures stem from treating context as storage. Validates PAM's selective memory architecture and Tier 3 purpose-built memory layer approach. — Mem0 blog, May 11 2026
 - [Memory Update — Temporal Reasoning in Mem0]: Mem0 added temporal reasoning to token-efficient algorithm (May 14). Now handles "Kendra loved Adidas (March 2026)" with validity windows. Closes gap with Zep on temporal knowledge. — Mem0 releases
+
+## Research Notes — 2026-05-31
+
+- [Build Pattern — Skills and Interpreters]: LangChain published "Building workflows for agents with Skills and Interpreters" (May 29, 2026) — new primitives for agent workflow construction. Skills = reusable capability bundles; Interpreters = runtime execution environments for skills. This pattern aligns with Polynize Brain's SKILL.md approach and should be evaluated for PAM's build automation layer. — blog.langchain.dev, May 29 2026
+- [Build Pattern — Context Compression Architecture]: Mem0 deep-dive into Hermes vs Claude Code context compression (May 14): Hermes uses two-layer compressor (fires at 50% and 85% of context window); Claude Code uses single server-side parameter. Both silently collapse exact-value preferences and hard constraints. Critical finding: extract constraints to persistent memory BEFORE compression fires. PAM should implement pre-compression cognition extraction. — mem0.ai, May 14 2026
+- [Build Pattern — Agent-First Infrastructure]: Mem0 Agent-First signup (May 21) enables agents to self-provision memory API keys in under 5 seconds with `mem0 init --agent --json`. Shadow account isolation, one-step human claim, zero key expiry. Signals memory infrastructure is now ready for fully autonomous agent deployment without human bottlenecks. — mem0.ai, May 21 2026
+- [Production Case Study — Lyft Self-Serve Agent Platform]: Lyft built production customer support agent platform using LangGraph + LangSmith (May 27 case study). Self-serve architecture with LangGraph for orchestration, LangSmith for observability. Key production insight: checkpointing and state persistence are non-negotiable for long-running support workflows. — blog.langchain.dev, May 27 2026
 
 ## Research Notes — 2026-05-30
 
@@ -142,6 +153,7 @@ Research agent build patterns and tools.
 
 ## Recent Activity
 
+- 2026-05-31: Rosie added build pattern research — LangChain Skills + Interpreters workflow primitives (May 29), context compression architecture deep-dive (May 14), Agent-First memory provisioning (May 21), Lyft production LangGraph case study (May 27) (blog.langchain.dev, mem0.ai)
 - 2026-05-30: Rosie added comprehensive 8-framework + 3-protocol comparison — Claude Agent SDK renamed, OpenAI Agents SDK as Swarm successor, Google ADK with 4 languages, ACP merged into A2A, MCP at 200+ servers, LangGraph checkpointing unmatched (morphllm.com)
 - 2026-05-27: Rosie added 2026 framework decision matrix — six frameworks dominate, LangGraph production default, CrewAI for rapid prototyping, AutoGen maintenance mode warning, framework vs platform decision highlighted (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape update — Mastra (TypeScript) and Agno (Python-native) emerging, type safety becoming differentiator, MCP now standard (youngju.dev)

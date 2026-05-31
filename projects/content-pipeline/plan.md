@@ -108,6 +108,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Content format pivot to save-worthy** — Shift content strategy toward practical frameworks, data, step-by-step breakdowns that get saved/sent (not just liked). Saves now drive distribution more than likes — Giraffe Social research (Rosie research → Scarlett)
 - [ ] **Golden Hour comment response protocol** — Reply to ALL comments within 2 hours of posting for ~30% engagement boost. Consider setting phone reminders for post timing — Giraffe Social research (Rosie research → Scarlett)
 - [ ] **Topic consistency strategy** — Post repeatedly on same topic to build algorithmic "topic profile." Inconsistent subjects confuse the system and kill reach — Giraffe Social research (Rosie research → Scarlett)
+- [ ] **Engagement velocity focus** — Prioritize speed of early engagement over total volume. 15 comments in first hour beats 30 across 12 hours. Consider posting when team is available to engage immediately. — Markana Media research (Rosie research → Scarlett)
+- [ ] **Contrarian AI content angle** — Lead with specific expertise and skepticism of generic AI hype. "Domain expertise is the real moat" performed 693 pts on HN. Position Polynize content as expert-driven, not AI-hype. — HN trend analysis (Rosie research → Scarlett)
 
 ## Research Notes — 2026-05-19
 
@@ -121,6 +123,12 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — "AI Layoffs Are Wrong" Narrative]: HN trending article (184 pts) argues companies cutting headcount for AI will lose to those who didn't. Key insight: institutional knowledge is the asset being destroyed. Content opportunity: "The AI Layoff Mistake" or "Why AI Should Multiply Your Team, Not Replace It" — contrarian angle with strong engagement potential. — Libertas Software, May 2026
 - [Content Angle — Skills as Standard]: CrewAI's new Skills Repository (May 21) makes skills a first-class primitive. Content angle: "Skills are the new APIs" or "Why every AI agent needs a skill stack" — educational content riding a platform shift. — CrewAI releases
 - [Content Angle — Context is RAM]: Mem0's "Context Window Behaves Like RAM, Not Storage" post explains why agents fail without memory. Technical explanation content with broad appeal — helps prospects understand why memory matters. — Mem0 blog, May 11 2026
+
+## Research Notes — 2026-05-31
+
+- [LinkedIn Algorithm — Three-Phase Evaluation Confirmed]: Independent analysis (Markana Media, digital-outcomes.eu) confirms LinkedIn's three-phase distribution: Phase 1 = 2-5% network quality filter (first 60-90 min); Phase 2 = second-degree + hashtag followers if engagement velocity passes threshold; Phase 3 = wider viral distribution. Key insight: engagement velocity (speed of interactions) matters more than total count — 15 comments in first hour beats 30 across 12 hours. — Markana Media, digital-outcomes.eu, 2026
+- [LinkedIn Algorithm — Dwell Time Multiplier Confirmed]: Posts with <3 seconds dwell time are actively de-ranked; 15+ seconds triggers reach multiplier. Multi-slide PDF carousels (8-12 slides) and 1,200+ character captions deliver immediate value and signal intentional consumption. Native video = +69% performance boost when branding appears in first 4 seconds. — digital-outcomes.eu, 2026
+- [Content Angle — Contrarian AI Takes Perform on HN]: "Domain expertise has always been the real moat" trending #5 on HN (693 pts, 403 comments) — contrarian takes on AI hype cycle resonate with developer audiences. Signal: skepticism of generic AI claims is rising; content should lead with specific expertise, not broad AI promises. — HN, May 30 2026
 
 ## Research Notes — 2026-05-30
 
@@ -149,6 +157,7 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 
 ## Recent Activity
 
+- 2026-05-31: Rosie added LinkedIn three-phase evaluation confirmation — engagement velocity > total count, dwell time multiplier confirmed, contrarian AI takes trending on HN (Markana Media, digital-outcomes.eu, HN)
 - 2026-05-30: Rosie added LinkedIn three-stage distribution model research — quality filter → 2-5% test → wider promotion; interest-based replacing network-based; comments > likes by wide margin; saves/sends signal utility content; reply within 2h = +30% engagement (Giraffe Social Media, May 28)
 - 2026-05-27: Rosie added LinkedIn May 2026 algorithm research — 92% content burial rate confirmed, three ranking signals (dwell time/saves/comment quality), tactics that hurt identified (external links, overused hashtags, promotional language) (John Wicks LinkedIn analysis)
 - 2026-05-26: Rosie added LinkedIn algorithm research — expertise over virality confirmed, three success signals identified (relevance/expertise/engagement), contrarian AI takes perform on HN (Buffer/LinkedIn team)

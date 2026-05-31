@@ -105,6 +105,8 @@ Latest research findings go here.
 6. **Market sizing narrative** — Incorporate $52B memory market growth into investor/pitch materials (Rosie research → Marrs)
 7. **Four dimensions framework** — Build cognition extraction around Storage/Curation/Retrieval/Lifecycle model (Rosie research → Marrs/Julian)
 8. **2026 Framework Landscape Update** — Update framework guidance to reflect 2026 consolidation: six major players, AutoGen maintenance mode warning, framework vs platform decision tree (Rosie research → Marrs/Julian)
+9. **Domain expertise narrative** — Incorporate "domain expertise is the real moat" research into Polynize Brain positioning: we install the domain model that agents cannot generate themselves (Rosie research → Marrs)
+10. **Context compression resilience** — Document how cognition frameworks prevent the 65% enterprise failure mode (context degradation) by extracting constraints to persistent memory before compression fires (Rosie research → Marrs/Julian)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
@@ -123,6 +125,12 @@ Latest research findings go here.
 - [Cognition Transfer — Institutional Knowledge Loss]: Companies cutting headcount for AI are losing institutional knowledge that cannot be rebuilt. The real value is not the work produced but the knowledge carried — how the business operates, where edge cases live, why decisions are made. AI multiplies judgment; it does not replace it. This validates Polynize Brain's core thesis: cognition frameworks preserve institutional knowledge as installable artifacts. — Libertas Software, May 2026 (HN trending)
 - [Cognition Installation — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21, 2026) launched Skills Repository with registry, cache, CLI, and SDK integration. Skills are now officially validated as the standard mechanism for agent knowledge installation. Polynize Brain's SKILL.md format is the right abstraction at the right time. — CrewAI GitHub releases
 - [Memory Architecture — Context Window is RAM, Not Storage]: Mem0 engineering analysis confirms context windows behave like volatile RAM, not persistent storage. Most agent failures stem from treating context as storage. This validates PAM's selective memory approach and Polynize Brain's emphasis on structured cognition over raw context. — Mem0 blog, May 11 2026
+
+## Research Notes — 2026-05-31
+
+- [Cognition Transfer — Domain Expertise Is the Real Moat]: HN-trending essay (693 pts, 403 comments) argues agentic AI severed the link between building software and building domain models. The binding constraint moved from "can you build it" to "can you tell whether it's right." Domain experts + agents are startlingly effective because experts bring "ground truth" — the thing the agent can't generate. This directly validates Polynize Brain's thesis: cognition frameworks install domain expertise as portable, verifiable artifacts. — brethorsting.com, May 30 2026
+- [Cognition Transfer — Context Compression Kills 65% of Enterprise Agents]: Mem0 analysis of Hermes vs Claude Code context compression reveals 65% of enterprise AI failures in 2025 traced to context degradation during multi-step reasoning, not raw token exhaustion. Both compressors silently collapse exact-value preferences and hard constraints. The fix: extract critical constraints to a persistent memory layer BEFORE compression fires. This is exactly the cognition-preservation problem Polynize Brain solves. — mem0.ai, May 14 2026
+- [Cognition Infrastructure — Agent-First Memory Provisioning]: Mem0 launched Agent-First signup (May 21) — agents can self-provision memory API keys in under 5 seconds with no human in the loop. `mem0 init --agent --json` returns working credentials. Signals infrastructure layer maturing for fully autonomous agent deployment. — mem0.ai, May 21 2026
 
 ## Research Notes — 2026-05-30
 
@@ -149,6 +157,7 @@ Latest research findings go here.
 
 ## Recent Activity
 
+- 2026-05-31: Rosie added domain expertise moat research — HN-trending essay validates cognition framework thesis; context compression analysis shows 65% of enterprise failures are cognition loss, not model failure; Mem0 Agent-First signals autonomous agent infrastructure maturing (brethorsting.com, mem0.ai)
 - 2026-05-30: Rosie added cognition architecture research — DualMem paper validates persona-memory separation thesis; AgenticThinking five-element persona framework maps to Polynize Brain extraction output (arXiv:2605.25693, agenticthinking.ai)
 - 2026-05-27: Rosie added 2026 framework consolidation research — six major frameworks crystallized (Claude SDK, Strands, LangGraph, OpenAI SDK, CrewAI, AG2), LangGraph dominates production (47M+ downloads), CrewAI at 60% Fortune 500, AutoGen in maintenance mode (qubittool.com, dev.to)
 - 2026-05-26: Rosie added framework landscape research — TypeScript camp rising (Mastra, Agno), MCP now de-facto standard, three framework camps emerging (youngju.dev)

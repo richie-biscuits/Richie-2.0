@@ -106,6 +106,8 @@ Research leads, market trends, and competitors for AI agent services.
 12. **Model routing messaging** — Add smart model routing to sales pitch (Gemini Flash for simple tasks, Claude for complex = 60-70% cost reduction) (Rosie research → Marrs)
 13. **Pricing review** — Digital One Agency anchors Australian custom AI at $50K+. Evaluate whether Polynize's $5K-$50K+ range is leaving money on the table. Consider raising floor or adding premium tier — Rosie research → Marrs/Shourov
 14. **Competitor differentiation** — Digital One Agency positions identically ("bespoke, not ChatGPT wrapper"). Draft clear differentiation: Polynize delivers faster (weeks not months) with installed cognition frameworks that compound value over time — Rosie research → Marrs
+15. **Domain expertise sales narrative** — Reframe Polynize value from "we build AI agents" to "we install the domain expertise your agents need to be correct" — grounded in HN-trending research that domain knowledge is the real moat (Rosie research → Marrs)
+16. **Context degradation sales hook** — "65% of enterprise AI failures are context degradation, not model failure. Without a cognition framework, your agent forgets why it's doing what it's doing." — mem0 research (Rosie research → Marrs)
 
 ## Research Notes — 2026-05-19
 
@@ -119,6 +121,12 @@ Research leads, market trends, and competitors for AI agent services.
 - [Sales Narrative — Institutional Knowledge Preservation]: HN-trending research confirms companies cutting headcount for AI lose institutional knowledge that cannot be rebuilt. Sales positioning: Polynize agents preserve institutional knowledge as installable cognition frameworks — sell knowledge preservation, not just automation. — Libertas Software, May 2026
 - [Competitive Intel — CrewAI Skills Repository]: CrewAI v1.14.5 (May 21) launched official Skills Repository. Skills are now standardized across CrewAI, Google Android, Mem0 Skill Graph. Polynize's SKILL.md-based cognition installation is aligned with market direction. — CrewAI releases
 - [Sales Strategy — AI Multiplies Judgment]: Reframe from "AI replaces workers" to "AI multiplies judgment" — the organizations that win will do significantly more work with the same people, not the same work with fewer people. — Libertas Software analysis
+
+## Research Notes — 2026-05-31
+
+- [Sales Positioning — Domain Expertise Is the Real Moat]: HN-trending essay (693 pts) argues the binding constraint for AI agents moved from "can you build it" to "can you tell whether it's right." Domain experts + agents are effective because experts bring ground truth. Sales implication: Polynize should sell cognition frameworks as "installable domain expertise" — the moat that survives framework churn and prevents the subtle, expensive errors that agents generate when they lack domain models. — brethorsting.com, May 30 2026
+- [Sales Positioning — Context Compression Failure Mode]: 65% of enterprise AI failures trace to context degradation during multi-step reasoning. Both Hermes and Claude Code compressors silently collapse exact preferences and hard constraints. Sales angle: "Without a cognition framework, your agent forgets why it's doing what it's doing." — mem0.ai, May 14 2026
+- [Australian Pricing Validation — Flowtivity Guide Still Current]: March 2026 Australian pricing guide confirms: custom AI agents $5K-$50K+, off-the-shelf $50-$500/mo, consulting $150-$400/hr, ROI 3-6 months. Integration complexity is primary cost driver ($1K-$3K/integration). This validates Polynize's pricing tier is market-aligned. — flowtivity.ai, March 2026
 
 ## Research Notes — 2026-05-30
 
@@ -145,6 +153,7 @@ Research leads, market trends, and competitors for AI agent services.
 
 ## Recent Activity
 
+- 2026-05-31: Rosie added domain expertise sales positioning research — "domain expertise is the real moat" validates cognition framework value prop; context compression failure mode = 65% of enterprise AI failures; Australian pricing guide confirms $5K-$50K+ market alignment (brethorsting.com, mem0.ai, flowtivity.ai)
 - 2026-05-30: Rosie added competitor pricing research — Digital One Agency (Australian) pricing custom AI at $50K-$150K with 3-6 month timelines. Suggests Polynize may be underpricing vs market anchor. Their "bespoke not SaaS" positioning mirrors Polynize's (digitaloneagency.com.au)
 - 2026-05-27: Rosie added updated BYOK vs bundled pricing research — confirmed 3,500-175,000% markups, model routing strategy for 60-70% cost reduction (Gemini Flash for simple tasks, Claude for complex) (Ivern AI benchmarks)
 - 2026-05-26: Rosie added real task pricing research — 100 task benchmark from Ivern AI, per-task costs $0.004-$0.057, BYOK markup 3,500-175,000% vs bundled platforms (Ivern AI)
