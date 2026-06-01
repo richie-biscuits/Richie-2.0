@@ -108,6 +108,8 @@ Research leads, market trends, and competitors for AI agent services.
 14. **Competitor differentiation** — Digital One Agency positions identically ("bespoke, not ChatGPT wrapper"). Draft clear differentiation: Polynize delivers faster (weeks not months) with installed cognition frameworks that compound value over time — Rosie research → Marrs
 15. **Domain expertise sales narrative** — Reframe Polynize value from "we build AI agents" to "we install the domain expertise your agents need to be correct" — grounded in HN-trending research that domain knowledge is the real moat (Rosie research → Marrs)
 16. **Context degradation sales hook** — "65% of enterprise AI failures are context degradation, not model failure. Without a cognition framework, your agent forgets why it's doing what it's doing." — mem0 research (Rosie research → Marrs)
+17. **SMB buyer's guide** — Create no-code vs custom decision framework for sales conversations (Rosie research → Marrs)
+18. **Workflow rollout sequence** — Add recommended implementation roadmap to proposals: pilot → voice → convergence (Rosie research → Marrs)
 
 ## Research Notes — 2026-05-19
 
@@ -151,8 +153,14 @@ Research leads, market trends, and competitors for AI agent services.
 - [ROI Benchmarks — Enterprise Baseline]: Deloitte 2026 State of AI report: 171% average ROI on enterprise AI agent deployments, US implementations averaging 192%. SMB AI delivers 55% higher operational efficiency, 35% cost reductions. Use these as anchor points in proposals — The AI Corner/Deloitte 2026
 - [SMB Pricing Validation]: SaaS AI agent platforms $20-$249/month production tiers (Ajelix $20, Copilot Business $21, Gemini Pro $19.99). Custom agents $5K-$50K+. Token-based custom builds $15-$75/month for 100-1,000 inference calls. Polynize's custom tier positioning is validated — Reinventing.ai/Ajelix analysis
 
+## Research Notes — 2026-06-01
+
+- [SMB Market — Operational Rigor Over Hype]: 2026 AI agents are operational, not experimental. The biggest differentiator for SMBs is integration depth and operational control, not model capability. No-code vs custom decision framework: choose no-code for well-bounded workflows and fast pilots; choose custom for deep read/write automation, strict compliance, deterministic behavior, and advanced observability. — blog.opshero.ai, April 2026
+- [Sales Positioning — Workflow Agent Rollout Sequence]: Recommended SMB rollout: (1) workflow agent pilot (internal/low-risk), (2) customer service voice agent pilot (bounded intents + strict escalation), (3) convergence (voice triggers workflow). This sequencing reduces risk and builds measurement muscle. High-ROI workflow candidates: lead qualification/CRM updates, quote generation, ticket routing, refund intake, document processing, meeting notes → action items. — blog.opshero.ai, April 2026
+
 ## Recent Activity
 
+- 2026-06-01: Rosie added SMB buyer's guide research — operational rigor over hype, no-code vs custom framework, workflow agent rollout sequence (Opshero)
 - 2026-05-31: Rosie added domain expertise sales positioning research — "domain expertise is the real moat" validates cognition framework value prop; context compression failure mode = 65% of enterprise AI failures; Australian pricing guide confirms $5K-$50K+ market alignment (brethorsting.com, mem0.ai, flowtivity.ai)
 - 2026-05-30: Rosie added competitor pricing research — Digital One Agency (Australian) pricing custom AI at $50K-$150K with 3-6 month timelines. Suggests Polynize may be underpricing vs market anchor. Their "bespoke not SaaS" positioning mirrors Polynize's (digitaloneagency.com.au)
 - 2026-05-27: Rosie added updated BYOK vs bundled pricing research — confirmed 3,500-175,000% markups, model routing strategy for 60-70% cost reduction (Gemini Flash for simple tasks, Claude for complex) (Ivern AI benchmarks)

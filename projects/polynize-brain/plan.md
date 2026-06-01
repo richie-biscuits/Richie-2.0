@@ -107,6 +107,8 @@ Latest research findings go here.
 8. **2026 Framework Landscape Update** — Update framework guidance to reflect 2026 consolidation: six major players, AutoGen maintenance mode warning, framework vs platform decision tree (Rosie research → Marrs/Julian)
 9. **Domain expertise narrative** — Incorporate "domain expertise is the real moat" research into Polynize Brain positioning: we install the domain model that agents cannot generate themselves (Rosie research → Marrs)
 10. **Context compression resilience** — Document how cognition frameworks prevent the 65% enterprise failure mode (context degradation) by extracting constraints to persistent memory before compression fires (Rosie research → Marrs/Julian)
+11. **Update cognition framework extraction** — Add human-in-the-loop governance spec (thresholds, escalation paths) to framework output based on 2026 production standards (Rosie research → Marrs/Julian)
+12. **Specialization narrative** — Reframe Polynize Brain from "general cognition" to "specialized agent ecosystem orchestration" in pitch materials (Rosie research → Marrs)
 
 ### Short Term (Next 2 Weeks)
 1. **Framework extraction v2** — Implement enhanced extraction with SOUL.md format
@@ -155,8 +157,14 @@ Latest research findings go here.
 - [DeepSeek Reasonix Trending]: DeepSeek-native coding agent (Reasonix) hit #11 on HN with 607 points, 253 comments. Native DeepSeek integration with high caching and low cost is resonating with developers. Signal: DeepSeek ecosystem is becoming a credible alternative to OpenAI/Anthropic for agent tooling — HN May 2026
 - [Memory Benchmarks — May 2026 Update]: Mem0 token-efficient algorithm now at 92.5% LoCoMo, 94.4% LongMemEval with <7,000 tokens per retrieval vs 25,000+ full-context. +29.6 points temporal reasoning, +23.1 multi-hop. Three parallel scoring passes (semantic + keyword + entity) fused at retrieval — Mem0 ECAI 2025 + May 2026 update
 
+## Research Notes — 2026-06-01
+
+- [Cognition Transfer — Production Reality 2026]: Enterprises shifted from "what's possible" to "prove it works" — demanding concrete ROI, governance frameworks, and production-ready systems. Specialization beats generalization: narrow, task-specific agents outperform general-purpose ones. Production value comes from coordinated agent ecosystems (orchestration over isolation). Gartner: 40% of enterprise apps will embed task-specific AI agents by end of 2026. Real-world benchmarks: Telus 40 min saved per interaction, Suzano 95% query time reduction, Danfoss 80% transactional decisions automated. — insights.reinventing.ai, Feb 2026
+- [Cognition Transfer — Human-in-the-Loop Governance]: Autonomy doesn't mean removing humans — it means strategically positioning them. Production deployments embed governance directly into agent workflows: autonomous execution within thresholds, human intervention for high-risk decisions, clear escalation paths for edge cases. This is the standard practice for production agent deployments. — insights.reinventing.ai, Feb 2026
+
 ## Recent Activity
 
+- 2026-06-01: Rosie added production deployment pattern research — enterprise shift to specialized agents, governance as standard, orchestration over isolation (Reinventing AI)
 - 2026-05-31: Rosie added domain expertise moat research — HN-trending essay validates cognition framework thesis; context compression analysis shows 65% of enterprise failures are cognition loss, not model failure; Mem0 Agent-First signals autonomous agent infrastructure maturing (brethorsting.com, mem0.ai)
 - 2026-05-30: Rosie added cognition architecture research — DualMem paper validates persona-memory separation thesis; AgenticThinking five-element persona framework maps to Polynize Brain extraction output (arXiv:2605.25693, agenticthinking.ai)
 - 2026-05-27: Rosie added 2026 framework consolidation research — six major frameworks crystallized (Claude SDK, Strands, LangGraph, OpenAI SDK, CrewAI, AG2), LangGraph dominates production (47M+ downloads), CrewAI at 60% Fortune 500, AutoGen in maintenance mode (qubittool.com, dev.to)

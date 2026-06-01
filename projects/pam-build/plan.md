@@ -101,6 +101,9 @@ Research agent build patterns and tools.
 16. **Pre-compression cognition extraction** — Implement constraint extraction to persistent memory BEFORE context compression fires. Both Hermes and Claude Code silently collapse preferences under compression. — Rosie research → Julian
 17. **Agent-First memory provisioning** — Evaluate Mem0's `mem0 init --agent --json` for PAM agent self-provisioning. Shadow account isolation + one-step claim pattern. — Rosie research → Julian
 18. **Lyft case study architecture review** — Study Lyft's LangGraph + LangSmith self-serve platform patterns for production reliability insights. — Rosie research → Julian
+19. **Evaluate Mem0 new algorithm** — Benchmark PAM memory against updated LoCoMo/LongMemEval scores (Rosie research → Julian)
+20. **Multi-signal retrieval implementation** — Add semantic + keyword + entity fused retrieval to PAM memory layer (Rosie research → Julian)
+21. **Document memory limitations** — Add cross-session identity and memory staleness to known limitations doc (Rosie research → Julian)
 
 ## Research Notes — 2026-05-19
 
@@ -151,8 +154,14 @@ Research agent build patterns and tools.
 - [Memory Architecture Comparison — May 2026]: Five architectures compared: Mem0 (SDK, 92.5% LoCoMo), Letta (runtime, high lock-in), Zep (temporal graph, SOC 2/HIPAA/GDPR), Hermes (open-source server, self-improving), OpenClaude (skill patterns). PAM's architecture should expose swapable memory layer to match use case — Innobu analysis
 - [DeepSeek Ecosystem — New Player]: DeepSeek Reasonix (native coding agent) trending on HN (607 pts). DeepSeek becoming credible alternative to OpenAI/Anthropic. PAM should evaluate DeepSeek API support for cost-sensitive clients — HN May 2026
 
+## Research Notes — 2026-06-01
+
+- [Memory Benchmarks — Mem0 Algorithm Update]: Mem0 released new token-efficient algorithm with scores: 92.5 LoCoMo, 94.4 LongMemEval, ~6,900 tokens/query. Biggest gains: +29.6 temporal reasoning, +23.1 multi-hop. Two architectural drivers: (1) single-pass ADD-only extraction treating agent-generated facts as first-class, (2) multi-signal retrieval (semantic + keyword + entity) fused in parallel. Full-context memory remains categorically unusable in production due to latency (9.87s median, 17.12s p95). — mem0.ai, May 2026
+- [Memory Architecture — Open Problems]: Hardest unsolved problems in agent memory: cross-session identity, temporal abstraction at scale, and memory staleness. Integration layer is the fastest-growing surface area — 21 frameworks and 20 vector stores now integrated. Production systems need selective memory, not full context. — mem0.ai, May 2026
+
 ## Recent Activity
 
+- 2026-06-01: Rosie added Mem0 algorithm benchmark research — 92.5 LoCoMo, multi-signal retrieval architecture, full-context unusable in production, open problems identified (Mem0 blog)
 - 2026-05-31: Rosie added build pattern research — LangChain Skills + Interpreters workflow primitives (May 29), context compression architecture deep-dive (May 14), Agent-First memory provisioning (May 21), Lyft production LangGraph case study (May 27) (blog.langchain.dev, mem0.ai)
 - 2026-05-30: Rosie added comprehensive 8-framework + 3-protocol comparison — Claude Agent SDK renamed, OpenAI Agents SDK as Swarm successor, Google ADK with 4 languages, ACP merged into A2A, MCP at 200+ servers, LangGraph checkpointing unmatched (morphllm.com)
 - 2026-05-27: Rosie added 2026 framework decision matrix — six frameworks dominate, LangGraph production default, CrewAI for rapid prototyping, AutoGen maintenance mode warning, framework vs platform decision highlighted (qubittool.com, dev.to)

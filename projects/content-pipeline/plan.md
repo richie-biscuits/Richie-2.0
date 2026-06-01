@@ -110,6 +110,8 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [ ] **Topic consistency strategy** — Post repeatedly on same topic to build algorithmic "topic profile." Inconsistent subjects confuse the system and kill reach — Giraffe Social research (Rosie research → Scarlett)
 - [ ] **Engagement velocity focus** — Prioritize speed of early engagement over total volume. 15 comments in first hour beats 30 across 12 hours. Consider posting when team is available to engage immediately. — Markana Media research (Rosie research → Scarlett)
 - [ ] **Contrarian AI content angle** — Lead with specific expertise and skepticism of generic AI hype. "Domain expertise is the real moat" performed 693 pts on HN. Position Polynize content as expert-driven, not AI-hype. — HN trend analysis (Rosie research → Scarlett)
+- [ ] **Semantic topic clarity** — Rewrite content strategy to emphasize explicit expertise and clear topic focus over clever phrasing (Rosie research → Scarlett)
+- [ ] **Emerging conversations timing** — Post when industry developments are hot to leverage faster feed insertion (Rosie research → Scarlett)
 
 ## Research Notes — 2026-05-19
 
@@ -155,8 +157,14 @@ Research what content is working on LinkedIn/TikTok/YouTube for AI content.
 - [Content Angle — DeepSeek Ecosystem]: DeepSeek Reasonix (native coding agent) trending hard on HN signals DeepSeek is becoming a credible dev platform. Content opportunity: "DeepSeek for AI agents" or "Beyond OpenAI: Building agents with DeepSeek" — contrarian angle with technical credibility — HN May 2026
 - [Content Angle — Framework Cost Reality]: New benchmark shows CrewAI burns 3x tokens vs LangGraph ($4,300/month difference at 10K executions). Tutorial angle: "Why your agent framework is burning your budget" or "The hidden cost of multi-agent orchestration" — fp8.co analysis
 
+## Research Notes — 2026-06-01
+
+- [LinkedIn Algorithm — Semantic Understanding Shift]: LinkedIn replaced behavior tracking with LLM-powered meaning interpretation. Keywords matter less; semantic concept matching matters more. Posts can now appear in feeds within minutes if they gain traction. Reach is no longer constrained by network size — strong semantic matches distribute beyond connections. Engagement quality wins: thoughtful comments outperform generic responses. Consistency builds "topic profile" — algorithm learns who you are and what you care about. Practical advice: be explicit about expertise, engage thoughtfully, build on existing conversations, stay close to current industry developments. — linkability.biz, March 2026
+- [Content Strategy — AI-Interpreted Content]: Content is now interpreted, categorised, and connected by AI systems that influence distribution. The question shifts from "How do I get engagement?" to "What am I actually known for — and how clearly am I expressing it?" — linkability.biz, March 2026
+
 ## Recent Activity
 
+- 2026-06-01: Rosie added LinkedIn semantic algorithm research — LLM-powered meaning interpretation replaces keyword tracking, engagement quality > volume, consistency builds topic profile (Linkability)
 - 2026-05-31: Rosie added LinkedIn three-phase evaluation confirmation — engagement velocity > total count, dwell time multiplier confirmed, contrarian AI takes trending on HN (Markana Media, digital-outcomes.eu, HN)
 - 2026-05-30: Rosie added LinkedIn three-stage distribution model research — quality filter → 2-5% test → wider promotion; interest-based replacing network-based; comments > likes by wide margin; saves/sends signal utility content; reply within 2h = +30% engagement (Giraffe Social Media, May 28)
 - 2026-05-27: Rosie added LinkedIn May 2026 algorithm research — 92% content burial rate confirmed, three ranking signals (dwell time/saves/comment quality), tactics that hurt identified (external links, overused hashtags, promotional language) (John Wicks LinkedIn analysis)
